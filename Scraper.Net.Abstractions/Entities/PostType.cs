@@ -4,8 +4,6 @@
     {
         Post,
         Repost,
-        Livestream,
-        RecordedLivestream,
         Reply
     }
 }

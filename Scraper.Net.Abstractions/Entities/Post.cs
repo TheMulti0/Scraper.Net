@@ -11,6 +11,8 @@ namespace Scraper.Net.Abstractions
 
         public PostType Type { get; init; }
 
+        public bool IsLivestream { get; init; }
+
         public User Author { get; init; }
 
         public DateTime? CreationDate { get; init; }

@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Abstractions", "Scraper.Net.Abstractions\Scraper.Net.Abstractions.csproj", "{6D0AF691-366E-4007-8470-5D085E6DEDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Abstractions", "Scraper.Net.Abstractions\Scraper.Net.Abstractions.csproj", "{6D0AF691-366E-4007-8470-5D085E6DEDAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Facebook", "Scraper.Net.Facebook\Scraper.Net.Facebook.csproj", "{6D2B8DE4-1480-4627-B467-B93523631DA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Facebook.Tests", "Scraper.Net.Facebook.Tests\Scraper.Net.Facebook.Tests.csproj", "{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{6D0AF691-366E-4007-8470-5D085E6DEDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D0AF691-366E-4007-8470-5D085E6DEDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D0AF691-366E-4007-8470-5D085E6DEDAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

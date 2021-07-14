@@ -1,0 +1,126 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Common;
+
+namespace Scraper.Net.Facebook.Scraper
+{
+    internal class DateTimeConverterUsingDateTimeParse : JsonConverter<DateTime>
+    {
+        public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            Debug.Assert(typeToConvert == typeof(DateTime));
+            return DateTime.Parse(reader.GetString());
+        }
+
+        public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
+        {
+            writer.WriteStringValue(value.ToString());
+        }
+    }
+
+    internal static class PostExtensions
+    {
+        private const string LinkRegex = "\n(?<link>[A-Z].+)";
+
+        public static FacebookPost ToPost(this RawFacebookPost raw)
+        {
+            return new()
+            {
+                Id = raw.PostId,
+                EntireText = raw.GetCleanText(),
+                PostTextOnly = raw.PostText,
+                CreationDate = raw.Time,
+                Url = raw.PostUrl,
+                Author = new Author
+                {
+                    Id = raw.UserId,
+                    Url = raw.UserUrl,
+                    UserName = raw.UserName
+                },
+                IsLive = raw.IsLive,
+                Link = raw.Link,
+                Images = raw.GetImages().ToArray(),
+                Video = raw.GetVideo(),
+                Stats = new Stats
+                {
+                    Comments = raw.Comments,
+                    Shares = raw.Shares,
+                    Likes = raw.Likes
+                },
+                SharedPost = raw.GetSharedPost(),
+                Comments = raw.CommentsFull
+            };
+        }
+        
+        private static string GetCleanText(this RawFacebookPost raw)
+        {
+            if (raw.Link != null)
+            {
+                return raw.Text.Replace(
+                    new[]
+                    {
+                        LinkRegex
+                    },
+                    raw.Link);
+            }
+
+            return raw.Text;
+        }
+
+        private static IEnumerable<Image> GetImages(this RawFacebookPost raw)
+        {
+            return raw.ImageIds.Select((id, index) => new Image
+            {
+                Id = id,
+                Url = raw.Images.ElementAt(index),
+                LowQualityUrl = raw.ImagesLowQuality.ElementAtOrDefault(index),
+                Description = raw.ImagesDescription.ElementAtOrDefault(index)
+            });
+        }
+
+        private static Video GetVideo(this RawFacebookPost raw)
+        {
+            if (raw.VideoId == null)
+            {
+                return null;
+            }   
+            
+            return new Video
+            {
+                Id = raw.VideoId,
+                Url = raw.VideoUrl,
+                Width = raw.VideoWidth,
+                Height = raw.VideoHeight,
+                Quality = raw.VideoQuality,
+                ThumbnailUrl = raw.VideoThumbnail,
+                SizeMb = raw.VideoSizeMb,
+                Watches = raw.VideoWatches
+            };
+        }
+
+        private static FacebookSharedPost GetSharedPost(this RawFacebookPost raw)
+        {
+            if (raw.SharedPostId == null)
+            {
+                return null;
+            }
+            
+            return new FacebookSharedPost
+            {
+                Id = raw.SharedPostId,
+                Url = raw.SharedPostUrl,
+                Text = raw.SharedText,
+                CreationDate = raw.SharedTime,
+                Author = new Author
+                {
+                    Id = raw.SharedUserId,
+                    UserName = raw.SharedUserName
+                }
+            };
+        }
+    }
+}
