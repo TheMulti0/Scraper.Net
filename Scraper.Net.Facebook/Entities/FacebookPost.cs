@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Scraper.Net.Facebook.Entities.Raw;
 
-namespace Scraper.Net.Facebook.Scraper
+namespace Scraper.Net.Facebook.Entities
 {
     public record FacebookPost
     {

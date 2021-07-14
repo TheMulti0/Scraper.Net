@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Scraper.Net.Facebook.Scraper
+namespace Scraper.Net.Facebook.Entities.Raw
 {
     public record RootComment : Comment
     {

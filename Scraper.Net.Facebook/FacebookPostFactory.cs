@@ -1,28 +1,12 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Common;
+using Scraper.Net.Facebook.Entities;
+using Scraper.Net.Facebook.Entities.Raw;
 
-namespace Scraper.Net.Facebook.Scraper
+namespace Scraper.Net.Facebook
 {
-    internal class DateTimeConverterUsingDateTimeParse : JsonConverter<DateTime>
-    {
-        public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        {
-            Debug.Assert(typeToConvert == typeof(DateTime));
-            return DateTime.Parse(reader.GetString());
-        }
-
-        public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
-        {
-            writer.WriteStringValue(value.ToString());
-        }
-    }
-
-    internal static class PostExtensions
+    internal static class FacebookPostFactory
     {
         private const string LinkRegex = "\n(?<link>[A-Z].+)";
 

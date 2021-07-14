@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
+using Scraper.Net.Facebook.Entities.Raw;
 
-namespace Scraper.Net.Facebook.Scraper
+namespace Scraper.Net.Facebook.Entities
 {
     internal record GetPostsResponse
     {

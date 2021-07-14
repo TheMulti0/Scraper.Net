@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Scraper.Net.Facebook.Scraper
+namespace Scraper.Net.Facebook.Entities
 {
     public record FacebookSharedPost
     {
