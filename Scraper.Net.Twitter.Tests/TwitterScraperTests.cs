@@ -12,6 +12,7 @@ namespace Scraper.Net.Twitter.Tests
     public class TwitterScraperTests
     {
         private readonly TwitterScraper _scraper;
+        private readonly TweetScraper _tweetScraper;
         private readonly TextCleaner _textCleaner;
         private readonly MediaItemsExtractor _mediaItemsExtractor;
 
@@ -24,6 +25,7 @@ namespace Scraper.Net.Twitter.Tests
             var config = rootConfig.Get<TwitterScraperConfig>();
             
             _scraper = new TwitterScraper(config);
+            _tweetScraper = new TweetScraper(config);
             _textCleaner = new TextCleaner();
             _mediaItemsExtractor = new MediaItemsExtractor();
         }
@@ -65,7 +67,7 @@ namespace Scraper.Net.Twitter.Tests
         {
             const long tweetId = 1361968093686333440;
             
-            ITweet tweet = await _scraper.TwitterClient.Tweets.GetTweetAsync(tweetId);
+            ITweet tweet = await _tweetScraper.TwitterClient.Tweets.GetTweetAsync(tweetId);
 
             IEnumerable<IMediaItem> media = _mediaItemsExtractor.ExtractMediaItems(tweet);
             
@@ -77,7 +79,7 @@ namespace Scraper.Net.Twitter.Tests
         {
             const long tweetId = 1361968818323664899;
             
-            ITweet tweet = await _scraper.TwitterClient.Tweets.GetTweetAsync(tweetId);
+            ITweet tweet = await _tweetScraper.TwitterClient.Tweets.GetTweetAsync(tweetId);
 
             IEnumerable<IMediaItem> media = _mediaItemsExtractor.ExtractMediaItems(tweet);
             

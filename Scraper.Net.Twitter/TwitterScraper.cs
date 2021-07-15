@@ -3,40 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Scraper.Net.Abstractions;
-using Tweetinvi;
 using Tweetinvi.Models;
-using Tweetinvi.Parameters;
 
 namespace Scraper.Net.Twitter
 {
     public class TwitterScraper : IPlatformScraper
     {
-        internal ITwitterClient TwitterClient { get; }
-        
+        private readonly TweetScraper _tweetScraper;
         private readonly TextCleaner _textCleaner;
         private readonly MediaItemsExtractor _mediaItemsExtractor;
 
         public TwitterScraper(
             TwitterScraperConfig config)
         {
-            TwitterClient = new TwitterClient(
-                config.ConsumerKey,
-                config.ConsumerSecret);
-
-            TwitterClient.Auth.InitializeClientBearerTokenAsync().Wait();
-
+            _tweetScraper = new TweetScraper(config);
             _textCleaner = new TextCleaner();
             _mediaItemsExtractor = new MediaItemsExtractor();
         }
 
         public async Task<IEnumerable<Post>> GetPostsAsync(User user)
         {
-            var parameters = new GetUserTimelineParameters(user.UserId)
-            {
-                PageSize = 10,
-                TweetMode = TweetMode.Extended
-            };
-            IEnumerable<ITweet> tweets = await TwitterClient.Timelines.GetUserTimelineAsync(parameters);
+            IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(user.UserId);
 
             return tweets.Select(ToPost(user));
         }
