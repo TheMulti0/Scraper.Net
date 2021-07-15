@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Scraper.Net.Twitter
 {
-    public class UrlExpander
+    internal class UrlExpander
     {
         private readonly HttpClient _httpClient;
 
