@@ -23,9 +23,11 @@ namespace Scraper.Net.Twitter
         {
             HttpResponseMessage response = await _httpClient.GetAsync(url);
 
-            bool wasRedirected = response.StatusCode == HttpStatusCode.Redirect ||
-                                 response.StatusCode == HttpStatusCode.Moved ||
-                                 response.StatusCode == HttpStatusCode.MovedPermanently;
+            bool wasRedirected = response.StatusCode 
+                is HttpStatusCode.Redirect 
+                or HttpStatusCode.Moved
+                or HttpStatusCode.MovedPermanently;
+            
             Uri actualUrl = response.Headers.Location;
 
             return wasRedirected && actualUrl != null
