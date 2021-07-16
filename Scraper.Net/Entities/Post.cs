@@ -13,7 +13,7 @@ namespace Scraper.Net
 
         public bool IsLivestream { get; init; }
 
-        public User Author { get; init; }
+        public string AuthorId { get; init; }
 
         public DateTime? CreationDate { get; init; }
         

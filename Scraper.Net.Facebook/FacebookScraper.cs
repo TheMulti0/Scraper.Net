@@ -29,7 +29,7 @@ namespace Scraper.Net.Facebook
             return post => new Post
             {
                 Content = CleanText(post),
-                Author = new User(id, "facebook"),
+                AuthorId = id,
                 CreationDate = post.CreationDate,
                 Url = post.Url,
                 MediaItems = GetMediaItems(post),

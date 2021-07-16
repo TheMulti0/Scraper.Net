@@ -39,7 +39,7 @@ namespace Scraper.Net.Twitter
                 return new Post
                 {
                     Content = _textCleaner.CleanText(text),
-                    Author = new User(id, "twitter"),
+                    AuthorId = id,
                     CreationDate = tweet.CreatedAt.DateTime,
                     Url = tweet.Url,
                     MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),

@@ -1,5 +1,4 @@
 ﻿using System.Text.RegularExpressions;
-using Common;
 
 namespace Scraper.Net.Twitter
 {

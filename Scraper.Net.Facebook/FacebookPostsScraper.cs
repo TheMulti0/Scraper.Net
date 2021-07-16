@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Common;
-using Scraper.Net;
 using Scraper.Net.Facebook.Entities;
 
 namespace Scraper.Net.Facebook
