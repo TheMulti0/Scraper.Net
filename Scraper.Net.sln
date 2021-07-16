@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter", "Scra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter.Tests", "Scraper.Net.Twitter.Tests\Scraper.Net.Twitter.Tests.csproj", "{2F3908D2-CF31-4738-9B68-60447848DE9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.YoutubeDl", "Scraper.Net.YoutubeDl\Scraper.Net.YoutubeDl.csproj", "{663F57CF-74EE-4D7A-96A9-F27296986217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.YoutubeDl.Tests", "Scraper.Net.YoutubeDl.Tests\Scraper.Net.YoutubeDl.Tests.csproj", "{BBA32269-5D2C-42FD-B66F-977DF8106045}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{2F3908D2-CF31-4738-9B68-60447848DE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F3908D2-CF31-4738-9B68-60447848DE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F3908D2-CF31-4738-9B68-60447848DE9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663F57CF-74EE-4D7A-96A9-F27296986217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663F57CF-74EE-4D7A-96A9-F27296986217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663F57CF-74EE-4D7A-96A9-F27296986217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663F57CF-74EE-4D7A-96A9-F27296986217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA32269-5D2C-42FD-B66F-977DF8106045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA32269-5D2C-42FD-B66F-977DF8106045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA32269-5D2C-42FD-B66F-977DF8106045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA32269-5D2C-42FD-B66F-977DF8106045}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -23,5 +23,22 @@ namespace Scraper.Net.Abstractions
             Width = width;
             Height = height;
         }
+        
+        public VideoItem(
+            string url,
+            string thumbnailUrl,
+            double? durationSeconds = null,
+            int? width = null,
+            int? height = null)
+        {
+            Url = url;
+            ThumbnailUrl = thumbnailUrl;
+            if (durationSeconds != null)
+            {
+                Duration = TimeSpan.FromSeconds((double) durationSeconds);
+            }
+            Width = width;
+            Height = height;
+        }
     }
 }
