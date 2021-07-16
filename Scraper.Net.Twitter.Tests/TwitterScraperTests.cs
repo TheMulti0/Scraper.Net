@@ -3,7 +3,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Scraper.Net;
 using Tweetinvi.Models;
 
 namespace Scraper.Net.Twitter.Tests
@@ -33,7 +32,7 @@ namespace Scraper.Net.Twitter.Tests
         [TestMethod]
         public async Task TestTheMulti0()
         {
-            var user = new User("themulti0", "twitter");
+            const string user = "themulti0";
             
             IEnumerable<Post> posts = await _scraper.GetPostsAsync(user);
             List<Post> list = posts.ToList();

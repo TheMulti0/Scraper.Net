@@ -18,19 +18,19 @@ namespace Scraper.Net.Facebook
             _scraper = new FacebookPostsScraper(config);
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(User user)
+        public async Task<IEnumerable<Post>> GetPostsAsync(string id)
         {
-            IEnumerable<FacebookPost> posts = await _scraper.GetPostsAsync(user);
+            IEnumerable<FacebookPost> posts = await _scraper.GetPostsAsync(id);
             
-            return posts.Select(ToPost(user));
+            return posts.Select(ToPost(id));
         }
 
-        private Func<FacebookPost, Post> ToPost(User user)
+        private Func<FacebookPost, Post> ToPost(string id)
         {
             return post => new Post
             {
                 Content = CleanText(post),
-                Author = user,
+                Author = new User(id, "facebook"),
                 CreationDate = post.CreationDate,
                 Url = post.Url,
                 MediaItems = GetMediaItems(post),

@@ -21,14 +21,14 @@ namespace Scraper.Net.Twitter
             _mediaItemsExtractor = new MediaItemsExtractor();
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(User user)
+        public async Task<IEnumerable<Post>> GetPostsAsync(string id)
         {
-            IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(user.UserId);
+            IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(id);
 
-            return tweets.Select(ToPost(user));
+            return tweets.Select(ToPost(id));
         }
 
-        private Func<ITweet, Post> ToPost(User user)
+        private Func<ITweet, Post> ToPost(string id)
         {
             return tweet =>
             {
@@ -39,7 +39,7 @@ namespace Scraper.Net.Twitter
                 return new Post
                 {
                     Content = _textCleaner.CleanText(text),
-                    Author = user,
+                    Author = new User(id, "twitter"),
                     CreationDate = tweet.CreatedAt.DateTime,
                     Url = tweet.Url,
                     MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),

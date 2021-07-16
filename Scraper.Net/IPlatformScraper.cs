@@ -5,6 +5,6 @@ namespace Scraper.Net
 {
     public interface IPlatformScraper
     {
-        Task<IEnumerable<Post>> GetPostsAsync(User user);
+        Task<IEnumerable<Post>> GetPostsAsync(string id);
     }
 }

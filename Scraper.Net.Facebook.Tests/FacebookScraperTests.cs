@@ -8,8 +8,8 @@ namespace Scraper.Net.Facebook.Tests
     [TestClass]
     public class FacebookScraperTests
     {
+        private const string User = "ayelet.benshaul.shaked";
         private static FacebookScraper _scraper;
-        private readonly User _user = new("ayelet.benshaul.shaked", "Facebook");
 
         [ClassInitialize]
         public static void Initialize(TestContext context)
@@ -21,7 +21,7 @@ namespace Scraper.Net.Facebook.Tests
         [TestMethod]
         public async Task TestGetPostsAsync()
         {
-            IEnumerable<Post> posts = await _scraper.GetPostsAsync(_user);
+            IEnumerable<Post> posts = await _scraper.GetPostsAsync(User);
             List<Post> list = posts.ToList();
 
             Assert.IsNotNull(list);

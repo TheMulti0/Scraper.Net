@@ -25,9 +25,9 @@ namespace Scraper.Net.Facebook
             _config = config;
         }
 
-        public async Task<IEnumerable<FacebookPost>> GetPostsAsync(User user)
+        public async Task<IEnumerable<FacebookPost>> GetPostsAsync(string id)
         {
-            var response = await GetResponseAsync(user);
+            var response = await GetResponseAsync(id);
 
             HandleError(response);
 
@@ -55,11 +55,11 @@ namespace Scraper.Net.Facebook
             }
         }
 
-        private async Task<GetPostsResponse> GetResponseAsync(User user)
+        private async Task<GetPostsResponse> GetResponseAsync(string id)
         {
             var request = new GetPostsRequest
             {
-                UserId = user.UserId,
+                UserId = id,
                 Pages = _config.PageCount,
                 Proxy = await GetProxyAsync(),
                 CookiesFileName = _config.CookiesFileName
