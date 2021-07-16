@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net", "Scraper.Net\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook", "Scraper.Net.Facebook\Scraper.Net.Facebook.csproj", "{6D2B8DE4-1480-4627-B467-B93523631DA8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook.Tests", "Scraper.Net.Facebook.Tests\Scraper.Net.Facebook.Tests.csproj", "{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter", "Scraper.Net.Twitter\Scraper.Net.Twitter.csproj", "{2C047ECD-170C-45FD-83EF-8CB8DEBEE986}"
@@ -33,10 +31,6 @@ Global
 		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D2B8DE4-1480-4627-B467-B93523631DA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9ECB668-6C1E-47E9-AA9C-A6D1D99C3542}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
