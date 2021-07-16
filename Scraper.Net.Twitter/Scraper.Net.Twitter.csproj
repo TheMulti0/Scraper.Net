@@ -10,7 +10,7 @@
   
     <ItemGroup>
         <ProjectReference Include="..\Common\Common.csproj" />
-        <ProjectReference Include="..\Scraper.Net.Abstractions\Scraper.Net.Abstractions.csproj" />
+        <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
     </ItemGroup>
 
     <ItemGroup>

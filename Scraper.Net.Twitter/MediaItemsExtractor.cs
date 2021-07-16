@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Scraper.Net.Abstractions;
+using Scraper.Net;
 using Tweetinvi.Models;
 using Tweetinvi.Models.Entities;
 using Tweetinvi.Models.Entities.ExtendedEntities;

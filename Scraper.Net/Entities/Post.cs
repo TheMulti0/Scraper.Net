@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Scraper.Net.Abstractions
+namespace Scraper.Net
 {
     public record Post
     {

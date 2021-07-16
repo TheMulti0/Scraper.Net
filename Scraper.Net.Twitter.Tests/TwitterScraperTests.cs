@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Scraper.Net.Abstractions;
+using Scraper.Net;
 using Tweetinvi.Models;
 
 namespace Scraper.Net.Twitter.Tests

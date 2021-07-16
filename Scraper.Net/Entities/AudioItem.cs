@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Scraper.Net.Abstractions
+namespace Scraper.Net
 {
     public record AudioItem(
         string Url,

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Abstractions", "Scraper.Net.Abstractions\Scraper.Net.Abstractions.csproj", "{6D0AF691-366E-4007-8470-5D085E6DEDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net", "Scraper.Net\Scraper.Net.csproj", "{6D0AF691-366E-4007-8470-5D085E6DEDAB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook", "Scraper.Net.Facebook\Scraper.Net.Facebook.csproj", "{6D2B8DE4-1480-4627-B467-B93523631DA8}"
 EndProject

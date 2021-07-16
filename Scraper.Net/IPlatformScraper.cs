@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Scraper.Net.Abstractions
+namespace Scraper.Net
 {
     public interface IPlatformScraper
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Scraper.Net.Abstractions
+namespace Scraper.Net
 {
     public interface IPostProcessor
     {
