@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Scraper.Net.Twitter.Tests
         public async Task TestTheMulti0()
         {
             const string user = "themulti0";
-            
+
             List<Post> posts = await _scraper.GetPostsAsync(user).ToListAsync();
             
             Assert.IsNotNull(posts);
