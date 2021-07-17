@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net
 {
-    public class ScraperService
+    public class ScraperService : IScraperService
     {
         private readonly IDictionary<string, IPlatformScraper> _platformScrapers;
         private readonly IEnumerable<IPostProcessor> _postProcessors;
