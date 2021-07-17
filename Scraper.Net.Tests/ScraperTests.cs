@@ -22,7 +22,7 @@ namespace Scraper.Net.Tests
             var id = "mockuser";
             
             var posts = await scraper.GetPostsAsync(id, "mock").ToListAsync();
-            var p = (await mockScraper.GetPostsAsync(id)).ToList();
+            var p = await mockScraper.GetPostsAsync(id).ToListAsync();
             
             CollectionAssert.AreEqual(p, posts);
         }

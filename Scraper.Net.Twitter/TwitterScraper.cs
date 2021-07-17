@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi.Models;
@@ -21,13 +22,18 @@ namespace Scraper.Net.Twitter
             _mediaItemsExtractor = new MediaItemsExtractor();
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(
+        public async IAsyncEnumerable<Post> GetPostsAsync(
             string id, 
-            CancellationToken ct = default)
+            [EnumeratorCancellation] CancellationToken ct = default)
         {
             IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(id);
 
-            return await tweets.ToAsyncEnumerable().SelectAwaitWithCancellation(ToPost(id)).ToListAsync(ct);
+            IAsyncEnumerable<Post> posts = tweets.ToAsyncEnumerable().SelectAwaitWithCancellation(ToPost(id));
+            
+            await foreach (Post post in posts.WithCancellation(ct))
+            {
+                yield return post;
+            }
         }
 
         private Func<ITweet, CancellationToken, ValueTask<Post>> ToPost(string id)

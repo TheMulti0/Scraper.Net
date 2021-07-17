@@ -27,10 +27,10 @@ namespace Scraper.Net
         {
             IPlatformScraper scraper = GetScraper(platform);
             
-            IEnumerable<Post> scrapedPosts = await scraper.GetPostsAsync(id, ct);
+            IAsyncEnumerable<Post> scrapedPosts = scraper.GetPostsAsync(id, ct);
             
             IAsyncEnumerable<Post> posts = _postProcessors.Aggregate(
-                scrapedPosts.ToAsyncEnumerable(),
+                scrapedPosts,
                 ProcessPosts);
 
             await foreach (Post processedPost in posts.WithCancellation(ct))

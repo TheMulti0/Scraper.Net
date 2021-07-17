@@ -21,11 +21,10 @@ namespace Scraper.Net.Facebook.Tests
         [TestMethod]
         public async Task TestGetPostsAsync()
         {
-            IEnumerable<Post> posts = await _scraper.GetPostsAsync(User);
-            List<Post> list = posts.ToList();
+            List<Post> posts = await _scraper.GetPostsAsync(User).ToListAsync();
 
-            Assert.IsNotNull(list);
-            CollectionAssert.AllItemsAreNotNull(list);
+            Assert.IsNotNull(posts);
+            CollectionAssert.AllItemsAreNotNull(posts);
         }
     }
 }

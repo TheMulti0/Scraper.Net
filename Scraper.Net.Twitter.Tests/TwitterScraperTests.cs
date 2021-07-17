@@ -34,11 +34,10 @@ namespace Scraper.Net.Twitter.Tests
         {
             const string user = "themulti0";
             
-            IEnumerable<Post> posts = await _scraper.GetPostsAsync(user);
-            List<Post> list = posts.ToList();
+            List<Post> posts = await _scraper.GetPostsAsync(user).ToListAsync();
             
-            Assert.IsNotNull(list);
-            CollectionAssert.AllItemsAreNotNull(list);
+            Assert.IsNotNull(posts);
+            CollectionAssert.AllItemsAreNotNull(posts);
         }
         
         [TestMethod]
