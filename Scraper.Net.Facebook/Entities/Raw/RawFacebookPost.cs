@@ -1,7 +1,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-namespace Scraper.Net.Facebook.Entities.Raw
+namespace Scraper.Net.Facebook
 {
     internal record RawFacebookPost 
     {

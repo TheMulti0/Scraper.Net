@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Scraper.Net.Facebook.Entities;
-using Scraper.Net.Facebook.Entities.Raw;
 
 namespace Scraper.Net.Facebook
 {
