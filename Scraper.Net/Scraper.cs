@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Scraper.Net
 {
@@ -17,16 +20,20 @@ namespace Scraper.Net
             _postProcessors = postProcessors;
         }
 
-        public async IAsyncEnumerable<Post> GetPostsAsync(string id, string platform)
+        public async IAsyncEnumerable<Post> GetPostsAsync(
+            string id,
+            string platform,
+            [EnumeratorCancellation] CancellationToken ct = default)
         {
             IPlatformScraper scraper = GetScraper(platform);
-            IEnumerable<Post> scrapedPosts = await scraper.GetPostsAsync(id);
+            
+            IEnumerable<Post> scrapedPosts = await scraper.GetPostsAsync(id, ct);
             
             IAsyncEnumerable<Post> posts = _postProcessors.Aggregate(
                 scrapedPosts.ToAsyncEnumerable(),
                 ProcessPosts);
 
-            await foreach (Post processedPost in posts)
+            await foreach (Post processedPost in posts.WithCancellation(ct))
             {
                 yield return processedPost;
             }

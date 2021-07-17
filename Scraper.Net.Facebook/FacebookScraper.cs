@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Scraper.Net.Facebook
@@ -16,9 +17,9 @@ namespace Scraper.Net.Facebook
             _scraper = new FacebookPostsScraper(config);
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(string id)
+        public async Task<IEnumerable<Post>> GetPostsAsync(string id, CancellationToken ct = default)
         {
-            IEnumerable<FacebookPost> posts = await _scraper.GetPostsAsync(id);
+            IEnumerable<FacebookPost> posts = await _scraper.GetPostsAsync(id, ct);
             
             return posts.Select(ToPost(id));
         }

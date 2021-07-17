@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Scraper.Net.Tests
 {
     internal class MockScraper : IPlatformScraper
     {
-        public Task<IEnumerable<Post>> GetPostsAsync(string id)
+        public Task<IEnumerable<Post>> GetPostsAsync(string id, CancellationToken ct =default)
         {
             IEnumerable<Post> posts = new []
             {

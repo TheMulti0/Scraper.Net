@@ -42,21 +42,21 @@ namespace Scraper.Net.Twitter.Tests
         }
         
         [TestMethod]
-        public void TestCleanTextWithShortenedUrl()
+        public async Task TestCleanTextWithShortenedUrl()
         {
             const string url = "https://t.co/Po1PsWNB49";
             
-            var expanded = _textCleaner.CleanText(url);
+            var expanded = await _textCleaner.CleanTextAsync(url);
             
             Assert.IsFalse(expanded.Contains(url));
         }
         
         [TestMethod]
-        public void TestCleanTextWithPictureShortenedUrl()
+        public async Task TestCleanTextWithPictureShortenedUrl()
         {
             const string url = "https://pic.twitter.com/epqvVYkWKC";
             
-            var expanded = _textCleaner.CleanText(url);
+            var expanded = await _textCleaner.CleanTextAsync(url);
             
             Assert.IsFalse(expanded.Contains(url));
         }

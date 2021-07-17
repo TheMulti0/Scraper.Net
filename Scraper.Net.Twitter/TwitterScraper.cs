@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi.Models;
 
@@ -20,16 +21,16 @@ namespace Scraper.Net.Twitter
             _mediaItemsExtractor = new MediaItemsExtractor();
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(string id)
+        public async Task<IEnumerable<Post>> GetPostsAsync(string id, CancellationToken ct = default)
         {
             IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(id);
 
-            return tweets.Select(ToPost(id));
+            return await tweets.ToAsyncEnumerable().SelectAwaitWithCancellation(ToPost(id)).ToListAsync(ct);
         }
 
-        private Func<ITweet, Post> ToPost(string id)
+        private Func<ITweet, CancellationToken, ValueTask<Post>> ToPost(string id)
         {
-            return tweet =>
+            return async (tweet, ct) =>
             {
                 string text = tweet.IsRetweet 
                     ? tweet.RetweetedTweet.Text 
@@ -37,7 +38,7 @@ namespace Scraper.Net.Twitter
                 
                 return new Post
                 {
-                    Content = _textCleaner.CleanText(text),
+                    Content = await _textCleaner.CleanTextAsync(text, ct),
                     AuthorId = id,
                     CreationDate = tweet.CreatedAt.DateTime,
                     Url = tweet.Url,

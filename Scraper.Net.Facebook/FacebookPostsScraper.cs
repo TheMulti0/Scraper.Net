@@ -22,13 +22,64 @@ namespace Scraper.Net.Facebook
             _config = config;
         }
 
-        public async Task<IEnumerable<FacebookPost>> GetPostsAsync(string id)
+        public async Task<IEnumerable<FacebookPost>> GetPostsAsync(string id, CancellationToken ct)
         {
-            var response = await GetResponseAsync(id);
+            GetPostsResponse response = await GetResponseAsync(id, ct);
 
             HandleError(response);
 
             return response.Posts.Select(raw => raw.ToPost());
+        }
+
+        private async Task<GetPostsResponse> GetResponseAsync(string id, CancellationToken ct)
+        {
+            var request = new GetPostsRequest
+            {
+                UserId = id,
+                Pages = _config.PageCount,
+                Proxy = await GetProxyAsync(ct),
+                CookiesFileName = _config.CookiesFileName
+            };
+
+            string json = JsonSerializer.Serialize(request)
+                .Replace("\"", "\\\""); // Python argument's double quoted strings need to be escaped
+
+            string responseStr = await ScriptExecutor.ExecutePython(
+                FacebookScriptName,
+                ct,
+                json);
+
+            var response = JsonSerializer.Deserialize<GetPostsResponse>(responseStr);
+            
+            return response with { OriginalRequest = request };
+        }
+
+        private async Task<string> GetProxyAsync(CancellationToken ct)
+        {
+            if (_config.Proxies.Length == 0)
+            {
+                return null;
+            }
+            
+            await _proxyIndexLock.WaitAsync(ct);
+
+            try
+            {
+                if (_proxyIndex == _config.Proxies.Length - 1)
+                {
+                    _proxyIndex = 0;
+                }
+                else
+                {
+                    _proxyIndex++;
+                }
+                
+                return _config.Proxies[_proxyIndex];
+            }
+            finally
+            {
+                _proxyIndexLock.Release();
+            }
         }
 
         private static void HandleError(GetPostsResponse response)
@@ -49,57 +100,6 @@ namespace Scraper.Net.Facebook
                         throw new Exception($"Unrecognized error {response.Error} {response.ErrorDescription}");    
                     }
                     break;
-            }
-        }
-
-        private async Task<GetPostsResponse> GetResponseAsync(string id)
-        {
-            var request = new GetPostsRequest
-            {
-                UserId = id,
-                Pages = _config.PageCount,
-                Proxy = await GetProxyAsync(),
-                CookiesFileName = _config.CookiesFileName
-            };
-
-            string json = JsonSerializer.Serialize(request)
-                .Replace("\"", "\\\""); // Python argument's double quoted strings need to be escaped
-
-            string responseStr = await ScriptExecutor.ExecutePython(
-                FacebookScriptName,
-                token: default,
-                json);
-
-            var response = JsonSerializer.Deserialize<GetPostsResponse>(responseStr);
-            
-            return response with { OriginalRequest = request };
-        }
-
-        private async Task<string> GetProxyAsync()
-        {
-            if (_config.Proxies.Length == 0)
-            {
-                return null;
-            }
-            
-            await _proxyIndexLock.WaitAsync();
-
-            try
-            {
-                if (_proxyIndex == _config.Proxies.Length - 1)
-                {
-                    _proxyIndex = 0;
-                }
-                else
-                {
-                    _proxyIndex++;
-                }
-                
-                return _config.Proxies[_proxyIndex];
-            }
-            finally
-            {
-                _proxyIndexLock.Release();
             }
         }
     }
