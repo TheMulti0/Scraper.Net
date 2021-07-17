@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Scraper.Net;
 using YoutubeDLSharp;
 using YoutubeDLSharp.Metadata;
 
