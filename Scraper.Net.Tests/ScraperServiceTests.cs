@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Tests
@@ -17,7 +18,8 @@ namespace Scraper.Net.Tests
                 {
                     {"mock", mockScraper}
                 },
-                new List<IPostProcessor>());
+                new List<IPostProcessor>(),
+                NullLogger<ScraperService>.Instance);
 
             var id = "mockuser";
             
@@ -38,7 +40,8 @@ namespace Scraper.Net.Tests
                 new List<IPostProcessor>
                 {
                     new ContentRemoverPostProcessor()
-                });
+                },
+                NullLogger<ScraperService>.Instance);
 
             var posts = await scraper.GetPostsAsync("mockuser", "mock").ToListAsync();
 
@@ -59,7 +62,8 @@ namespace Scraper.Net.Tests
                 new List<IPostProcessor>
                 {
                     new ExceptionPostProcessor()
-                });
+                },
+                NullLogger<ScraperService>.Instance);
 
             await scraper.GetPostsAsync("mockuser", "mock").ToListAsync();
         }

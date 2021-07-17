@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net
 {
@@ -11,13 +12,16 @@ namespace Scraper.Net
     {
         private readonly IDictionary<string, IPlatformScraper> _platformScrapers;
         private readonly IEnumerable<IPostProcessor> _postProcessors;
+        private readonly ILogger<ScraperService> _logger;
 
         public ScraperService(
             IDictionary<string, IPlatformScraper> platformScrapers,
-            IEnumerable<IPostProcessor> postProcessors)
+            IEnumerable<IPostProcessor> postProcessors,
+            ILogger<ScraperService> logger)
         {
             _platformScrapers = platformScrapers;
             _postProcessors = postProcessors;
+            _logger = logger;
         }
 
         public async IAsyncEnumerable<Post> GetPostsAsync(
@@ -39,7 +43,7 @@ namespace Scraper.Net
             }
         }
 
-        private static IAsyncEnumerable<Post> ProcessPosts(
+        private IAsyncEnumerable<Post> ProcessPosts(
             IAsyncEnumerable<Post> posts,
             IPostProcessor postProcessor)
         {
@@ -49,8 +53,9 @@ namespace Scraper.Net
                 {
                     return postProcessor.ProcessAsync(post);
                 }
-                catch
+                catch(Exception e)
                 {
+                    _logger.LogWarning(e, "Post processor failed");
                     return new [] { post }.ToAsyncEnumerable(); // Return original post without processing if processing fails
                 }
             });

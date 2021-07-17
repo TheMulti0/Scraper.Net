@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 // ReSharper disable MethodSupportsCancellation
 
@@ -54,7 +55,8 @@ namespace Scraper.Net.Tests
                     {
                         {"mock", new MockDelayScraper(delay)}
                     },
-                    new List<IPostProcessor>());
+                    new List<IPostProcessor>(),
+                    NullLogger<ScraperService>.Instance);
 
                 var cts = new CancellationTokenSource(delay * coefficient);
 
@@ -89,7 +91,8 @@ namespace Scraper.Net.Tests
                     new List<IPostProcessor>
                     {
                         new MockDelayPostProcessor(delay)
-                    });
+                    },
+                    NullLogger<ScraperService>.Instance);
 
                 var cts = new CancellationTokenSource(delay * coefficient);
 
