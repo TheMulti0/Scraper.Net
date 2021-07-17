@@ -6,7 +6,7 @@ namespace Scraper.Net.Tests
 {
     internal class ExceptionPostProcessor : IPostProcessor
     {
-        public IAsyncEnumerable<Post> ProcessAsync(Post post, CancellationToken ct = default)
+        public IAsyncEnumerable<Post> ProcessAsync(Post post, string platform, CancellationToken ct = default)
         {
             throw new InvalidOperationException();
         }

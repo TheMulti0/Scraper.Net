@@ -35,7 +35,7 @@ namespace Scraper.Net
             
             IAsyncEnumerable<Post> posts = _postProcessors.Aggregate(
                 scrapedPosts,
-                ProcessPosts);
+                (p, pP) => ProcessPosts(p, pP, platform));
 
             await foreach (Post processedPost in posts.WithCancellation(ct))
             {
@@ -45,13 +45,14 @@ namespace Scraper.Net
 
         private IAsyncEnumerable<Post> ProcessPosts(
             IAsyncEnumerable<Post> posts,
-            IPostProcessor postProcessor)
+            IPostProcessor postProcessor,
+            string platform)
         {
             return posts.SelectMany(post =>
             {
                 try
                 {
-                    return postProcessor.ProcessAsync(post);
+                    return postProcessor.ProcessAsync(post, platform);
                 }
                 catch(Exception e)
                 {

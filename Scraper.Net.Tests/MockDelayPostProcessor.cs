@@ -17,6 +17,7 @@ namespace Scraper.Net.Tests
         
         public async IAsyncEnumerable<Post> ProcessAsync(
             Post post,
+            string platform,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
             await Task.Delay(_delay, ct);

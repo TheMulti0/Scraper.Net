@@ -8,6 +8,7 @@ namespace Scraper.Net.Tests
     {
         public async IAsyncEnumerable<Post> ProcessAsync(
             Post post,
+            string platform,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
             yield return post with { Content = null };

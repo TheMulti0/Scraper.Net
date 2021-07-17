@@ -1,14 +1,13 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Scraper.Net;
 
 namespace Scraper.Net.YoutubeDl.Tests
 {
     [TestClass]
     public class YoutubeDlPostProcessorTests
     {
-        private readonly YoutubeDlPostProcessor _youtubeDl = new();
+        private readonly YoutubeDlPostProcessor _youtubeDl = new(false);
         
         [DataTestMethod]
         [DataRow("https://facebook.com/hebpmo/posts/4293743697354072")]
@@ -36,8 +35,7 @@ namespace Scraper.Net.YoutubeDl.Tests
                 Url = url
             };
 
-            Post post = await _youtubeDl.ProcessAsync(originalPost)
-                .FirstOrDefaultAsync();
+            Post post = await _youtubeDl.ProcessAsync(originalPost, "").FirstOrDefaultAsync();
 
             Assert.IsNotNull(post);
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,20 @@ namespace Scraper.Net.Tests
     [TestClass]
     public class ScraperServiceTests
     {
+        [TestMethod]
+        public async Task TestNoMatchingScraper()
+        {
+            var scraper = new ScraperService(
+                new Dictionary<string, IPlatformScraper>(),
+                new List<IPostProcessor>(),
+                NullLogger<ScraperService>.Instance);
+
+            var id = "mockuser";
+
+            await Assert.ThrowsExceptionAsync<ArgumentException>(
+                async () => await scraper.GetPostsAsync(id, "mock").ToListAsync());
+        }
+        
         [TestMethod]
         public async Task TestPostDelivery()
         {

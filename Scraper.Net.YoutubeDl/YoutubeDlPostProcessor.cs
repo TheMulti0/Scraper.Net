@@ -11,12 +11,24 @@ namespace Scraper.Net.YoutubeDl
 {
     public class YoutubeDlPostProcessor : IPostProcessor
     {
+        private readonly bool _keepReceivedPost;
         private readonly YoutubeDL _youtubeDl = new();
+
+        public YoutubeDlPostProcessor(bool keepReceivedPost)
+        {
+            _keepReceivedPost = keepReceivedPost;
+        }
 
         public async IAsyncEnumerable<Post> ProcessAsync(
             Post post,
+            string platform,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
+            if (_keepReceivedPost)
+            {
+                yield return post;
+            }
+            
             VideoItem videoItem = await ExtractVideoItem(post.Url, ct);
 
             IEnumerable<IMediaItem> postMediaItems = post.MediaItems ?? Enumerable.Empty<IMediaItem>();

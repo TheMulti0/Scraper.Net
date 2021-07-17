@@ -7,6 +7,7 @@ namespace Scraper.Net
     {
         IAsyncEnumerable<Post> ProcessAsync(
             Post post,
+            string platform,
             CancellationToken ct = default);
     }
 }
