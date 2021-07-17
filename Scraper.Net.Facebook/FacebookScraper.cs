@@ -12,7 +12,7 @@ namespace Scraper.Net.Facebook
         private const string SharePrefixPattern = @"‏{0}‏\n‏\d{1,2}‏\s[\w\u0590-\u05FF]+\s·\n";
         private readonly FacebookPostsScraper _scraper;
 
-        public FacebookScraper(FacebookScraperConfig config)
+        public FacebookScraper(FacebookConfig config)
         {
             _scraper = new FacebookPostsScraper(config);
         }

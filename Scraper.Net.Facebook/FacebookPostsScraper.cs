@@ -11,13 +11,11 @@ namespace Scraper.Net.Facebook
     {
         private const string FacebookScriptName = "get_posts.py";
 
-        private readonly FacebookScraperConfig _config;
-
+        private readonly FacebookConfig _config;
         private readonly SemaphoreSlim _proxyIndexLock = new(1, 1);
         private int _proxyIndex;
 
-        public FacebookPostsScraper(
-            FacebookScraperConfig config)
+        public FacebookPostsScraper(FacebookConfig config)
         {
             _config = config;
         }
@@ -44,7 +42,8 @@ namespace Scraper.Net.Facebook
             string json = JsonSerializer.Serialize(request)
                 .Replace("\"", "\\\""); // Python argument's double quoted strings need to be escaped
 
-            string responseStr = await ScriptExecutor.ExecutePython(
+            string responseStr = await ScriptExecutor.Execute(
+                _config.PythonPath,
                 FacebookScriptName,
                 ct,
                 json);

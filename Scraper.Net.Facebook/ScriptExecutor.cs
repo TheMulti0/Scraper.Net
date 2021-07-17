@@ -9,14 +9,6 @@ namespace Scraper.Net.Facebook
 {
     public static class ScriptExecutor
     {
-        public static Task<string> ExecutePython(
-            string fileName,
-            CancellationToken token = default,
-            params object[] parameters)
-        {
-            return Execute("python3", fileName, token, parameters);
-        }
-        
         public static async Task<string> Execute(
             string command,
             string fileName,

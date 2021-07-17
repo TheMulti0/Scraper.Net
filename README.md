@@ -7,7 +7,7 @@
 - [x] Higher video extraction using Youtube-DL
 - [x] Asynchronous main scraper
 - [x] Screenshot support using Html/CSS to Image
-- [ ] Easy configuration of external binaries
+- [x] Easy configuration of external binaries
 - [ ] Facebook Profile/page comprehensive support
 - [ ] Facebook generator support
 - [ ] Twitter page size investigation

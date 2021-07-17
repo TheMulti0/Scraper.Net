@@ -1,7 +1,9 @@
 ﻿namespace Scraper.Net.Facebook
 {
-    public class FacebookScraperConfig
+    public class FacebookConfig
     {
+        public string PythonPath { get; init; } = "python3";
+        
         public int PageCount { get; set; } = 1;
 
         public string[] Proxies { get; set; } = new string[0];

@@ -6,17 +6,29 @@ using System.Threading;
 using System.Threading.Tasks;
 using YoutubeDLSharp;
 using YoutubeDLSharp.Metadata;
+using YoutubeDLSharp.Options;
 
 namespace Scraper.Net.YoutubeDl
 {
     public class YoutubeDlPostProcessor : IPostProcessor
     {
         private readonly bool _keepReceivedPost;
-        private readonly YoutubeDL _youtubeDl = new();
+        private readonly YoutubeDL _youtubeDl;
+        private readonly OptionSet _overrideOptions;
 
-        public YoutubeDlPostProcessor(bool keepReceivedPost)
+        public YoutubeDlPostProcessor(
+            bool keepReceivedPost,
+            YoutubeDlConfig config)
         {
             _keepReceivedPost = keepReceivedPost;
+            
+            _youtubeDl = new YoutubeDL(config.DegreeOfConcurrency)
+            {
+                YoutubeDLPath = config.YoutubeDlPath,
+                FFmpegPath = config.FfMpegPath
+            };
+
+            _overrideOptions = config.OverrideOptions;
         }
 
         public async IAsyncEnumerable<Post> ProcessAsync(
@@ -63,11 +75,12 @@ namespace Scraper.Net.YoutubeDl
                 format => format.AudioCodec != none && format.VideoCodec != none);
         }
 
-        private static ThumbnailData GetHighestQualityThumbnail(VideoData data) => data.Thumbnails.LastOrDefault();
+        private static ThumbnailData GetHighestQualityThumbnail(VideoData data) 
+            => data.Thumbnails.LastOrDefault();
 
         private async Task<VideoData> GetVideoData(string url, CancellationToken ct)
         {
-            RunResult<VideoData> result = await _youtubeDl.RunVideoDataFetch(url, ct);
+            RunResult<VideoData> result = await _youtubeDl.RunVideoDataFetch(url, ct, overrideOptions: _overrideOptions);
 
             if (result.Success)
             {
