@@ -8,32 +8,32 @@ namespace Scraper.Net.Twitter
 {
     internal class TweetScraper
     {
+        private readonly TwitterScraperConfig _config;
         internal ITwitterClient TwitterClient { get; }
         
         public TweetScraper(
             TwitterScraperConfig config)
         {
+            _config = config;
+            
             TwitterClient = new TwitterClient(
-                config.ConsumerKey,
-                config.ConsumerSecret);
+                _config.ConsumerKey,
+                _config.ConsumerSecret);
 
             TwitterClient.Auth.InitializeClientBearerTokenAsync().Wait();
         }
 
         public IAsyncEnumerable<ITweet> GetTweetsAsync(string userId)
         {
-            const int pageSize = 10;
-            const int pageCount = 5;
-
             var parameters = new GetUserTimelineParameters(userId)
             {
-                PageSize = pageSize,
+                PageSize = _config.MaxPageSize, 
                 TweetMode = TweetMode.Extended
             };
 
             return TwitterClient.Timelines.GetUserTimelineIterator(parameters)
                 .ToAsyncEnumerable()
-                .Take(pageSize * pageCount);
+                .Take(_config.MaxPages * _config.MaxPageSize);
         }
     }
 }
