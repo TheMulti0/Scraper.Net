@@ -17,31 +17,32 @@ class GetPostsRequest:
         self.__dict__.update(new_dict)
 
 
-class GetPostsResponse:
-    posts: []
-    error: str
-    error_description: str
+class Error:
+    type: str
+    message: str
+
+    def __init__(self, exception: Exception):
+        self.type = type(exception).__name__
+        self.message = str(exception)
 
 
 def json_converter(obj):
     if isinstance(obj, datetime):
         return obj.__str__()
-    if isinstance(obj, GetPostsResponse):
+    if isinstance(obj, Error):
         return obj.__dict__
 
 
 def main(args):
     request = GetPostsRequest(json.loads(args[0]))
-    response = GetPostsResponse()
 
     try:
-        response.posts = get_facebook_posts(request)
-    except Exception as e:
-        response.error = type(e).__name__
-        response.error_description = str(e)
+        for post in get_facebook_posts(request):
+            print(serialize(post))
 
-    print(
-        json.dumps(response, indent=2, default=json_converter))
+    except Exception as e:
+        error = Error(e)
+        print(serialize(error))
 
 
 def get_facebook_posts(request: GetPostsRequest):
@@ -55,6 +56,10 @@ def get_facebook_posts(request: GetPostsRequest):
         timeout=request.timeout)
 
     return list(posts)
+
+
+def serialize(obj):
+    return json.dumps(obj, indent=2, default=json_converter)
 
 
 if __name__ == "__main__":

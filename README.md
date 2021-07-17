@@ -8,8 +8,7 @@
 - [x] Asynchronous main scraper
 - [x] Screenshot support using Html/CSS to Image
 - [x] Easy configuration of external binaries
-- [ ] Facebook Profile/page comprehensive support
-- [ ] Facebook generator support
+- [x] Facebook generator support
 - [ ] Twitter page size investigation
 - [ ] RSS feeds support
 - [ ] Add GetProfile for scrapers

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Scraper.Net.Facebook
 {
@@ -21,9 +22,9 @@ namespace Scraper.Net.Facebook
             string id,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
-            IEnumerable<FacebookPost> posts = await _scraper.GetPostsAsync(id, ct);
-
-            foreach (Post post in posts.Select(ToPost(id)))
+            IAsyncEnumerable<FacebookPost> posts = _scraper.GetFacebookPostsAsync(id, ct);
+            
+            await foreach (Post post in posts.Select(ToPost(id)).WithCancellation(ct))
             {
                 yield return post;
             }

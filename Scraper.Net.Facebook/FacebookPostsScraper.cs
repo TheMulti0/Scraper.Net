@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,38 +21,74 @@ namespace Scraper.Net.Facebook
             _config = config;
         }
 
-        public async Task<IEnumerable<FacebookPost>> GetPostsAsync(string id, CancellationToken ct)
+        public IAsyncEnumerable<FacebookPost> GetFacebookPostsAsync(
+            string id,
+            CancellationToken ct)
         {
-            GetPostsResponse response = await GetResponseAsync(id, ct);
-
-            HandleError(response);
-
-            return response.Posts.Select(raw => raw.ToPost());
+            return GetRawPosts(id, ct).Select(raw => raw.ToPost());
         }
 
-        private async Task<GetPostsResponse> GetResponseAsync(string id, CancellationToken ct)
+        private async IAsyncEnumerable<RawFacebookPost> GetRawPosts(
+            string id,
+            [EnumeratorCancellation] CancellationToken ct)
         {
-            var request = new GetPostsRequest
+            GetPostsRequest request = await CreateGetPostsRequest(id, ct);
+
+            IAsyncEnumerable<string> postsJson = GetRawPostsJson(request, ct);
+
+            IAsyncEnumerable<RawFacebookPost> posts = postsJson.Select(json => Deserialize(json, request));
+
+            await foreach (RawFacebookPost post in posts.WithCancellation(ct))
             {
-                UserId = id,
-                Pages = _config.PageCount,
-                Proxy = await GetProxyAsync(ct),
-                CookiesFileName = _config.CookiesFileName
-            };
+                yield return post;
+            }
+        }
 
-            string json = JsonSerializer.Serialize(request)
-                .Replace("\"", "\\\""); // Python argument's double quoted strings need to be escaped
+        private static RawFacebookPost Deserialize(string json, GetPostsRequest request)
+        {
+            try
+            {
+                var post = JsonSerializer.Deserialize<RawFacebookPost>(json);
 
-            string responseStr = await ScriptExecutor.Execute(
+                if (post?.Available != true)
+                {
+                    throw new JsonException();
+                }
+                
+                return post;
+            }
+            catch (JsonException)
+            {
+                var error = JsonSerializer.Deserialize<Error>(json);
+                
+                if (error == null)
+                {
+                    throw;
+                }
+                
+                HandleError(error, request);
+                throw; // HandleError should throw exception
+            }
+        }
+
+        private IAsyncEnumerable<string> GetRawPostsJson(
+            GetPostsRequest request,
+            CancellationToken ct)
+        {
+            return ScriptExecutor.Execute(
                 _config.PythonPath,
                 FacebookScriptName,
-                ct,
-                json);
-
-            var response = JsonSerializer.Deserialize<GetPostsResponse>(responseStr);
-            
-            return response with { OriginalRequest = request };
+                request,
+                ct);
         }
+
+        private async Task<GetPostsRequest> CreateGetPostsRequest(string id, CancellationToken ct) => new GetPostsRequest
+        {
+            UserId = id,
+            Pages = _config.PageCount,
+            Proxy = await GetProxyAsync(ct),
+            CookiesFileName = _config.CookiesFileName
+        };
 
         private async Task<string> GetProxyAsync(CancellationToken ct)
         {
@@ -81,24 +118,20 @@ namespace Scraper.Net.Facebook
             }
         }
 
-        private static void HandleError(GetPostsResponse response)
+        private static void HandleError(Error error, GetPostsRequest request)
         {
-            switch (response.Error)
+            switch (error.Type)
             {
                 case "ProxyError":
-                    throw new InvalidOperationException($"Proxy is invalid, proxy is {response.OriginalRequest.Proxy}");
+                    throw new InvalidOperationException($"Proxy is invalid, proxy is {request.Proxy}");
                 case "TemporarilyBanned":
-                    throw new InvalidOperationException($"Temporarily banned, proxy is {response.OriginalRequest.Proxy}");
+                    throw new InvalidOperationException($"Temporarily banned, proxy is {request.Proxy}");
                 case "InvalidCookies":
                     throw new InvalidOperationException("Invalid cookies passed in the cookies file");
                 case "LoginRequired":
-                    throw new InvalidOperationException($"Login required in order to view {response.OriginalRequest.UserId}");
+                    throw new InvalidOperationException($"Login required in order to view {request.UserId}");
                 default:
-                    if (response.Posts == null)
-                    {
-                        throw new Exception($"Unrecognized error {response.Error} {response.ErrorDescription}");    
-                    }
-                    break;
+                    throw new Exception($"Unrecognized error {error} {error.Message}");    
             }
         }
     }

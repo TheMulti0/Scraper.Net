@@ -1,45 +1,63 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reactive.Linq;
+using System.Runtime.CompilerServices;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Scraper.Net.Facebook
 {
-    public static class ScriptExecutor
+    internal static class ScriptExecutor
     {
-        public static async Task<string> Execute(
-            string command,
-            string fileName,
-            CancellationToken token = default,
-            params object[] parameters)
+        public static IAsyncEnumerable<string> Execute(
+            string executablePath,
+            string scriptName,
+            GetPostsRequest request,
+            CancellationToken token = default)
         {
-            var arguments = new[] { fileName }
-                .Concat(
-                    parameters
-                        .Where(o => o != null)
-                        .Select(o => o.ToString()));
-            
-            ProcessStartInfo startInfo = CreateProcessStartInfo(
-                command,
-                arguments);
-            
-            using Process process = Process.Start(startInfo);
+            Process process = StartProcess(executablePath, scriptName, GetRequestJson(request), token);
 
+            IObservable<string> standardOutput = process.StandardOutput();
+
+            const string startOfPost = "{";
+            const string endOfPost = "}";
+            
+            return standardOutput
+                .SkipWhile(s => s != startOfPost)
+                .TakeUntil(s => s == endOfPost)
+                .Aggregate(string.Empty, (lhs, rhs) => lhs + "\n" + rhs)
+                .Retry()
+                .Where(s => s.EndsWith(endOfPost))
+                .ToAsyncEnumerable();
+        }
+        
+        private static string GetRequestJson(GetPostsRequest request)
+        {
+            return JsonSerializer.Serialize(request).Replace("\"", "\\\"");
+        }
+
+        private static Process StartProcess(
+            string executablePath,
+            string scriptName,
+            string parameters,
+            CancellationToken token)
+        {
+            string[] arguments = {
+                scriptName,
+                parameters
+            };
+
+            ProcessStartInfo startInfo = CreateProcessStartInfo(executablePath, arguments);
+            
+            Process process = Process.Start(startInfo);
+            
             token.Register(() => process.Kill());
-
-            string output = await process.StandardOutput.ReadToEndAsync();
-            string error = await process.StandardError.ReadToEndAsync();
-
-            await process.WaitForExitAsync(token);
             
-            if (string.IsNullOrEmpty(output))
-            {
-                throw new InvalidOperationException($"Failed to execute script (no output) {error}");
-            }
-
-            return output;
+            return process;
         }
 
         private static ProcessStartInfo CreateProcessStartInfo(
