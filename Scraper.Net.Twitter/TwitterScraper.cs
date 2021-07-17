@@ -26,9 +26,9 @@ namespace Scraper.Net.Twitter
             string id, 
             [EnumeratorCancellation] CancellationToken ct = default)
         {
-            IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(id);
+            IAsyncEnumerable<ITweet> tweets = _tweetScraper.GetTweetsAsync(id);
 
-            IAsyncEnumerable<Post> posts = tweets.ToAsyncEnumerable().SelectAwaitWithCancellation(ToPost(id));
+            IAsyncEnumerable<Post> posts = tweets.SelectAwaitWithCancellation(ToPost(id));
             
             await foreach (Post post in posts.WithCancellation(ct))
             {

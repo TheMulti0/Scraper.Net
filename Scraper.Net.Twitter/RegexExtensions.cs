@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scraper.Net.Twitter
 {
-    public static class RegexExtensions
+    internal static class RegexExtensions
     {
         public static async Task<string> ReplaceAsync(
             this Regex regex,
