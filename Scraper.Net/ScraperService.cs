@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Scraper.Net
 {
-    public class Scraper
+    public class ScraperService
     {
         private readonly IDictionary<string, IPlatformScraper> _platformScrapers;
         private readonly IEnumerable<IPostProcessor> _postProcessors;
 
-        public Scraper(
+        public ScraperService(
             IDictionary<string, IPlatformScraper> platformScrapers,
             IEnumerable<IPostProcessor> postProcessors)
         {

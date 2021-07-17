@@ -6,13 +6,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Tests
 {
     [TestClass]
-    public class ScraperTests
+    public class ScraperServiceTests
     {
         [TestMethod]
         public async Task TestPostDelivery()
         {
             var mockScraper = new MockScraper();
-            var scraper = new Scraper(
+            var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper> 
                 {
                     {"mock", mockScraper}
@@ -30,7 +30,7 @@ namespace Scraper.Net.Tests
         [TestMethod]
         public async Task TestPostProcessing()
         {
-            var scraper = new Scraper(
+            var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper> 
                 {
                     {"mock", new MockScraper()}
@@ -51,7 +51,7 @@ namespace Scraper.Net.Tests
         [TestMethod]
         public async Task TestPostProcessorExceptionCatch()
         {
-            var scraper = new Scraper(
+            var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper> 
                 {
                     {"mock", new MockScraper()}

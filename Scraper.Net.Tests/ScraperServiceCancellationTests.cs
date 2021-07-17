@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Tests
 {
     [TestClass]
-    public class ScraperCancellationTests
+    public class ScraperServiceCancellationTests
     {
         [DataTestMethod]
         [DataRow(500)]
@@ -49,7 +49,7 @@ namespace Scraper.Net.Tests
             {
                 TimeSpan delay = TimeSpan.FromMilliseconds(delayMs);
 
-                var scraper = new Scraper(
+                var scraper = new ScraperService(
                     new Dictionary<string, IPlatformScraper>
                     {
                         {"mock", new MockDelayScraper(delay)}
@@ -81,7 +81,7 @@ namespace Scraper.Net.Tests
             {
                 TimeSpan delay = TimeSpan.FromMilliseconds(delayMs);
 
-                var scraper = new Scraper(
+                var scraper = new ScraperService(
                     new Dictionary<string, IPlatformScraper>
                     {
                         {"mock", new MockScraper(true)}
