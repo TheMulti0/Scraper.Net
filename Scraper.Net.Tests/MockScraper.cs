@@ -1,30 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace Scraper.Net.Tests
 {
     internal class MockScraper : IPlatformScraper
     {
-        public IAsyncEnumerable<Post> GetPostsAsync(string id, CancellationToken ct =default)
-        {
-            IEnumerable<Post> posts = new []
-            {
-                new Post
-                {
-                    Content = "Mock1"
-                },
-                new Post
-                {
-                    Content = "Mock2"
-                },
-                new Post
-                {
-                    Content = "Mock3"
-                }
-            };
+        private readonly bool _ignoreCt;
+        private readonly MockDelayScraper _scraper;
 
-            return posts.ToAsyncEnumerable();
+        public MockScraper(bool ignoreCt = false)
+        {
+            _ignoreCt = ignoreCt;
+            _scraper = new MockDelayScraper(TimeSpan.Zero);
+        }
+
+        public IAsyncEnumerable<Post> GetPostsAsync(string id, CancellationToken ct = default)
+        {
+            return _ignoreCt 
+                ? _scraper.GetPostsAsync(id) 
+                : _scraper.GetPostsAsync(id, ct);
         }
     }
 }
