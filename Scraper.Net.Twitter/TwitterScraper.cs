@@ -21,7 +21,9 @@ namespace Scraper.Net.Twitter
             _mediaItemsExtractor = new MediaItemsExtractor();
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(string id, CancellationToken ct = default)
+        public async Task<IEnumerable<Post>> GetPostsAsync(
+            string id, 
+            CancellationToken ct = default)
         {
             IEnumerable<ITweet> tweets = await _tweetScraper.GetTweetsAsync(id);
 

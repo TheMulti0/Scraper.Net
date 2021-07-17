@@ -17,7 +17,9 @@ namespace Scraper.Net.Facebook
             _scraper = new FacebookPostsScraper(config);
         }
 
-        public async Task<IEnumerable<Post>> GetPostsAsync(string id, CancellationToken ct = default)
+        public async Task<IEnumerable<Post>> GetPostsAsync(
+            string id,
+            CancellationToken ct = default)
         {
             IEnumerable<FacebookPost> posts = await _scraper.GetPostsAsync(id, ct);
             

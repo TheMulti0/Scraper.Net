@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading;
 using System.Threading.Tasks;
 using YoutubeDLSharp;
 using YoutubeDLSharp.Metadata;
@@ -11,9 +13,11 @@ namespace Scraper.Net.YoutubeDl
     {
         private readonly YoutubeDL _youtubeDl = new();
 
-        public async IAsyncEnumerable<Post> ProcessAsync(Post post)
+        public async IAsyncEnumerable<Post> ProcessAsync(
+            Post post,
+            [EnumeratorCancellation] CancellationToken ct = default)
         {
-            VideoItem videoItem = await ExtractVideoItem(post.Url);
+            VideoItem videoItem = await ExtractVideoItem(post.Url, ct);
 
             IEnumerable<IMediaItem> postMediaItems = post.MediaItems ?? Enumerable.Empty<IMediaItem>();
             
@@ -24,9 +28,9 @@ namespace Scraper.Net.YoutubeDl
             yield return post with { MediaItems = mediaItems };
         }
 
-        private async Task<VideoItem> ExtractVideoItem(string postUrl)
+        private async Task<VideoItem> ExtractVideoItem(string postUrl, CancellationToken ct)
         {
-            VideoData data = await GetVideoData(postUrl);
+            VideoData data = await GetVideoData(postUrl, ct);
 
             FormatData highestFormat = GetHighestQualityFormat(data);
             ThumbnailData highestThumbnail = GetHighestQualityThumbnail(data);
@@ -49,9 +53,9 @@ namespace Scraper.Net.YoutubeDl
 
         private static ThumbnailData GetHighestQualityThumbnail(VideoData data) => data.Thumbnails.LastOrDefault();
 
-        private async Task<VideoData> GetVideoData(string url)
+        private async Task<VideoData> GetVideoData(string url, CancellationToken ct)
         {
-            RunResult<VideoData> result = await _youtubeDl.RunVideoDataFetch(url);
+            RunResult<VideoData> result = await _youtubeDl.RunVideoDataFetch(url, ct);
 
             if (result.Success)
             {
@@ -59,7 +63,6 @@ namespace Scraper.Net.YoutubeDl
             }
             
             string message = string.Join('\n', result.ErrorOutput);
-
             throw new Exception(message);
         }
     }

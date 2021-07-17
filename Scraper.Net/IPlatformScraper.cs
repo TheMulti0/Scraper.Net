@@ -6,6 +6,8 @@ namespace Scraper.Net
 {
     public interface IPlatformScraper
     {
-        Task<IEnumerable<Post>> GetPostsAsync(string id, CancellationToken ct = default);
+        Task<IEnumerable<Post>> GetPostsAsync(
+            string id,
+            CancellationToken ct = default);
     }
 }
