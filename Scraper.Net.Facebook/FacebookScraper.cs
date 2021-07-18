@@ -11,18 +11,39 @@ namespace Scraper.Net.Facebook
     public class FacebookScraper : IPlatformScraper
     {
         private const string SharePrefixPattern = @"‏{0}‏\n‏\d{1,2}‏\s[\w\u0590-\u05FF]+\s·\n";
-        private readonly FacebookPostsScraper _scraper;
+        private readonly PostsScraper _postsScraper;
+        private readonly PageInfoScraper _pageInfoScraper;
 
         public FacebookScraper(FacebookConfig config)
         {
-            _scraper = new FacebookPostsScraper(config);
+            if (config?.MaxPageCount < 1)
+            {
+                throw new ArgumentException(nameof(config.MaxPageCount));
+            }
+            _postsScraper = new PostsScraper(config);
+            _pageInfoScraper = new PageInfoScraper(config);
+        }
+
+        public async Task<Net.Author> GetAuthorAsync(
+            string id, 
+            CancellationToken ct = default)
+        {
+            PageInfo pageInfo = await _pageInfoScraper.GetPageInfoAsync(id, ct);
+
+            return new Net.Author
+            {
+                Id = pageInfo.Url.Split('/')[1],
+                DisplayName = pageInfo.Name,
+                Description = pageInfo.About,
+                ProfilePictureUrl = pageInfo.Image
+            };
         }
 
         public async IAsyncEnumerable<Post> GetPostsAsync(
             string id,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
-            IAsyncEnumerable<FacebookPost> posts = _scraper.GetFacebookPostsAsync(id, ct);
+            IAsyncEnumerable<FacebookPost> posts = _postsScraper.GetFacebookPostsAsync(id, ct);
             
             await foreach (Post post in posts.Select(ToPost(id)).WithCancellation(ct))
             {
@@ -44,7 +65,7 @@ namespace Scraper.Net.Facebook
             };
         }
 
-        private string CleanText(FacebookPost post)
+        private static string CleanText(FacebookPost post)
         {
             if (post.SharedPost == null)
             {

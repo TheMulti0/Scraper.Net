@@ -16,7 +16,7 @@ namespace Scraper.Net.Facebook
         public static IAsyncEnumerable<string> Execute(
             string executablePath,
             string scriptName,
-            GetPostsRequest request,
+            object request,
             CancellationToken token = default)
         {
             Process process = StartProcess(executablePath, scriptName, GetRequestJson(request), token);
@@ -35,7 +35,7 @@ namespace Scraper.Net.Facebook
                 .ToAsyncEnumerable();
         }
         
-        private static string GetRequestJson(GetPostsRequest request)
+        private static string GetRequestJson(object request)
         {
             return JsonSerializer.Serialize(request).Replace("\"", "\\\"");
         }

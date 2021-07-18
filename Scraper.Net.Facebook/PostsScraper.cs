@@ -8,20 +8,16 @@ using System.Threading.Tasks;
 
 namespace Scraper.Net.Facebook
 {
-    internal class FacebookPostsScraper
+    internal class PostsScraper
     {
-        private const string FacebookScriptName = "get_posts.py";
+        private const string ScriptName = "get_posts.py";
 
         private readonly FacebookConfig _config;
         private readonly SemaphoreSlim _proxyIndexLock = new(1, 1);
         private int _proxyIndex;
 
-        public FacebookPostsScraper(FacebookConfig config)
+        public PostsScraper(FacebookConfig config)
         {
-            if (_config.MaxPageCount < 1)
-            {
-                throw new ArgumentException(nameof(_config.MaxPageCount));
-            }
             _config = config;
         }
 
@@ -81,7 +77,7 @@ namespace Scraper.Net.Facebook
         {
             return ScriptExecutor.Execute(
                 _config.PythonPath,
-                FacebookScriptName,
+                ScriptName,
                 request,
                 ct);
         }
