@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Scraper.Net
 {
@@ -16,7 +17,7 @@ namespace Scraper.Net
         public string AuthorId { get; init; }
 
         public DateTime? CreationDate { get; init; }
-        
-        public IEnumerable<IMediaItem> MediaItems { get; init; }
+
+        public IEnumerable<IMediaItem> MediaItems { get; init; } = Enumerable.Empty<IMediaItem>();
     }
 }

@@ -10,7 +10,7 @@
 - [x] Easy configuration of external binaries
 - [x] Facebook generator support
 - [x] Twitter page size investigation
-- [ ] RSS feeds support
+- [x] RSS feeds support
 - [ ] Add GetProfile for scrapers
 - [ ] Rate-limit handling
 - [ ] Instagram support
