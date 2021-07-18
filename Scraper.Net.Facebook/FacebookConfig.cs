@@ -4,7 +4,7 @@
     {
         public string PythonPath { get; init; } = "python3";
         
-        public int PageCount { get; set; } = 1;
+        public int MaxPageCount { get; set; } = 1;
 
         public string[] Proxies { get; set; } = new string[0];
 

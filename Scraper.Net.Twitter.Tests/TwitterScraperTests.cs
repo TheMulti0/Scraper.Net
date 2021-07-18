@@ -22,7 +22,7 @@ namespace Scraper.Net.Twitter.Tests
                 .AddUserSecrets<TwitterScraperTests>()
                 .Build();
 
-            var config = rootConfig.Get<TwitterScraperConfig>();
+            var config = rootConfig.Get<TwitterConfig>();
             
             _scraper = new TwitterScraper(config);
             _tweetScraper = new TweetScraper(config);

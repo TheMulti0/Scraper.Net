@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Tweetinvi;
 using Tweetinvi.Models;
@@ -8,12 +9,19 @@ namespace Scraper.Net.Twitter
 {
     internal class TweetScraper
     {
-        private readonly TwitterScraperConfig _config;
+        private readonly TwitterConfig _config;
         internal ITwitterClient TwitterClient { get; }
         
-        public TweetScraper(
-            TwitterScraperConfig config)
+        public TweetScraper(TwitterConfig config)
         {
+            if (_config.MaxPageCount < 1)
+            {
+                throw new ArgumentException(nameof(_config.MaxPageCount));
+            }
+            if (_config.MaxPageSize < 1)
+            {
+                throw new ArgumentException(nameof(_config.MaxPageSize));
+            }
             _config = config;
             
             TwitterClient = new TwitterClient(
@@ -33,7 +41,7 @@ namespace Scraper.Net.Twitter
 
             return TwitterClient.Timelines.GetUserTimelineIterator(parameters)
                 .ToAsyncEnumerable()
-                .Take(_config.MaxPages * _config.MaxPageSize);
+                .Take(_config.MaxPageCount * _config.MaxPageSize);
         }
     }
 }

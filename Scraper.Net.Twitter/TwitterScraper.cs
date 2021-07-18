@@ -15,7 +15,7 @@ namespace Scraper.Net.Twitter
         private readonly MediaItemsExtractor _mediaItemsExtractor;
 
         public TwitterScraper(
-            TwitterScraperConfig config)
+            TwitterConfig config)
         {
             _tweetScraper = new TweetScraper(config);
             _textCleaner = new TextCleaner();

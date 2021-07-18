@@ -1,6 +1,6 @@
 ﻿namespace Scraper.Net.Twitter
 {
-    public record TwitterScraperConfig
+    public record TwitterConfig
     {
         public string ConsumerKey { get; init; }
 
@@ -8,6 +8,6 @@
 
         public int MaxPageSize { get; init; } = 200;
 
-        public int MaxPages { get; init; } = 1;
+        public int MaxPageCount { get; init; } = 1;
     }
 }

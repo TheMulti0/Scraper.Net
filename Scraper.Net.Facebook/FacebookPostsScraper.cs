@@ -18,6 +18,10 @@ namespace Scraper.Net.Facebook
 
         public FacebookPostsScraper(FacebookConfig config)
         {
+            if (_config.MaxPageCount < 1)
+            {
+                throw new ArgumentException(nameof(_config.MaxPageCount));
+            }
             _config = config;
         }
 
@@ -85,7 +89,7 @@ namespace Scraper.Net.Facebook
         private async Task<GetPostsRequest> CreateGetPostsRequest(string id, CancellationToken ct) => new GetPostsRequest
         {
             UserId = id,
-            Pages = _config.PageCount,
+            Pages = _config.MaxPageCount,
             Proxy = await GetProxyAsync(ct),
             CookiesFileName = _config.CookiesFileName
         };
