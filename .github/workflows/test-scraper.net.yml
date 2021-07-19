@@ -2,7 +2,7 @@ name: Build and test Scraper.Net
 
 on:
   push:
-    branches: [ master ]
+    #branches: [ master ]
     #paths:
     #  - "Scraper.Net/**"
     #  - "Scraper.Net.Tests/**"
