@@ -5,7 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common\Common.csproj" />
         <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
     </ItemGroup>
 
