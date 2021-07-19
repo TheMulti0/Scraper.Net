@@ -9,17 +9,17 @@ using Tweetinvi.Models;
 namespace Scraper.Net.Twitter.Tests
 {
     [TestClass]
-    public class TweetScraperTests
+    public class TwitterScraperGetPostsTests
     {
         private readonly ITwitterClient _twitterClient;
         private readonly TwitterScraper _scraper;
         private readonly TextCleaner _textCleaner;
         private readonly MediaItemsExtractor _mediaItemsExtractor;
 
-        public TweetScraperTests()
+        public TwitterScraperGetPostsTests()
         {
             IConfigurationRoot rootConfig = new ConfigurationBuilder()
-                .AddUserSecrets<TweetScraperTests>()
+                .AddUserSecrets<TwitterScraperGetPostsTests>()
                 .Build();
 
             var config = rootConfig.Get<TwitterConfig>();

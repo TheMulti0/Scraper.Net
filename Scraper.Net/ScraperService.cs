@@ -24,6 +24,16 @@ namespace Scraper.Net
             _logger = logger;
         }
 
+        public Task<Author> GetAuthorAsync(
+            string id,
+            string platform,
+            CancellationToken ct = default)
+        {
+            IPlatformScraper scraper = GetScraper(platform);
+
+            return scraper.GetAuthorAsync(id, ct);
+        }
+
         public async IAsyncEnumerable<Post> GetPostsAsync(
             string id,
             string platform,

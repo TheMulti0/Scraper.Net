@@ -15,6 +15,16 @@ namespace Scraper.Net.Tests
             _delay = delay;
         }
 
+        public async Task<Author> GetAuthorAsync(string id, CancellationToken ct = default)
+        {
+            await Task.Delay(_delay, ct);
+
+            return new Author
+            {
+                Id = "author"
+            };
+        }
+
         public async IAsyncEnumerable<Post> GetPostsAsync(
             string id,
             [EnumeratorCancellation] CancellationToken ct = default)

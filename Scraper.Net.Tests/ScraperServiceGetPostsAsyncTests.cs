@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Tests
 {
     [TestClass]
-    public class ScraperServiceTests
+    public class ScraperServiceGetPostsAsyncTests
     {
         [TestMethod]
         public async Task TestNoMatchingScraper()

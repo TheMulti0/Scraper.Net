@@ -6,9 +6,9 @@ namespace Scraper.Net
 {
     public interface IPlatformScraper
     {
-        // Task<Author> GetAuthorAsync(
-        //     string id,
-        //     CancellationToken ct = default);
+        Task<Author> GetAuthorAsync(
+            string id,
+            CancellationToken ct = default);
         
         IAsyncEnumerable<Post> GetPostsAsync(
             string id,

@@ -5,14 +5,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Twitter.Tests
 {
     [TestClass]
-    public class UserScraperTests
+    public class TwitterScraperGetPostsAsyncTests
     {
         private readonly TwitterScraper _scraper;
 
-        public UserScraperTests()
+        public TwitterScraperGetPostsAsyncTests()
         {
             IConfigurationRoot rootConfig = new ConfigurationBuilder()
-                .AddUserSecrets<UserScraperTests>()
+                .AddUserSecrets<TwitterScraperGetPostsAsyncTests>()
                 .Build();
 
             var config = rootConfig.Get<TwitterConfig>();
