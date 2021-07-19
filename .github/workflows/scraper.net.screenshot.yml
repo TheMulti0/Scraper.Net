@@ -2,9 +2,9 @@ name: Test and publish Scraper.Net.Screenshot
 
 on:
   push:
-  #  paths:
-  #    - "Scraper.Net.Screenshot/**"
-  #    - "Scraper.Net.Screenshot.Tests/**"
+   paths:
+     - "Scraper.Net.Screenshot/**"
+     - "Scraper.Net.Screenshot.Tests/**"
   pull_request:
     paths:
       - "Scraper.Net.Screenshot/**"

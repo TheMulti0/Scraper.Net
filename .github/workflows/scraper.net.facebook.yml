@@ -2,9 +2,9 @@ name: Test and publish Scraper.Net.Facebook
 
 on:
   push:
-  #  paths:
-  #    - "Scraper.Net.Facebook/**"
-  #    - "Scraper.Net.Facebook.Tests/**"
+   paths:
+     - "Scraper.Net.Facebook/**"
+     - "Scraper.Net.Facebook.Tests/**"
   pull_request:
     paths:
       - "Scraper.Net.Facebook/**"
