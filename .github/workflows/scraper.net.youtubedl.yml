@@ -28,8 +28,8 @@ jobs:
 
     - name: Setup youtube-dl
       run: |
-        curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-        chmod a+rx /usr/local/bin/youtube-dl
+        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+        sudo chmod a+rx /usr/local/bin/youtube-dl
 
     - name: Restore dependencies
       run: dotnet restore
