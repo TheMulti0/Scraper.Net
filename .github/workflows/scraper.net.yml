@@ -54,3 +54,4 @@ jobs:
       with:
         PROJECT_FILE_PATH: Scraper.Net/Scraper.Net.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+        TAG_COMMIT: false
