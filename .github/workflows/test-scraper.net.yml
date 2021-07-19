@@ -32,4 +32,4 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build
+      run: dotnet test --no-build Scraper.Net.Tests
