@@ -11,7 +11,7 @@
 - [x] Facebook generator support
 - [x] Twitter page size investigation
 - [x] RSS feeds support
-- [ ] Add GetProfile for scrapers
+- [x] Add GetProfile for scrapers
 - [ ] Rate-limit handling
 - [ ] Instagram support
 - [ ] Telegram support
