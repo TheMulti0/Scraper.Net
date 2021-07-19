@@ -2,9 +2,9 @@ name: Test and publish Scraper.Net.Twitter
 
 on:
   push:
-   paths:
-     - "Scraper.Net.Twitter/**"
-     - "Scraper.Net.Twitter.Tests/**"
+  #  paths:
+  #    - "Scraper.Net.Twitter/**"
+  #    - "Scraper.Net.Twitter.Tests/**"
   pull_request:
     paths:
       - "Scraper.Net.Twitter/**"

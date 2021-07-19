@@ -2,9 +2,9 @@ name: Test and publish Scraper.Net.YoutubeDl
 
 on:
   push:
-   paths:
-     - "Scraper.Net.YoutubeDl/**"
-     - "Scraper.Net.YoutubeDl.Tests/**"
+  #  paths:
+  #    - "Scraper.Net.YoutubeDl/**"
+  #    - "Scraper.Net.YoutubeDl.Tests/**"
   pull_request:
     paths:
       - "Scraper.Net.YoutubeDl/**"
