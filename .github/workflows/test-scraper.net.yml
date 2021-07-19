@@ -3,9 +3,9 @@ name: Build and test Scraper.Net
 on:
   push:
     branches: [ master ]
-    paths:
-      - "Scraper.Net/**"
-      - "Scraper.Net.Tests/**"
+    #paths:
+    #  - "Scraper.Net/**"
+    #  - "Scraper.Net.Tests/**"
   pull_request:
     branches: [ master ]
     paths:
