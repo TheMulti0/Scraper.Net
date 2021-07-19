@@ -4,29 +4,61 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Tweetinvi;
 using Tweetinvi.Models;
 
 namespace Scraper.Net.Twitter
 {
     public class TwitterScraper : IPlatformScraper
     {
-        private readonly TweetScraper _tweetScraper;
+        private readonly AsyncLazy<TweetScraper> _tweetScraper;
+        private readonly AsyncLazy<UserScraper> _userScraper;
         private readonly TextCleaner _textCleaner;
         private readonly MediaItemsExtractor _mediaItemsExtractor;
 
         public TwitterScraper(
             TwitterConfig config)
         {
-            _tweetScraper = new TweetScraper(config);
+            if (config.MaxPageCount < 1)
+            {
+                throw new ArgumentException(nameof(config.MaxPageCount));
+            }
+            if (config.MaxPageSize < 1)
+            {
+                throw new ArgumentException(nameof(config.MaxPageSize));
+            }
+            
+            var twitterClient = new AsyncLazy<ITwitterClient>(() => TwitterClientFactory.CreateAsync(config));
+
+            _tweetScraper = new AsyncLazy<TweetScraper>(async () => new TweetScraper(await twitterClient, config));
+            _userScraper = new AsyncLazy<UserScraper>(async () => new UserScraper(await twitterClient));
+            
             _textCleaner = new TextCleaner();
             _mediaItemsExtractor = new MediaItemsExtractor();
+        }
+
+        public async Task<Author> GetAuthorAsync(
+            string id,
+            CancellationToken ct = default)
+        {
+            UserScraper userScraper = await _userScraper;
+            IUser user = await userScraper.GetUserAsync(id);
+
+            return new Author
+            {
+                Id = user.ScreenName,
+                DisplayName = user.Name,
+                Description = user.Description,
+                ProfilePictureUrl = user.ProfileImageUrl
+            };
         }
 
         public async IAsyncEnumerable<Post> GetPostsAsync(
             string id, 
             [EnumeratorCancellation] CancellationToken ct = default)
         {
-            IAsyncEnumerable<ITweet> tweets = _tweetScraper.GetTweetsAsync(id);
+            TweetScraper tweetScraper = await _tweetScraper;
+            IAsyncEnumerable<ITweet> tweets = tweetScraper.GetTweetsAsync(id);
 
             IAsyncEnumerable<Post> posts = tweets.SelectAwaitWithCancellation(ToPost(id));
             
