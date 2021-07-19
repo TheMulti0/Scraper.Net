@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi;
+using Tweetinvi.Exceptions;
 using Tweetinvi.Models;
 
 namespace Scraper.Net.Twitter
@@ -42,7 +43,7 @@ namespace Scraper.Net.Twitter
             CancellationToken ct = default)
         {
             UserScraper userScraper = await _userScraper;
-            IUser user = await userScraper.GetUserAsync(id);
+            IUser user = await GetUserAsync(id, userScraper);
 
             return new Author
             {
@@ -53,19 +54,30 @@ namespace Scraper.Net.Twitter
             };
         }
 
+        private static Task<IUser> GetUserAsync(string id, UserScraper userScraper)
+        {
+            return ExceptionHandler.HandleExceptionAsync(id, () => userScraper.GetUserAsync(id));
+        }
+
         public async IAsyncEnumerable<Post> GetPostsAsync(
             string id, 
             [EnumeratorCancellation] CancellationToken ct = default)
         {
             TweetScraper tweetScraper = await _tweetScraper;
-            IAsyncEnumerable<ITweet> tweets = tweetScraper.GetTweetsAsync(id);
 
+            IAsyncEnumerable<ITweet> tweets = GetTweetsAsync(id, tweetScraper);
+            
             IAsyncEnumerable<Post> posts = tweets.SelectAwaitWithCancellation(ToPost(id));
             
             await foreach (Post post in posts.WithCancellation(ct))
             {
                 yield return post;
             }
+        }
+
+        private static IAsyncEnumerable<ITweet> GetTweetsAsync(string id, TweetScraper tweetScraper)
+        {
+            return ExceptionHandler.HandleExceptionAsync(id, () => tweetScraper.GetTweetsAsync(id));
         }
 
         private Func<ITweet, CancellationToken, ValueTask<Post>> ToPost(string id)
