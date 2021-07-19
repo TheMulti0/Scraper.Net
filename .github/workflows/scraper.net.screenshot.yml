@@ -1,14 +1,14 @@
-name: Test and publish Scraper.Net
+name: Test and publish Scraper.Net.Screenshot
 
 on:
   push:
    paths:
-     - "Scraper.Net/**"
-     - "Scraper.Net.Tests/**"
+     - "Scraper.Net.Screenshot/**"
+     - "Scraper.Net.Screenshot.Tests/**"
   pull_request:
     paths:
-      - "Scraper.Net/**"
-      - "Scraper.Net.Tests/**"
+      - "Scraper.Net.Screenshot/**"
+      - "Scraper.Net.Screenshot.Tests/**"
 
 env:
   DOTNET_VERSION: 5.0.x
@@ -31,9 +31,16 @@ jobs:
       
     - name: Build
       run: dotnet build --no-restore
+
+    - name: Set secrets
+      run: |
+        cd Scraper.Net.Screenshot.Tests
+        dotnet user-secrets set UserId "${{ secrets.HTMLCSSTOIMAGE_USERID }}"
+        dotnet user-secrets set ApiKey "${{ secrets.HTMLCSSTOIMAGE_APIKEY }}"
+        cd ..
       
     - name: Test
-      run: dotnet test --no-build Scraper.Net.Tests
+      run: dotnet test --no-build Scraper.Net.Screenshot.Tests
 
   publish:
 
@@ -53,6 +60,6 @@ jobs:
     - name: Publish on version change
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: Scraper.Net/Scraper.Net.csproj
+        PROJECT_FILE_PATH: Scraper.Net.Screenshot/Scraper.Net.Screenshot.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         TAG_COMMIT: false
