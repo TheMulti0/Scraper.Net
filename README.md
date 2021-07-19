@@ -12,6 +12,6 @@
 - [x] Twitter page size investigation
 - [x] RSS feeds support
 - [x] Add GetProfile for scrapers
-- [ ] Rate-limit handling
+- [x] Rate-limit handling
 - [ ] Instagram support
 - [ ] Telegram support
