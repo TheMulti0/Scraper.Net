@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Screenshot.Tests
 {
     [TestClass]
-    public class ScraperServiceTests
+    public class ScreenshotterServiceTests
     {
         [TestMethod]
         public async Task TestNoMatchingScreenshotter()
