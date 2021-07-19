@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Feed.Tests
@@ -20,11 +21,23 @@ namespace Scraper.Net.Feed.Tests
             await Test("http://www.ynet.co.il/Integration/StoryRss2.xml");
         }
 
+        [TestMethod]
+        public async Task TestNotFound()
+        {
+            await TestFailure<IdNotFoundException>("somenotaccesibleurl"); // Try as file
+            await TestFailure<IdNotFoundException>("https://somenotaccesibleurl"); // Try url
+        }
+
         private static async Task Test(string url)
         {
             var author = await FeedScraper.GetAuthorAsync(url);
 
             Assert.IsNotNull(author.Id);
+        }
+
+        private static Task TestFailure<T>(string url) where T : Exception
+        {
+            return Assert.ThrowsExceptionAsync<T>(async () => await FeedScraper.GetAuthorAsync(url));
         }
     }
 }

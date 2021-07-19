@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 using Tweetinvi.Exceptions;
 
@@ -45,12 +46,14 @@ namespace Scraper.Net.Twitter
                 }
                 catch (TwitterException e)
                 {
-                    switch (e.StatusCode)
+                    switch ((HttpStatusCode?) e.StatusCode)
                     {
-                        case 404:
+                        case HttpStatusCode.NotFound:
                             throw new IdNotFoundException(id, e);
-                        case 429:
+                        
+                        case HttpStatusCode.TooManyRequests:
                             throw new RateLimitedException(e);
+                        
                         default:
                             throw;
                     }

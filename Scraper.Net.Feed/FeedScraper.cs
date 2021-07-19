@@ -44,7 +44,7 @@ namespace Scraper.Net.Feed
 
         private static SyndicationFeed GetFeed(string id)
         {
-            using var reader = XmlReader.Create(id);
+            using XmlReader reader = ExceptionHandler.Do(id, () => XmlReader.Create(id));
             
             return SyndicationFeed.Load(reader);
         }
