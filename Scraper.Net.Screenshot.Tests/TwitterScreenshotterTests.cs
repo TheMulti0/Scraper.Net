@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Screenshot.Tests
 {
-    [TestClass]
+    //[TestClass]
     public class TwitterScreenshotterTests
     {
         private readonly HtmlCssToImageClient _client;
