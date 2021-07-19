@@ -25,17 +25,17 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
-        
-    - name: Restore dependencies
-      run: dotnet restore
-      
-    - name: Build
-      run: dotnet build --no-restore
 
     - name: Setup youtube-dl
       run: |
         curl -L https://yt-dl.org/downloads/latest/youtube-dl -o ./youtube-dl.exe
         chmod a+rx ./youtube-dl.exe
+                
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore
       
     - name: Test
       run: dotnet test --no-build Scraper.Net.YoutubeDl.Tests

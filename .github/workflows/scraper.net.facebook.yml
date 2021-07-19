@@ -25,6 +25,13 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+
+    - name: Install python dependencies
+      run: pip install -r Scraper.Net.Facebook/requirements.txt
         
     - name: Restore dependencies
       run: dotnet restore
