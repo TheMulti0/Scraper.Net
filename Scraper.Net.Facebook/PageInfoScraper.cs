@@ -20,9 +20,10 @@ namespace Scraper.Net.Facebook
 
         public async Task<PageInfo> GetPageInfoAsync(
             string id,
+            string proxy,
             CancellationToken ct)
         {
-            GetPageInfoRequest request = await CreateGetPageInfoRequest(id, ct);
+            GetPageInfoRequest request = CreateGetPageInfoRequest(id, proxy);
 
             string pageInfoJson = await GetPageInfoJson(request, ct).FirstOrDefaultAsync(ct);
 
@@ -44,15 +45,15 @@ namespace Scraper.Net.Facebook
             }
             catch (JsonException)
             {
-                var error = JsonSerializer.Deserialize<Error>(json);
+                var exception = JsonSerializer.Deserialize<FacebookScraperException>(json);
                 
-                if (error == null)
+                if (exception == null)
                 {
                     throw;
                 }
                 
-                HandleError(error, request);
-                throw; // HandleError should throw exception
+                ExceptionHandler.HandleException(request.UserId, request.Proxy, exception);
+                throw; // HandleException should throw exception
             }
         }
 
@@ -67,33 +68,14 @@ namespace Scraper.Net.Facebook
                 ct);
         }
 
-        private async Task<GetPageInfoRequest> CreateGetPageInfoRequest(string id, CancellationToken ct)
+        private GetPageInfoRequest CreateGetPageInfoRequest(string id, string proxy)
         {
             return new()
             {
                 UserId = id,
-                //Proxy = await GetProxyAsync(ct),
+                Proxy = proxy,
                 CookiesFileName = _config.CookiesFileName
             };
-        }
-        
-        private static void HandleError(Error error, GetPageInfoRequest request)
-        {
-            switch (error.Type)
-            {
-                case "ProxyError":
-                    throw new InvalidOperationException($"Proxy is invalid, proxy is {request.Proxy}");
-                case "TemporarilyBanned":
-                    throw new InvalidOperationException($"Temporarily banned, proxy is {request.Proxy}");
-                case "InvalidCookies":
-                    throw new InvalidOperationException("Invalid cookies passed in the cookies file");
-                case "LoginRequired":
-                    throw new InvalidOperationException($"Login required in order to view {request.UserId}");
-                case "HTTPError" when error.Message.StartsWith("404"):
-                    throw new InvalidOperationException($"Cannot find user {request.UserId}");
-                default:
-                    throw new Exception($"Unrecognized error {error} {error.Message}");    
-            }
         }
     }
 }

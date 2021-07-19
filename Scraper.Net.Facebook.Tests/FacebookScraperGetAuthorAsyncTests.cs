@@ -31,7 +31,7 @@ namespace Scraper.Net.Facebook.Tests
         [TestMethod]
         public async Task TestError()
         {
-            await Assert.ThrowsExceptionAsync<InvalidOperationException>(async () => await _scraper.GetAuthorAsync("myownrandomuser1234123123123123123123123123"));
+            await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await _scraper.GetAuthorAsync("myownrandomuser1234123123123123123123123123"));
         }
         
         [DataTestMethod]

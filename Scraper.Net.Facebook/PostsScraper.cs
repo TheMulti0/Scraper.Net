@@ -13,8 +13,6 @@ namespace Scraper.Net.Facebook
         private const string ScriptName = "get_posts.py";
 
         private readonly FacebookConfig _config;
-        private readonly SemaphoreSlim _proxyIndexLock = new(1, 1);
-        private int _proxyIndex;
 
         public PostsScraper(FacebookConfig config)
         {
@@ -23,16 +21,18 @@ namespace Scraper.Net.Facebook
 
         public IAsyncEnumerable<FacebookPost> GetFacebookPostsAsync(
             string id,
+            string proxy,
             CancellationToken ct)
         {
-            return GetRawPosts(id, ct).Select(raw => raw.ToPost());
+            return GetRawPosts(id, proxy, ct).Select(raw => raw.ToPost());
         }
 
         private async IAsyncEnumerable<RawFacebookPost> GetRawPosts(
             string id,
+            string proxy,
             [EnumeratorCancellation] CancellationToken ct)
         {
-            GetPostsRequest request = await CreateGetPostsRequest(id, ct);
+            GetPostsRequest request = CreateGetPostsRequest(id, proxy);
 
             IAsyncEnumerable<string> postsJson = GetRawPostsJson(request, ct);
 
@@ -59,15 +59,15 @@ namespace Scraper.Net.Facebook
             }
             catch (JsonException)
             {
-                var error = JsonSerializer.Deserialize<Error>(json);
+                var exception = JsonSerializer.Deserialize<FacebookScraperException>(json);
                 
-                if (error == null)
+                if (exception == null)
                 {
                     throw;
                 }
                 
-                HandleError(error, request);
-                throw; // HandleError should throw exception
+                ExceptionHandler.HandleException(request.UserId, request.Proxy, exception);
+                throw; // HandleException should throw exception
             }
         }
 
@@ -82,57 +82,12 @@ namespace Scraper.Net.Facebook
                 ct);
         }
 
-        private async Task<GetPostsRequest> CreateGetPostsRequest(string id, CancellationToken ct) => new GetPostsRequest
+        private GetPostsRequest CreateGetPostsRequest(string id, string proxy) => new()
         {
             UserId = id,
             Pages = _config.MaxPageCount,
-            Proxy = await GetProxyAsync(ct),
+            Proxy = proxy,
             CookiesFileName = _config.CookiesFileName
         };
-
-        private async Task<string> GetProxyAsync(CancellationToken ct)
-        {
-            if (_config.Proxies.Length == 0)
-            {
-                return null;
-            }
-            
-            await _proxyIndexLock.WaitAsync(ct);
-
-            try
-            {
-                if (_proxyIndex == _config.Proxies.Length - 1)
-                {
-                    _proxyIndex = 0;
-                }
-                else
-                {
-                    _proxyIndex++;
-                }
-                
-                return _config.Proxies[_proxyIndex];
-            }
-            finally
-            {
-                _proxyIndexLock.Release();
-            }
-        }
-
-        private static void HandleError(Error error, GetPostsRequest request)
-        {
-            switch (error.Type)
-            {
-                case "ProxyError":
-                    throw new InvalidOperationException($"Proxy is invalid, proxy is {request.Proxy}");
-                case "TemporarilyBanned":
-                    throw new InvalidOperationException($"Temporarily banned, proxy is {request.Proxy}");
-                case "InvalidCookies":
-                    throw new InvalidOperationException("Invalid cookies passed in the cookies file");
-                case "LoginRequired":
-                    throw new InvalidOperationException($"Login required in order to view {request.UserId}");
-                default:
-                    throw new Exception($"Unrecognized error {error} {error.Message}");    
-            }
-        }
     }
 }

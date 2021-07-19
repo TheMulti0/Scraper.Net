@@ -41,7 +41,7 @@ namespace Scraper.Net.Facebook.Tests
                     }
                 });
             
-            await Assert.ThrowsExceptionAsync<Exception>(async () => await scraper.GetPostsAsync(User).ToListAsync());
+            await Assert.ThrowsExceptionAsync<InvalidOperationException>(async () => await scraper.GetPostsAsync(User).ToListAsync());
         }
         
         [DataTestMethod]
