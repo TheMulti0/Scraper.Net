@@ -3,6 +3,7 @@ using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace Scraper.Net.Feed
@@ -11,15 +12,41 @@ namespace Scraper.Net.Feed
     {
         private const string ImageSrcPattern = "<img.+?src=[\"'](.+?)[\"'].*?>";
         private static readonly Regex ImageSrcRegex = new(ImageSrcPattern);
-        
+
+        public Task<Author> GetAuthorAsync(
+            string id,
+            CancellationToken ct = default)
+        {
+            return Task.FromResult(GetAuthor(id));
+        }
+
+        private static Author GetAuthor(string id)
+        {
+            SyndicationFeed feed = GetFeed(id);
+
+            return new Author
+            {
+                Id = id,
+                DisplayName = feed.Title?.Text,
+                Description = feed.Description?.Text,
+                ProfilePictureUrl = feed.ImageUrl?.ToString()
+            };
+        }
+
         public IAsyncEnumerable<Post> GetPostsAsync(
             string id,
             CancellationToken ct = default)
         {
-            using var reader = XmlReader.Create(id);
-            SyndicationFeed feed = SyndicationFeed.Load(reader);
+            SyndicationFeed feed = GetFeed(id);
 
             return feed.Items.Select(item => ToPost(item, id)).ToAsyncEnumerable();
+        }
+
+        private static SyndicationFeed GetFeed(string id)
+        {
+            using var reader = XmlReader.Create(id);
+            
+            return SyndicationFeed.Load(reader);
         }
 
         private static Post ToPost(SyndicationItem item, string url)

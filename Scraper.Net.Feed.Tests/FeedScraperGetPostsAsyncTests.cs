@@ -5,8 +5,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Feed.Tests
 {
     [TestClass]
-    public class FeedScraperTests
+    public class FeedScraperGetPostsAsyncTests
     {
+        private static readonly FeedScraper FeedScraper = new();
+
         [TestMethod]
         public async Task TestMako()
         {
@@ -21,7 +23,7 @@ namespace Scraper.Net.Feed.Tests
 
         private static async Task Test(string url)
         {
-            var posts = await new FeedScraper().GetPostsAsync(url).ToListAsync();
+            var posts = await FeedScraper.GetPostsAsync(url).ToListAsync();
             
             CollectionAssert.AllItemsAreNotNull(posts);
 
