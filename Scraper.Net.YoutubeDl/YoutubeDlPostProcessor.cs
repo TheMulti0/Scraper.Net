@@ -24,8 +24,7 @@ namespace Scraper.Net.YoutubeDl
             
             _youtubeDl = new YoutubeDL(config.DegreeOfConcurrency)
             {
-                YoutubeDLPath = config.YoutubeDlPath,
-                FFmpegPath = config.FfMpegPath
+                YoutubeDLPath = config.YoutubeDlPath
             };
 
             _overrideOptions = config.OverrideOptions;

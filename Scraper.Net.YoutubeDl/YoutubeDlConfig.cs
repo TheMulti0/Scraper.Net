@@ -8,8 +8,6 @@ namespace Scraper.Net.YoutubeDl
 
         public string YoutubeDlPath { get; init; } = "youtube-dl.exe";
 
-        public string FfMpegPath { get; init; } = "ffmpeg.exe";
-        
         public OptionSet OverrideOptions { get; init; }
     }
 }
