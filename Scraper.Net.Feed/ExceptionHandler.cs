@@ -24,7 +24,8 @@ namespace Scraper.Net.Feed
                     case HttpStatusCode.NotFound:
                         throw new IdNotFoundException(id, e);
                     
-                    case null when e.Message.StartsWith("No such host is known"):
+                    case null when e.Message.StartsWith("No such host is known") ||
+                                   e.Message.StartsWith("Resource temporarily unavailable"):
                         throw new IdNotFoundException(id, e);
                     
                     case HttpStatusCode.TooManyRequests:

@@ -6,10 +6,13 @@ namespace Scraper.Net.YoutubeDl
     {
         public byte DegreeOfConcurrency { get; init; } = 4;
 
-        public string YoutubeDlPath { get; init; } = "youtube-dl.exe";
+        public string YoutubeDlPath { get; init; }
+#if _WINDOWS
+            = "youtube-dl.exe";
+#else
+            = "/usr/local/bin/youtube-dl";
+#endif
 
-        public string FfMpegPath { get; init; } = "ffmpeg.exe";
-        
         public OptionSet OverrideOptions { get; init; }
     }
 }
