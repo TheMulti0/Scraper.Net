@@ -3,8 +3,8 @@ name: Publish Scraper.Net
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: [ "Test Scraper.Net" ]
-    #branches: [ master ]
+    workflows: 
+      - "Test Scraper.Net"
     types: [ completed ]
 
 jobs:
