@@ -11,6 +11,6 @@ namespace Scraper.Net.Facebook
         [JsonPropertyName("message")]
         public string OriginalMessage { get; init; }
 
-        public override string Message => OriginalMessage;
+        public override string Message => $"{Type}: {OriginalMessage}";
     }
 }

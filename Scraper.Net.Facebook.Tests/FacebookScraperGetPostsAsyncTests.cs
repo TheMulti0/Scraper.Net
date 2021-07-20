@@ -61,8 +61,16 @@ namespace Scraper.Net.Facebook.Tests
 
             await Assert.ThrowsExceptionAsync<OperationCanceledException>(async () =>
             {
-                // ReSharper disable once MethodSupportsCancellation
-                await _scraper.GetPostsAsync(User, cts.Token).ToListAsync();
+                try
+                {
+                    // ReSharper disable once MethodSupportsCancellation
+                    await _scraper.GetPostsAsync(User, cts.Token).ToListAsync();
+                }
+                catch (LoginRequiredException)
+                {
+                    Assert.Inconclusive("Login required");
+                }
+                
             });
         }
     }
