@@ -1,6 +1,6 @@
 ﻿namespace Scraper.Net.Twitter
 {
-    public static class TwitterConstants
+    internal static class TwitterConstants
     {
         public const string TwitterBaseDomain = "twitter.com";
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Scraper.Net.Facebook
 {
-    public record FacebookPost
+    internal record FacebookPost
     {
         public string Id { get; init; }
 

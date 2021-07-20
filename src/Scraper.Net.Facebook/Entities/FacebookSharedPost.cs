@@ -2,7 +2,7 @@
 
 namespace Scraper.Net.Facebook
 {
-    public record FacebookSharedPost
+    internal record FacebookSharedPost
     {
         public string Id { get; init; }
 

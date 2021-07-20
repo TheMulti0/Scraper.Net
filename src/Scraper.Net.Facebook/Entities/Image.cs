@@ -1,6 +1,6 @@
 ﻿namespace Scraper.Net.Facebook
 {
-    public record Image
+    internal record Image
     {
         public string Id { get; init; }
         

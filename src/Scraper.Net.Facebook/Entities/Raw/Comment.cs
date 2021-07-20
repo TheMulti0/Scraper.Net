@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Scraper.Net.Facebook
 {
-    public record Comment
+    internal record Comment
     {
         [JsonPropertyName("comment_id")]
         public string CommentId { get; init; }

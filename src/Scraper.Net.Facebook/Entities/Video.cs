@@ -2,7 +2,7 @@ using System;
 
 namespace Scraper.Net.Facebook
 {
-    public record Video
+    internal record Video
     {
         public string Id { get; init; }
 

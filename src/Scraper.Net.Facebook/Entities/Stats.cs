@@ -1,6 +1,6 @@
 ﻿namespace Scraper.Net.Facebook
 {
-    public record Stats
+    internal record Stats
     {
         public int Comments { get; init; }
 
