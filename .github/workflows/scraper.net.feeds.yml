@@ -1,14 +1,14 @@
-name: Test and publish Scraper.Net.Feed
+name: Test and publish Scraper.Net.Feeds
 
 on:
   push:
    paths:
-     - "src/Scraper.Net.Feed/**"
-     - "test/Scraper.Net.Feed.Tests/**"
+     - "src/Scraper.Net.Feeds/**"
+     - "test/Scraper.Net.Feeds.Tests/**"
   pull_request:
     paths:
-      - "src/Scraper.Net.Feed/**"
-      - "test/Scraper.Net.Feed.Tests/**"
+      - "src/Scraper.Net.Feeds/**"
+      - "test/Scraper.Net.Feeds.Tests/**"
 
 env:
   DOTNET_VERSION: 5.0.x
@@ -33,7 +33,7 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Test
-      run: dotnet test --no-build src/Scraper.Net.Feed.Tests
+      run: dotnet test --no-build src/Scraper.Net.Feeds.Tests
 
   publish:
 
@@ -53,6 +53,6 @@ jobs:
     - name: Publish on version change
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: src/Scraper.Net.Feed/Scraper.Net.Feed.csproj
+        PROJECT_FILE_PATH: src/Scraper.Net.Feeds/Scraper.Net.Feeds.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         TAG_COMMIT: false

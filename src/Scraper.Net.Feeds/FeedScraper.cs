@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Scraper.Net.Feed
+namespace Scraper.Net.Feeds
 {
     public class FeedScraper : IPlatformScraper
     {

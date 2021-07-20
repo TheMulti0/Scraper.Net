@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 
-namespace Scraper.Net.Feed
+namespace Scraper.Net.Feeds
 {
     internal static class ExceptionHandler
     {

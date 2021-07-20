@@ -23,9 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Screenshot", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Screenshot.Tests", "test\Scraper.Net.Screenshot.Tests\Scraper.Net.Screenshot.Tests.csproj", "{F02CE0D4-5D4B-473F-8FED-53E13F796C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feed", "src\Scraper.Net.Feed\Scraper.Net.Feed.csproj", "{06050656-4664-44F5-A65E-8C4D4D2AA337}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feeds", "src\Scraper.Net.Feeds\Scraper.Net.Feeds.csproj", "{06050656-4664-44F5-A65E-8C4D4D2AA337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feed.Tests", "test\Scraper.Net.Feed.Tests\Scraper.Net.Feed.Tests.csproj", "{B3D0733C-C3E9-462C-B121-DF4DE89FB60B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feeds.Tests", "test\Scraper.Net.Feeds.Tests\Scraper.Net.Feeds.Tests.csproj", "{B3D0733C-C3E9-462C-B121-DF4DE89FB60B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

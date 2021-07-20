@@ -2,7 +2,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Scraper.Net.Feed.Tests
+namespace Scraper.Net.Feeds.Tests
 {
     [TestClass]
     public class FeedScraperGetPostsAsyncTests

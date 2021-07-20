@@ -1,10 +1,10 @@
-﻿namespace Scraper.Net.Feed
+﻿namespace Scraper.Net.Feeds
 {
     public static class ScraperBuilderExtensions
     {
         public static ScraperBuilder AddFeed(
             this ScraperBuilder builder,
-            string platform = "feed")
+            string platform = "feeds")
         {
             return builder
                 .AddScraper(_ =>
