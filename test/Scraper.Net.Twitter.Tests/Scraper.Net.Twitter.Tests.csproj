@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Scraper.Net.Twitter\Scraper.Net.Twitter.csproj" />
+      <ProjectReference Include="..\..\src\Scraper.Net.Twitter\Scraper.Net.Twitter.csproj" />
     </ItemGroup>
 
 </Project>

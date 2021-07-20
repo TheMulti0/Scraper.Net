@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        
+
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Scraper.Net.Facebook\Scraper.Net.Facebook.csproj" />
+      <ProjectReference Include="..\..\src\Scraper.Net\Scraper.Net.csproj" />
     </ItemGroup>
 
 </Project>

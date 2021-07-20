@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Scraper.Net.Screenshot\Scraper.Net.Screenshot.csproj" />
+      <ProjectReference Include="..\..\src\Scraper.Net.Screenshot\Scraper.Net.Screenshot.csproj" />
     </ItemGroup>
 
 </Project>

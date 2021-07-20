@@ -3,12 +3,12 @@ name: Test and publish Scraper.Net
 on:
   push:
    paths:
-     - "Scraper.Net/**"
-     - "Scraper.Net.Tests/**"
+     - "src/Scraper.Net/**"
+     - "test/Scraper.Net.Tests/**"
   pull_request:
     paths:
-      - "Scraper.Net/**"
-      - "Scraper.Net.Tests/**"
+      - "src/Scraper.Net/**"
+      - "test/Scraper.Net.Tests/**"
 
 env:
   DOTNET_VERSION: 5.0.x
@@ -33,7 +33,7 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build Scraper.Net.Tests
+      run: dotnet test --no-build test/Scraper.Net.Tests
 
   publish:
 
@@ -53,6 +53,6 @@ jobs:
     - name: Publish on version change
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: Scraper.Net/Scraper.Net.csproj
+        PROJECT_FILE_PATH: src/Scraper.Net/Scraper.Net.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         TAG_COMMIT: false

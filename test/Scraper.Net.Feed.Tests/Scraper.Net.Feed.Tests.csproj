@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
+      <ProjectReference Include="..\..\src\Scraper.Net.Feed\Scraper.Net.Feed.csproj" />
     </ItemGroup>
 
 </Project>

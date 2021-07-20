@@ -3,12 +3,12 @@ name: Test and publish Scraper.Net.YoutubeDl
 on:
   push:
    paths:
-     - "Scraper.Net.YoutubeDl/**"
-     - "Scraper.Net.YoutubeDl.Tests/**"
+     - "src/Scraper.Net.YoutubeDl/**"
+     - "test/Scraper.Net.YoutubeDl.Tests/**"
   pull_request:
     paths:
-      - "Scraper.Net.YoutubeDl/**"
-      - "Scraper.Net.YoutubeDl.Tests/**"
+      - "src/Scraper.Net.YoutubeDl/**"
+      - "test/Scraper.Net.YoutubeDl.Tests/**"
 
 env:
   DOTNET_VERSION: 5.0.x
@@ -38,7 +38,7 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build Scraper.Net.YoutubeDl.Tests
+      run: dotnet test --no-build test/Scraper.Net.YoutubeDl.Tests
 
   publish:
 
@@ -58,6 +58,6 @@ jobs:
     - name: Publish on version change
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: Scraper.Net.YoutubeDl/Scraper.Net.YoutubeDl.csproj
+        PROJECT_FILE_PATH: src/Scraper.Net.YoutubeDl/Scraper.Net.YoutubeDl.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         TAG_COMMIT: false

@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Scraper.Net.YoutubeDl\Scraper.Net.YoutubeDl.csproj" />
+      <ProjectReference Include="..\..\src\Scraper.Net.YoutubeDl\Scraper.Net.YoutubeDl.csproj" />
     </ItemGroup>
 
 </Project>

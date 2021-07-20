@@ -3,12 +3,12 @@ name: Test and publish Scraper.Net.Facebook
 on:
   push:
    paths:
-     - "Scraper.Net.Facebook/**"
-     - "Scraper.Net.Facebook.Tests/**"
+     - "src/Scraper.Net.Facebook/**"
+     - "test/Scraper.Net.Facebook.Tests/**"
   pull_request:
     paths:
-      - "Scraper.Net.Facebook/**"
-      - "Scraper.Net.Facebook.Tests/**"
+      - "src/Scraper.Net.Facebook/**"
+      - "test/Scraper.Net.Facebook.Tests/**"
 
 env:
   DOTNET_VERSION: 5.0.x
@@ -31,7 +31,7 @@ jobs:
         python-version: '3.7'
 
     - name: Install python dependencies
-      run: pip install -r Scraper.Net.Facebook/requirements.txt
+      run: pip install -r src/Scraper.Net.Facebook/requirements.txt
         
     - name: Restore dependencies
       run: dotnet restore
@@ -40,7 +40,7 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build Scraper.Net.Facebook.Tests
+      run: dotnet test --no-build test/Scraper.Net.Facebook.Tests
 
   publish:
 
@@ -60,6 +60,6 @@ jobs:
     - name: Publish on version change
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: Scraper.Net.Facebook/Scraper.Net.Facebook.csproj
+        PROJECT_FILE_PATH: src/Scraper.Net.Facebook/Scraper.Net.Facebook.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         TAG_COMMIT: false

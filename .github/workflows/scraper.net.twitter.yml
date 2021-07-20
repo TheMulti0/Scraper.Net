@@ -3,12 +3,12 @@ name: Test and publish Scraper.Net.Twitter
 on:
   push:
    paths:
-     - "Scraper.Net.Twitter/**"
-     - "Scraper.Net.Twitter.Tests/**"
+     - "src/Scraper.Net.Twitter/**"
+     - "test/Scraper.Net.Twitter.Tests/**"
   pull_request:
     paths:
-      - "Scraper.Net.Twitter/**"
-      - "Scraper.Net.Twitter.Tests/**"
+      - "src/Scraper.Net.Twitter/**"
+      - "test/Scraper.Net.Twitter.Tests/**"
 
 env:
   DOTNET_VERSION: 5.0.x
@@ -34,13 +34,13 @@ jobs:
 
     - name: Set secrets
       run: |
-        cd Scraper.Net.Twitter.Tests
+        cd test/Scraper.Net.Twitter.Tests
         dotnet user-secrets set ConsumerKey "${{ secrets.TWITTER_CONSUMERKEY }}"
         dotnet user-secrets set ConsumerSecret "${{ secrets.TWITTER_CONSUMERSECRET }}"
         cd ..
       
     - name: Test
-      run: dotnet test --no-build Scraper.Net.Twitter.Tests
+      run: dotnet test --no-build test/Scraper.Net.Twitter.Tests
 
   publish:
 
@@ -60,6 +60,6 @@ jobs:
     - name: Publish on version change
       uses: rohith/publish-nuget@v2
       with:
-        PROJECT_FILE_PATH: Scraper.Net.Twitter/Scraper.Net.Twitter.csproj
+        PROJECT_FILE_PATH: src/Scraper.Net.Twitter/Scraper.Net.Twitter.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         TAG_COMMIT: false

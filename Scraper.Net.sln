@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net", "Scraper.Net\Scraper.Net.csproj", "{6D0AF691-366E-4007-8470-5D085E6DEDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net", "src\Scraper.Net\Scraper.Net.csproj", "{6D0AF691-366E-4007-8470-5D085E6DEDAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook", "Scraper.Net.Facebook\Scraper.Net.Facebook.csproj", "{6D2B8DE4-1480-4627-B467-B93523631DA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook", "src\Scraper.Net.Facebook\Scraper.Net.Facebook.csproj", "{6D2B8DE4-1480-4627-B467-B93523631DA8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook.Tests", "Scraper.Net.Facebook.Tests\Scraper.Net.Facebook.Tests.csproj", "{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scraper.Net.Facebook.Tests", "test\Scraper.Net.Facebook.Tests\Scraper.Net.Facebook.Tests.csproj", "{4BF51EE2-9E5C-4DAD-8EF0-D372F3762D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter", "Scraper.Net.Twitter\Scraper.Net.Twitter.csproj", "{2C047ECD-170C-45FD-83EF-8CB8DEBEE986}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter", "src\Scraper.Net.Twitter\Scraper.Net.Twitter.csproj", "{2C047ECD-170C-45FD-83EF-8CB8DEBEE986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter.Tests", "Scraper.Net.Twitter.Tests\Scraper.Net.Twitter.Tests.csproj", "{2F3908D2-CF31-4738-9B68-60447848DE9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Twitter.Tests", "test\Scraper.Net.Twitter.Tests\Scraper.Net.Twitter.Tests.csproj", "{2F3908D2-CF31-4738-9B68-60447848DE9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.YoutubeDl", "Scraper.Net.YoutubeDl\Scraper.Net.YoutubeDl.csproj", "{663F57CF-74EE-4D7A-96A9-F27296986217}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.YoutubeDl", "src\Scraper.Net.YoutubeDl\Scraper.Net.YoutubeDl.csproj", "{663F57CF-74EE-4D7A-96A9-F27296986217}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.YoutubeDl.Tests", "Scraper.Net.YoutubeDl.Tests\Scraper.Net.YoutubeDl.Tests.csproj", "{BBA32269-5D2C-42FD-B66F-977DF8106045}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.YoutubeDl.Tests", "test\Scraper.Net.YoutubeDl.Tests\Scraper.Net.YoutubeDl.Tests.csproj", "{BBA32269-5D2C-42FD-B66F-977DF8106045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Tests", "Scraper.Net.Tests\Scraper.Net.Tests.csproj", "{37A8396C-4924-47B5-9D0A-4F1DE2AEE84B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Tests", "test\Scraper.Net.Tests\Scraper.Net.Tests.csproj", "{37A8396C-4924-47B5-9D0A-4F1DE2AEE84B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Screenshot", "Scraper.Net.Screenshot\Scraper.Net.Screenshot.csproj", "{69B7374A-B313-4864-BBFF-92EA597B5291}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Screenshot", "src\Scraper.Net.Screenshot\Scraper.Net.Screenshot.csproj", "{69B7374A-B313-4864-BBFF-92EA597B5291}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Screenshot.Tests", "Scraper.Net.Screenshot.Tests\Scraper.Net.Screenshot.Tests.csproj", "{F02CE0D4-5D4B-473F-8FED-53E13F796C83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Screenshot.Tests", "test\Scraper.Net.Screenshot.Tests\Scraper.Net.Screenshot.Tests.csproj", "{F02CE0D4-5D4B-473F-8FED-53E13F796C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feed", "Scraper.Net.Feed\Scraper.Net.Feed.csproj", "{06050656-4664-44F5-A65E-8C4D4D2AA337}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feed", "src\Scraper.Net.Feed\Scraper.Net.Feed.csproj", "{06050656-4664-44F5-A65E-8C4D4D2AA337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feed.Tests", "Scraper.Net.Feed.Tests\Scraper.Net.Feed.Tests.csproj", "{B3D0733C-C3E9-462C-B121-DF4DE89FB60B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Feed.Tests", "test\Scraper.Net.Feed.Tests\Scraper.Net.Feed.Tests.csproj", "{B3D0733C-C3E9-462C-B121-DF4DE89FB60B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

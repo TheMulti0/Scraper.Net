@@ -4,10 +4,7 @@
       "src": [
         {
           "files": [
-            "**.csproj"
-          ],
-          "exclude": [
-            "**.Tests.csproj"
+            "src/**.csproj"
           ],
           "cwd": "../"
         }
