@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Reactive.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading;
@@ -17,24 +14,42 @@ namespace Scraper.Net.Facebook
             string executablePath,
             string scriptName,
             object request,
-            CancellationToken token = default)
+            CancellationToken ct = default)
         {
-            Process process = StartProcess(executablePath, scriptName, GetRequestJson(request), token);
+            Process process = StartProcess(executablePath, scriptName, GetRequestJson(request), ct);
 
-            IObservable<string> standardOutput = process.StandardOutput();
+            const string blockStart = "{";
+            const string blockEnd = "}";
 
-            const string startOfPost = "{";
-            const string endOfPost = "}";
-            
-            return standardOutput
-                .SkipWhile(s => s != startOfPost)
-                .TakeUntil(s => s == endOfPost)
-                .Aggregate(string.Empty, (lhs, rhs) => lhs + "\n" + rhs)
-                .Retry()
-                .Where(s => s.EndsWith(endOfPost))
-                .ToAsyncEnumerable();
+            return GetOutputJsonBlocks(process, blockStart, blockEnd, ct);
         }
-        
+
+        private static async IAsyncEnumerable<string> GetOutputJsonBlocks(
+            Process process,
+            string blockStart,
+            string blockEnd,
+            [EnumeratorCancellation] CancellationToken ct)
+        {
+            IAsyncEnumerable<string> standardOutput = process.StandardOutput()
+                .SkipWhile(l => l != blockStart);
+
+            var block = string.Empty;
+
+            await foreach (string line in standardOutput.WithCancellation(ct))
+            {
+                block += line + "\n";
+
+                if (line != blockEnd)
+                {
+                    continue;
+                }
+
+                yield return block;
+
+                block = string.Empty;
+            }
+        }
+
         private static string GetRequestJson(object request)
         {
             return JsonSerializer.Serialize(request).Replace("\"", "\\\"");
@@ -55,7 +70,7 @@ namespace Scraper.Net.Facebook
             
             Process process = Process.Start(startInfo);
             
-            token.Register(() => process.Kill());
+            token.Register(() => process?.Kill());
             
             return process;
         }

@@ -26,6 +26,11 @@ namespace Scraper.Net.Facebook
             GetPageInfoRequest request = CreateGetPageInfoRequest(id, proxy);
 
             string pageInfoJson = await GetPageInfoJson(request, ct).FirstOrDefaultAsync(ct);
+            
+            if (pageInfoJson == null)
+            {
+                ct.ThrowIfCancellationRequested();
+            }
 
             return Deserialize(pageInfoJson, request);
         }
