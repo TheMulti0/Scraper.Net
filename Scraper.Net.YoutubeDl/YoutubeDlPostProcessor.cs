@@ -16,10 +16,9 @@ namespace Scraper.Net.YoutubeDl
         private readonly OptionSet _overrideOptions;
 
         public YoutubeDlPostProcessor(
-            bool keepReceivedPost,
             YoutubeDlConfig config)
         {
-            _keepReceivedPost = keepReceivedPost;
+            _keepReceivedPost = config.KeepReceivedPost;
             
             _youtubeDl = new YoutubeDL(config.DegreeOfConcurrency)
             {

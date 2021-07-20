@@ -7,7 +7,7 @@ namespace Scraper.Net.YoutubeDl.Tests
     [TestClass]
     public class YoutubeDlPostProcessorTests
     {
-        private readonly YoutubeDlPostProcessor _youtubeDl = new(false, new YoutubeDlConfig());
+        private readonly YoutubeDlPostProcessor _youtubeDl = new(new YoutubeDlConfig());
         
         [DataTestMethod]
         [DataRow("https://facebook.com/hebpmo/posts/4293743697354072")]
