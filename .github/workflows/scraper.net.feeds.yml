@@ -33,7 +33,7 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Test
-      run: dotnet test --no-build src/Scraper.Net.Feeds.Tests
+      run: dotnet test --no-build test/Scraper.Net.Feeds.Tests
 
   publish:
 
