@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -49,18 +47,23 @@ namespace Scraper.Net.Facebook.Tests
         {
             var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(delayMs));
 
-            await Assert.ThrowsExceptionAsync<OperationCanceledException>(async () =>
+            try
             {
-                try
-                {
-                    // ReSharper disable once MethodSupportsCancellation
-                    await _scraper.GetAuthorAsync(User, cts.Token);
-                }
-                catch (LoginRequiredException)
+                await Assert.ThrowsExceptionAsync<OperationCanceledException>(
+                    async () =>
+                    {
+                        // ReSharper disable once MethodSupportsCancellation
+                        await _scraper.GetAuthorAsync(User, cts.Token);
+                    });
+            }
+            catch (AssertFailedException e)
+            {
+                if (FacebookScraperTestHelper.DidThrow<LoginRequiredException>(e))
                 {
                     Assert.Inconclusive("Login required");
                 }
-            });
+            }
+            
         }
     }
 }
