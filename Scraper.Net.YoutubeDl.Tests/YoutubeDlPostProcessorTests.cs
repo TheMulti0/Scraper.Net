@@ -30,19 +30,26 @@ namespace Scraper.Net.YoutubeDl.Tests
 
         private async Task Test(string url)
         {
-            var originalPost = new Post
+            try
             {
-                Url = url
-            };
+                var originalPost = new Post
+                {
+                    Url = url
+                };
 
-            Post post = await _youtubeDl.ProcessAsync(originalPost, "").FirstOrDefaultAsync();
+                Post post = await _youtubeDl.ProcessAsync(originalPost, "").FirstOrDefaultAsync();
 
-            Assert.IsNotNull(post);
+                Assert.IsNotNull(post);
 
-            IMediaItem video = post.MediaItems.FirstOrDefault(item => item is VideoItem);
+                IMediaItem video = post.MediaItems.FirstOrDefault(item => item is VideoItem);
 
-            Assert.IsNotNull(video);
-            Assert.IsNotNull(video.Url);
+                Assert.IsNotNull(video);
+                Assert.IsNotNull(video.Url);
+            }
+            catch (LoginRequiredException)
+            {
+                Assert.Inconclusive("Login required");
+            }
         }
     }
 }

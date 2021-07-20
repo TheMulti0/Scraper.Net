@@ -15,7 +15,7 @@ namespace Scraper.Net.YoutubeDl
             {
                 if (
                     e.Message.Contains(
-                        "This video is only available for registered users. Use --username and -*** --netrc to provide account credentials."))
+                        "This video is only available for registered users. Use --username and --password or --netrc to provide account credentials."))
                 {
                     throw new LoginRequiredException(e);
                 }
