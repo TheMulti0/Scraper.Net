@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -53,7 +52,7 @@ namespace Scraper.Net.YoutubeDl
 
         private async Task<VideoItem> ExtractVideoItem(string postUrl, CancellationToken ct)
         {
-            VideoData data = await GetVideoData(postUrl, ct);
+            VideoData data = await ExceptionHandler.Do(() => GetVideoData(postUrl, ct));
 
             FormatData highestFormat = GetHighestQualityFormat(data);
             ThumbnailData highestThumbnail = GetHighestQualityThumbnail(data);
@@ -87,7 +86,7 @@ namespace Scraper.Net.YoutubeDl
             }
             
             string message = string.Join('\n', result.ErrorOutput);
-            throw new Exception(message);
+            throw new YoutubeDlException(message);
         }
     }
 }
