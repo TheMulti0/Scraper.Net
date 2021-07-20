@@ -23,9 +23,16 @@ namespace Scraper.Net.Facebook.Tests
         [TestMethod]
         public async Task TestGet()
         {
-            var author = await _scraper.GetAuthorAsync(User);
+            try
+            {
+                var author = await _scraper.GetAuthorAsync(User);
 
-            Assert.IsNotNull(author);
+                Assert.IsNotNull(author);   
+            }
+            catch (LoginRequiredException)
+            {
+                Assert.Inconclusive("Login required");
+            }
         }
         
         [TestMethod]
@@ -37,6 +44,7 @@ namespace Scraper.Net.Facebook.Tests
         [DataTestMethod]
         [DataRow(1)]
         [DataRow(500)]
+        [DataRow(5000)]
         public async Task TestCancellation(int delayMs)
         {
             var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(delayMs));
