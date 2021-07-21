@@ -62,6 +62,7 @@ namespace Scraper.Net.Facebook
             CancellationToken token)
         {
             string[] arguments = {
+                "-u", // python -u forces the stdout and stderr streams to be unbuffered, without this option the output will only be received when process has exited
                 scriptName,
                 parameters
             };
