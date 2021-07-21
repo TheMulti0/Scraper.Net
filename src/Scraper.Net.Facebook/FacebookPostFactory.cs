@@ -39,17 +39,17 @@ namespace Scraper.Net.Facebook
         
         private static string GetCleanText(this RawFacebookPost raw)
         {
-            if (raw.Link != null)
+            if (raw.Link == null || string.IsNullOrEmpty(raw.Text))
             {
-                return raw.Text.Replace(
-                    new[]
-                    {
-                        LinkRegex
-                    },
-                    raw.Link);
+                return raw.Text;
             }
-
-            return raw.Text;
+            
+            return raw.Text.Replace(
+                new[]
+                {
+                    LinkRegex
+                },
+                raw.Link);
         }
 
         private static IEnumerable<Image> GetImages(this RawFacebookPost raw)
