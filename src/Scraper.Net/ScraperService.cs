@@ -11,15 +11,18 @@ namespace Scraper.Net
     public class ScraperService : IScraperService
     {
         private readonly IDictionary<string, IPlatformScraper> _platformScrapers;
+        private readonly IEnumerable<PostFilter> _postFilters;
         private readonly IEnumerable<IPostProcessor> _postProcessors;
         private readonly ILogger<ScraperService> _logger;
 
         public ScraperService(
             IDictionary<string, IPlatformScraper> platformScrapers,
+            IEnumerable<PostFilter> postFilters,
             IEnumerable<IPostProcessor> postProcessors,
             ILogger<ScraperService> logger)
         {
             _platformScrapers = platformScrapers;
+            _postFilters = postFilters;
             _postProcessors = postProcessors;
             _logger = logger;
         }
@@ -41,7 +44,8 @@ namespace Scraper.Net
         {
             IPlatformScraper scraper = GetScraper(platform);
             
-            IAsyncEnumerable<Post> scrapedPosts = scraper.GetPostsAsync(id, ct);
+            IAsyncEnumerable<Post> scrapedPosts = scraper.GetPostsAsync(id, ct)
+                .Where(post => _postFilters.All(filter => filter(post, platform)));
             
             IAsyncEnumerable<Post> posts = _postProcessors.Aggregate(
                 scrapedPosts,

@@ -55,6 +55,7 @@ namespace Scraper.Net.Tests
                     {
                         {"mock", new MockDelayScraper(delay)}
                     },
+                    new List<PostFilter>(),
                     new List<IPostProcessor>(),
                     NullLogger<ScraperService>.Instance);
 
@@ -88,6 +89,7 @@ namespace Scraper.Net.Tests
                     {
                         {"mock", new MockScraper(true)}
                     },
+                    new List<PostFilter>(),
                     new List<IPostProcessor>
                     {
                         new MockDelayPostProcessor(delay)

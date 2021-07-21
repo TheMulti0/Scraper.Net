@@ -15,6 +15,7 @@ namespace Scraper.Net.Tests
         {
             var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper>(),
+                new List<PostFilter>(),
                 new List<IPostProcessor>(),
                 NullLogger<ScraperService>.Instance);
 
@@ -33,6 +34,7 @@ namespace Scraper.Net.Tests
                 {
                     {"mock", mockScraper}
                 },
+                new List<PostFilter>(),
                 new List<IPostProcessor>(),
                 NullLogger<ScraperService>.Instance);
 

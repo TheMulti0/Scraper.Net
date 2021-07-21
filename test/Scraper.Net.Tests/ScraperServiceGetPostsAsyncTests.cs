@@ -15,6 +15,7 @@ namespace Scraper.Net.Tests
         {
             var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper>(),
+                new List<PostFilter>(),
                 new List<IPostProcessor>(),
                 NullLogger<ScraperService>.Instance);
 
@@ -33,6 +34,7 @@ namespace Scraper.Net.Tests
                 {
                     {"mock", mockScraper}
                 },
+                new List<PostFilter>(),
                 new List<IPostProcessor>(),
                 NullLogger<ScraperService>.Instance);
 
@@ -43,6 +45,29 @@ namespace Scraper.Net.Tests
             
             CollectionAssert.AreEqual(p, posts);
         }
+        
+        [TestMethod]
+        public async Task TestPostFilter()
+        {
+            var mockScraper = new MockScraper();
+            var scraper = new ScraperService(
+                new Dictionary<string, IPlatformScraper> 
+                {
+                    {"mock", mockScraper}
+                },
+                new PostFilter[]
+                {
+                    (post, platform) => false
+                },
+                new List<IPostProcessor>(),
+                NullLogger<ScraperService>.Instance);
+
+            var id = "mockuser";
+            
+            var posts = await scraper.GetPostsAsync(id, "mock").ToListAsync();
+            
+            Assert.IsTrue(!posts.Any());
+        }
 
         [TestMethod]
         public async Task TestPostProcessing()
@@ -52,6 +77,7 @@ namespace Scraper.Net.Tests
                 {
                     {"mock", new MockScraper()}
                 },
+                new List<PostFilter>(),
                 new List<IPostProcessor>
                 {
                     new ContentRemoverPostProcessor()
@@ -74,6 +100,7 @@ namespace Scraper.Net.Tests
                 {
                     {"mock", new MockScraper()}
                 },
+                new List<PostFilter>(),
                 new List<IPostProcessor>
                 {
                     new ExceptionPostProcessor()

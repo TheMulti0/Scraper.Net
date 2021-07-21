@@ -34,7 +34,7 @@ namespace FacebookScraperApp
         {
             var facebookConfig = new FacebookConfig
             {
-                MaxPageCount = 1
+                MaxPageCount = 5
             };
 
             var provider = new ServiceCollection()

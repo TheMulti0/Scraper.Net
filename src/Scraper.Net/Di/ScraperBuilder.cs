@@ -24,6 +24,13 @@ namespace Scraper.Net
             return this;
         }
 
+        public ScraperBuilder AddPostFilter(PostFilter filter)
+        {
+            Services.AddSingleton(filter);
+
+            return this;
+        }
+
         public ScraperBuilder AddPostProcessor(Func<IServiceProvider, IPostProcessor> factory)
         {
             Services.AddSingleton(factory);
