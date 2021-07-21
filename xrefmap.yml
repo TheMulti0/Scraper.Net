@@ -1,0 +1,980 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Scraper.Net
+  name: Scraper.Net
+  href: api/Scraper.Net.html
+  commentId: N:Scraper.Net
+  fullName: Scraper.Net
+  nameWithType: Scraper.Net
+- uid: Scraper.Net.Facebook
+  name: Scraper.Net.Facebook
+  href: api/Scraper.Net.Facebook.html
+  commentId: N:Scraper.Net.Facebook
+  fullName: Scraper.Net.Facebook
+  nameWithType: Scraper.Net.Facebook
+- uid: Scraper.Net.Facebook.FacebookConfig
+  name: FacebookConfig
+  href: api/Scraper.Net.Facebook.FacebookConfig.html
+  commentId: T:Scraper.Net.Facebook.FacebookConfig
+  fullName: Scraper.Net.Facebook.FacebookConfig
+  nameWithType: FacebookConfig
+- uid: Scraper.Net.Facebook.FacebookConfig.CookiesFileName
+  name: CookiesFileName
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_CookiesFileName
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.CookiesFileName
+  fullName: Scraper.Net.Facebook.FacebookConfig.CookiesFileName
+  nameWithType: FacebookConfig.CookiesFileName
+- uid: Scraper.Net.Facebook.FacebookConfig.CookiesFileName*
+  name: CookiesFileName
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_CookiesFileName_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.CookiesFileName
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookConfig.CookiesFileName
+  nameWithType: FacebookConfig.CookiesFileName
+- uid: Scraper.Net.Facebook.FacebookConfig.MaxPageCount
+  name: MaxPageCount
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_MaxPageCount
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.MaxPageCount
+  fullName: Scraper.Net.Facebook.FacebookConfig.MaxPageCount
+  nameWithType: FacebookConfig.MaxPageCount
+- uid: Scraper.Net.Facebook.FacebookConfig.MaxPageCount*
+  name: MaxPageCount
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_MaxPageCount_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.MaxPageCount
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookConfig.MaxPageCount
+  nameWithType: FacebookConfig.MaxPageCount
+- uid: Scraper.Net.Facebook.FacebookConfig.Proxies
+  name: Proxies
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_Proxies
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.Proxies
+  fullName: Scraper.Net.Facebook.FacebookConfig.Proxies
+  nameWithType: FacebookConfig.Proxies
+- uid: Scraper.Net.Facebook.FacebookConfig.Proxies*
+  name: Proxies
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_Proxies_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.Proxies
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookConfig.Proxies
+  nameWithType: FacebookConfig.Proxies
+- uid: Scraper.Net.Facebook.FacebookConfig.PythonPath
+  name: PythonPath
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_PythonPath
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.PythonPath
+  fullName: Scraper.Net.Facebook.FacebookConfig.PythonPath
+  nameWithType: FacebookConfig.PythonPath
+- uid: Scraper.Net.Facebook.FacebookConfig.PythonPath*
+  name: PythonPath
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_PythonPath_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.PythonPath
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookConfig.PythonPath
+  nameWithType: FacebookConfig.PythonPath
+- uid: Scraper.Net.Facebook.FacebookScraper
+  name: FacebookScraper
+  href: api/Scraper.Net.Facebook.FacebookScraper.html
+  commentId: T:Scraper.Net.Facebook.FacebookScraper
+  fullName: Scraper.Net.Facebook.FacebookScraper
+  nameWithType: FacebookScraper
+- uid: Scraper.Net.Facebook.FacebookScraper.#ctor(Scraper.Net.Facebook.FacebookConfig)
+  name: FacebookScraper(FacebookConfig)
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper__ctor_Scraper_Net_Facebook_FacebookConfig_
+  commentId: M:Scraper.Net.Facebook.FacebookScraper.#ctor(Scraper.Net.Facebook.FacebookConfig)
+  fullName: Scraper.Net.Facebook.FacebookScraper.FacebookScraper(Scraper.Net.Facebook.FacebookConfig)
+  nameWithType: FacebookScraper.FacebookScraper(FacebookConfig)
+- uid: Scraper.Net.Facebook.FacebookScraper.#ctor*
+  name: FacebookScraper
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper__ctor_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraper.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraper.FacebookScraper
+  nameWithType: FacebookScraper.FacebookScraper
+- uid: Scraper.Net.Facebook.FacebookScraper.GetAuthorAsync(System.String,CancellationToken)
+  name: GetAuthorAsync(String, CancellationToken)
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper_GetAuthorAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Facebook.FacebookScraper.GetAuthorAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Facebook.FacebookScraper.GetAuthorAsync(System.String, CancellationToken)
+  nameWithType: FacebookScraper.GetAuthorAsync(String, CancellationToken)
+- uid: Scraper.Net.Facebook.FacebookScraper.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraper.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraper.GetAuthorAsync
+  nameWithType: FacebookScraper.GetAuthorAsync
+- uid: Scraper.Net.Facebook.FacebookScraper.GetPostsAsync(System.String,CancellationToken)
+  name: GetPostsAsync(String, CancellationToken)
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper_GetPostsAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Facebook.FacebookScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Facebook.FacebookScraper.GetPostsAsync(System.String, CancellationToken)
+  nameWithType: FacebookScraper.GetPostsAsync(String, CancellationToken)
+- uid: Scraper.Net.Facebook.FacebookScraper.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper_GetPostsAsync_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraper.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraper.GetPostsAsync
+  nameWithType: FacebookScraper.GetPostsAsync
+- uid: Scraper.Net.Facebook.FacebookScraperException
+  name: FacebookScraperException
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html
+  commentId: T:Scraper.Net.Facebook.FacebookScraperException
+  fullName: Scraper.Net.Facebook.FacebookScraperException
+  nameWithType: FacebookScraperException
+- uid: Scraper.Net.Facebook.FacebookScraperException.Message
+  name: Message
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_Message
+  commentId: P:Scraper.Net.Facebook.FacebookScraperException.Message
+  fullName: Scraper.Net.Facebook.FacebookScraperException.Message
+  nameWithType: FacebookScraperException.Message
+- uid: Scraper.Net.Facebook.FacebookScraperException.Message*
+  name: Message
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_Message_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraperException.Message
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraperException.Message
+  nameWithType: FacebookScraperException.Message
+- uid: Scraper.Net.Facebook.FacebookScraperException.OriginalMessage
+  name: OriginalMessage
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_OriginalMessage
+  commentId: P:Scraper.Net.Facebook.FacebookScraperException.OriginalMessage
+  fullName: Scraper.Net.Facebook.FacebookScraperException.OriginalMessage
+  nameWithType: FacebookScraperException.OriginalMessage
+- uid: Scraper.Net.Facebook.FacebookScraperException.OriginalMessage*
+  name: OriginalMessage
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_OriginalMessage_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraperException.OriginalMessage
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraperException.OriginalMessage
+  nameWithType: FacebookScraperException.OriginalMessage
+- uid: Scraper.Net.Facebook.FacebookScraperException.OriginalStackTrace
+  name: OriginalStackTrace
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_OriginalStackTrace
+  commentId: P:Scraper.Net.Facebook.FacebookScraperException.OriginalStackTrace
+  fullName: Scraper.Net.Facebook.FacebookScraperException.OriginalStackTrace
+  nameWithType: FacebookScraperException.OriginalStackTrace
+- uid: Scraper.Net.Facebook.FacebookScraperException.OriginalStackTrace*
+  name: OriginalStackTrace
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_OriginalStackTrace_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraperException.OriginalStackTrace
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraperException.OriginalStackTrace
+  nameWithType: FacebookScraperException.OriginalStackTrace
+- uid: Scraper.Net.Facebook.FacebookScraperException.StackTrace
+  name: StackTrace
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_StackTrace
+  commentId: P:Scraper.Net.Facebook.FacebookScraperException.StackTrace
+  fullName: Scraper.Net.Facebook.FacebookScraperException.StackTrace
+  nameWithType: FacebookScraperException.StackTrace
+- uid: Scraper.Net.Facebook.FacebookScraperException.StackTrace*
+  name: StackTrace
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_StackTrace_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraperException.StackTrace
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraperException.StackTrace
+  nameWithType: FacebookScraperException.StackTrace
+- uid: Scraper.Net.Facebook.FacebookScraperException.Type
+  name: Type
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_Type
+  commentId: P:Scraper.Net.Facebook.FacebookScraperException.Type
+  fullName: Scraper.Net.Facebook.FacebookScraperException.Type
+  nameWithType: FacebookScraperException.Type
+- uid: Scraper.Net.Facebook.FacebookScraperException.Type*
+  name: Type
+  href: api/Scraper.Net.Facebook.FacebookScraperException.html#Scraper_Net_Facebook_FacebookScraperException_Type_
+  commentId: Overload:Scraper.Net.Facebook.FacebookScraperException.Type
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookScraperException.Type
+  nameWithType: FacebookScraperException.Type
+- uid: Scraper.Net.Facebook.ScraperBuilderExtensions
+  name: ScraperBuilderExtensions
+  href: api/Scraper.Net.Facebook.ScraperBuilderExtensions.html
+  commentId: T:Scraper.Net.Facebook.ScraperBuilderExtensions
+  fullName: Scraper.Net.Facebook.ScraperBuilderExtensions
+  nameWithType: ScraperBuilderExtensions
+- uid: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook(Scraper.Net.ScraperBuilder,Scraper.Net.Facebook.FacebookConfig,System.String)
+  name: AddFacebook(ScraperBuilder, FacebookConfig, String)
+  href: api/Scraper.Net.Facebook.ScraperBuilderExtensions.html#Scraper_Net_Facebook_ScraperBuilderExtensions_AddFacebook_Scraper_Net_ScraperBuilder_Scraper_Net_Facebook_FacebookConfig_System_String_
+  commentId: M:Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook(Scraper.Net.ScraperBuilder,Scraper.Net.Facebook.FacebookConfig,System.String)
+  fullName: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook(Scraper.Net.ScraperBuilder, Scraper.Net.Facebook.FacebookConfig, System.String)
+  nameWithType: ScraperBuilderExtensions.AddFacebook(ScraperBuilder, FacebookConfig, String)
+- uid: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook*
+  name: AddFacebook
+  href: api/Scraper.Net.Facebook.ScraperBuilderExtensions.html#Scraper_Net_Facebook_ScraperBuilderExtensions_AddFacebook_
+  commentId: Overload:Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook
+  nameWithType: ScraperBuilderExtensions.AddFacebook
+- uid: Scraper.Net.Feeds
+  name: Scraper.Net.Feeds
+  href: api/Scraper.Net.Feeds.html
+  commentId: N:Scraper.Net.Feeds
+  fullName: Scraper.Net.Feeds
+  nameWithType: Scraper.Net.Feeds
+- uid: Scraper.Net.Feeds.FeedScraper
+  name: FeedScraper
+  href: api/Scraper.Net.Feeds.FeedScraper.html
+  commentId: T:Scraper.Net.Feeds.FeedScraper
+  fullName: Scraper.Net.Feeds.FeedScraper
+  nameWithType: FeedScraper
+- uid: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync(System.String,CancellationToken)
+  name: GetAuthorAsync(String, CancellationToken)
+  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetAuthorAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Feeds.FeedScraper.GetAuthorAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync(System.String, CancellationToken)
+  nameWithType: FeedScraper.GetAuthorAsync(String, CancellationToken)
+- uid: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.Feeds.FeedScraper.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync
+  nameWithType: FeedScraper.GetAuthorAsync
+- uid: Scraper.Net.Feeds.FeedScraper.GetPostsAsync(System.String,CancellationToken)
+  name: GetPostsAsync(String, CancellationToken)
+  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetPostsAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Feeds.FeedScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.FeedScraper.GetPostsAsync(System.String, CancellationToken)
+  nameWithType: FeedScraper.GetPostsAsync(String, CancellationToken)
+- uid: Scraper.Net.Feeds.FeedScraper.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetPostsAsync_
+  commentId: Overload:Scraper.Net.Feeds.FeedScraper.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Feeds.FeedScraper.GetPostsAsync
+  nameWithType: FeedScraper.GetPostsAsync
+- uid: Scraper.Net.Feeds.ScraperBuilderExtensions
+  name: ScraperBuilderExtensions
+  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html
+  commentId: T:Scraper.Net.Feeds.ScraperBuilderExtensions
+  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions
+  nameWithType: ScraperBuilderExtensions
+- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed(Scraper.Net.ScraperBuilder,System.String)
+  name: AddFeed(ScraperBuilder, String)
+  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeed_Scraper_Net_ScraperBuilder_System_String_
+  commentId: M:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed(Scraper.Net.ScraperBuilder,System.String)
+  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed(Scraper.Net.ScraperBuilder, System.String)
+  nameWithType: ScraperBuilderExtensions.AddFeed(ScraperBuilder, String)
+- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed*
+  name: AddFeed
+  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeed_
+  commentId: Overload:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed
+  isSpec: "True"
+  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed
+  nameWithType: ScraperBuilderExtensions.AddFeed
+- uid: Scraper.Net.IdNotFoundException
+  name: IdNotFoundException
+  href: api/Scraper.Net.IdNotFoundException.html
+  commentId: T:Scraper.Net.IdNotFoundException
+  fullName: Scraper.Net.IdNotFoundException
+  nameWithType: IdNotFoundException
+- uid: Scraper.Net.IdNotFoundException.#ctor(System.String)
+  name: IdNotFoundException(String)
+  href: api/Scraper.Net.IdNotFoundException.html#Scraper_Net_IdNotFoundException__ctor_System_String_
+  commentId: M:Scraper.Net.IdNotFoundException.#ctor(System.String)
+  fullName: Scraper.Net.IdNotFoundException.IdNotFoundException(System.String)
+  nameWithType: IdNotFoundException.IdNotFoundException(String)
+- uid: Scraper.Net.IdNotFoundException.#ctor(System.String,Exception)
+  name: IdNotFoundException(String, Exception)
+  href: api/Scraper.Net.IdNotFoundException.html#Scraper_Net_IdNotFoundException__ctor_System_String_Exception_
+  commentId: M:Scraper.Net.IdNotFoundException.#ctor(System.String,Exception)
+  fullName: Scraper.Net.IdNotFoundException.IdNotFoundException(System.String, Exception)
+  nameWithType: IdNotFoundException.IdNotFoundException(String, Exception)
+- uid: Scraper.Net.IdNotFoundException.#ctor*
+  name: IdNotFoundException
+  href: api/Scraper.Net.IdNotFoundException.html#Scraper_Net_IdNotFoundException__ctor_
+  commentId: Overload:Scraper.Net.IdNotFoundException.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.IdNotFoundException.IdNotFoundException
+  nameWithType: IdNotFoundException.IdNotFoundException
+- uid: Scraper.Net.IMediaItem
+  name: IMediaItem
+  href: api/Scraper.Net.IMediaItem.html
+  commentId: T:Scraper.Net.IMediaItem
+  fullName: Scraper.Net.IMediaItem
+  nameWithType: IMediaItem
+- uid: Scraper.Net.IMediaItem.Url
+  name: Url
+  href: api/Scraper.Net.IMediaItem.html#Scraper_Net_IMediaItem_Url
+  commentId: P:Scraper.Net.IMediaItem.Url
+  fullName: Scraper.Net.IMediaItem.Url
+  nameWithType: IMediaItem.Url
+- uid: Scraper.Net.IMediaItem.Url*
+  name: Url
+  href: api/Scraper.Net.IMediaItem.html#Scraper_Net_IMediaItem_Url_
+  commentId: Overload:Scraper.Net.IMediaItem.Url
+  isSpec: "True"
+  fullName: Scraper.Net.IMediaItem.Url
+  nameWithType: IMediaItem.Url
+- uid: Scraper.Net.IPlatformScraper
+  name: IPlatformScraper
+  href: api/Scraper.Net.IPlatformScraper.html
+  commentId: T:Scraper.Net.IPlatformScraper
+  fullName: Scraper.Net.IPlatformScraper
+  nameWithType: IPlatformScraper
+- uid: Scraper.Net.IPlatformScraper.GetAuthorAsync(System.String,CancellationToken)
+  name: GetAuthorAsync(String, CancellationToken)
+  href: api/Scraper.Net.IPlatformScraper.html#Scraper_Net_IPlatformScraper_GetAuthorAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.IPlatformScraper.GetAuthorAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.IPlatformScraper.GetAuthorAsync(System.String, CancellationToken)
+  nameWithType: IPlatformScraper.GetAuthorAsync(String, CancellationToken)
+- uid: Scraper.Net.IPlatformScraper.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.IPlatformScraper.html#Scraper_Net_IPlatformScraper_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.IPlatformScraper.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.IPlatformScraper.GetAuthorAsync
+  nameWithType: IPlatformScraper.GetAuthorAsync
+- uid: Scraper.Net.IPlatformScraper.GetPostsAsync(System.String,CancellationToken)
+  name: GetPostsAsync(String, CancellationToken)
+  href: api/Scraper.Net.IPlatformScraper.html#Scraper_Net_IPlatformScraper_GetPostsAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.IPlatformScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.IPlatformScraper.GetPostsAsync(System.String, CancellationToken)
+  nameWithType: IPlatformScraper.GetPostsAsync(String, CancellationToken)
+- uid: Scraper.Net.IPlatformScraper.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.IPlatformScraper.html#Scraper_Net_IPlatformScraper_GetPostsAsync_
+  commentId: Overload:Scraper.Net.IPlatformScraper.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.IPlatformScraper.GetPostsAsync
+  nameWithType: IPlatformScraper.GetPostsAsync
+- uid: Scraper.Net.IPostProcessor
+  name: IPostProcessor
+  href: api/Scraper.Net.IPostProcessor.html
+  commentId: T:Scraper.Net.IPostProcessor
+  fullName: Scraper.Net.IPostProcessor
+  nameWithType: IPostProcessor
+- uid: Scraper.Net.IPostProcessor.ProcessAsync(Post,System.String,CancellationToken)
+  name: ProcessAsync(Post, String, CancellationToken)
+  href: api/Scraper.Net.IPostProcessor.html#Scraper_Net_IPostProcessor_ProcessAsync_Post_System_String_CancellationToken_
+  commentId: M:Scraper.Net.IPostProcessor.ProcessAsync(Post,System.String,CancellationToken)
+  fullName: Scraper.Net.IPostProcessor.ProcessAsync(Post, System.String, CancellationToken)
+  nameWithType: IPostProcessor.ProcessAsync(Post, String, CancellationToken)
+- uid: Scraper.Net.IPostProcessor.ProcessAsync*
+  name: ProcessAsync
+  href: api/Scraper.Net.IPostProcessor.html#Scraper_Net_IPostProcessor_ProcessAsync_
+  commentId: Overload:Scraper.Net.IPostProcessor.ProcessAsync
+  isSpec: "True"
+  fullName: Scraper.Net.IPostProcessor.ProcessAsync
+  nameWithType: IPostProcessor.ProcessAsync
+- uid: Scraper.Net.IScraperService
+  name: IScraperService
+  href: api/Scraper.Net.IScraperService.html
+  commentId: T:Scraper.Net.IScraperService
+  fullName: Scraper.Net.IScraperService
+  nameWithType: IScraperService
+- uid: Scraper.Net.IScraperService.GetAuthorAsync(System.String,System.String,CancellationToken)
+  name: GetAuthorAsync(String, String, CancellationToken)
+  href: api/Scraper.Net.IScraperService.html#Scraper_Net_IScraperService_GetAuthorAsync_System_String_System_String_CancellationToken_
+  commentId: M:Scraper.Net.IScraperService.GetAuthorAsync(System.String,System.String,CancellationToken)
+  fullName: Scraper.Net.IScraperService.GetAuthorAsync(System.String, System.String, CancellationToken)
+  nameWithType: IScraperService.GetAuthorAsync(String, String, CancellationToken)
+- uid: Scraper.Net.IScraperService.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.IScraperService.html#Scraper_Net_IScraperService_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.IScraperService.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.IScraperService.GetAuthorAsync
+  nameWithType: IScraperService.GetAuthorAsync
+- uid: Scraper.Net.IScraperService.GetPostsAsync(System.String,System.String,CancellationToken)
+  name: GetPostsAsync(String, String, CancellationToken)
+  href: api/Scraper.Net.IScraperService.html#Scraper_Net_IScraperService_GetPostsAsync_System_String_System_String_CancellationToken_
+  commentId: M:Scraper.Net.IScraperService.GetPostsAsync(System.String,System.String,CancellationToken)
+  fullName: Scraper.Net.IScraperService.GetPostsAsync(System.String, System.String, CancellationToken)
+  nameWithType: IScraperService.GetPostsAsync(String, String, CancellationToken)
+- uid: Scraper.Net.IScraperService.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.IScraperService.html#Scraper_Net_IScraperService_GetPostsAsync_
+  commentId: Overload:Scraper.Net.IScraperService.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.IScraperService.GetPostsAsync
+  nameWithType: IScraperService.GetPostsAsync
+- uid: Scraper.Net.LoginRequiredException
+  name: LoginRequiredException
+  href: api/Scraper.Net.LoginRequiredException.html
+  commentId: T:Scraper.Net.LoginRequiredException
+  fullName: Scraper.Net.LoginRequiredException
+  nameWithType: LoginRequiredException
+- uid: Scraper.Net.LoginRequiredException.#ctor
+  name: LoginRequiredException()
+  href: api/Scraper.Net.LoginRequiredException.html#Scraper_Net_LoginRequiredException__ctor
+  commentId: M:Scraper.Net.LoginRequiredException.#ctor
+  fullName: Scraper.Net.LoginRequiredException.LoginRequiredException()
+  nameWithType: LoginRequiredException.LoginRequiredException()
+- uid: Scraper.Net.LoginRequiredException.#ctor(Exception)
+  name: LoginRequiredException(Exception)
+  href: api/Scraper.Net.LoginRequiredException.html#Scraper_Net_LoginRequiredException__ctor_Exception_
+  commentId: M:Scraper.Net.LoginRequiredException.#ctor(Exception)
+  fullName: Scraper.Net.LoginRequiredException.LoginRequiredException(Exception)
+  nameWithType: LoginRequiredException.LoginRequiredException(Exception)
+- uid: Scraper.Net.LoginRequiredException.#ctor(System.String,Exception)
+  name: LoginRequiredException(String, Exception)
+  href: api/Scraper.Net.LoginRequiredException.html#Scraper_Net_LoginRequiredException__ctor_System_String_Exception_
+  commentId: M:Scraper.Net.LoginRequiredException.#ctor(System.String,Exception)
+  fullName: Scraper.Net.LoginRequiredException.LoginRequiredException(System.String, Exception)
+  nameWithType: LoginRequiredException.LoginRequiredException(String, Exception)
+- uid: Scraper.Net.LoginRequiredException.#ctor*
+  name: LoginRequiredException
+  href: api/Scraper.Net.LoginRequiredException.html#Scraper_Net_LoginRequiredException__ctor_
+  commentId: Overload:Scraper.Net.LoginRequiredException.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.LoginRequiredException.LoginRequiredException
+  nameWithType: LoginRequiredException.LoginRequiredException
+- uid: Scraper.Net.PostFilter
+  name: PostFilter
+  href: api/Scraper.Net.PostFilter.html
+  commentId: T:Scraper.Net.PostFilter
+  fullName: Scraper.Net.PostFilter
+  nameWithType: PostFilter
+- uid: Scraper.Net.PostType
+  name: PostType
+  href: api/Scraper.Net.PostType.html
+  commentId: T:Scraper.Net.PostType
+  fullName: Scraper.Net.PostType
+  nameWithType: PostType
+- uid: Scraper.Net.PostType.Post
+  name: Post
+  href: api/Scraper.Net.PostType.html#Scraper_Net_PostType_Post
+  commentId: F:Scraper.Net.PostType.Post
+  fullName: Scraper.Net.PostType.Post
+  nameWithType: PostType.Post
+- uid: Scraper.Net.PostType.Reply
+  name: Reply
+  href: api/Scraper.Net.PostType.html#Scraper_Net_PostType_Reply
+  commentId: F:Scraper.Net.PostType.Reply
+  fullName: Scraper.Net.PostType.Reply
+  nameWithType: PostType.Reply
+- uid: Scraper.Net.PostType.Repost
+  name: Repost
+  href: api/Scraper.Net.PostType.html#Scraper_Net_PostType_Repost
+  commentId: F:Scraper.Net.PostType.Repost
+  fullName: Scraper.Net.PostType.Repost
+  nameWithType: PostType.Repost
+- uid: Scraper.Net.RateLimitedException
+  name: RateLimitedException
+  href: api/Scraper.Net.RateLimitedException.html
+  commentId: T:Scraper.Net.RateLimitedException
+  fullName: Scraper.Net.RateLimitedException
+  nameWithType: RateLimitedException
+- uid: Scraper.Net.RateLimitedException.#ctor
+  name: RateLimitedException()
+  href: api/Scraper.Net.RateLimitedException.html#Scraper_Net_RateLimitedException__ctor
+  commentId: M:Scraper.Net.RateLimitedException.#ctor
+  fullName: Scraper.Net.RateLimitedException.RateLimitedException()
+  nameWithType: RateLimitedException.RateLimitedException()
+- uid: Scraper.Net.RateLimitedException.#ctor(Exception)
+  name: RateLimitedException(Exception)
+  href: api/Scraper.Net.RateLimitedException.html#Scraper_Net_RateLimitedException__ctor_Exception_
+  commentId: M:Scraper.Net.RateLimitedException.#ctor(Exception)
+  fullName: Scraper.Net.RateLimitedException.RateLimitedException(Exception)
+  nameWithType: RateLimitedException.RateLimitedException(Exception)
+- uid: Scraper.Net.RateLimitedException.#ctor(System.String,Exception)
+  name: RateLimitedException(String, Exception)
+  href: api/Scraper.Net.RateLimitedException.html#Scraper_Net_RateLimitedException__ctor_System_String_Exception_
+  commentId: M:Scraper.Net.RateLimitedException.#ctor(System.String,Exception)
+  fullName: Scraper.Net.RateLimitedException.RateLimitedException(System.String, Exception)
+  nameWithType: RateLimitedException.RateLimitedException(String, Exception)
+- uid: Scraper.Net.RateLimitedException.#ctor*
+  name: RateLimitedException
+  href: api/Scraper.Net.RateLimitedException.html#Scraper_Net_RateLimitedException__ctor_
+  commentId: Overload:Scraper.Net.RateLimitedException.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.RateLimitedException.RateLimitedException
+  nameWithType: RateLimitedException.RateLimitedException
+- uid: Scraper.Net.ScraperBuilder
+  name: ScraperBuilder
+  href: api/Scraper.Net.ScraperBuilder.html
+  commentId: T:Scraper.Net.ScraperBuilder
+  fullName: Scraper.Net.ScraperBuilder
+  nameWithType: ScraperBuilder
+- uid: Scraper.Net.ScraperBuilder.#ctor(IServiceCollection)
+  name: ScraperBuilder(IServiceCollection)
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder__ctor_IServiceCollection_
+  commentId: M:Scraper.Net.ScraperBuilder.#ctor(IServiceCollection)
+  fullName: Scraper.Net.ScraperBuilder.ScraperBuilder(IServiceCollection)
+  nameWithType: ScraperBuilder.ScraperBuilder(IServiceCollection)
+- uid: Scraper.Net.ScraperBuilder.#ctor*
+  name: ScraperBuilder
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder__ctor_
+  commentId: Overload:Scraper.Net.ScraperBuilder.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperBuilder.ScraperBuilder
+  nameWithType: ScraperBuilder.ScraperBuilder
+- uid: Scraper.Net.ScraperBuilder.AddPostFilter(Scraper.Net.PostFilter)
+  name: AddPostFilter(PostFilter)
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_AddPostFilter_Scraper_Net_PostFilter_
+  commentId: M:Scraper.Net.ScraperBuilder.AddPostFilter(Scraper.Net.PostFilter)
+  fullName: Scraper.Net.ScraperBuilder.AddPostFilter(Scraper.Net.PostFilter)
+  nameWithType: ScraperBuilder.AddPostFilter(PostFilter)
+- uid: Scraper.Net.ScraperBuilder.AddPostFilter*
+  name: AddPostFilter
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_AddPostFilter_
+  commentId: Overload:Scraper.Net.ScraperBuilder.AddPostFilter
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperBuilder.AddPostFilter
+  nameWithType: ScraperBuilder.AddPostFilter
+- uid: Scraper.Net.ScraperBuilder.AddPostProcessor(Func{IServiceProvider,Scraper.Net.IPostProcessor})
+  name: AddPostProcessor(Func<IServiceProvider, IPostProcessor>)
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_AddPostProcessor_Func_IServiceProvider_Scraper_Net_IPostProcessor__
+  commentId: M:Scraper.Net.ScraperBuilder.AddPostProcessor(Func{IServiceProvider,Scraper.Net.IPostProcessor})
+  name.vb: AddPostProcessor(Func(Of IServiceProvider, IPostProcessor))
+  fullName: Scraper.Net.ScraperBuilder.AddPostProcessor(Func<IServiceProvider, Scraper.Net.IPostProcessor>)
+  fullName.vb: Scraper.Net.ScraperBuilder.AddPostProcessor(Func(Of IServiceProvider, Scraper.Net.IPostProcessor))
+  nameWithType: ScraperBuilder.AddPostProcessor(Func<IServiceProvider, IPostProcessor>)
+  nameWithType.vb: ScraperBuilder.AddPostProcessor(Func(Of IServiceProvider, IPostProcessor))
+- uid: Scraper.Net.ScraperBuilder.AddPostProcessor*
+  name: AddPostProcessor
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_AddPostProcessor_
+  commentId: Overload:Scraper.Net.ScraperBuilder.AddPostProcessor
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperBuilder.AddPostProcessor
+  nameWithType: ScraperBuilder.AddPostProcessor
+- uid: Scraper.Net.ScraperBuilder.AddScraper(Func{IServiceProvider,System.ValueTuple{Scraper.Net.IPlatformScraper,System.String}})
+  name: AddScraper(Func<IServiceProvider, (IPlatformScraper, String)>)
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_AddScraper_Func_IServiceProvider_System_ValueTuple_Scraper_Net_IPlatformScraper_System_String___
+  commentId: M:Scraper.Net.ScraperBuilder.AddScraper(Func{IServiceProvider,System.ValueTuple{Scraper.Net.IPlatformScraper,System.String}})
+  name.vb: AddScraper(Func(Of IServiceProvider, (IPlatformScraper, String)))
+  fullName: Scraper.Net.ScraperBuilder.AddScraper(Func<IServiceProvider, System.ValueTuple<Scraper.Net.IPlatformScraper, System.String>>)
+  fullName.vb: Scraper.Net.ScraperBuilder.AddScraper(Func(Of IServiceProvider, System.ValueTuple(Of Scraper.Net.IPlatformScraper, System.String)))
+  nameWithType: ScraperBuilder.AddScraper(Func<IServiceProvider, (IPlatformScraper, String)>)
+  nameWithType.vb: ScraperBuilder.AddScraper(Func(Of IServiceProvider, (IPlatformScraper, String)))
+- uid: Scraper.Net.ScraperBuilder.AddScraper*
+  name: AddScraper
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_AddScraper_
+  commentId: Overload:Scraper.Net.ScraperBuilder.AddScraper
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperBuilder.AddScraper
+  nameWithType: ScraperBuilder.AddScraper
+- uid: Scraper.Net.ScraperBuilder.Services
+  name: Services
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_Services
+  commentId: P:Scraper.Net.ScraperBuilder.Services
+  fullName: Scraper.Net.ScraperBuilder.Services
+  nameWithType: ScraperBuilder.Services
+- uid: Scraper.Net.ScraperBuilder.Services*
+  name: Services
+  href: api/Scraper.Net.ScraperBuilder.html#Scraper_Net_ScraperBuilder_Services_
+  commentId: Overload:Scraper.Net.ScraperBuilder.Services
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperBuilder.Services
+  nameWithType: ScraperBuilder.Services
+- uid: Scraper.Net.ScraperService
+  name: ScraperService
+  href: api/Scraper.Net.ScraperService.html
+  commentId: T:Scraper.Net.ScraperService
+  fullName: Scraper.Net.ScraperService
+  nameWithType: ScraperService
+- uid: Scraper.Net.ScraperService.#ctor(IDictionary{System.String,Scraper.Net.IPlatformScraper},IEnumerable{Scraper.Net.PostFilter},IEnumerable{Scraper.Net.IPostProcessor},ILogger{Scraper.Net.ScraperService})
+  name: ScraperService(IDictionary<String, IPlatformScraper>, IEnumerable<PostFilter>, IEnumerable<IPostProcessor>, ILogger<ScraperService>)
+  href: api/Scraper.Net.ScraperService.html#Scraper_Net_ScraperService__ctor_IDictionary_System_String_Scraper_Net_IPlatformScraper__IEnumerable_Scraper_Net_PostFilter__IEnumerable_Scraper_Net_IPostProcessor__ILogger_Scraper_Net_ScraperService__
+  commentId: M:Scraper.Net.ScraperService.#ctor(IDictionary{System.String,Scraper.Net.IPlatformScraper},IEnumerable{Scraper.Net.PostFilter},IEnumerable{Scraper.Net.IPostProcessor},ILogger{Scraper.Net.ScraperService})
+  name.vb: ScraperService(IDictionary(Of String, IPlatformScraper), IEnumerable(Of PostFilter), IEnumerable(Of IPostProcessor), ILogger(Of ScraperService))
+  fullName: Scraper.Net.ScraperService.ScraperService(IDictionary<System.String, Scraper.Net.IPlatformScraper>, IEnumerable<Scraper.Net.PostFilter>, IEnumerable<Scraper.Net.IPostProcessor>, ILogger<Scraper.Net.ScraperService>)
+  fullName.vb: Scraper.Net.ScraperService.ScraperService(IDictionary(Of System.String, Scraper.Net.IPlatformScraper), IEnumerable(Of Scraper.Net.PostFilter), IEnumerable(Of Scraper.Net.IPostProcessor), ILogger(Of Scraper.Net.ScraperService))
+  nameWithType: ScraperService.ScraperService(IDictionary<String, IPlatformScraper>, IEnumerable<PostFilter>, IEnumerable<IPostProcessor>, ILogger<ScraperService>)
+  nameWithType.vb: ScraperService.ScraperService(IDictionary(Of String, IPlatformScraper), IEnumerable(Of PostFilter), IEnumerable(Of IPostProcessor), ILogger(Of ScraperService))
+- uid: Scraper.Net.ScraperService.#ctor*
+  name: ScraperService
+  href: api/Scraper.Net.ScraperService.html#Scraper_Net_ScraperService__ctor_
+  commentId: Overload:Scraper.Net.ScraperService.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperService.ScraperService
+  nameWithType: ScraperService.ScraperService
+- uid: Scraper.Net.ScraperService.GetAuthorAsync(System.String,System.String,CancellationToken)
+  name: GetAuthorAsync(String, String, CancellationToken)
+  href: api/Scraper.Net.ScraperService.html#Scraper_Net_ScraperService_GetAuthorAsync_System_String_System_String_CancellationToken_
+  commentId: M:Scraper.Net.ScraperService.GetAuthorAsync(System.String,System.String,CancellationToken)
+  fullName: Scraper.Net.ScraperService.GetAuthorAsync(System.String, System.String, CancellationToken)
+  nameWithType: ScraperService.GetAuthorAsync(String, String, CancellationToken)
+- uid: Scraper.Net.ScraperService.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.ScraperService.html#Scraper_Net_ScraperService_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.ScraperService.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperService.GetAuthorAsync
+  nameWithType: ScraperService.GetAuthorAsync
+- uid: Scraper.Net.ScraperService.GetPostsAsync(System.String,System.String,CancellationToken)
+  name: GetPostsAsync(String, String, CancellationToken)
+  href: api/Scraper.Net.ScraperService.html#Scraper_Net_ScraperService_GetPostsAsync_System_String_System_String_CancellationToken_
+  commentId: M:Scraper.Net.ScraperService.GetPostsAsync(System.String,System.String,CancellationToken)
+  fullName: Scraper.Net.ScraperService.GetPostsAsync(System.String, System.String, CancellationToken)
+  nameWithType: ScraperService.GetPostsAsync(String, String, CancellationToken)
+- uid: Scraper.Net.ScraperService.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.ScraperService.html#Scraper_Net_ScraperService_GetPostsAsync_
+  commentId: Overload:Scraper.Net.ScraperService.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.ScraperService.GetPostsAsync
+  nameWithType: ScraperService.GetPostsAsync
+- uid: Scraper.Net.Screenshot
+  name: Scraper.Net.Screenshot
+  href: api/Scraper.Net.Screenshot.html
+  commentId: N:Scraper.Net.Screenshot
+  fullName: Scraper.Net.Screenshot
+  nameWithType: Scraper.Net.Screenshot
+- uid: Scraper.Net.Screenshot.IPlatformScreenshotter
+  name: IPlatformScreenshotter
+  href: api/Scraper.Net.Screenshot.IPlatformScreenshotter.html
+  commentId: T:Scraper.Net.Screenshot.IPlatformScreenshotter
+  fullName: Scraper.Net.Screenshot.IPlatformScreenshotter
+  nameWithType: IPlatformScreenshotter
+- uid: Scraper.Net.Screenshot.IPlatformScreenshotter.ScreenshotAsync(System.String)
+  name: ScreenshotAsync(String)
+  href: api/Scraper.Net.Screenshot.IPlatformScreenshotter.html#Scraper_Net_Screenshot_IPlatformScreenshotter_ScreenshotAsync_System_String_
+  commentId: M:Scraper.Net.Screenshot.IPlatformScreenshotter.ScreenshotAsync(System.String)
+  fullName: Scraper.Net.Screenshot.IPlatformScreenshotter.ScreenshotAsync(System.String)
+  nameWithType: IPlatformScreenshotter.ScreenshotAsync(String)
+- uid: Scraper.Net.Screenshot.IPlatformScreenshotter.ScreenshotAsync*
+  name: ScreenshotAsync
+  href: api/Scraper.Net.Screenshot.IPlatformScreenshotter.html#Scraper_Net_Screenshot_IPlatformScreenshotter_ScreenshotAsync_
+  commentId: Overload:Scraper.Net.Screenshot.IPlatformScreenshotter.ScreenshotAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.IPlatformScreenshotter.ScreenshotAsync
+  nameWithType: IPlatformScreenshotter.ScreenshotAsync
+- uid: Scraper.Net.Screenshot.ScraperBuilderExtensions
+  name: ScraperBuilderExtensions
+  href: api/Scraper.Net.Screenshot.ScraperBuilderExtensions.html
+  commentId: T:Scraper.Net.Screenshot.ScraperBuilderExtensions
+  fullName: Scraper.Net.Screenshot.ScraperBuilderExtensions
+  nameWithType: ScraperBuilderExtensions
+- uid: Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot(Scraper.Net.ScraperBuilder,Action{Scraper.Net.Screenshot.ScreenshotterBuilder},HtmlCssToImageCredentials,System.Boolean)
+  name: AddScreenshot(ScraperBuilder, Action<ScreenshotterBuilder>, HtmlCssToImageCredentials, Boolean)
+  href: api/Scraper.Net.Screenshot.ScraperBuilderExtensions.html#Scraper_Net_Screenshot_ScraperBuilderExtensions_AddScreenshot_Scraper_Net_ScraperBuilder_Action_Scraper_Net_Screenshot_ScreenshotterBuilder__HtmlCssToImageCredentials_System_Boolean_
+  commentId: M:Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot(Scraper.Net.ScraperBuilder,Action{Scraper.Net.Screenshot.ScreenshotterBuilder},HtmlCssToImageCredentials,System.Boolean)
+  name.vb: AddScreenshot(ScraperBuilder, Action(Of ScreenshotterBuilder), HtmlCssToImageCredentials, Boolean)
+  fullName: Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot(Scraper.Net.ScraperBuilder, Action<Scraper.Net.Screenshot.ScreenshotterBuilder>, HtmlCssToImageCredentials, System.Boolean)
+  fullName.vb: Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot(Scraper.Net.ScraperBuilder, Action(Of Scraper.Net.Screenshot.ScreenshotterBuilder), HtmlCssToImageCredentials, System.Boolean)
+  nameWithType: ScraperBuilderExtensions.AddScreenshot(ScraperBuilder, Action<ScreenshotterBuilder>, HtmlCssToImageCredentials, Boolean)
+  nameWithType.vb: ScraperBuilderExtensions.AddScreenshot(ScraperBuilder, Action(Of ScreenshotterBuilder), HtmlCssToImageCredentials, Boolean)
+- uid: Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot*
+  name: AddScreenshot
+  href: api/Scraper.Net.Screenshot.ScraperBuilderExtensions.html#Scraper_Net_Screenshot_ScraperBuilderExtensions_AddScreenshot_
+  commentId: Overload:Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScraperBuilderExtensions.AddScreenshot
+  nameWithType: ScraperBuilderExtensions.AddScreenshot
+- uid: Scraper.Net.Screenshot.ScreenshotPostProcessor
+  name: ScreenshotPostProcessor
+  href: api/Scraper.Net.Screenshot.ScreenshotPostProcessor.html
+  commentId: T:Scraper.Net.Screenshot.ScreenshotPostProcessor
+  fullName: Scraper.Net.Screenshot.ScreenshotPostProcessor
+  nameWithType: ScreenshotPostProcessor
+- uid: Scraper.Net.Screenshot.ScreenshotPostProcessor.#ctor(System.Boolean,Dictionary{System.String,Scraper.Net.Screenshot.IPlatformScreenshotter})
+  name: ScreenshotPostProcessor(Boolean, Dictionary<String, IPlatformScreenshotter>)
+  href: api/Scraper.Net.Screenshot.ScreenshotPostProcessor.html#Scraper_Net_Screenshot_ScreenshotPostProcessor__ctor_System_Boolean_Dictionary_System_String_Scraper_Net_Screenshot_IPlatformScreenshotter__
+  commentId: M:Scraper.Net.Screenshot.ScreenshotPostProcessor.#ctor(System.Boolean,Dictionary{System.String,Scraper.Net.Screenshot.IPlatformScreenshotter})
+  name.vb: ScreenshotPostProcessor(Boolean, Dictionary(Of String, IPlatformScreenshotter))
+  fullName: Scraper.Net.Screenshot.ScreenshotPostProcessor.ScreenshotPostProcessor(System.Boolean, Dictionary<System.String, Scraper.Net.Screenshot.IPlatformScreenshotter>)
+  fullName.vb: Scraper.Net.Screenshot.ScreenshotPostProcessor.ScreenshotPostProcessor(System.Boolean, Dictionary(Of System.String, Scraper.Net.Screenshot.IPlatformScreenshotter))
+  nameWithType: ScreenshotPostProcessor.ScreenshotPostProcessor(Boolean, Dictionary<String, IPlatformScreenshotter>)
+  nameWithType.vb: ScreenshotPostProcessor.ScreenshotPostProcessor(Boolean, Dictionary(Of String, IPlatformScreenshotter))
+- uid: Scraper.Net.Screenshot.ScreenshotPostProcessor.#ctor*
+  name: ScreenshotPostProcessor
+  href: api/Scraper.Net.Screenshot.ScreenshotPostProcessor.html#Scraper_Net_Screenshot_ScreenshotPostProcessor__ctor_
+  commentId: Overload:Scraper.Net.Screenshot.ScreenshotPostProcessor.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScreenshotPostProcessor.ScreenshotPostProcessor
+  nameWithType: ScreenshotPostProcessor.ScreenshotPostProcessor
+- uid: Scraper.Net.Screenshot.ScreenshotPostProcessor.ProcessAsync(Post,System.String,CancellationToken)
+  name: ProcessAsync(Post, String, CancellationToken)
+  href: api/Scraper.Net.Screenshot.ScreenshotPostProcessor.html#Scraper_Net_Screenshot_ScreenshotPostProcessor_ProcessAsync_Post_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Screenshot.ScreenshotPostProcessor.ProcessAsync(Post,System.String,CancellationToken)
+  fullName: Scraper.Net.Screenshot.ScreenshotPostProcessor.ProcessAsync(Post, System.String, CancellationToken)
+  nameWithType: ScreenshotPostProcessor.ProcessAsync(Post, String, CancellationToken)
+- uid: Scraper.Net.Screenshot.ScreenshotPostProcessor.ProcessAsync*
+  name: ProcessAsync
+  href: api/Scraper.Net.Screenshot.ScreenshotPostProcessor.html#Scraper_Net_Screenshot_ScreenshotPostProcessor_ProcessAsync_
+  commentId: Overload:Scraper.Net.Screenshot.ScreenshotPostProcessor.ProcessAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScreenshotPostProcessor.ProcessAsync
+  nameWithType: ScreenshotPostProcessor.ProcessAsync
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder
+  name: ScreenshotterBuilder
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html
+  commentId: T:Scraper.Net.Screenshot.ScreenshotterBuilder
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder
+  nameWithType: ScreenshotterBuilder
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder.#ctor(IServiceCollection)
+  name: ScreenshotterBuilder(IServiceCollection)
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html#Scraper_Net_Screenshot_ScreenshotterBuilder__ctor_IServiceCollection_
+  commentId: M:Scraper.Net.Screenshot.ScreenshotterBuilder.#ctor(IServiceCollection)
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder.ScreenshotterBuilder(IServiceCollection)
+  nameWithType: ScreenshotterBuilder.ScreenshotterBuilder(IServiceCollection)
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder.#ctor*
+  name: ScreenshotterBuilder
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html#Scraper_Net_Screenshot_ScreenshotterBuilder__ctor_
+  commentId: Overload:Scraper.Net.Screenshot.ScreenshotterBuilder.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder.ScreenshotterBuilder
+  nameWithType: ScreenshotterBuilder.ScreenshotterBuilder
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter(Func{IServiceProvider,System.ValueTuple{Scraper.Net.Screenshot.IPlatformScreenshotter,System.String}})
+  name: AddScreenshotter(Func<IServiceProvider, (IPlatformScreenshotter, String)>)
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html#Scraper_Net_Screenshot_ScreenshotterBuilder_AddScreenshotter_Func_IServiceProvider_System_ValueTuple_Scraper_Net_Screenshot_IPlatformScreenshotter_System_String___
+  commentId: M:Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter(Func{IServiceProvider,System.ValueTuple{Scraper.Net.Screenshot.IPlatformScreenshotter,System.String}})
+  name.vb: AddScreenshotter(Func(Of IServiceProvider, (IPlatformScreenshotter, String)))
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter(Func<IServiceProvider, System.ValueTuple<Scraper.Net.Screenshot.IPlatformScreenshotter, System.String>>)
+  fullName.vb: Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter(Func(Of IServiceProvider, System.ValueTuple(Of Scraper.Net.Screenshot.IPlatformScreenshotter, System.String)))
+  nameWithType: ScreenshotterBuilder.AddScreenshotter(Func<IServiceProvider, (IPlatformScreenshotter, String)>)
+  nameWithType.vb: ScreenshotterBuilder.AddScreenshotter(Func(Of IServiceProvider, (IPlatformScreenshotter, String)))
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter*
+  name: AddScreenshotter
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html#Scraper_Net_Screenshot_ScreenshotterBuilder_AddScreenshotter_
+  commentId: Overload:Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder.AddScreenshotter
+  nameWithType: ScreenshotterBuilder.AddScreenshotter
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder.Services
+  name: Services
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html#Scraper_Net_Screenshot_ScreenshotterBuilder_Services
+  commentId: P:Scraper.Net.Screenshot.ScreenshotterBuilder.Services
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder.Services
+  nameWithType: ScreenshotterBuilder.Services
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilder.Services*
+  name: Services
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilder.html#Scraper_Net_Screenshot_ScreenshotterBuilder_Services_
+  commentId: Overload:Scraper.Net.Screenshot.ScreenshotterBuilder.Services
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilder.Services
+  nameWithType: ScreenshotterBuilder.Services
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilderExtensions
+  name: ScreenshotterBuilderExtensions
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.html
+  commentId: T:Scraper.Net.Screenshot.ScreenshotterBuilderExtensions
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilderExtensions
+  nameWithType: ScreenshotterBuilderExtensions
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.AddTwitter(Scraper.Net.Screenshot.ScreenshotterBuilder,System.String)
+  name: AddTwitter(ScreenshotterBuilder, String)
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.html#Scraper_Net_Screenshot_ScreenshotterBuilderExtensions_AddTwitter_Scraper_Net_Screenshot_ScreenshotterBuilder_System_String_
+  commentId: M:Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.AddTwitter(Scraper.Net.Screenshot.ScreenshotterBuilder,System.String)
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.AddTwitter(Scraper.Net.Screenshot.ScreenshotterBuilder, System.String)
+  nameWithType: ScreenshotterBuilderExtensions.AddTwitter(ScreenshotterBuilder, String)
+- uid: Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.AddTwitter*
+  name: AddTwitter
+  href: api/Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.html#Scraper_Net_Screenshot_ScreenshotterBuilderExtensions_AddTwitter_
+  commentId: Overload:Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.AddTwitter
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.AddTwitter
+  nameWithType: ScreenshotterBuilderExtensions.AddTwitter
+- uid: Scraper.Net.Screenshot.TwitterScreenshotter
+  name: TwitterScreenshotter
+  href: api/Scraper.Net.Screenshot.TwitterScreenshotter.html
+  commentId: T:Scraper.Net.Screenshot.TwitterScreenshotter
+  fullName: Scraper.Net.Screenshot.TwitterScreenshotter
+  nameWithType: TwitterScreenshotter
+- uid: Scraper.Net.Screenshot.TwitterScreenshotter.#ctor(IHtmlCssToImageClient)
+  name: TwitterScreenshotter(IHtmlCssToImageClient)
+  href: api/Scraper.Net.Screenshot.TwitterScreenshotter.html#Scraper_Net_Screenshot_TwitterScreenshotter__ctor_IHtmlCssToImageClient_
+  commentId: M:Scraper.Net.Screenshot.TwitterScreenshotter.#ctor(IHtmlCssToImageClient)
+  fullName: Scraper.Net.Screenshot.TwitterScreenshotter.TwitterScreenshotter(IHtmlCssToImageClient)
+  nameWithType: TwitterScreenshotter.TwitterScreenshotter(IHtmlCssToImageClient)
+- uid: Scraper.Net.Screenshot.TwitterScreenshotter.#ctor*
+  name: TwitterScreenshotter
+  href: api/Scraper.Net.Screenshot.TwitterScreenshotter.html#Scraper_Net_Screenshot_TwitterScreenshotter__ctor_
+  commentId: Overload:Scraper.Net.Screenshot.TwitterScreenshotter.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.TwitterScreenshotter.TwitterScreenshotter
+  nameWithType: TwitterScreenshotter.TwitterScreenshotter
+- uid: Scraper.Net.Screenshot.TwitterScreenshotter.ScreenshotAsync(System.String)
+  name: ScreenshotAsync(String)
+  href: api/Scraper.Net.Screenshot.TwitterScreenshotter.html#Scraper_Net_Screenshot_TwitterScreenshotter_ScreenshotAsync_System_String_
+  commentId: M:Scraper.Net.Screenshot.TwitterScreenshotter.ScreenshotAsync(System.String)
+  fullName: Scraper.Net.Screenshot.TwitterScreenshotter.ScreenshotAsync(System.String)
+  nameWithType: TwitterScreenshotter.ScreenshotAsync(String)
+- uid: Scraper.Net.Screenshot.TwitterScreenshotter.ScreenshotAsync*
+  name: ScreenshotAsync
+  href: api/Scraper.Net.Screenshot.TwitterScreenshotter.html#Scraper_Net_Screenshot_TwitterScreenshotter_ScreenshotAsync_
+  commentId: Overload:Scraper.Net.Screenshot.TwitterScreenshotter.ScreenshotAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Screenshot.TwitterScreenshotter.ScreenshotAsync
+  nameWithType: TwitterScreenshotter.ScreenshotAsync
+- uid: Scraper.Net.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Scraper.Net.ServiceCollectionExtensions.html
+  commentId: T:Scraper.Net.ServiceCollectionExtensions
+  fullName: Scraper.Net.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Scraper.Net.ServiceCollectionExtensions.AddScraper(IServiceCollection,Action{Scraper.Net.ScraperBuilder})
+  name: AddScraper(IServiceCollection, Action<ScraperBuilder>)
+  href: api/Scraper.Net.ServiceCollectionExtensions.html#Scraper_Net_ServiceCollectionExtensions_AddScraper_IServiceCollection_Action_Scraper_Net_ScraperBuilder__
+  commentId: M:Scraper.Net.ServiceCollectionExtensions.AddScraper(IServiceCollection,Action{Scraper.Net.ScraperBuilder})
+  name.vb: AddScraper(IServiceCollection, Action(Of ScraperBuilder))
+  fullName: Scraper.Net.ServiceCollectionExtensions.AddScraper(IServiceCollection, Action<Scraper.Net.ScraperBuilder>)
+  fullName.vb: Scraper.Net.ServiceCollectionExtensions.AddScraper(IServiceCollection, Action(Of Scraper.Net.ScraperBuilder))
+  nameWithType: ServiceCollectionExtensions.AddScraper(IServiceCollection, Action<ScraperBuilder>)
+  nameWithType.vb: ServiceCollectionExtensions.AddScraper(IServiceCollection, Action(Of ScraperBuilder))
+- uid: Scraper.Net.ServiceCollectionExtensions.AddScraper*
+  name: AddScraper
+  href: api/Scraper.Net.ServiceCollectionExtensions.html#Scraper_Net_ServiceCollectionExtensions_AddScraper_
+  commentId: Overload:Scraper.Net.ServiceCollectionExtensions.AddScraper
+  isSpec: "True"
+  fullName: Scraper.Net.ServiceCollectionExtensions.AddScraper
+  nameWithType: ServiceCollectionExtensions.AddScraper
+- uid: Scraper.Net.StringExtensions
+  name: StringExtensions
+  href: api/Scraper.Net.StringExtensions.html
+  commentId: T:Scraper.Net.StringExtensions
+  fullName: Scraper.Net.StringExtensions
+  nameWithType: StringExtensions
+- uid: Scraper.Net.StringExtensions.Replace(System.String,IEnumerable{System.String},System.String)
+  name: Replace(String, IEnumerable<String>, String)
+  href: api/Scraper.Net.StringExtensions.html#Scraper_Net_StringExtensions_Replace_System_String_IEnumerable_System_String__System_String_
+  commentId: M:Scraper.Net.StringExtensions.Replace(System.String,IEnumerable{System.String},System.String)
+  name.vb: Replace(String, IEnumerable(Of String), String)
+  fullName: Scraper.Net.StringExtensions.Replace(System.String, IEnumerable<System.String>, System.String)
+  fullName.vb: Scraper.Net.StringExtensions.Replace(System.String, IEnumerable(Of System.String), System.String)
+  nameWithType: StringExtensions.Replace(String, IEnumerable<String>, String)
+  nameWithType.vb: StringExtensions.Replace(String, IEnumerable(Of String), String)
+- uid: Scraper.Net.StringExtensions.Replace*
+  name: Replace
+  href: api/Scraper.Net.StringExtensions.html#Scraper_Net_StringExtensions_Replace_
+  commentId: Overload:Scraper.Net.StringExtensions.Replace
+  isSpec: "True"
+  fullName: Scraper.Net.StringExtensions.Replace
+  nameWithType: StringExtensions.Replace
+- uid: Scraper.Net.Twitter
+  name: Scraper.Net.Twitter
+  href: api/Scraper.Net.Twitter.html
+  commentId: N:Scraper.Net.Twitter
+  fullName: Scraper.Net.Twitter
+  nameWithType: Scraper.Net.Twitter
+- uid: Scraper.Net.Twitter.ScraperBuilderExtensions
+  name: ScraperBuilderExtensions
+  href: api/Scraper.Net.Twitter.ScraperBuilderExtensions.html
+  commentId: T:Scraper.Net.Twitter.ScraperBuilderExtensions
+  fullName: Scraper.Net.Twitter.ScraperBuilderExtensions
+  nameWithType: ScraperBuilderExtensions
+- uid: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter(Scraper.Net.ScraperBuilder,TwitterConfig,System.String)
+  name: AddTwitter(ScraperBuilder, TwitterConfig, String)
+  href: api/Scraper.Net.Twitter.ScraperBuilderExtensions.html#Scraper_Net_Twitter_ScraperBuilderExtensions_AddTwitter_Scraper_Net_ScraperBuilder_TwitterConfig_System_String_
+  commentId: M:Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter(Scraper.Net.ScraperBuilder,TwitterConfig,System.String)
+  fullName: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter(Scraper.Net.ScraperBuilder, TwitterConfig, System.String)
+  nameWithType: ScraperBuilderExtensions.AddTwitter(ScraperBuilder, TwitterConfig, String)
+- uid: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter*
+  name: AddTwitter
+  href: api/Scraper.Net.Twitter.ScraperBuilderExtensions.html#Scraper_Net_Twitter_ScraperBuilderExtensions_AddTwitter_
+  commentId: Overload:Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter
+  isSpec: "True"
+  fullName: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter
+  nameWithType: ScraperBuilderExtensions.AddTwitter
+- uid: Scraper.Net.Twitter.TwitterScraper
+  name: TwitterScraper
+  href: api/Scraper.Net.Twitter.TwitterScraper.html
+  commentId: T:Scraper.Net.Twitter.TwitterScraper
+  fullName: Scraper.Net.Twitter.TwitterScraper
+  nameWithType: TwitterScraper
+- uid: Scraper.Net.Twitter.TwitterScraper.#ctor(TwitterConfig)
+  name: TwitterScraper(TwitterConfig)
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper__ctor_TwitterConfig_
+  commentId: M:Scraper.Net.Twitter.TwitterScraper.#ctor(TwitterConfig)
+  fullName: Scraper.Net.Twitter.TwitterScraper.TwitterScraper(TwitterConfig)
+  nameWithType: TwitterScraper.TwitterScraper(TwitterConfig)
+- uid: Scraper.Net.Twitter.TwitterScraper.#ctor*
+  name: TwitterScraper
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper__ctor_
+  commentId: Overload:Scraper.Net.Twitter.TwitterScraper.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Twitter.TwitterScraper.TwitterScraper
+  nameWithType: TwitterScraper.TwitterScraper
+- uid: Scraper.Net.Twitter.TwitterScraper.GetAuthorAsync(System.String,CancellationToken)
+  name: GetAuthorAsync(String, CancellationToken)
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper_GetAuthorAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Twitter.TwitterScraper.GetAuthorAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Twitter.TwitterScraper.GetAuthorAsync(System.String, CancellationToken)
+  nameWithType: TwitterScraper.GetAuthorAsync(String, CancellationToken)
+- uid: Scraper.Net.Twitter.TwitterScraper.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.Twitter.TwitterScraper.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Twitter.TwitterScraper.GetAuthorAsync
+  nameWithType: TwitterScraper.GetAuthorAsync
+- uid: Scraper.Net.Twitter.TwitterScraper.GetPostsAsync(System.String,CancellationToken)
+  name: GetPostsAsync(String, CancellationToken)
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper_GetPostsAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Twitter.TwitterScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Twitter.TwitterScraper.GetPostsAsync(System.String, CancellationToken)
+  nameWithType: TwitterScraper.GetPostsAsync(String, CancellationToken)
+- uid: Scraper.Net.Twitter.TwitterScraper.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper_GetPostsAsync_
+  commentId: Overload:Scraper.Net.Twitter.TwitterScraper.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Twitter.TwitterScraper.GetPostsAsync
+  nameWithType: TwitterScraper.GetPostsAsync
+- uid: Scraper.Net.YoutubeDl
+  name: Scraper.Net.YoutubeDl
+  href: api/Scraper.Net.YoutubeDl.html
+  commentId: N:Scraper.Net.YoutubeDl
+  fullName: Scraper.Net.YoutubeDl
+  nameWithType: Scraper.Net.YoutubeDl
+- uid: Scraper.Net.YoutubeDl.ScraperBuilderExtensions
+  name: ScraperBuilderExtensions
+  href: api/Scraper.Net.YoutubeDl.ScraperBuilderExtensions.html
+  commentId: T:Scraper.Net.YoutubeDl.ScraperBuilderExtensions
+  fullName: Scraper.Net.YoutubeDl.ScraperBuilderExtensions
+  nameWithType: ScraperBuilderExtensions
+- uid: Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl(Scraper.Net.ScraperBuilder,YoutubeDlConfig)
+  name: AddYoutubeDl(ScraperBuilder, YoutubeDlConfig)
+  href: api/Scraper.Net.YoutubeDl.ScraperBuilderExtensions.html#Scraper_Net_YoutubeDl_ScraperBuilderExtensions_AddYoutubeDl_Scraper_Net_ScraperBuilder_YoutubeDlConfig_
+  commentId: M:Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl(Scraper.Net.ScraperBuilder,YoutubeDlConfig)
+  fullName: Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl(Scraper.Net.ScraperBuilder, YoutubeDlConfig)
+  nameWithType: ScraperBuilderExtensions.AddYoutubeDl(ScraperBuilder, YoutubeDlConfig)
+- uid: Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl*
+  name: AddYoutubeDl
+  href: api/Scraper.Net.YoutubeDl.ScraperBuilderExtensions.html#Scraper_Net_YoutubeDl_ScraperBuilderExtensions_AddYoutubeDl_
+  commentId: Overload:Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl
+  isSpec: "True"
+  fullName: Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl
+  nameWithType: ScraperBuilderExtensions.AddYoutubeDl
+- uid: Scraper.Net.YoutubeDl.YoutubeDlException
+  name: YoutubeDlException
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlException.html
+  commentId: T:Scraper.Net.YoutubeDl.YoutubeDlException
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlException
+  nameWithType: YoutubeDlException
+- uid: Scraper.Net.YoutubeDl.YoutubeDlException.#ctor(System.String)
+  name: YoutubeDlException(String)
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlException.html#Scraper_Net_YoutubeDl_YoutubeDlException__ctor_System_String_
+  commentId: M:Scraper.Net.YoutubeDl.YoutubeDlException.#ctor(System.String)
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlException.YoutubeDlException(System.String)
+  nameWithType: YoutubeDlException.YoutubeDlException(String)
+- uid: Scraper.Net.YoutubeDl.YoutubeDlException.#ctor*
+  name: YoutubeDlException
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlException.html#Scraper_Net_YoutubeDl_YoutubeDlException__ctor_
+  commentId: Overload:Scraper.Net.YoutubeDl.YoutubeDlException.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlException.YoutubeDlException
+  nameWithType: YoutubeDlException.YoutubeDlException
+- uid: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor
+  name: YoutubeDlPostProcessor
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.html
+  commentId: T:Scraper.Net.YoutubeDl.YoutubeDlPostProcessor
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor
+  nameWithType: YoutubeDlPostProcessor
+- uid: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.#ctor(YoutubeDlConfig)
+  name: YoutubeDlPostProcessor(YoutubeDlConfig)
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.html#Scraper_Net_YoutubeDl_YoutubeDlPostProcessor__ctor_YoutubeDlConfig_
+  commentId: M:Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.#ctor(YoutubeDlConfig)
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.YoutubeDlPostProcessor(YoutubeDlConfig)
+  nameWithType: YoutubeDlPostProcessor.YoutubeDlPostProcessor(YoutubeDlConfig)
+- uid: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.#ctor*
+  name: YoutubeDlPostProcessor
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.html#Scraper_Net_YoutubeDl_YoutubeDlPostProcessor__ctor_
+  commentId: Overload:Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.YoutubeDlPostProcessor
+  nameWithType: YoutubeDlPostProcessor.YoutubeDlPostProcessor
+- uid: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.ProcessAsync(Post,System.String,CancellationToken)
+  name: ProcessAsync(Post, String, CancellationToken)
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.html#Scraper_Net_YoutubeDl_YoutubeDlPostProcessor_ProcessAsync_Post_System_String_CancellationToken_
+  commentId: M:Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.ProcessAsync(Post,System.String,CancellationToken)
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.ProcessAsync(Post, System.String, CancellationToken)
+  nameWithType: YoutubeDlPostProcessor.ProcessAsync(Post, String, CancellationToken)
+- uid: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.ProcessAsync*
+  name: ProcessAsync
+  href: api/Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.html#Scraper_Net_YoutubeDl_YoutubeDlPostProcessor_ProcessAsync_
+  commentId: Overload:Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.ProcessAsync
+  isSpec: "True"
+  fullName: Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.ProcessAsync
+  nameWithType: YoutubeDlPostProcessor.ProcessAsync
