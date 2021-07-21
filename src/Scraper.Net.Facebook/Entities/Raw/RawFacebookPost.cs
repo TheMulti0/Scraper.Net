@@ -127,6 +127,7 @@ namespace Scraper.Net.Facebook
         public string SharedText { get; init; }
         
         [JsonPropertyName("shared_time")]
+        [JsonConverter(typeof(DateTimeConverterUsingDateTimeParse))]
         public DateTime? SharedTime { get; init; }
 
         [JsonPropertyName("shared_user_id")]
