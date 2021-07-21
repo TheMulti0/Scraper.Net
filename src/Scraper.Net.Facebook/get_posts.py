@@ -49,13 +49,11 @@ def get_facebook_posts(request: GetPostsRequest):
     if request.proxy is not None:
         set_proxy(request.proxy)
 
-    posts = get_posts(
+    return get_posts(
         request.user_id,
         pages=request.pages,
         cookies=request.cookies_filename,
         timeout=request.timeout)
-
-    return list(posts)
 
 
 def serialize(obj):
