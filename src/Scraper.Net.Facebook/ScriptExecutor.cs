@@ -86,7 +86,7 @@ namespace Scraper.Net.Facebook
                 Arguments = string.Join(' ', args),
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
-                RedirectStandardError = true
+                RedirectStandardError = false
             };
         }
     }
