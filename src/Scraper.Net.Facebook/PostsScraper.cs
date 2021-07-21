@@ -61,7 +61,7 @@ namespace Scraper.Net.Facebook
             {
                 var exception = JsonSerializer.Deserialize<FacebookScraperException>(json);
                 
-                if (exception == null)
+                if (exception?.Type == null)
                 {
                     throw;
                 }
