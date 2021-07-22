@@ -45,19 +45,6 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Facebook.FacebookConfig.MaxPageCount
   nameWithType: FacebookConfig.MaxPageCount
-- uid: Scraper.Net.Facebook.FacebookConfig.Proxies
-  name: Proxies
-  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_Proxies
-  commentId: P:Scraper.Net.Facebook.FacebookConfig.Proxies
-  fullName: Scraper.Net.Facebook.FacebookConfig.Proxies
-  nameWithType: FacebookConfig.Proxies
-- uid: Scraper.Net.Facebook.FacebookConfig.Proxies*
-  name: Proxies
-  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_Proxies_
-  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.Proxies
-  isSpec: "True"
-  fullName: Scraper.Net.Facebook.FacebookConfig.Proxies
-  nameWithType: FacebookConfig.Proxies
 - uid: Scraper.Net.Facebook.FacebookConfig.PythonPath
   name: PythonPath
   href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_PythonPath
