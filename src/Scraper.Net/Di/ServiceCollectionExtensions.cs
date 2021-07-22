@@ -23,9 +23,8 @@ namespace Scraper.Net
                 .GetServices<RegisteredPlatformScraper>()
                 .ToDictionary(r => r.Platform, r => r.Scraper);
 
-            IEnumerable<PostFilter> postFilters = provider.GetServices<PostFilter>();
-            IEnumerable<IPostProcessor> postProcessors = provider.GetServices<IPostProcessor>();
-
+            var postFilters = provider.GetServices<PostFilter>();
+            var postProcessors = provider.GetServices<IPostProcessor>();
             var logger = provider.GetService<ILogger<ScraperService>>();
 
             return new ScraperService(platformScrapers, postFilters, postProcessors, logger);

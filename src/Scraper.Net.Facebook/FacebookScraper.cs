@@ -17,7 +17,11 @@ namespace Scraper.Net.Facebook
 
         public FacebookScraper(FacebookConfig config)
         {
-            if (config?.MaxPageCount < 1)
+            if (config == null)
+            {
+                throw new ArgumentNullException(nameof(config));
+            }
+            if (config.MaxPageCount < 1)
             {
                 throw new ArgumentException(nameof(config.MaxPageCount));
             }
