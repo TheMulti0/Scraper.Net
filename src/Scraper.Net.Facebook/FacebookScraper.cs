@@ -11,7 +11,6 @@ namespace Scraper.Net.Facebook
     public class FacebookScraper : IPlatformScraper
     {
         private const string SharePrefixPattern = @"‏{0}‏\n‏\d{1,2}‏\s[\w\u0590-\u05FF]+\s·\n";
-        private readonly ProxyManager _proxyManager;
         private readonly PostsScraper _postsScraper;
         private readonly PageInfoScraper _pageInfoScraper;
 
@@ -25,7 +24,6 @@ namespace Scraper.Net.Facebook
             {
                 throw new ArgumentException(nameof(config.MaxPageCount));
             }
-            _proxyManager = new ProxyManager(config);
             _postsScraper = new PostsScraper(config);
             _pageInfoScraper = new PageInfoScraper(config);
         }
@@ -34,9 +32,8 @@ namespace Scraper.Net.Facebook
             string id, 
             CancellationToken ct = default)
         {
-            string proxy = await _proxyManager.GetProxyAsync(ct);
-            
-            PageInfo pageInfo = await _pageInfoScraper.GetPageInfoAsync(id, proxy, ct);
+            // TODO take advantage of proxy support
+            PageInfo pageInfo = await _pageInfoScraper.GetPageInfoAsync(id, null, ct);
 
             return new Net.Author
             {
@@ -51,9 +48,7 @@ namespace Scraper.Net.Facebook
             string id,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
-            string proxy = await _proxyManager.GetProxyAsync(ct);
-            
-            IAsyncEnumerable<FacebookPost> posts = _postsScraper.GetFacebookPostsAsync(id, proxy, ct);
+            IAsyncEnumerable<FacebookPost> posts = _postsScraper.GetFacebookPostsAsync(id, null, ct);
             
             await foreach (Post post in posts.Select(ToPost(id)).WithCancellation(ct))
             {

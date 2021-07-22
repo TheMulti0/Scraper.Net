@@ -39,16 +39,9 @@ namespace Scraper.Net.Facebook.Tests
         [TestMethod]
         public async Task TestError()
         {
-            var scraper = new FacebookScraper(
-                new FacebookConfig
-                {
-                    Proxies = new[]
-                    {
-                        "1.1.1.1"
-                    }
-                });
+            var scraper = new FacebookScraper(new FacebookConfig());
             
-            await Assert.ThrowsExceptionAsync<InvalidOperationException>(async () => await scraper.GetPostsAsync(User).ToListAsync());
+            await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await scraper.GetPostsAsync("anonexistinguser123135435332423").ToListAsync());
         }
         
         [DataTestMethod]
