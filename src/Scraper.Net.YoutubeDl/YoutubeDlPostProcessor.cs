@@ -38,10 +38,7 @@ namespace Scraper.Net.YoutubeDl
                 yield return post;
             }
             
-            if (post.MediaItems.All(item => !(item is VideoItem)))
-            {
-                yield break;
-            }
+            //TODO Filter out posts that have no video
             
             VideoItem videoItem = await ExtractVideoItem(post.Url, ct);
 
