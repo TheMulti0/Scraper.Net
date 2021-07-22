@@ -2,7 +2,10 @@
 
     <PropertyGroup>
       <TargetFramework>net5.0</TargetFramework>
-      <Version>0.1.0</Version>
+      <Version>0.1.1</Version>
+      <Title>Scraper.Net.YoutubeDl</Title>
+      <Authors>TheMulti0</Authors>
+      <RepositoryType>https://github.com/TheMulti0/Scraper.Net</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
