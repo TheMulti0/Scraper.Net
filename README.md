@@ -13,5 +13,8 @@
 - [x] RSS feeds support
 - [x] Add GetProfile for scrapers
 - [x] Rate-limit handling
+- [ ] Proxy support
 - [ ] Instagram support
+- [ ] Youtube support
+- [ ] Spotify support
 - [ ] Telegram support
