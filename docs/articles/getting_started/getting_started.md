@@ -50,8 +50,8 @@ await foreach (var post in posts)
 }
 ```
 
-In the following example `Microsoft.Extensions.DependencyInjection` is used to create an @Scraper.Net.IScraperService.
+In the following example `Microsoft.Extensions.DependencyInjection` is used to create an [`IScraperService`](xref:Scraper.Net.IScraperService).
 
 Using the [`AddScraper`](xref:Scraper.Net.ScraperBuilder) extension method it is possible to register in the [`ScraperBuilder`](xref:Scraper.Net.ScraperBuilder) your desired platform scraper.
 
-After building the service provider, the generated [`IScraperService`](xref:Scraper.Net.ScraperService) is used to get the posts asynchronously using async enumerable and print their content.
+After building the service provider, the generated [`IScraperService`](xref:Scraper.Net.IScraperService) is used to get the posts asynchronously using async enumerable and print their content.
