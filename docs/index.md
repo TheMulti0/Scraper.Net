@@ -10,6 +10,6 @@ Scraper.Net is a multi-platform, asynchronous .NET library responsible of provid
 
 ## Where to begin?
 
-If this is your first time using Scraper.Net, you should refer to the [introduction](xref:guides.intro) for tutorials.
+If this is your first time using Scraper.Net, you should refer to the [guides](xref:guides.getting_started).
 
-More experienced users might want to refer to the [API Reference](xref:api.home) for a breakdown of the individual objects in the library.
+You might also want to refer to the [API Reference](xref:api.home) for a breakdown of the individual objects in the library.
