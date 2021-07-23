@@ -1,6 +1,15 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: api.home
+  name: API Reference
+  href: api/index.html
+- uid: guides.intro
+  name: Introduction
+  href: articles/intro.html
+- uid: root.home
+  name: Scraper.Net
+  href: index.html
 - uid: Scraper.Net
   name: Scraper.Net
   href: api/Scraper.Net.html
