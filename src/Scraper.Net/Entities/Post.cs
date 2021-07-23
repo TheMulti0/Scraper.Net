@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace Scraper.Net
 {
+    /// <summary>
+    /// Represents the base unit of a post 
+    /// </summary>
     public record Post
     {
         public string Url { get; init; }

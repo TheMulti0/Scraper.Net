@@ -5,11 +5,14 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi;
-using Tweetinvi.Exceptions;
 using Tweetinvi.Models;
 
 namespace Scraper.Net.Twitter
 {
+    /// <summary>
+    /// <see cref="IPlatformScraper"/> for providing Twitter posts.
+    /// The scraping engine is powered by Tweetinvi
+    /// </summary>
     public class TwitterScraper : IPlatformScraper
     {
         private readonly AsyncLazy<TweetScraper> _tweetScraper;

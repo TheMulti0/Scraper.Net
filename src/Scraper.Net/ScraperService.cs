@@ -8,6 +8,12 @@ using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net
 {
+    /// <summary>
+    /// Implementation of <see cref="IScraperService"/> which is built on top of
+    /// platform scrapers <see cref="IPlatformScraper"/>,
+    /// post filters <see cref="PostFilter"/> and
+    /// post processors <see cref="IPostProcessor"/>
+    /// </summary>
     public class ScraperService : IScraperService
     {
         private readonly IDictionary<string, IPlatformScraper> _platformScrapers;

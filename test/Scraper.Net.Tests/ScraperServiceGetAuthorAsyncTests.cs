@@ -28,7 +28,7 @@ namespace Scraper.Net.Tests
         [TestMethod]
         public async Task TestGetAuthorAsync()
         {
-            var mockScraper = new MockScraper();
+            IPlatformScraper mockScraper = new MockScraper();
             var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper> 
                 {

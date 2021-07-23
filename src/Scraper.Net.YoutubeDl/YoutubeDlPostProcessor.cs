@@ -9,6 +9,10 @@ using YoutubeDLSharp.Options;
 
 namespace Scraper.Net.YoutubeDl
 {
+    /// <summary>
+    /// <see cref="IPostProcessor"/> for downloading high-quality videos.
+    /// The scraping engine is powered by YoutubeDLSharp
+    /// </summary>
     public class YoutubeDlPostProcessor : IPostProcessor
     {
         private readonly bool _keepReceivedPost;
@@ -60,6 +64,7 @@ namespace Scraper.Net.YoutubeDl
 
             return new VideoItem(
                 highestFormat.Url ?? data.Url,
+                UrlType.DirectUrl,
                 highestThumbnail.Url,
                 data.Duration,
                 highestFormat.Width ?? highestThumbnail.Width,

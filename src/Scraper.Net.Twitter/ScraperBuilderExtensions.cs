@@ -5,6 +5,13 @@ namespace Scraper.Net.Twitter
 {
     public static class ScraperBuilderExtensions
     {
+        /// <summary>
+        /// Adds a <see cref="TwitterScraper"/>
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <param name="config"></param>
+        /// <param name="platform"></param>
+        /// <returns>A reference to this instance after the operation has completed</returns>
         public static ScraperBuilder AddTwitter(
             this ScraperBuilder builder,
             TwitterConfig config = null,

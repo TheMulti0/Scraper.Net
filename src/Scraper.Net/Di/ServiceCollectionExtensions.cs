@@ -8,6 +8,14 @@ namespace Scraper.Net
 {
     public static class ServiceCollectionExtensions
     {
+        /// <summary>
+        /// Adds a singleton service of the type <see cref="IScraperService" /> using a factory of scraper-related services
+        /// specified in <paramref name="builderAction"/> to the
+        /// specified IServiceCollection
+        /// </summary>
+        /// <param name="services">This service collection</param>
+        /// <param name="builderAction">Scraper-related services factory</param>
+        /// <returns>A reference to this instance after the operation has completed</returns>
         public static IServiceCollection AddScraper(
             this IServiceCollection services,
             Action<ScraperBuilder> builderAction)

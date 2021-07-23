@@ -5,9 +5,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Scraper.Net.Feeds.Tests
 {
     [TestClass]
-    public class FeedScraperGetAuthorAsyncTests
+    public class FeedsScraperGetAuthorAsyncTests
     {
-        private static readonly FeedScraper FeedScraper = new();
+        private static readonly FeedsScraper FeedsScraper = new();
         
         [TestMethod]
         public async Task TestMako()
@@ -30,14 +30,14 @@ namespace Scraper.Net.Feeds.Tests
 
         private static async Task Test(string url)
         {
-            var author = await FeedScraper.GetAuthorAsync(url);
+            var author = await FeedsScraper.GetAuthorAsync(url);
 
             Assert.IsNotNull(author.Id);
         }
 
         private static Task TestFailure<T>(string url) where T : Exception
         {
-            return Assert.ThrowsExceptionAsync<T>(async () => await FeedScraper.GetAuthorAsync(url));
+            return Assert.ThrowsExceptionAsync<T>(async () => await FeedsScraper.GetAuthorAsync(url));
         }
     }
 }

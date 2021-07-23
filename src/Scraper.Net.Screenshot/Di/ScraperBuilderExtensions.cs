@@ -8,6 +8,14 @@ namespace Scraper.Net.Screenshot
 {
     public static class ScraperBuilderExtensions
     {
+        /// <summary>
+        /// Adds a <see cref="ScreenshotPostProcessor"/>
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <param name="builderAction">Screenshot-related services factory</param>
+        /// <param name="config"></param>
+        /// <param name="keepReceivedPost">If set to true, the post processor will return the original post in addition to the processed one</param>
+        /// <returns>A reference to this instance after the operation has completed</returns>
         public static ScraperBuilder AddScreenshot(
             this ScraperBuilder builder,
             Action<ScreenshotterBuilder> builderAction,

@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace Scraper.Net.Facebook
 {
+    /// <summary>
+    /// <see cref="IPlatformScraper"/> for providing Facebook posts.
+    /// The scraping engine is powered by the python library facebook-scraper
+    /// <see href="https://github.com/kevinzg/facebook-scraper"/>
+    /// </summary>
     public class FacebookScraper : IPlatformScraper
     {
         private const string SharePrefixPattern = @"‏{0}‏\n‏\d{1,2}‏\s[\w\u0590-\u05FF]+\s·\n";
@@ -107,6 +112,7 @@ namespace Scraper.Net.Facebook
             
             var video = new VideoItem(
                 post.Video.Url,
+                UrlType.DirectUrl,
                 post.Video.ThumbnailUrl,
                 post.Video.Duration,
                 post.Video.Width,

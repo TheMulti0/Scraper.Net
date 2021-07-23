@@ -4,6 +4,9 @@ namespace Scraper.Net.YoutubeDl
 {
     public record YoutubeDlConfig
     {
+        /// <summary>
+        /// If set to true, the post processor will return the original post in addition to the processed one
+        /// </summary>
         public bool KeepReceivedPost { get; init; }
         
         public byte DegreeOfConcurrency { get; init; } = 4;

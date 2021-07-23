@@ -52,6 +52,7 @@ namespace Scraper.Net.Twitter
             {
                 return new VideoItem(
                     bestVideo.URL,
+                    UrlType.DirectUrl,
                     thumbnailUrl,
                     TimeSpan.FromMilliseconds(videoInfo.DurationInMilliseconds),
                     size?.Width,

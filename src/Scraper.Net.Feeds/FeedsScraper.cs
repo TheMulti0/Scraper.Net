@@ -8,7 +8,11 @@ using System.Xml;
 
 namespace Scraper.Net.Feeds
 {
-    public class FeedScraper : IPlatformScraper
+    /// <summary>
+    /// <see cref="IPlatformScraper"/> for providing <see cref="SyndicationFeed"/> items.
+    /// The scraping engine is powered by System.ServiceModel.Syndication
+    /// </summary>
+    public class FeedsScraper : IPlatformScraper
     {
         private const string ImageSrcPattern = "<img.+?src=[\"'](.+?)[\"'].*?>";
         private static readonly Regex ImageSrcRegex = new(ImageSrcPattern);

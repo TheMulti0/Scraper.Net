@@ -5,6 +5,12 @@ namespace Scraper.Net.Screenshot
 {
     public static class ScreenshotterBuilderExtensions
     {
+        /// <summary>
+        /// Adds a <see cref="TwitterScreenshotter"/>
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <param name="platform"></param>
+        /// <returns>A reference to this instance after the operation has completed</returns>
         public static ScreenshotterBuilder AddTwitter(
             this ScreenshotterBuilder builder,
             string platform = "twitter")
