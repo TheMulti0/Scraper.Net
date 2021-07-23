@@ -199,57 +199,57 @@ references:
   commentId: N:Scraper.Net.Feeds
   fullName: Scraper.Net.Feeds
   nameWithType: Scraper.Net.Feeds
-- uid: Scraper.Net.Feeds.FeedScraper
-  name: FeedScraper
-  href: api/Scraper.Net.Feeds.FeedScraper.html
-  commentId: T:Scraper.Net.Feeds.FeedScraper
-  fullName: Scraper.Net.Feeds.FeedScraper
-  nameWithType: FeedScraper
-- uid: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync(System.String,CancellationToken)
+- uid: Scraper.Net.Feeds.FeedsScraper
+  name: FeedsScraper
+  href: api/Scraper.Net.Feeds.FeedsScraper.html
+  commentId: T:Scraper.Net.Feeds.FeedsScraper
+  fullName: Scraper.Net.Feeds.FeedsScraper
+  nameWithType: FeedsScraper
+- uid: Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync(System.String,CancellationToken)
   name: GetAuthorAsync(String, CancellationToken)
-  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetAuthorAsync_System_String_CancellationToken_
-  commentId: M:Scraper.Net.Feeds.FeedScraper.GetAuthorAsync(System.String,CancellationToken)
-  fullName: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync(System.String, CancellationToken)
-  nameWithType: FeedScraper.GetAuthorAsync(String, CancellationToken)
-- uid: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync*
+  href: api/Scraper.Net.Feeds.FeedsScraper.html#Scraper_Net_Feeds_FeedsScraper_GetAuthorAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync(System.String, CancellationToken)
+  nameWithType: FeedsScraper.GetAuthorAsync(String, CancellationToken)
+- uid: Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync*
   name: GetAuthorAsync
-  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetAuthorAsync_
-  commentId: Overload:Scraper.Net.Feeds.FeedScraper.GetAuthorAsync
+  href: api/Scraper.Net.Feeds.FeedsScraper.html#Scraper_Net_Feeds_FeedsScraper_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync
   isSpec: "True"
-  fullName: Scraper.Net.Feeds.FeedScraper.GetAuthorAsync
-  nameWithType: FeedScraper.GetAuthorAsync
-- uid: Scraper.Net.Feeds.FeedScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync
+  nameWithType: FeedsScraper.GetAuthorAsync
+- uid: Scraper.Net.Feeds.FeedsScraper.GetPostsAsync(System.String,CancellationToken)
   name: GetPostsAsync(String, CancellationToken)
-  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetPostsAsync_System_String_CancellationToken_
-  commentId: M:Scraper.Net.Feeds.FeedScraper.GetPostsAsync(System.String,CancellationToken)
-  fullName: Scraper.Net.Feeds.FeedScraper.GetPostsAsync(System.String, CancellationToken)
-  nameWithType: FeedScraper.GetPostsAsync(String, CancellationToken)
-- uid: Scraper.Net.Feeds.FeedScraper.GetPostsAsync*
+  href: api/Scraper.Net.Feeds.FeedsScraper.html#Scraper_Net_Feeds_FeedsScraper_GetPostsAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Feeds.FeedsScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.FeedsScraper.GetPostsAsync(System.String, CancellationToken)
+  nameWithType: FeedsScraper.GetPostsAsync(String, CancellationToken)
+- uid: Scraper.Net.Feeds.FeedsScraper.GetPostsAsync*
   name: GetPostsAsync
-  href: api/Scraper.Net.Feeds.FeedScraper.html#Scraper_Net_Feeds_FeedScraper_GetPostsAsync_
-  commentId: Overload:Scraper.Net.Feeds.FeedScraper.GetPostsAsync
+  href: api/Scraper.Net.Feeds.FeedsScraper.html#Scraper_Net_Feeds_FeedsScraper_GetPostsAsync_
+  commentId: Overload:Scraper.Net.Feeds.FeedsScraper.GetPostsAsync
   isSpec: "True"
-  fullName: Scraper.Net.Feeds.FeedScraper.GetPostsAsync
-  nameWithType: FeedScraper.GetPostsAsync
+  fullName: Scraper.Net.Feeds.FeedsScraper.GetPostsAsync
+  nameWithType: FeedsScraper.GetPostsAsync
 - uid: Scraper.Net.Feeds.ScraperBuilderExtensions
   name: ScraperBuilderExtensions
   href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html
   commentId: T:Scraper.Net.Feeds.ScraperBuilderExtensions
   fullName: Scraper.Net.Feeds.ScraperBuilderExtensions
   nameWithType: ScraperBuilderExtensions
-- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed(Scraper.Net.ScraperBuilder,System.String)
-  name: AddFeed(ScraperBuilder, String)
-  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeed_Scraper_Net_ScraperBuilder_System_String_
-  commentId: M:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed(Scraper.Net.ScraperBuilder,System.String)
-  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed(Scraper.Net.ScraperBuilder, System.String)
-  nameWithType: ScraperBuilderExtensions.AddFeed(ScraperBuilder, String)
-- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed*
-  name: AddFeed
-  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeed_
-  commentId: Overload:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed
+- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds(Scraper.Net.ScraperBuilder,System.String)
+  name: AddFeeds(ScraperBuilder, String)
+  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeeds_Scraper_Net_ScraperBuilder_System_String_
+  commentId: M:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds(Scraper.Net.ScraperBuilder,System.String)
+  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds(Scraper.Net.ScraperBuilder, System.String)
+  nameWithType: ScraperBuilderExtensions.AddFeeds(ScraperBuilder, String)
+- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds*
+  name: AddFeeds
+  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeeds_
+  commentId: Overload:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds
   isSpec: "True"
-  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeed
-  nameWithType: ScraperBuilderExtensions.AddFeed
+  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds
+  nameWithType: ScraperBuilderExtensions.AddFeeds
 - uid: Scraper.Net.IdNotFoundException
   name: IdNotFoundException
   href: api/Scraper.Net.IdNotFoundException.html
@@ -889,6 +889,24 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Twitter.TwitterScraper.GetPostsAsync
   nameWithType: TwitterScraper.GetPostsAsync
+- uid: Scraper.Net.UrlType
+  name: UrlType
+  href: api/Scraper.Net.UrlType.html
+  commentId: T:Scraper.Net.UrlType
+  fullName: Scraper.Net.UrlType
+  nameWithType: UrlType
+- uid: Scraper.Net.UrlType.DirectUrl
+  name: DirectUrl
+  href: api/Scraper.Net.UrlType.html#Scraper_Net_UrlType_DirectUrl
+  commentId: F:Scraper.Net.UrlType.DirectUrl
+  fullName: Scraper.Net.UrlType.DirectUrl
+  nameWithType: UrlType.DirectUrl
+- uid: Scraper.Net.UrlType.WebpageUrl
+  name: WebpageUrl
+  href: api/Scraper.Net.UrlType.html#Scraper_Net_UrlType_WebpageUrl
+  commentId: F:Scraper.Net.UrlType.WebpageUrl
+  fullName: Scraper.Net.UrlType.WebpageUrl
+  nameWithType: UrlType.WebpageUrl
 - uid: Scraper.Net.YoutubeDl
   name: Scraper.Net.YoutubeDl
   href: api/Scraper.Net.YoutubeDl.html
