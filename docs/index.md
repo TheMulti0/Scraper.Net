@@ -1,4 +1,15 @@
-# This is the **HOMEPAGE**.
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-## Quick Start Notes:
-1. Add images to the *images* folder if the file is referencing an image.
+---
+uid: root.home
+---
+
+# Scraper.Net
+
+## What is Scraper.Net?
+
+Scraper.Net is a multi-platform, asynchronous .NET library responsible of providing easy post scraping over a variety of sources.
+
+## Where to begin?
+
+If this is your first time using Scraper.Net, you should refer to the [introduction](xref:guides.intro) for tutorials.
+
+More experienced users might want to refer to the [API Reference](xref:api.home) for a breakdown of the individual objects in the library.

@@ -27,7 +27,7 @@ namespace Scraper.Net
         /// <param name="id">Author id</param>
         /// <param name="platform">Platform to query</param>
         /// <param name="ct">Cancellation token</param>
-        /// <returns>Async-enumerable of posts</returns>
+        /// <returns>A finite async-enumerable of the posts</returns>
         IAsyncEnumerable<Post> GetPostsAsync(
             string id,
             string platform,
