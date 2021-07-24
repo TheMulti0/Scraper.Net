@@ -2,22 +2,20 @@
 
     <PropertyGroup>
       <TargetFramework>net5.0</TargetFramework>
-      <Version>0.1.4</Version>
+      <Version>0.1.5</Version>
       <Title>Scraper.Net.Facebook</Title>
       <Authors>TheMulti0</Authors>
       <RepositoryUrl>https://github.com/TheMulti0/Scraper.Net</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
+      <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="*.py">
+      <EmbeddedResource Include="*.py">
         <IncludeInPackage>true</IncludeInPackage>
-        <PackageCopyToOutput>true</PackageCopyToOutput>
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>

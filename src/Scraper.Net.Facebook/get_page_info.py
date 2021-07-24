@@ -55,5 +55,4 @@ def serialize(obj):
     return json.dumps(obj, indent=2, default=json_converter)
 
 
-if __name__ == "__main__":
-    main(sys.argv[1:])
+main(sys.argv[1:])

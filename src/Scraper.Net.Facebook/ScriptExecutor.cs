@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
@@ -10,18 +12,35 @@ namespace Scraper.Net.Facebook
 {
     internal static class ScriptExecutor
     {
-        public static IAsyncEnumerable<string> Execute(
+        public static async IAsyncEnumerable<string> Execute(
             string executablePath,
             string scriptName,
             object request,
-            CancellationToken ct = default)
+            [EnumeratorCancellation] CancellationToken ct = default)
         {
-            Process process = StartProcess(executablePath, scriptName, GetRequestJson(request), ct);
+            string script = await GetScript(scriptName);
+
+            Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
 
             const string blockStart = "{";
             const string blockEnd = "}";
 
-            return GetOutputJsonBlocks(process, blockStart, blockEnd, ct);
+            await foreach (string block in GetOutputJsonBlocks(process, blockStart, blockEnd, ct))
+            {
+                yield return block;
+            }
+        }
+
+        private static async Task<string> GetScript(string scriptName)
+        {
+            Type type = typeof(ScriptExecutor);
+
+            await using Stream scriptStream = type.Assembly
+                .GetManifestResourceStream($"{type.Namespace}.{scriptName}");
+            
+            using var streamReader = new StreamReader(scriptStream);
+            
+            return await streamReader.ReadToEndAsync();
         }
 
         private static async IAsyncEnumerable<string> GetOutputJsonBlocks(
@@ -57,13 +76,14 @@ namespace Scraper.Net.Facebook
 
         private static Process StartProcess(
             string executablePath,
-            string scriptName,
+            string script,
             string parameters,
             CancellationToken token)
         {
             string[] arguments = {
                 "-u", // python -u forces the stdout and stderr streams to be unbuffered, without this option the output will only be received when process has exited
-                scriptName,
+                "-c", // python -c is required when running a script as argument
+                $"\"{script}\"",
                 parameters
             };
 
