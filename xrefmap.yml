@@ -885,6 +885,25 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.PostsStreamer.Stream
   nameWithType: PostsStreamer.Stream
+- uid: Scraper.Net.Stream.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Scraper.Net.Stream.ServiceCollectionExtensions.html
+  commentId: T:Scraper.Net.Stream.ServiceCollectionExtensions
+  fullName: Scraper.Net.Stream.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection,Scraper.Net.PostFilter)
+  name: AddStream(IServiceCollection, PostFilter)
+  href: api/Scraper.Net.Stream.ServiceCollectionExtensions.html#Scraper_Net_Stream_ServiceCollectionExtensions_AddStream_IServiceCollection_Scraper_Net_PostFilter_
+  commentId: M:Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection,Scraper.Net.PostFilter)
+  fullName: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection, Scraper.Net.PostFilter)
+  nameWithType: ServiceCollectionExtensions.AddStream(IServiceCollection, PostFilter)
+- uid: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream*
+  name: AddStream
+  href: api/Scraper.Net.Stream.ServiceCollectionExtensions.html#Scraper_Net_Stream_ServiceCollectionExtensions_AddStream_
+  commentId: Overload:Scraper.Net.Stream.ServiceCollectionExtensions.AddStream
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream
+  nameWithType: ServiceCollectionExtensions.AddStream
 - uid: Scraper.Net.StringExtensions
   name: StringExtensions
   href: api/Scraper.Net.StringExtensions.html
