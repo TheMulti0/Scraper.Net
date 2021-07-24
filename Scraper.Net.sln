@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{3357
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookScraperApp", "samples\FacebookScraperApp\FacebookScraperApp.csproj", "{B0D0B70A-80A0-4A2F-AE2F-7511E3998814}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Stream", "src\Scraper.Net.Stream\Scraper.Net.Stream.csproj", "{AFD803B8-18AB-468B-A5CB-89304AEFB9DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper.Net.Stream.Tests", "test\Scraper.Net.Stream.Tests\Scraper.Net.Stream.Tests.csproj", "{5A395044-BFD2-41C1-AA74-86F0B44A88BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,14 @@ Global
 		{B0D0B70A-80A0-4A2F-AE2F-7511E3998814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0D0B70A-80A0-4A2F-AE2F-7511E3998814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0D0B70A-80A0-4A2F-AE2F-7511E3998814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD803B8-18AB-468B-A5CB-89304AEFB9DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD803B8-18AB-468B-A5CB-89304AEFB9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD803B8-18AB-468B-A5CB-89304AEFB9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD803B8-18AB-468B-A5CB-89304AEFB9DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A395044-BFD2-41C1-AA74-86F0B44A88BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A395044-BFD2-41C1-AA74-86F0B44A88BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A395044-BFD2-41C1-AA74-86F0B44A88BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A395044-BFD2-41C1-AA74-86F0B44A88BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,5 +118,6 @@ Global
 		{2F3908D2-CF31-4738-9B68-60447848DE9C} = {89753950-AF3C-4201-9CA1-EEC7C7EDB6AE}
 		{BBA32269-5D2C-42FD-B66F-977DF8106045} = {89753950-AF3C-4201-9CA1-EEC7C7EDB6AE}
 		{B0D0B70A-80A0-4A2F-AE2F-7511E3998814} = {33579A60-1DBF-4106-973E-770615272429}
+		{5A395044-BFD2-41C1-AA74-86F0B44A88BE} = {89753950-AF3C-4201-9CA1-EEC7C7EDB6AE}
 	EndGlobalSection
 EndGlobal
