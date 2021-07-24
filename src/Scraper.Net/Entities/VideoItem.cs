@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Scraper.Net
 {
@@ -7,10 +8,12 @@ namespace Scraper.Net
         public string Url { get; }
         public UrlType UrlType { get; }
         public string ThumbnailUrl { get; }
+        [JsonConverter(typeof(NullableTimeSpanConverter))]
         public TimeSpan? Duration { get; }
         public int? Width { get; }
         public int? Height { get; }
 
+        [JsonConstructor]
         public VideoItem(
             string url,
             UrlType urlType,
