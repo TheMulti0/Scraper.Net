@@ -1,4 +1,4 @@
-name: Test and publish Scraper.Net
+name: Test and publish Scraper.Net.Stream
 
 on:
   push:
