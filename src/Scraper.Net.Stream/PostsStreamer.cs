@@ -2,6 +2,9 @@
 
 namespace Scraper.Net.Stream
 {
+    /// <summary>
+    /// Periodically polls for posts, distincts duplicates and exposes a stream of new posts
+    /// </summary>
     public class PostsStreamer
     {
         private readonly IScraperService _service;
