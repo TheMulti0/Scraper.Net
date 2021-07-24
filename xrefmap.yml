@@ -471,6 +471,44 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.MediaItemConverter.Write
   nameWithType: MediaItemConverter.Write
+- uid: Scraper.Net.NullableTimeSpanConverter
+  name: NullableTimeSpanConverter
+  href: api/Scraper.Net.NullableTimeSpanConverter.html
+  commentId: T:Scraper.Net.NullableTimeSpanConverter
+  fullName: Scraper.Net.NullableTimeSpanConverter
+  nameWithType: NullableTimeSpanConverter
+- uid: Scraper.Net.NullableTimeSpanConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Scraper.Net.NullableTimeSpanConverter.html#Scraper_Net_NullableTimeSpanConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Scraper.Net.NullableTimeSpanConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Scraper.Net.NullableTimeSpanConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Scraper.Net.NullableTimeSpanConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: NullableTimeSpanConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: NullableTimeSpanConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Scraper.Net.NullableTimeSpanConverter.Read*
+  name: Read
+  href: api/Scraper.Net.NullableTimeSpanConverter.html#Scraper_Net_NullableTimeSpanConverter_Read_
+  commentId: Overload:Scraper.Net.NullableTimeSpanConverter.Read
+  isSpec: "True"
+  fullName: Scraper.Net.NullableTimeSpanConverter.Read
+  nameWithType: NullableTimeSpanConverter.Read
+- uid: Scraper.Net.NullableTimeSpanConverter.Write(Utf8JsonWriter,System.Nullable{TimeSpan},JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Nullable<TimeSpan>, JsonSerializerOptions)
+  href: api/Scraper.Net.NullableTimeSpanConverter.html#Scraper_Net_NullableTimeSpanConverter_Write_Utf8JsonWriter_System_Nullable_TimeSpan__JsonSerializerOptions_
+  commentId: M:Scraper.Net.NullableTimeSpanConverter.Write(Utf8JsonWriter,System.Nullable{TimeSpan},JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, Nullable(Of TimeSpan), JsonSerializerOptions)
+  fullName: Scraper.Net.NullableTimeSpanConverter.Write(Utf8JsonWriter, System.Nullable<TimeSpan>, JsonSerializerOptions)
+  fullName.vb: Scraper.Net.NullableTimeSpanConverter.Write(Utf8JsonWriter, System.Nullable(Of TimeSpan), JsonSerializerOptions)
+  nameWithType: NullableTimeSpanConverter.Write(Utf8JsonWriter, Nullable<TimeSpan>, JsonSerializerOptions)
+  nameWithType.vb: NullableTimeSpanConverter.Write(Utf8JsonWriter, Nullable(Of TimeSpan), JsonSerializerOptions)
+- uid: Scraper.Net.NullableTimeSpanConverter.Write*
+  name: Write
+  href: api/Scraper.Net.NullableTimeSpanConverter.html#Scraper_Net_NullableTimeSpanConverter_Write_
+  commentId: Overload:Scraper.Net.NullableTimeSpanConverter.Write
+  isSpec: "True"
+  fullName: Scraper.Net.NullableTimeSpanConverter.Write
+  nameWithType: NullableTimeSpanConverter.Write
 - uid: Scraper.Net.PostFilter
   name: PostFilter
   href: api/Scraper.Net.PostFilter.html
