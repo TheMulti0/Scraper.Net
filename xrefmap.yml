@@ -806,6 +806,85 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.ServiceCollectionExtensions.AddScraper
   nameWithType: ServiceCollectionExtensions.AddScraper
+- uid: Scraper.Net.Stream
+  name: Scraper.Net.Stream
+  href: api/Scraper.Net.Stream.html
+  commentId: N:Scraper.Net.Stream
+  fullName: Scraper.Net.Stream
+  nameWithType: Scraper.Net.Stream
+- uid: Scraper.Net.Stream.InMemoryPostTimeFilter
+  name: InMemoryPostTimeFilter
+  href: api/Scraper.Net.Stream.InMemoryPostTimeFilter.html
+  commentId: T:Scraper.Net.Stream.InMemoryPostTimeFilter
+  fullName: Scraper.Net.Stream.InMemoryPostTimeFilter
+  nameWithType: InMemoryPostTimeFilter
+- uid: Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post,System.String)
+  name: Filter(Post, String)
+  href: api/Scraper.Net.Stream.InMemoryPostTimeFilter.html#Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_Post_System_String_
+  commentId: M:Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post,System.String)
+  fullName: Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post, System.String)
+  nameWithType: InMemoryPostTimeFilter.Filter(Post, String)
+- uid: Scraper.Net.Stream.InMemoryPostTimeFilter.Filter*
+  name: Filter
+  href: api/Scraper.Net.Stream.InMemoryPostTimeFilter.html#Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_
+  commentId: Overload:Scraper.Net.Stream.InMemoryPostTimeFilter.Filter
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.InMemoryPostTimeFilter.Filter
+  nameWithType: InMemoryPostTimeFilter.Filter
+- uid: Scraper.Net.Stream.PollingStreamer
+  name: PollingStreamer
+  href: api/Scraper.Net.Stream.PollingStreamer.html
+  commentId: T:Scraper.Net.Stream.PollingStreamer
+  fullName: Scraper.Net.Stream.PollingStreamer
+  nameWithType: PollingStreamer
+- uid: Scraper.Net.Stream.PollingStreamer.Stream*
+  name: Stream
+  href: api/Scraper.Net.Stream.PollingStreamer.html#Scraper_Net_Stream_PollingStreamer_Stream_
+  commentId: Overload:Scraper.Net.Stream.PollingStreamer.Stream
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.PollingStreamer.Stream
+  nameWithType: PollingStreamer.Stream
+- uid: Scraper.Net.Stream.PollingStreamer.Stream``1(Func{CancellationToken,IAsyncEnumerable{``0}},Func{``0,System.Boolean},TimeSpan)
+  name: Stream<T>(Func<CancellationToken, IAsyncEnumerable<T>>, Func<T, Boolean>, TimeSpan)
+  href: api/Scraper.Net.Stream.PollingStreamer.html#Scraper_Net_Stream_PollingStreamer_Stream__1_Func_CancellationToken_IAsyncEnumerable___0___Func___0_System_Boolean__TimeSpan_
+  commentId: M:Scraper.Net.Stream.PollingStreamer.Stream``1(Func{CancellationToken,IAsyncEnumerable{``0}},Func{``0,System.Boolean},TimeSpan)
+  name.vb: Stream(Of T)(Func(Of CancellationToken, IAsyncEnumerable(Of T)), Func(Of T, Boolean), TimeSpan)
+  fullName: Scraper.Net.Stream.PollingStreamer.Stream<T>(Func<CancellationToken, IAsyncEnumerable<T>>, Func<T, System.Boolean>, TimeSpan)
+  fullName.vb: Scraper.Net.Stream.PollingStreamer.Stream(Of T)(Func(Of CancellationToken, IAsyncEnumerable(Of T)), Func(Of T, System.Boolean), TimeSpan)
+  nameWithType: PollingStreamer.Stream<T>(Func<CancellationToken, IAsyncEnumerable<T>>, Func<T, Boolean>, TimeSpan)
+  nameWithType.vb: PollingStreamer.Stream(Of T)(Func(Of CancellationToken, IAsyncEnumerable(Of T)), Func(Of T, Boolean), TimeSpan)
+- uid: Scraper.Net.Stream.PostsStreamer
+  name: PostsStreamer
+  href: api/Scraper.Net.Stream.PostsStreamer.html
+  commentId: T:Scraper.Net.Stream.PostsStreamer
+  fullName: Scraper.Net.Stream.PostsStreamer
+  nameWithType: PostsStreamer
+- uid: Scraper.Net.Stream.PostsStreamer.#ctor(Scraper.Net.IScraperService,Scraper.Net.PostFilter)
+  name: PostsStreamer(IScraperService, PostFilter)
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer__ctor_Scraper_Net_IScraperService_Scraper_Net_PostFilter_
+  commentId: M:Scraper.Net.Stream.PostsStreamer.#ctor(Scraper.Net.IScraperService,Scraper.Net.PostFilter)
+  fullName: Scraper.Net.Stream.PostsStreamer.PostsStreamer(Scraper.Net.IScraperService, Scraper.Net.PostFilter)
+  nameWithType: PostsStreamer.PostsStreamer(IScraperService, PostFilter)
+- uid: Scraper.Net.Stream.PostsStreamer.#ctor*
+  name: PostsStreamer
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer__ctor_
+  commentId: Overload:Scraper.Net.Stream.PostsStreamer.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.PostsStreamer.PostsStreamer
+  nameWithType: PostsStreamer.PostsStreamer
+- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan)
+  name: Stream(String, String, TimeSpan)
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_TimeSpan_
+  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan)
+  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan)
+  nameWithType: PostsStreamer.Stream(String, String, TimeSpan)
+- uid: Scraper.Net.Stream.PostsStreamer.Stream*
+  name: Stream
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_
+  commentId: Overload:Scraper.Net.Stream.PostsStreamer.Stream
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.PostsStreamer.Stream
+  nameWithType: PostsStreamer.Stream
 - uid: Scraper.Net.StringExtensions
   name: StringExtensions
   href: api/Scraper.Net.StringExtensions.html
