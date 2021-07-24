@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FeedsScraper
+    <title>Class MediaItemConverter
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FeedsScraper
+    <meta name="title" content="Class MediaItemConverter
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,46 +68,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Scraper.Net.Feeds.FeedsScraper">
+            <article class="content wrap" id="_content" data-uid="Scraper.Net.MediaItemConverter">
   
   
-  <h1 id="Scraper_Net_Feeds_FeedsScraper" data-uid="Scraper.Net.Feeds.FeedsScraper" class="text-break">Class FeedsScraper
+  <h1 id="Scraper_Net_MediaItemConverter" data-uid="Scraper.Net.MediaItemConverter" class="text-break">Class MediaItemConverter
   </h1>
-  <div class="markdown level0 summary"><p><a class="xref" href="Scraper.Net.IPlatformScraper.html">IPlatformScraper</a> for providing <see cref="!:SyndicationFeed"></see> items.
-The scraping engine is powered by System.ServiceModel.Syndication</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FeedsScraper</span></div>
+    <div class="level1"><span class="xref">MediaItemConverter</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Scraper.Net.IPlatformScraper.html">IPlatformScraper</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Scraper.Net.Feeds.html">Scraper.Net.Feeds</a></h6>
-  <h6><strong>Assembly</strong>: Scraper.Net.Feeds.dll</h6>
-  <h5 id="Scraper_Net_Feeds_FeedsScraper_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Scraper.Net.html">Scraper.Net</a></h6>
+  <h6><strong>Assembly</strong>: Scraper.Net.dll</h6>
+  <h5 id="Scraper_Net_MediaItemConverter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FeedsScraper : object, IPlatformScraper</code></pre>
+    <pre><code class="lang-csharp hljs">public class MediaItemConverter : JsonConverter&lt;IMediaItem&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6eb37223cd13f8c7128d21c5ee7da63896198b03/apiSpec/new?filename=Scraper_Net_Feeds_FeedsScraper_GetAuthorAsync_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6eb37223cd13f8c7128d21c5ee7da63896198b03/apiSpec/new?filename=Scraper_Net_MediaItemConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_.md&amp;value=---%0Auid%3A%20Scraper.Net.MediaItemConverter.Read(Utf8JsonReader%40%2CType%2CJsonSerializerOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6eb37223cd13f8c7128d21c5ee7da63896198b03/src/Scraper.Net.Feeds/FeedsScraper.cs/#L20">View Source</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6eb37223cd13f8c7128d21c5ee7da63896198b03/src/Scraper.Net/Entities/MediaItemConverter.cs/#L9">View Source</a>
   </span>
-  <a id="Scraper_Net_Feeds_FeedsScraper_GetAuthorAsync_" data-uid="Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync*"></a>
-  <h4 id="Scraper_Net_Feeds_FeedsScraper_GetAuthorAsync_System_String_CancellationToken_" data-uid="Scraper.Net.Feeds.FeedsScraper.GetAuthorAsync(System.String,CancellationToken)">GetAuthorAsync(String, CancellationToken)</h4>
+  <a id="Scraper_Net_MediaItemConverter_Read_" data-uid="Scraper.Net.MediaItemConverter.Read*"></a>
+  <h4 id="Scraper_Net_MediaItemConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_" data-uid="Scraper.Net.MediaItemConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)">Read(ref Utf8JsonReader, Type, JsonSerializerOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Author&gt; GetAuthorAsync(string id, CancellationToken ct = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IMediaItem Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,13 +114,18 @@ The scraping engine is powered by System.ServiceModel.Syndication</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">id</span></td>
+        <td><span class="xref">Utf8JsonReader</span></td>
+        <td><span class="parametername">reader</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">ct</span></td>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">typeToConvert</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">JsonSerializerOptions</span></td>
+        <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -141,25 +140,25 @@ The scraping engine is powered by System.ServiceModel.Syndication</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Author</span>&gt;</td>
+        <td><a class="xref" href="Scraper.Net.IMediaItem.html">IMediaItem</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6eb37223cd13f8c7128d21c5ee7da63896198b03/apiSpec/new?filename=Scraper_Net_Feeds_FeedsScraper_GetPostsAsync_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20Scraper.Net.Feeds.FeedsScraper.GetPostsAsync(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6eb37223cd13f8c7128d21c5ee7da63896198b03/apiSpec/new?filename=Scraper_Net_MediaItemConverter_Write_Utf8JsonWriter_Scraper_Net_IMediaItem_JsonSerializerOptions_.md&amp;value=---%0Auid%3A%20Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter%2CScraper.Net.IMediaItem%2CJsonSerializerOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6eb37223cd13f8c7128d21c5ee7da63896198b03/src/Scraper.Net.Feeds/FeedsScraper.cs/#L40">View Source</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6eb37223cd13f8c7128d21c5ee7da63896198b03/src/Scraper.Net/Entities/MediaItemConverter.cs/#L17">View Source</a>
   </span>
-  <a id="Scraper_Net_Feeds_FeedsScraper_GetPostsAsync_" data-uid="Scraper.Net.Feeds.FeedsScraper.GetPostsAsync*"></a>
-  <h4 id="Scraper_Net_Feeds_FeedsScraper_GetPostsAsync_System_String_CancellationToken_" data-uid="Scraper.Net.Feeds.FeedsScraper.GetPostsAsync(System.String,CancellationToken)">GetPostsAsync(String, CancellationToken)</h4>
+  <a id="Scraper_Net_MediaItemConverter_Write_" data-uid="Scraper.Net.MediaItemConverter.Write*"></a>
+  <h4 id="Scraper_Net_MediaItemConverter_Write_Utf8JsonWriter_Scraper_Net_IMediaItem_JsonSerializerOptions_" data-uid="Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter,Scraper.Net.IMediaItem,JsonSerializerOptions)">Write(Utf8JsonWriter, IMediaItem, JsonSerializerOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;Post&gt; GetPostsAsync(string id, CancellationToken ct = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Write(Utf8JsonWriter writer, IMediaItem value, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,36 +171,22 @@ The scraping engine is powered by System.ServiceModel.Syndication</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">id</span></td>
+        <td><span class="xref">Utf8JsonWriter</span></td>
+        <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">ct</span></td>
+        <td><a class="xref" href="Scraper.Net.IMediaItem.html">IMediaItem</a></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">Post</span>&gt;</td>
+        <td><span class="xref">JsonSerializerOptions</span></td>
+        <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Scraper.Net.IPlatformScraper.html">IPlatformScraper</a>
-  </div>
 </article>
           </div>
           
@@ -210,10 +195,10 @@ The scraping engine is powered by System.ServiceModel.Syndication</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6eb37223cd13f8c7128d21c5ee7da63896198b03/apiSpec/new?filename=Scraper_Net_Feeds_FeedsScraper.md&amp;value=---%0Auid%3A%20Scraper.Net.Feeds.FeedsScraper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6eb37223cd13f8c7128d21c5ee7da63896198b03/apiSpec/new?filename=Scraper_Net_MediaItemConverter.md&amp;value=---%0Auid%3A%20Scraper.Net.MediaItemConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6eb37223cd13f8c7128d21c5ee7da63896198b03/src/Scraper.Net.Feeds/FeedsScraper.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6eb37223cd13f8c7128d21c5ee7da63896198b03/src/Scraper.Net/Entities/MediaItemConverter.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

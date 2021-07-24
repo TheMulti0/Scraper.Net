@@ -386,6 +386,25 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.IScraperService.GetPostsAsync
   nameWithType: IScraperService.GetPostsAsync
+- uid: Scraper.Net.JsonInterfaceConverterAttribute
+  name: JsonInterfaceConverterAttribute
+  href: api/Scraper.Net.JsonInterfaceConverterAttribute.html
+  commentId: T:Scraper.Net.JsonInterfaceConverterAttribute
+  fullName: Scraper.Net.JsonInterfaceConverterAttribute
+  nameWithType: JsonInterfaceConverterAttribute
+- uid: Scraper.Net.JsonInterfaceConverterAttribute.#ctor(Type)
+  name: JsonInterfaceConverterAttribute(Type)
+  href: api/Scraper.Net.JsonInterfaceConverterAttribute.html#Scraper_Net_JsonInterfaceConverterAttribute__ctor_Type_
+  commentId: M:Scraper.Net.JsonInterfaceConverterAttribute.#ctor(Type)
+  fullName: Scraper.Net.JsonInterfaceConverterAttribute.JsonInterfaceConverterAttribute(Type)
+  nameWithType: JsonInterfaceConverterAttribute.JsonInterfaceConverterAttribute(Type)
+- uid: Scraper.Net.JsonInterfaceConverterAttribute.#ctor*
+  name: JsonInterfaceConverterAttribute
+  href: api/Scraper.Net.JsonInterfaceConverterAttribute.html#Scraper_Net_JsonInterfaceConverterAttribute__ctor_
+  commentId: Overload:Scraper.Net.JsonInterfaceConverterAttribute.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.JsonInterfaceConverterAttribute.JsonInterfaceConverterAttribute
+  nameWithType: JsonInterfaceConverterAttribute.JsonInterfaceConverterAttribute
 - uid: Scraper.Net.LoginRequiredException
   name: LoginRequiredException
   href: api/Scraper.Net.LoginRequiredException.html
@@ -417,6 +436,41 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.LoginRequiredException.LoginRequiredException
   nameWithType: LoginRequiredException.LoginRequiredException
+- uid: Scraper.Net.MediaItemConverter
+  name: MediaItemConverter
+  href: api/Scraper.Net.MediaItemConverter.html
+  commentId: T:Scraper.Net.MediaItemConverter
+  fullName: Scraper.Net.MediaItemConverter
+  nameWithType: MediaItemConverter
+- uid: Scraper.Net.MediaItemConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Scraper.Net.MediaItemConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Scraper.Net.MediaItemConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Scraper.Net.MediaItemConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: MediaItemConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: MediaItemConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Scraper.Net.MediaItemConverter.Read*
+  name: Read
+  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Read_
+  commentId: Overload:Scraper.Net.MediaItemConverter.Read
+  isSpec: "True"
+  fullName: Scraper.Net.MediaItemConverter.Read
+  nameWithType: MediaItemConverter.Read
+- uid: Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter,Scraper.Net.IMediaItem,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, IMediaItem, JsonSerializerOptions)
+  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Write_Utf8JsonWriter_Scraper_Net_IMediaItem_JsonSerializerOptions_
+  commentId: M:Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter,Scraper.Net.IMediaItem,JsonSerializerOptions)
+  fullName: Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter, Scraper.Net.IMediaItem, JsonSerializerOptions)
+  nameWithType: MediaItemConverter.Write(Utf8JsonWriter, IMediaItem, JsonSerializerOptions)
+- uid: Scraper.Net.MediaItemConverter.Write*
+  name: Write
+  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Write_
+  commentId: Overload:Scraper.Net.MediaItemConverter.Write
+  isSpec: "True"
+  fullName: Scraper.Net.MediaItemConverter.Write
+  nameWithType: MediaItemConverter.Write
 - uid: Scraper.Net.PostFilter
   name: PostFilter
   href: api/Scraper.Net.PostFilter.html
