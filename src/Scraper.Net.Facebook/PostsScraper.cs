@@ -12,10 +12,14 @@ namespace Scraper.Net.Facebook
     {
         private const string ScriptName = "get_posts.py";
 
+        private readonly ScriptExecutor _executor;
         private readonly FacebookConfig _config;
 
-        public PostsScraper(FacebookConfig config)
+        public PostsScraper(
+            ScriptExecutor executor,
+            FacebookConfig config)
         {
+            _executor = executor;
             _config = config;
         }
 
@@ -75,7 +79,7 @@ namespace Scraper.Net.Facebook
             GetPostsRequest request,
             CancellationToken ct)
         {
-            return ScriptExecutor.Execute(
+            return _executor.ExecuteAsync(
                 _config.PythonPath,
                 ScriptName,
                 request,

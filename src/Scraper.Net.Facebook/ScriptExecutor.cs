@@ -10,15 +10,17 @@ using System.Threading.Tasks;
 
 namespace Scraper.Net.Facebook
 {
-    internal static class ScriptExecutor
+    internal class ScriptExecutor
     {
-        public static async IAsyncEnumerable<string> Execute(
+        private readonly Dictionary<string, string> _scripts = new();
+        
+        public async IAsyncEnumerable<string> ExecuteAsync(
             string executablePath,
             string scriptName,
             object request,
             [EnumeratorCancellation] CancellationToken ct = default)
         {
-            string script = await GetScript(scriptName);
+            string script = await GetScriptAsync(scriptName);
 
             Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
 
@@ -31,15 +33,29 @@ namespace Scraper.Net.Facebook
             }
         }
 
-        private static async Task<string> GetScript(string scriptName)
+        private async Task<string> GetScriptAsync(string scriptName)
+        {
+            if (_scripts.ContainsKey(scriptName))
+            {
+                return _scripts[scriptName];
+            }
+            
+            string script = await GetScriptFromResourcesAsync(scriptName);
+            
+            _scripts.Add(scriptName, script);
+            
+            return script;
+        }
+
+        private static async Task<string> GetScriptFromResourcesAsync(string scriptName)
         {
             Type type = typeof(ScriptExecutor);
 
             await using Stream scriptStream = type.Assembly
                 .GetManifestResourceStream($"{type.Namespace}.{scriptName}");
-            
+
             using var streamReader = new StreamReader(scriptStream);
-            
+
             return await streamReader.ReadToEndAsync();
         }
 

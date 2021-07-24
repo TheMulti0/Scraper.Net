@@ -11,10 +11,14 @@ namespace Scraper.Net.Facebook
     {
         private const string ScriptName = "get_page_info.py";
 
+        private readonly ScriptExecutor _executor;
         private readonly FacebookConfig _config;
 
-        public PageInfoScraper(FacebookConfig config)
+        public PageInfoScraper(
+            ScriptExecutor executor,
+            FacebookConfig config)
         {
+            _executor = executor;
             _config = config;
         }
 
@@ -66,7 +70,7 @@ namespace Scraper.Net.Facebook
             GetPageInfoRequest request,
             CancellationToken ct)
         {
-            return ScriptExecutor.Execute(
+            return _executor.ExecuteAsync(
                 _config.PythonPath,
                 ScriptName,
                 request,

@@ -29,8 +29,11 @@ namespace Scraper.Net.Facebook
             {
                 throw new ArgumentException(nameof(config.MaxPageCount));
             }
-            _postsScraper = new PostsScraper(config);
-            _pageInfoScraper = new PageInfoScraper(config);
+
+            var executor = new ScriptExecutor();
+            
+            _postsScraper = new PostsScraper(executor, config);
+            _pageInfoScraper = new PageInfoScraper(executor, config);
         }
 
         public async Task<Net.Author> GetAuthorAsync(
