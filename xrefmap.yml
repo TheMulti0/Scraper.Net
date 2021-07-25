@@ -6,7 +6,7 @@ references:
   href: api/index.html
 - uid: guides.getting_started
   name: Getting started
-  href: articles/getting_started/getting_started.html
+  href: articles/getting_started.html
 - uid: root.home
   name: Scraper.Net
   href: index.html
