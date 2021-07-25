@@ -93,6 +93,10 @@ namespace Scraper.Net
                     }
                     processedPost = enumerator.Current;
                 }
+                catch (OperationCanceledException)
+                {
+                    throw;
+                }
                 catch (Exception e)
                 {
                     _logger.LogWarning(e, "Post processor failed");
