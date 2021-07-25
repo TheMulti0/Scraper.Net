@@ -92,9 +92,14 @@ namespace Scraper.Net.Tests
             }
         }
         
-        [TestMethod]
-        public async Task TestPostProcessorExceptionCatch()
+        [DataTestMethod]
+        [DataRow(0)]
+        [DataRow(100)]
+        [DataRow(1000)]
+        public async Task TestPostProcessorExceptionCatch(int delayMs)
         {
+            var delay = TimeSpan.FromMilliseconds(delayMs);
+            
             var scraper = new ScraperService(
                 new Dictionary<string, IPlatformScraper> 
                 {
@@ -103,7 +108,7 @@ namespace Scraper.Net.Tests
                 new List<PostFilter>(),
                 new List<IPostProcessor>
                 {
-                    new ExceptionPostProcessor()
+                    new ExceptionDelayPostProcessor(delay)
                 },
                 NullLogger<ScraperService>.Instance);
 

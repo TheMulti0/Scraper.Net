@@ -68,18 +68,43 @@ namespace Scraper.Net
             IPostProcessor postProcessor,
             string platform)
         {
-            return posts.SelectMany(post =>
+            return posts.SelectMany(post => ProcessPost(post, postProcessor, platform));
+        }
+
+        private async IAsyncEnumerable<Post> ProcessPost(
+            Post post,
+            IPostProcessor postProcessor,
+            string platform)
+        {
+            IAsyncEnumerator<Post> enumerator = postProcessor
+                .ProcessAsync(post, platform)
+                .GetAsyncEnumerator();
+            var canContinue = true;
+
+            while (canContinue)
             {
+                Post processedPost;
+
                 try
                 {
-                    return postProcessor.ProcessAsync(post, platform);
+                    if (!await enumerator.MoveNextAsync())
+                    {
+                        break;
+                    }
+                    processedPost = enumerator.Current;
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     _logger.LogWarning(e, "Post processor failed");
-                    return new [] { post }.ToAsyncEnumerable(); // Return original post without processing if processing fails
-                }
-            });
+                    
+                    canContinue = false;
+
+                    processedPost = post; // Return original post without processing if processing fails
+                }   
+                
+                // the yield statement is outside the try catch block
+                yield return processedPost;
+            }
         }
 
         private IPlatformScraper GetScraper(string platform)
