@@ -6,7 +6,7 @@ Scraper.Net is a multi-platform, asynchronous .NET library responsible of provid
 
 ## Where to begin?
 
-Refer to the [documentation site]("https://scraper-net.github.io/Scraper.Net/) which contains guides along with an API reference.
+Refer to the [documentation site](https://scraper-net.github.io/Scraper.Net) which contains [guides](https://scraper-net.github.io/Scraper.Net/articles/getting_started.html) along with an [API reference](https://scraper-net.github.io/Scraper.Net/api/index.html).
 
 ## Simple Usage
 
