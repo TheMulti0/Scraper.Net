@@ -28,12 +28,10 @@ namespace Scraper.Net.Tests
             await TestPlatformScraperCancellation(delayMs, 1.1);
         }
 
-        [DataTestMethod]
-        [DataRow(500)]
-        [DataRow(5000)]
-        public async Task TestPostProcessorImmediateCancellation(int delayMs)
+        [TestMethod]
+        public async Task TestPostProcessorImmediateCancellation()
         {
-            await TestPostProcessorCancellation(delayMs, 0.1);
+            await TestPostProcessorCancellation(0, 0.1);
         }
 
         [DataTestMethod]
@@ -46,36 +44,31 @@ namespace Scraper.Net.Tests
 
         private static async Task TestPlatformScraperCancellation(int delayMs, double coefficient)
         {
+            TimeSpan delay = TimeSpan.FromMilliseconds(delayMs);
+
+            var scraper = new ScraperService(
+                new Dictionary<string, IPlatformScraper>
+                {
+                    {"mock", new MockDelayScraper(delay)}
+                },
+                new List<PostFilter>(),
+                new List<IPostProcessor>(),
+                NullLogger<ScraperService>.Instance);
+
+            var cts = new CancellationTokenSource(delay * coefficient);
+
+
             async Task Test()
             {
-                TimeSpan delay = TimeSpan.FromMilliseconds(delayMs);
-
-                var scraper = new ScraperService(
-                    new Dictionary<string, IPlatformScraper>
-                    {
-                        {"mock", new MockDelayScraper(delay)}
-                    },
-                    new List<PostFilter>(),
-                    new List<IPostProcessor>(),
-                    NullLogger<ScraperService>.Instance);
-
-                var cts = new CancellationTokenSource(delay * coefficient);
-
-                try
-                {
-                    await scraper.GetPostsAsync("mockuser", "mock", cts.Token)
-                        .ToListAsync();
-                }
-                catch (TaskCanceledException e)
-                {
-                    var scraperMethod = $"{nameof(MockDelayScraper)}.{nameof(MockDelayScraper.GetPostsAsync)}";
-                    Assert.IsTrue(e.StackTrace.Contains(scraperMethod));
-
-                    throw;
-                }
+                await scraper.GetPostsAsync("mockuser", "mock", cts.Token)
+                    .ToListAsync();
             }
 
-            await Assert.ThrowsExceptionAsync<TaskCanceledException>(Test);
+            var exception = await Assert.ThrowsExceptionAsync<TaskCanceledException>(Test);
+            
+            var scraperMethod = $"{nameof(MockDelayScraper)}.{nameof(MockDelayScraper.GetPostsAsync)}";
+            Assert.IsTrue(exception.StackTrace.Contains(scraperMethod));
+            
         }
 
         private static async Task TestPostProcessorCancellation(int delayMs, double coefficient)
@@ -105,14 +98,11 @@ namespace Scraper.Net.Tests
                 }
                 catch (TaskCanceledException e)
                 {
-                    var postProcessorMethod = $"{nameof(MockDelayPostProcessor)}.{nameof(MockDelayPostProcessor.ProcessAsync)}";
-                    Assert.IsTrue(e.StackTrace.Contains(postProcessorMethod));
-
-                    throw;
+                    throw new OperationCanceledException(string.Empty, e);
                 }
             }
 
-            await Assert.ThrowsExceptionAsync<TaskCanceledException>(Scrape);
+            await Assert.ThrowsExceptionAsync<OperationCanceledException>(Scrape);
         }
     }
 }
