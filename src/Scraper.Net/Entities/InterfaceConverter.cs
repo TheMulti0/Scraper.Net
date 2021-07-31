@@ -1,31 +1,35 @@
 using System;
-using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace Scraper.Net
 {
-    public class MediaItemConverter: JsonConverter<IMediaItem>
+    public class InterfaceConverter<T> : JsonConverter<T> where T : class
     {
         private const string TypeDiscriminator = "$type";
+        private const string ValueDiscriminator = "$value";
 
-        public override IMediaItem Read(
+        public override T Read(
             ref Utf8JsonReader reader,
             Type typeToConvert,
             JsonSerializerOptions options)
         {
             using JsonDocument document = JsonDocument.ParseValue(ref reader);
             JsonElement rootElement = document.RootElement;
-            string rawText = rootElement.GetRawText();
 
-            var type = Type.GetType(rootElement.GetProperty(TypeDiscriminator).GetString());
+            string typeName = rootElement.GetProperty(TypeDiscriminator).GetString();
+            
+            Type type = Type.GetType(typeName!) 
+                        ?? throw new InvalidOperationException();
 
-            return JsonSerializer.Deserialize(ref reader, type) as IMediaItem;
+            string media = rootElement.GetProperty(ValueDiscriminator).GetRawText();
+            
+            return JsonSerializer.Deserialize(media!, type, options) as T;
         }
 
         public override void Write(
             Utf8JsonWriter writer,
-            IMediaItem value, 
+            T value, 
             JsonSerializerOptions options)
         {
             if (value is null)
@@ -37,20 +41,11 @@ namespace Scraper.Net
             writer.WriteStartObject();
             
             Type type = value.GetType();
-
-            writer.WriteString(TypeDiscriminator, type.Name);
+            writer.WriteString(TypeDiscriminator, type.FullName);
             
-            foreach (PropertyInfo property in type.GetProperties())
-            {
-                if (!property.CanRead)
-                {
-                    continue;
-                }
-                
-                writer.WritePropertyName(property.Name);
-
-                JsonSerializer.Serialize(writer, property.GetValue(value), options);
-            }
+            writer.WritePropertyName(ValueDiscriminator);
+            JsonSerializer.Serialize(writer, value, value.GetType(), options);
+            
             writer.WriteEndObject();
         }
     }
