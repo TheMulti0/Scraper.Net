@@ -303,6 +303,50 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.IMediaItem.Url
   nameWithType: IMediaItem.Url
+- uid: Scraper.Net.InterfaceConverter`1
+  name: InterfaceConverter<T>
+  href: api/Scraper.Net.InterfaceConverter-1.html
+  commentId: T:Scraper.Net.InterfaceConverter`1
+  name.vb: InterfaceConverter(Of T)
+  fullName: Scraper.Net.InterfaceConverter<T>
+  fullName.vb: Scraper.Net.InterfaceConverter(Of T)
+  nameWithType: InterfaceConverter<T>
+  nameWithType.vb: InterfaceConverter(Of T)
+- uid: Scraper.Net.InterfaceConverter`1.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Scraper.Net.InterfaceConverter-1.html#Scraper_Net_InterfaceConverter_1_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Scraper.Net.InterfaceConverter`1.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Scraper.Net.InterfaceConverter<T>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Scraper.Net.InterfaceConverter(Of T).Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: InterfaceConverter<T>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: InterfaceConverter(Of T).Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Scraper.Net.InterfaceConverter`1.Read*
+  name: Read
+  href: api/Scraper.Net.InterfaceConverter-1.html#Scraper_Net_InterfaceConverter_1_Read_
+  commentId: Overload:Scraper.Net.InterfaceConverter`1.Read
+  isSpec: "True"
+  fullName: Scraper.Net.InterfaceConverter<T>.Read
+  fullName.vb: Scraper.Net.InterfaceConverter(Of T).Read
+  nameWithType: InterfaceConverter<T>.Read
+  nameWithType.vb: InterfaceConverter(Of T).Read
+- uid: Scraper.Net.InterfaceConverter`1.Write(Utf8JsonWriter,`0,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  href: api/Scraper.Net.InterfaceConverter-1.html#Scraper_Net_InterfaceConverter_1_Write_Utf8JsonWriter__0_JsonSerializerOptions_
+  commentId: M:Scraper.Net.InterfaceConverter`1.Write(Utf8JsonWriter,`0,JsonSerializerOptions)
+  fullName: Scraper.Net.InterfaceConverter<T>.Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  fullName.vb: Scraper.Net.InterfaceConverter(Of T).Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  nameWithType: InterfaceConverter<T>.Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  nameWithType.vb: InterfaceConverter(Of T).Write(Utf8JsonWriter, T, JsonSerializerOptions)
+- uid: Scraper.Net.InterfaceConverter`1.Write*
+  name: Write
+  href: api/Scraper.Net.InterfaceConverter-1.html#Scraper_Net_InterfaceConverter_1_Write_
+  commentId: Overload:Scraper.Net.InterfaceConverter`1.Write
+  isSpec: "True"
+  fullName: Scraper.Net.InterfaceConverter<T>.Write
+  fullName.vb: Scraper.Net.InterfaceConverter(Of T).Write
+  nameWithType: InterfaceConverter<T>.Write
+  nameWithType.vb: InterfaceConverter(Of T).Write
 - uid: Scraper.Net.IPlatformScraper
   name: IPlatformScraper
   href: api/Scraper.Net.IPlatformScraper.html
@@ -436,41 +480,6 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.LoginRequiredException.LoginRequiredException
   nameWithType: LoginRequiredException.LoginRequiredException
-- uid: Scraper.Net.MediaItemConverter
-  name: MediaItemConverter
-  href: api/Scraper.Net.MediaItemConverter.html
-  commentId: T:Scraper.Net.MediaItemConverter
-  fullName: Scraper.Net.MediaItemConverter
-  nameWithType: MediaItemConverter
-- uid: Scraper.Net.MediaItemConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
-  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
-  commentId: M:Scraper.Net.MediaItemConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
-  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: Scraper.Net.MediaItemConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName.vb: Scraper.Net.MediaItemConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType: MediaItemConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType.vb: MediaItemConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-- uid: Scraper.Net.MediaItemConverter.Read*
-  name: Read
-  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Read_
-  commentId: Overload:Scraper.Net.MediaItemConverter.Read
-  isSpec: "True"
-  fullName: Scraper.Net.MediaItemConverter.Read
-  nameWithType: MediaItemConverter.Read
-- uid: Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter,Scraper.Net.IMediaItem,JsonSerializerOptions)
-  name: Write(Utf8JsonWriter, IMediaItem, JsonSerializerOptions)
-  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Write_Utf8JsonWriter_Scraper_Net_IMediaItem_JsonSerializerOptions_
-  commentId: M:Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter,Scraper.Net.IMediaItem,JsonSerializerOptions)
-  fullName: Scraper.Net.MediaItemConverter.Write(Utf8JsonWriter, Scraper.Net.IMediaItem, JsonSerializerOptions)
-  nameWithType: MediaItemConverter.Write(Utf8JsonWriter, IMediaItem, JsonSerializerOptions)
-- uid: Scraper.Net.MediaItemConverter.Write*
-  name: Write
-  href: api/Scraper.Net.MediaItemConverter.html#Scraper_Net_MediaItemConverter_Write_
-  commentId: Overload:Scraper.Net.MediaItemConverter.Write
-  isSpec: "True"
-  fullName: Scraper.Net.MediaItemConverter.Write
-  nameWithType: MediaItemConverter.Write
 - uid: Scraper.Net.NullableTimeSpanConverter
   name: NullableTimeSpanConverter
   href: api/Scraper.Net.NullableTimeSpanConverter.html
