@@ -992,6 +992,15 @@ references:
   commentId: T:Scraper.Net.Stream.ServiceCollectionExtensions
   fullName: Scraper.Net.Stream.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
+- uid: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection,Func{IServiceProvider,Scraper.Net.PostFilter})
+  name: AddStream(IServiceCollection, Func<IServiceProvider, PostFilter>)
+  href: api/Scraper.Net.Stream.ServiceCollectionExtensions.html#Scraper_Net_Stream_ServiceCollectionExtensions_AddStream_IServiceCollection_Func_IServiceProvider_Scraper_Net_PostFilter__
+  commentId: M:Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection,Func{IServiceProvider,Scraper.Net.PostFilter})
+  name.vb: AddStream(IServiceCollection, Func(Of IServiceProvider, PostFilter))
+  fullName: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection, Func<IServiceProvider, Scraper.Net.PostFilter>)
+  fullName.vb: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection, Func(Of IServiceProvider, Scraper.Net.PostFilter))
+  nameWithType: ServiceCollectionExtensions.AddStream(IServiceCollection, Func<IServiceProvider, PostFilter>)
+  nameWithType.vb: ServiceCollectionExtensions.AddStream(IServiceCollection, Func(Of IServiceProvider, PostFilter))
 - uid: Scraper.Net.Stream.ServiceCollectionExtensions.AddStream(IServiceCollection,Scraper.Net.PostFilter)
   name: AddStream(IServiceCollection, PostFilter)
   href: api/Scraper.Net.Stream.ServiceCollectionExtensions.html#Scraper_Net_Stream_ServiceCollectionExtensions_AddStream_IServiceCollection_Scraper_Net_PostFilter_
