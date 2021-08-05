@@ -73,12 +73,12 @@ references:
   commentId: T:Scraper.Net.Facebook.FacebookScraper
   fullName: Scraper.Net.Facebook.FacebookScraper
   nameWithType: FacebookScraper
-- uid: Scraper.Net.Facebook.FacebookScraper.#ctor(Scraper.Net.Facebook.FacebookConfig)
-  name: FacebookScraper(FacebookConfig)
-  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper__ctor_Scraper_Net_Facebook_FacebookConfig_
-  commentId: M:Scraper.Net.Facebook.FacebookScraper.#ctor(Scraper.Net.Facebook.FacebookConfig)
-  fullName: Scraper.Net.Facebook.FacebookScraper.FacebookScraper(Scraper.Net.Facebook.FacebookConfig)
-  nameWithType: FacebookScraper.FacebookScraper(FacebookConfig)
+- uid: Scraper.Net.Facebook.FacebookScraper.#ctor(Scraper.Net.Facebook.FacebookConfig,ILoggerFactory)
+  name: FacebookScraper(FacebookConfig, ILoggerFactory)
+  href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper__ctor_Scraper_Net_Facebook_FacebookConfig_ILoggerFactory_
+  commentId: M:Scraper.Net.Facebook.FacebookScraper.#ctor(Scraper.Net.Facebook.FacebookConfig,ILoggerFactory)
+  fullName: Scraper.Net.Facebook.FacebookScraper.FacebookScraper(Scraper.Net.Facebook.FacebookConfig, ILoggerFactory)
+  nameWithType: FacebookScraper.FacebookScraper(FacebookConfig, ILoggerFactory)
 - uid: Scraper.Net.Facebook.FacebookScraper.#ctor*
   name: FacebookScraper
   href: api/Scraper.Net.Facebook.FacebookScraper.html#Scraper_Net_Facebook_FacebookScraper__ctor_
