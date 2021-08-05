@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace Scraper.Net.Facebook
 {
@@ -20,7 +22,9 @@ namespace Scraper.Net.Facebook
                 .AddScraper(provider =>
                 {
                     config ??= provider.GetService<FacebookConfig>() ?? new FacebookConfig();
-                    var scraper = new FacebookScraper(config);
+                    var factory = provider.GetService<ILoggerFactory>() ?? NullLoggerFactory.Instance;
+                    
+                    var scraper = new FacebookScraper(config, factory);
 
                     return (scraper, platform);
                 });

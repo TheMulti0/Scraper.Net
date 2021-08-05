@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Facebook.Tests
@@ -17,7 +18,8 @@ namespace Scraper.Net.Facebook.Tests
         public static void Initialize(TestContext context)
         {
             _scraper = new FacebookScraper(
-                new FacebookConfig());
+                new FacebookConfig(),
+                NullLoggerFactory.Instance);
         }
 
         [TestMethod]
@@ -39,9 +41,7 @@ namespace Scraper.Net.Facebook.Tests
         [TestMethod]
         public async Task TestError()
         {
-            var scraper = new FacebookScraper(new FacebookConfig());
-            
-            await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await scraper.GetPostsAsync("anonexistinguser123135435332423").ToListAsync());
+            await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await _scraper.GetPostsAsync("anonexistinguser123135435332423").ToListAsync());
         }
         
         [DataTestMethod]

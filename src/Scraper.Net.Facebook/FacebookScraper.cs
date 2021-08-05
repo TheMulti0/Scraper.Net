@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net.Facebook
 {
@@ -19,7 +20,9 @@ namespace Scraper.Net.Facebook
         private readonly PostsScraper _postsScraper;
         private readonly PageInfoScraper _pageInfoScraper;
 
-        public FacebookScraper(FacebookConfig config)
+        public FacebookScraper(
+            FacebookConfig config,
+            ILoggerFactory loggerFactory)
         {
             if (config == null)
             {
@@ -30,7 +33,7 @@ namespace Scraper.Net.Facebook
                 throw new ArgumentException(nameof(config.MaxPageCount));
             }
 
-            var executor = new ScriptExecutor();
+            var executor = new ScriptExecutor(loggerFactory.CreateLogger<ScriptExecutor>());
             
             _postsScraper = new PostsScraper(executor, config);
             _pageInfoScraper = new PageInfoScraper(executor, config);

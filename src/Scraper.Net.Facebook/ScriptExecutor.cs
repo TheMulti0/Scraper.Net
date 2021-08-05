@@ -7,12 +7,19 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net.Facebook
 {
     internal class ScriptExecutor
     {
         private readonly Dictionary<string, string> _scripts = new();
+        private readonly ILogger<ScriptExecutor> _logger;
+
+        public ScriptExecutor(ILogger<ScriptExecutor> logger)
+        {
+            _logger = logger;
+        }
         
         public async IAsyncEnumerable<string> ExecuteAsync(
             string executablePath,
@@ -23,6 +30,7 @@ namespace Scraper.Net.Facebook
             string script = await GetScriptAsync(scriptName);
 
             Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
+            process.StandardError().ToObservable().Subscribe(Log(scriptName));
 
             const string blockStart = "{";
             const string blockEnd = "}";
@@ -57,32 +65,6 @@ namespace Scraper.Net.Facebook
             using var streamReader = new StreamReader(scriptStream);
 
             return await streamReader.ReadToEndAsync();
-        }
-
-        private static async IAsyncEnumerable<string> GetOutputJsonBlocks(
-            Process process,
-            string blockStart,
-            string blockEnd,
-            [EnumeratorCancellation] CancellationToken ct)
-        {
-            IAsyncEnumerable<string> standardOutput = process.StandardOutput()
-                .SkipWhile(l => l != blockStart);
-
-            var block = string.Empty;
-
-            await foreach (string line in standardOutput.WithCancellation(ct))
-            {
-                block += line + "\n";
-
-                if (line != blockEnd)
-                {
-                    continue;
-                }
-
-                yield return block;
-
-                block = string.Empty;
-            }
         }
 
         private static string GetRequestJson(object request)
@@ -122,8 +104,39 @@ namespace Scraper.Net.Facebook
                 Arguments = string.Join(' ', args),
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
-                RedirectStandardError = false
+                RedirectStandardError = true
             };
+        }
+
+        private Action<string> Log(string scriptName)
+        {
+            return line => _logger.LogDebug("[{}]: {}", scriptName, line);
+        }
+
+        private static async IAsyncEnumerable<string> GetOutputJsonBlocks(
+            Process process,
+            string blockStart,
+            string blockEnd,
+            [EnumeratorCancellation] CancellationToken ct)
+        {
+            IAsyncEnumerable<string> standardOutput = process.StandardOutput()
+                .SkipWhile(l => l != blockStart);
+
+            var block = string.Empty;
+
+            await foreach (string line in standardOutput.WithCancellation(ct))
+            {
+                block += line + "\n";
+
+                if (line != blockEnd)
+                {
+                    continue;
+                }
+
+                yield return block;
+
+                block = string.Empty;
+            }
         }
     }
 }
