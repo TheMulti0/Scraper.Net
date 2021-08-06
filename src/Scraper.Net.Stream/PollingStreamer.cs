@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Scraper.Net.Stream
 {
-    public static class PollingStreamer
+    internal static class PollingStreamer
     {
         public static IObservable<T> Stream<T>(
             Func<CancellationToken, IAsyncEnumerable<T>> asyncFunction,

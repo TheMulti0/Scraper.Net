@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net.Stream
 {
@@ -15,10 +16,7 @@ namespace Scraper.Net.Stream
             this IServiceCollection services,
             PostFilter filter)
         {
-            return services.AddSingleton(
-                provider => new PostsStreamer(
-                    provider.GetRequiredService<IScraperService>(),
-                    filter));
+            return services.AddStream(_ => filter);
         }
 
         /// <summary>
@@ -34,7 +32,8 @@ namespace Scraper.Net.Stream
             return services.AddSingleton(
                 provider => new PostsStreamer(
                     provider.GetRequiredService<IScraperService>(),
-                    action(provider)));
+                    action(provider),
+                    provider.GetRequiredService<ILogger<PostsStreamer>>()));
         }
     }
 }

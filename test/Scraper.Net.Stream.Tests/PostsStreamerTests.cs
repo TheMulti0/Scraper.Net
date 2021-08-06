@@ -1,6 +1,7 @@
 using System;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Stream.Tests
@@ -10,7 +11,8 @@ namespace Scraper.Net.Stream.Tests
     {
         private readonly PostsStreamer _streamer = new(
             new SinglePostScraperService(),
-            (_, _) => true);
+            (_, _) => true,
+            NullLogger<PostsStreamer>.Instance);
         
         [DataTestMethod]
         [DataRow(10, 1)]

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net.Stream
 {
@@ -9,13 +13,16 @@ namespace Scraper.Net.Stream
     {
         private readonly IScraperService _service;
         private readonly PostFilter _filter;
+        private readonly ILogger<PostsStreamer> _logger;
 
         public PostsStreamer(
             IScraperService service,
-            PostFilter filter)
+            PostFilter filter,
+            ILogger<PostsStreamer> logger)
         {
             _service = service;
             _filter = filter;
+            _logger = logger;
         }
 
         public IObservable<Post> Stream(
@@ -24,9 +31,32 @@ namespace Scraper.Net.Stream
             TimeSpan interval)
         {
             return PollingStreamer.Stream(
-                ct => _service.GetPostsAsync(id, platform, ct),
+                ct => GetPostsAsync(id, platform, ct),
                 post => _filter(post, platform),
                 interval);
+        }
+
+        private async IAsyncEnumerable<Post> GetPostsAsync(
+            string id,
+            string platform,
+            [EnumeratorCancellation] CancellationToken ct)
+        {
+            IAsyncEnumerator<Post> enumerator = _service.GetPostsAsync(id, platform, ct)
+                .GetAsyncEnumerator(ct);
+
+            for (var more = true; more;)
+            {
+                try
+                {
+                    more = await enumerator.MoveNextAsync();
+                }
+                catch (Exception e)
+                {
+                    _logger.LogError(e, "Failed to get posts");
+                }
+                
+                yield return enumerator.Current;
+            }
         } 
     }
 }
