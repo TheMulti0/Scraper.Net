@@ -41,6 +41,8 @@ namespace Scraper.Net.Stream
             string platform,
             [EnumeratorCancellation] CancellationToken ct)
         {
+            _logger.LogInformation("Scraping [{}] {}", platform, id);
+            
             IAsyncEnumerator<Post> enumerator = _service.GetPostsAsync(id, platform, ct)
                 .GetAsyncEnumerator(ct);
 
@@ -52,7 +54,7 @@ namespace Scraper.Net.Stream
                 }
                 catch (Exception e)
                 {
-                    _logger.LogError(e, "Failed to get posts");
+                    _logger.LogError(e, "Failed to get posts for [{}] {}", platform, id);
                 }
                 
                 yield return enumerator.Current;
