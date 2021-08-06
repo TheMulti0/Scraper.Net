@@ -30,7 +30,7 @@ namespace Scraper.Net.Facebook
             string script = await GetScriptAsync(scriptName);
 
             Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
-            process.StandardError().ToObservable().Subscribe(Log(scriptName));
+            //process.StandardError().ToObservable().Subscribe(Log(scriptName));
 
             const string blockStart = "{";
             const string blockEnd = "}";
@@ -103,8 +103,8 @@ namespace Scraper.Net.Facebook
                 FileName = command,
                 Arguments = string.Join(' ', args),
                 UseShellExecute = false,
+                RedirectStandardError = true,
                 RedirectStandardOutput = true,
-                RedirectStandardError = true
             };
         }
 

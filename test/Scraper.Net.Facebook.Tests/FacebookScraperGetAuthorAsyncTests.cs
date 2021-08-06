@@ -9,7 +9,7 @@ namespace Scraper.Net.Facebook.Tests
     [TestClass]
     public class FacebookScraperGetAuthorAsyncTests
     {
-        private const string User = "ayelet.benshaul.shaked";
+        private const string User = "Netanyahu";
         private static FacebookScraper _scraper;
 
         [ClassInitialize]

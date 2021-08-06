@@ -8,12 +8,12 @@ namespace Scraper.Net.Facebook
     {
         public static IAsyncEnumerable<string> StandardOutput(this Process process)
         {
-            return GetOutput(process, process?.StandardOutput);
+            return GetOutput(process, process.StandardOutput);
         }
         
         public static IAsyncEnumerable<string> StandardError(this Process process)
         {
-            return GetOutput(process, process?.StandardError);
+            return GetOutput(process, process.StandardError);
         }
 
         private static async IAsyncEnumerable<string> GetOutput(
@@ -22,14 +22,10 @@ namespace Scraper.Net.Facebook
         {
             while (stream.EndOfStream == false)
             {
-                string line = await process.StandardError.ReadLineAsync();
-                yield return line;
+                yield return await stream.ReadLineAsync();
             }
 
-            if (process != null)
-            {
-                await process.WaitForExitAsync();
-            }
+            await process.WaitForExitAsync();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Scraper.Net.Facebook
         
         [JsonPropertyName("image_id")]
         public string ImageId { get; init; }
-        
+
         [JsonPropertyName("image_ids")]
         public string[] ImageIds { get; init; }
         

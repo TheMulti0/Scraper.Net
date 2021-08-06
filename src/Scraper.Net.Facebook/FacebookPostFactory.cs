@@ -54,12 +54,14 @@ namespace Scraper.Net.Facebook
 
         private static IEnumerable<Image> GetImages(this RawFacebookPost raw)
         {
-            return raw.ImageIds.Select((id, index) => new Image
+            return raw.ImagesLowQuality.Select((lowQualityUrl, index) => new Image
             {
-                Id = id,
-                Url = raw.Images.ElementAt(index),
-                LowQualityUrl = raw.ImagesLowQuality.ElementAtOrDefault(index),
-                Description = raw.ImagesDescription.ElementAtOrDefault(index)
+                Id = raw.ImageIds?.ElementAtOrDefault(index),
+                Url = raw.Images?.ElementAtOrDefault(index) ??
+                      lowQualityUrl,
+                LowQualityUrl = lowQualityUrl,
+                Description = raw.ImagesDescription?.ElementAtOrDefault(index) ??
+                              raw.ImagesLowQualityDescription?.ElementAtOrDefault(index)
             });
         }
 

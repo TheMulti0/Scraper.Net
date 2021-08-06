@@ -11,14 +11,17 @@ namespace Scraper.Net.Facebook.Tests
     [TestClass]
     public class FacebookScraperGetPostsAsyncTests
     {
-        private const string User = "ayelet.benshaul.shaked";
+        private const string User = "NaftaliBennett";
         private static FacebookScraper _scraper;
 
         [ClassInitialize]
         public static void Initialize(TestContext context)
         {
             _scraper = new FacebookScraper(
-                new FacebookConfig(),
+                new FacebookConfig
+                {
+                    MaxPageCount = 3
+                },
                 NullLoggerFactory.Instance);
         }
 
