@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Facebook.FacebookConfig.html",
-          "hash": "oSMsqUfccmo1FNlWkGCCGg=="
+          "hash": "vdeIbzeB0TAjfxx/30BtOg=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Facebook.FacebookScraper.html",
-          "hash": "dYmM5me0CnIZc0CCH1fs+g=="
+          "hash": "wdOu9qaem0kOJfRAIW/Bhg=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Facebook.FacebookScraperException.html",
-          "hash": "X7VAF5JikmV1naLj++Pzhg=="
+          "hash": "4A9xiwx4NO+TY4RK4fitYw=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Facebook.ScraperBuilderExtensions.html",
-          "hash": "mHd1SMw9P99MWicgBm2XQA=="
+          "hash": "0W4yc46gD9oHYHJTvHz6Qw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Feeds.FeedsScraper.html",
-          "hash": "DvTyWUp0avVeYPpA+dv/5g=="
+          "hash": "ydBCfqpgbB8Yz/Om5TIx4g=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Feeds.ScraperBuilderExtensions.html",
-          "hash": "Ud/s9g+/S+KNWTjK11Jw1A=="
+          "hash": "FmPoaprEoG5Oervyv6F36A=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.IMediaItem.html",
-          "hash": "sFhU9fMKd86VhgDdISQcHw=="
+          "hash": "41U0xoq8gkhUdlm6WAHwIg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.IPlatformScraper.html",
-          "hash": "iqqks5L/zed8/GpCf1qDkg=="
+          "hash": "/FcWckOpnlA85UOhCkziKw=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.IPostProcessor.html",
-          "hash": "mGIBB2+aHZmkRUMjy9MaAA=="
+          "hash": "SmvgS3Jxx12kM7j0mzYwcg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.IScraperService.html",
-          "hash": "TAGs9GyBZRblf0i7lIUPHw=="
+          "hash": "vAJwOiGsnJBjn+QoLV//qQ=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.IdNotFoundException.html",
-          "hash": "/S+c9P8uBJ4VWqQ64aiU3A=="
+          "hash": "awgRDs43HcrafdYSEv6eMQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.InterfaceConverter-1.html",
-          "hash": "KIs0+NXlAquDIkn+CXjbXw=="
+          "hash": "CIGPyqBO+gGxghTpOjsfAA=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.JsonInterfaceConverterAttribute.html",
-          "hash": "GE3ufScC85C2opedIcn5tg=="
+          "hash": "rOw3BKdH8faE2XLsnZFN/w=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.LoginRequiredException.html",
-          "hash": "+QfpNAsJTFSVM/TyCcDsrw=="
+          "hash": "/172P+DEf1n6xxYyOg8xoQ=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.NullableTimeSpanConverter.html",
-          "hash": "Hgiqkgb5atIFJiCAt7FxAw=="
+          "hash": "EJU44s5O3W3StndhOWeKpg=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.PostFilter.html",
-          "hash": "TMQUF+IE9dnhDNporyyFZQ=="
+          "hash": "BNK4DMQ6YiJOdroeAM28Wg=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.PostType.html",
-          "hash": "5sbGtCK/F9kgUrnUdeZtbw=="
+          "hash": "+T9+5CIUziEsIwyUHXya9g=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.RateLimitedException.html",
-          "hash": "872uOod9SsQN/3vKEgtx0g=="
+          "hash": "IMkpSRMjcs3lLnHa24h42Q=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.ScraperBuilder.html",
-          "hash": "lQKFfWK2CN5bxgVkr9Udkw=="
+          "hash": "OdGBV+yXWylH9Z+wBcfohQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.ScraperService.html",
-          "hash": "Sooyf0fyu3enkhzTT7XXVQ=="
+          "hash": "ocPOX1BMOwIVL21gdws7tw=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Screenshot.IPlatformScreenshotter.html",
-          "hash": "2FosCdinAg1DY58yQo9QEQ=="
+          "hash": "Xoms1D3JZWfVCZDkA+tO1g=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Screenshot.ScraperBuilderExtensions.html",
-          "hash": "di5LVRdeeU85U9sd2ICs1A=="
+          "hash": "T+ls1rlhQz0cuVFnKX5mvA=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Screenshot.ScreenshotPostProcessor.html",
-          "hash": "UEwCR63evFKSUfY+Dx5PZw=="
+          "hash": "5Ev4jYXf0kNdtD6V6RLmkQ=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Screenshot.ScreenshotterBuilder.html",
-          "hash": "hv5DzhHBQbAashwXtBphbQ=="
+          "hash": "1sES6TllTmIgB2KY+nAnIg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Screenshot.ScreenshotterBuilderExtensions.html",
-          "hash": "8JXy5NFD271Vwyc2Xhr6jg=="
+          "hash": "WIhtyFG9OnOSP4uj8xnUKw=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Screenshot.TwitterScreenshotter.html",
-          "hash": "kXSS9tn6zNgGli9T9LoaCQ=="
+          "hash": "G0K35qIRY8AhJ/P9wPQNpw=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.ServiceCollectionExtensions.html",
-          "hash": "T8eVdXXip0PLqp6eF3LxMQ=="
+          "hash": "CGU2BJckxFhS4B5FMlwChw=="
         }
       },
       "is_incremental": false,
@@ -369,19 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Stream.InMemoryPostTimeFilter.html",
-          "hash": "p7+5SUI3S5joAOcXpBJcbg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Scraper.Net.Stream.PollingStreamer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Scraper.Net.Stream.PollingStreamer.html",
-          "hash": "AsObHF2ABgBz7d3FWabpcQ=="
+          "hash": "joCXyNbFaGkTZJYHpjrhkA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Stream.PostsStreamer.html",
-          "hash": "eDa/YqT2q1QPDmiaZQ8y+g=="
+          "hash": "u98m6fXqQ/LVJBzJISE3Ww=="
         }
       },
       "is_incremental": false,
@@ -405,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Stream.ServiceCollectionExtensions.html",
-          "hash": "6PlXbhTGdsxaCIsiL6BTlA=="
+          "hash": "fHoxU1xuaaKj3WsTUyOU5g=="
         }
       },
       "is_incremental": false,
@@ -417,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Stream.html",
-          "hash": "db3JxjYvl3sYTYcJ9fXwqA=="
+          "hash": "w3ZZGEokI2z/NKQMxVyFKg=="
         }
       },
       "is_incremental": false,
@@ -429,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.StringExtensions.html",
-          "hash": "FWA/5ij4K5gHHuoLed4twg=="
+          "hash": "idicofKCs4XWdldEmtNc1A=="
         }
       },
       "is_incremental": false,
@@ -441,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Twitter.ScraperBuilderExtensions.html",
-          "hash": "uHmmVXdp/LNzSe2Xl1mSTQ=="
+          "hash": "miuAGlfeNo5Unc6m1JIcyg=="
         }
       },
       "is_incremental": false,
@@ -453,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.Twitter.TwitterScraper.html",
-          "hash": "Vg5xe6ViJBGr+9ZDocv4og=="
+          "hash": "whvI1VFqavh7WPSCJy0Gfw=="
         }
       },
       "is_incremental": false,
@@ -477,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.UrlType.html",
-          "hash": "GTTcwpq27dGWzu8WlSdkmg=="
+          "hash": "jbPGWcdgVo4L4Ovg6KeYMg=="
         }
       },
       "is_incremental": false,
@@ -489,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.YoutubeDl.ScraperBuilderExtensions.html",
-          "hash": "G5n2EA6pA6udqSYFntEW9Q=="
+          "hash": "6fA9wzdxDv+pv1wSLihjSA=="
         }
       },
       "is_incremental": false,
@@ -501,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.YoutubeDl.YoutubeDlException.html",
-          "hash": "TlaU4AiFoWI6wy65CO5nRA=="
+          "hash": "DBfd2gYLOoVEwzm6sx1t3Q=="
         }
       },
       "is_incremental": false,
@@ -513,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Scraper.Net.YoutubeDl.YoutubeDlPostProcessor.html",
-          "hash": "/6rxwY3WM2E5EjwfIR40dQ=="
+          "hash": "ufSd8/xIJPPmaTX8bu67tQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "IeefbFKfrLWvNYQftXRVrA=="
+          "hash": "Ytn0Upn3nkg3Lrh8VyLLGw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "NdU8uzeu6T+xa9h5itoUOw=="
+          "hash": "N0/DewgDAu1pzEZS75nv7g=="
         }
       },
       "is_incremental": false,
@@ -573,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting_started.html",
-          "hash": "1HO5I2aFuvQZyoyjhCKByg=="
+          "hash": "RG3nqSPpUCMAy75IIoMGsQ=="
         }
       },
       "is_incremental": false,
@@ -597,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6zK5ORWF1K6aMWj7P93eTg=="
+          "hash": "5BGZNDpEjta1Klhd48Un5g=="
         }
       },
       "is_incremental": false,
@@ -636,7 +624,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 45,
+          "total_file_count": 44,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
