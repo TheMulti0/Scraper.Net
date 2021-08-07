@@ -62,6 +62,8 @@ namespace Scraper.Net.Stream
                 
                 yield return enumerator.Current;
             }
+            
+            _logger.LogInformation("Done scraping [{}] {}", platform, id);
         } 
     }
 }
