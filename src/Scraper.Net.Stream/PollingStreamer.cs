@@ -12,12 +12,15 @@ namespace Scraper.Net.Stream
         public static IObservable<T> Stream<T>(
             Func<CancellationToken, IAsyncEnumerable<T>> asyncFunction,
             Func<T, bool> filter,
-            TimeSpan interval)
+            TimeSpan interval,
+            IScheduler scheduler = null)
         {
+            scheduler ??= Scheduler.Default;
+            
             IObservable<T> observable = Poll(
                 asyncFunction,
                 interval,
-                Scheduler.Default);
+                scheduler);
             
             return observable
                 .Retry() // Continue polling even if one batch threw an exception
