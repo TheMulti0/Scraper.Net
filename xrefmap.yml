@@ -954,12 +954,12 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.PostsStreamer.PostsStreamer
   nameWithType: PostsStreamer.PostsStreamer
-- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan)
-  name: Stream(String, String, TimeSpan)
-  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_TimeSpan_
-  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan)
-  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan)
-  nameWithType: PostsStreamer.Stream(String, String, TimeSpan)
+- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IScheduler)
+  name: Stream(String, String, TimeSpan, IScheduler)
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_TimeSpan_IScheduler_
+  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IScheduler)
+  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan, IScheduler)
+  nameWithType: PostsStreamer.Stream(String, String, TimeSpan, IScheduler)
 - uid: Scraper.Net.Stream.PostsStreamer.Stream*
   name: Stream
   href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_
