@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Scraper.Net.Stream
 {
@@ -11,46 +11,38 @@ namespace Scraper.Net.Stream
     {
         public static IObservable<T> Stream<T>(
             Func<CancellationToken, IAsyncEnumerable<T>> asyncFunction,
-            Func<T, bool> filter,
-            TimeSpan interval,
-            IScheduler scheduler = null)
+            TimeSpan interval)
         {
-            scheduler ??= Scheduler.Default;
-            
-            IObservable<T> observable = Poll(
+            IObservable<T> stream = Poll(
                 asyncFunction,
-                interval,
-                scheduler);
-            
-            return observable
-                .Retry() // Continue polling even if one batch threw an exception
-                .Where(filter);
+                interval);
+
+            return stream.Retry(); // Continue polling even if one batch threw an exception
         } 
 
         private static IObservable<TResult> Poll<TResult>(
             Func<CancellationToken, IAsyncEnumerable<TResult>> asyncFunction,
-            TimeSpan interval,
-            IScheduler scheduler)
+            TimeSpan interval)
         {
-            return Observable.Create<TResult>(observer =>
+            async Task PollLoop(IObserver<TResult> observer, CancellationToken ct)
             {
-                return scheduler.ScheduleAsync(async (s, ct) => 
+                while (!ct.IsCancellationRequested)
                 {
-                    while(!ct.IsCancellationRequested)
+                    try
                     {
-                        try
-                        {
-                            await asyncFunction(ct).ForEachAsync(observer.OnNext, ct);
-                        }
-                        catch(Exception ex)
-                        {
-                            observer.OnError(ex);
-                        }
-
-                        await s.Sleep(interval, ct);
+                        await asyncFunction(ct)
+                            .ForEachAsync(observer.OnNext, ct);
                     }
-                });        
-            });    
+                    catch (Exception ex)
+                    {
+                        observer.OnError(ex);
+                    }
+
+                    await Task.Delay(interval, ct);
+                }
+            }
+
+            return Observable.Create<TResult>(PollLoop);
         }
     }
 }
