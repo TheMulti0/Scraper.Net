@@ -12,6 +12,7 @@ namespace Scraper.Net.Stream.Tests
         private readonly PostsStreamer _streamer = new(
             new SinglePostScraperService(),
             (_, _) => true,
+            new PostsStreamerConfig(),
             NullLogger<PostsStreamer>.Instance);
         
         [DataTestMethod]
@@ -38,6 +39,41 @@ namespace Scraper.Net.Stream.Tests
             await Task.Delay(interval * expectedPostCount * 1.5);
 
             Assert.AreEqual(expectedPostCount, actualPostCount);
+        }
+
+        [DataTestMethod]
+        [DataRow(1)]
+        [DataRow(4)]
+        [DataRow(-1)]
+        public async Task TestMaxDegreeOfParallelism(int max)
+        {
+            PostsStreamer streamer = new(
+                new SinglePostScraperService(),
+                (_, _) => true,
+                new PostsStreamerConfig
+                {
+                    MaxDegreeOfParallelism = max 
+                },
+                NullLogger<PostsStreamer>.Instance);
+            
+            const int expected = 1;
+            int actualPostCount = 0;
+
+            streamer
+                .Stream("", "", TimeSpan.FromDays(1))
+                .Take(expected)
+                .Subscribe(
+                    _ =>
+                    {
+                        lock (this)
+                        {
+                            actualPostCount++;
+                        }
+                    });
+
+            await Task.Delay(100);
+            
+            Assert.AreEqual(expected, actualPostCount);
         }
     }
 }

@@ -40,6 +40,8 @@ namespace Scraper.Net.Stream
 
                     await Task.Delay(interval, ct);
                 }
+                
+                observer.OnCompleted();
             }
 
             return Observable.Create<TResult>(PollLoop);
