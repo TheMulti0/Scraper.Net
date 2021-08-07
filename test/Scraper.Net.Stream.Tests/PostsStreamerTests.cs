@@ -15,8 +15,8 @@ namespace Scraper.Net.Stream.Tests
             NullLogger<PostsStreamer>.Instance);
         
         [DataTestMethod]
-        [DataRow(10, 1)]
-        [DataRow(10, 10)]
+        [DataRow(50, 1)]
+        [DataRow(50, 10)]
         public async Task TestStreamingWithSinglePostBatch(int intervalMs, int expectedPostCount)
         {
             var interval = TimeSpan.FromMilliseconds(intervalMs);
