@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -39,11 +40,13 @@ namespace Scraper.Net.Stream
         public IObservable<Post> Stream(
             string id,
             string platform,
-            TimeSpan interval)
+            TimeSpan interval,
+            IScheduler scheduler = null)
         {
             IObservable<Post> stream = PollingStreamer.Stream(
                 ct => PollAsync(id, platform, ct),
-                interval);
+                interval,
+                scheduler);
             
             return stream
                 .Where(post => _filter(post, platform)); // Apply filter
