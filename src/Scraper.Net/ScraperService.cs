@@ -57,9 +57,18 @@ namespace Scraper.Net
                 scrapedPosts,
                 (p, pP) => ProcessPosts(p, pP, platform));
 
+            var any = false;
+            
             await foreach (Post processedPost in posts.WithCancellation(ct))
             {
+                if (!any)
+                    any = true;
                 yield return processedPost;
+            }
+
+            if (!any)
+            {
+                _logger.LogWarning("No posts found for [{}] {}", platform, id);
             }
         }
 
