@@ -37,7 +37,7 @@ namespace Scraper.Net.Stream
                 provider => new PostsStreamer(
                     provider.GetRequiredService<IScraperService>(),
                     action(provider),
-                    config,
+                    config ?? new PostsStreamerConfig(),
                     provider.GetRequiredService<ILogger<PostsStreamer>>()));
         }
     }
