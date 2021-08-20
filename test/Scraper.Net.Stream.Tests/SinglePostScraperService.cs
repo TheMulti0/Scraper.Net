@@ -8,6 +8,8 @@ namespace Scraper.Net.Stream.Tests
 {
     internal class SinglePostScraperService : IScraperService
     {
+        private int _counter = 0;
+        
         public Task<Author> GetAuthorAsync(string id, string platform, CancellationToken ct = default)
         {
             throw new NotImplementedException();
@@ -15,7 +17,15 @@ namespace Scraper.Net.Stream.Tests
 
         public IAsyncEnumerable<Post> GetPostsAsync(string id, string platform, CancellationToken ct = default)
         {
-            return AsyncEnumerable.Repeat(new Post(), 1);
+            switch (id)
+            {
+                case "noid":
+                    throw new IdNotFoundException(id);
+                case "onetime" when _counter++ < 1:
+                    throw new InvalidOperationException();
+                default:
+                    return AsyncEnumerable.Repeat(new Post(), 1);
+            }
         }
     }
 }

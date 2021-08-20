@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Threading;
@@ -22,8 +23,16 @@ namespace Scraper.Net.Stream
                 interval,
                 scheduler);
 
-            return stream.Retry(); // Continue polling even if one batch threw an exception
-        } 
+            // Continue polling even if one batch threw an exception, except IdNotFoundException which breaks the stream
+            return stream
+                .RetryWhen(
+                    exceptions => exceptions.Select(e =>
+                    {
+                        if (e is IdNotFoundException)
+                            throw e;
+                        return e;
+                    }));
+        }
 
         private static IObservable<TResult> Poll<TResult>(
             Func<CancellationToken, IAsyncEnumerable<TResult>> asyncFunction,
@@ -48,7 +57,7 @@ namespace Scraper.Net.Stream
                         }
 
                         await s.Sleep(interval, ct);
-                    }
+                    }   
                 }
 
                 return scheduler.ScheduleAsync(PollLoop);

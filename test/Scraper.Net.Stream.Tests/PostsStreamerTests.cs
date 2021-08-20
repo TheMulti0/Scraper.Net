@@ -41,6 +41,30 @@ namespace Scraper.Net.Stream.Tests
             Assert.AreEqual(expectedPostCount, actualPostCount);
         }
 
+        [TestMethod]
+        public async Task TestIdNotFoundException()
+        {
+            TimeSpan interval = TimeSpan.FromSeconds(1);
+
+            var obs = _streamer
+                .Stream("noid", "", interval)
+                .Take(1);
+            
+            await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await obs);
+        }
+        
+        [TestMethod]
+        public async Task TestOneTimeException()
+        {
+            TimeSpan interval = TimeSpan.FromSeconds(1);
+
+            var obs = _streamer
+                .Stream("onetime", "", interval)
+                .Take(1);
+            
+            await obs; // Should not throw an exception 
+        }
+
         [DataTestMethod]
         [DataRow(1)]
         [DataRow(4)]
