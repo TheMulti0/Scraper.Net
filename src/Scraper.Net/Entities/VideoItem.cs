@@ -14,6 +14,7 @@ namespace Scraper.Net
         public int? Height { get; }
 
         [JsonConstructor]
+        [Newtonsoft.Json.JsonConstructor]
         public VideoItem(
             string url,
             UrlType urlType,
