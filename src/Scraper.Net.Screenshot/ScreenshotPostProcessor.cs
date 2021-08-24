@@ -31,7 +31,7 @@ namespace Scraper.Net.Screenshot
             IPlatformScreenshotter screenshotter = GetScreenshotter(platform);
 
             string screenshotUrl = await screenshotter.ScreenshotAsync(post.Url);
-            var screenshot = new PhotoItem(screenshotUrl);
+            var screenshot = new ScreenshotItem(screenshotUrl);
             
             yield return post with { MediaItems = new [] { screenshot } };
         }
