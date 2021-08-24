@@ -42,15 +42,16 @@ namespace Scraper.Net.YoutubeDl
                 yield return post;
             }
             
-            //TODO Filter out posts that have no video
+            if (!post.MediaItems.Any(item => item is VideoItem))
+            {
+                yield break;
+            }
             
             VideoItem videoItem = await ExtractVideoItem(post.Url, ct);
 
-            IEnumerable<IMediaItem> postMediaItems = post.MediaItems ?? Enumerable.Empty<IMediaItem>();
-            
-            IEnumerable<IMediaItem> mediaItems = postMediaItems
+            IEnumerable<IMediaItem> mediaItems = post.MediaItems
                 .Where(item => item is not VideoItem)
-                .Append(videoItem); // Append extracted video to media items
+                .Append(videoItem); // Replace all video items with new extracted video item 
             
             yield return post with { MediaItems = mediaItems };
         }
@@ -61,7 +62,7 @@ namespace Scraper.Net.YoutubeDl
 
             FormatData highestFormat = GetHighestQualityFormat(data);
             ThumbnailData highestThumbnail = GetHighestQualityThumbnail(data);
-
+            
             return new VideoItem(
                 highestFormat.Url ?? data.Url,
                 UrlType.DirectUrl,
