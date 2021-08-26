@@ -9,4 +9,8 @@
       <ProjectReference Include="..\..\src\Scraper.Net.Facebook\Scraper.Net.Facebook.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="TheMulti0.Console" Version="1.0.0" />
+    </ItemGroup>
+    
 </Project>

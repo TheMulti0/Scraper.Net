@@ -30,7 +30,7 @@ namespace Scraper.Net.Facebook
             string script = await GetScriptAsync(scriptName);
 
             Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
-            //process.StandardError().ToObservable().Subscribe(Log(scriptName));
+            process.StandardError().Subscribe(Log(scriptName), ct);
 
             const string blockStart = "{";
             const string blockEnd = "}";
@@ -119,7 +119,9 @@ namespace Scraper.Net.Facebook
             string blockEnd,
             [EnumeratorCancellation] CancellationToken ct)
         {
-            IAsyncEnumerable<string> standardOutput = process.StandardOutput()
+            IAsyncEnumerable<string> standardOutput = process
+                .StandardOutput()
+                .ToAsyncEnumerable()
                 .SkipWhile(l => l != blockStart);
 
             var block = string.Empty;

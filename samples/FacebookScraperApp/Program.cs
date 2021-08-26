@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Scraper.Net;
 using Scraper.Net.Facebook;
+using TheMulti0.Console;
 
 namespace FacebookScraperApp
 {
@@ -37,7 +39,7 @@ namespace FacebookScraperApp
             };
 
             var provider = new ServiceCollection()
-                .AddLogging()
+                .AddLogging(builder => builder.SetMinimumLevel(LogLevel.Debug).AddTheMulti0Console())
                 .AddScraper(builder => builder.AddFacebook(facebookConfig))
                 .BuildServiceProvider();
 

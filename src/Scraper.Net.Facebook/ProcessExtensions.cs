@@ -1,31 +1,50 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reactive.Concurrency;
+using System.Reactive.Linq;
 
 namespace Scraper.Net.Facebook
 {
     internal static class ProcessExtensions
     {
-        public static IAsyncEnumerable<string> StandardOutput(this Process process)
+        public static IObservable<string> StandardOutput(this Process process, IScheduler scheduler = null)
         {
-            return GetOutput(process, process.StandardOutput);
+            scheduler ??= Scheduler.Default;
+            
+            return GetOutput(process, process.StandardOutput, scheduler);
         }
         
-        public static IAsyncEnumerable<string> StandardError(this Process process)
+        public static IObservable<string> StandardError(this Process process, IScheduler scheduler = null)
         {
-            return GetOutput(process, process.StandardError);
+            scheduler ??= Scheduler.Default;
+            
+            return GetOutput(process, process.StandardError, scheduler);
         }
 
-        private static async IAsyncEnumerable<string> GetOutput(
+        private static IObservable<string> GetOutput(
             Process process,
-            StreamReader stream)
+            StreamReader stream,
+            IScheduler scheduler)
         {
-            while (stream.EndOfStream == false)
-            {
-                yield return await stream.ReadLineAsync();
-            }
+             IDisposable Observe(IObserver<string> observer)
+             {
+                 return scheduler.ScheduleAsync(
+                     async (s, ct) =>
+                     {
+                         while (stream.EndOfStream == false)
+                         {
+                             string line = await stream.ReadLineAsync();
+                             observer.OnNext(line);
+                         }
 
-            await process.WaitForExitAsync();
+                         await process.WaitForExitAsync(ct);
+                         observer.OnCompleted();
+                     });
+
+             }
+
+            return Observable.Create<string>(Observe);
         }
     }
 }
