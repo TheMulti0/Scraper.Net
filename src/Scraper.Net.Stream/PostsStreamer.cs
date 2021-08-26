@@ -17,6 +17,7 @@ namespace Scraper.Net.Stream
         private readonly IScraperService _service;
         private readonly PostFilter _filter;
         private readonly SemaphoreSlim _semaphore;
+        private readonly TimeSpan? _pollingTimeout;
         private readonly ILogger<PostsStreamer> _logger;
 
         public PostsStreamer(
@@ -33,6 +34,8 @@ namespace Scraper.Net.Stream
             {
                 _semaphore = new SemaphoreSlim(max, max);
             }
+
+            _pollingTimeout = config.PollingTimeout;
             
             _logger = logger;
         }
@@ -46,6 +49,7 @@ namespace Scraper.Net.Stream
             IObservable<Post> stream = PollingStreamer.Stream(
                 ct => PollAsync(id, platform, ct),
                 interval,
+                _pollingTimeout,
                 scheduler);
             
             return stream
