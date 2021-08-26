@@ -1080,12 +1080,15 @@ references:
   commentId: T:Scraper.Net.Twitter.TwitterScraper
   fullName: Scraper.Net.Twitter.TwitterScraper
   nameWithType: TwitterScraper
-- uid: Scraper.Net.Twitter.TwitterScraper.#ctor(TwitterConfig)
-  name: TwitterScraper(TwitterConfig)
-  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper__ctor_TwitterConfig_
-  commentId: M:Scraper.Net.Twitter.TwitterScraper.#ctor(TwitterConfig)
-  fullName: Scraper.Net.Twitter.TwitterScraper.TwitterScraper(TwitterConfig)
-  nameWithType: TwitterScraper.TwitterScraper(TwitterConfig)
+- uid: Scraper.Net.Twitter.TwitterScraper.#ctor(TwitterConfig,ILogger{Scraper.Net.Twitter.TwitterScraper})
+  name: TwitterScraper(TwitterConfig, ILogger<TwitterScraper>)
+  href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper__ctor_TwitterConfig_ILogger_Scraper_Net_Twitter_TwitterScraper__
+  commentId: M:Scraper.Net.Twitter.TwitterScraper.#ctor(TwitterConfig,ILogger{Scraper.Net.Twitter.TwitterScraper})
+  name.vb: TwitterScraper(TwitterConfig, ILogger(Of TwitterScraper))
+  fullName: Scraper.Net.Twitter.TwitterScraper.TwitterScraper(TwitterConfig, ILogger<Scraper.Net.Twitter.TwitterScraper>)
+  fullName.vb: Scraper.Net.Twitter.TwitterScraper.TwitterScraper(TwitterConfig, ILogger(Of Scraper.Net.Twitter.TwitterScraper))
+  nameWithType: TwitterScraper.TwitterScraper(TwitterConfig, ILogger<TwitterScraper>)
+  nameWithType.vb: TwitterScraper.TwitterScraper(TwitterConfig, ILogger(Of TwitterScraper))
 - uid: Scraper.Net.Twitter.TwitterScraper.#ctor*
   name: TwitterScraper
   href: api/Scraper.Net.Twitter.TwitterScraper.html#Scraper_Net_Twitter_TwitterScraper__ctor_
