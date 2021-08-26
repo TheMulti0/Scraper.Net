@@ -986,6 +986,19 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.PostsStreamerConfig.MaxDegreeOfParallelism
   nameWithType: PostsStreamerConfig.MaxDegreeOfParallelism
+- uid: Scraper.Net.Stream.PostsStreamerConfig.PollingTimeout
+  name: PollingTimeout
+  href: api/Scraper.Net.Stream.PostsStreamerConfig.html#Scraper_Net_Stream_PostsStreamerConfig_PollingTimeout
+  commentId: P:Scraper.Net.Stream.PostsStreamerConfig.PollingTimeout
+  fullName: Scraper.Net.Stream.PostsStreamerConfig.PollingTimeout
+  nameWithType: PostsStreamerConfig.PollingTimeout
+- uid: Scraper.Net.Stream.PostsStreamerConfig.PollingTimeout*
+  name: PollingTimeout
+  href: api/Scraper.Net.Stream.PostsStreamerConfig.html#Scraper_Net_Stream_PostsStreamerConfig_PollingTimeout_
+  commentId: Overload:Scraper.Net.Stream.PostsStreamerConfig.PollingTimeout
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.PostsStreamerConfig.PollingTimeout
+  nameWithType: PostsStreamerConfig.PollingTimeout
 - uid: Scraper.Net.Stream.ServiceCollectionExtensions
   name: ServiceCollectionExtensions
   href: api/Scraper.Net.Stream.ServiceCollectionExtensions.html
