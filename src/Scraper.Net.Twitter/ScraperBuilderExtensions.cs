@@ -21,7 +21,8 @@ namespace Scraper.Net.Twitter
                 .AddScraper(provider =>
                 {
                     config ??= provider.GetService<TwitterConfig>() ?? throw new ArgumentNullException(nameof(config));
-                    var scraper = new TwitterScraper(config);
+                    
+                    var scraper = ActivatorUtilities.CreateInstance<TwitterScraper>(provider, config);
 
                     return (scraper, platform);
                 });

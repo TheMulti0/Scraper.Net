@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using Tweetinvi;
 using Tweetinvi.Models;
 
@@ -15,13 +16,15 @@ namespace Scraper.Net.Twitter
     /// </summary>
     public class TwitterScraper : IPlatformScraper
     {
+        private readonly ILogger<TwitterScraper> _logger;
         private readonly AsyncLazy<TweetScraper> _tweetScraper;
         private readonly AsyncLazy<UserScraper> _userScraper;
         private readonly TextCleaner _textCleaner;
         private readonly MediaItemsExtractor _mediaItemsExtractor;
 
         public TwitterScraper(
-            TwitterConfig config)
+            TwitterConfig config,
+            ILogger<TwitterScraper> logger)
         {
             if (config.MaxPageCount < 1)
             {
@@ -31,7 +34,8 @@ namespace Scraper.Net.Twitter
             {
                 throw new ArgumentException(nameof(config.MaxPageSize));
             }
-            
+            _logger = logger;
+
             var twitterClient = new AsyncLazy<ITwitterClient>(() => TwitterClientFactory.CreateAsync(config));
 
             _tweetScraper = new AsyncLazy<TweetScraper>(async () => new TweetScraper(await twitterClient, config));
@@ -67,6 +71,7 @@ namespace Scraper.Net.Twitter
             [EnumeratorCancellation] CancellationToken ct = default)
         {
             TweetScraper tweetScraper = await _tweetScraper;
+            _logger.LogDebug("Created tweetScraper");
 
             IAsyncEnumerable<ITweet> tweets = GetTweetsAsync(id, tweetScraper);
             
@@ -87,6 +92,8 @@ namespace Scraper.Net.Twitter
         {
             return async (tweet, ct) =>
             {
+                _logger.LogDebug("Converting {}", id);
+                
                 string text = tweet.IsRetweet 
                     ? tweet.RetweetedTweet.Text 
                     : tweet.FullText;

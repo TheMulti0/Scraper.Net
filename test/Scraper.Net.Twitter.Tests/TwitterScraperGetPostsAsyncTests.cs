@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Tweetinvi;
 using Tweetinvi.Models;
@@ -25,7 +26,7 @@ namespace Scraper.Net.Twitter.Tests
             var config = rootConfig.Get<TwitterConfig>();
 
             _twitterClient = TwitterClientFactory.CreateAsync(config).Result;
-            _scraper = new TwitterScraper(config);
+            _scraper = new TwitterScraper(config, NullLogger<TwitterScraper>.Instance);
             _textCleaner = new TextCleaner();
             _mediaItemsExtractor = new MediaItemsExtractor();
         }

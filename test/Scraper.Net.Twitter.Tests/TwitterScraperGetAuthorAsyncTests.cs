@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Twitter.Tests
@@ -17,7 +18,7 @@ namespace Scraper.Net.Twitter.Tests
 
             var config = rootConfig.Get<TwitterConfig>();
 
-            _scraper = new TwitterScraper(config);
+            _scraper = new TwitterScraper(config, NullLogger<TwitterScraper>.Instance);
         }
 
         [TestMethod]
