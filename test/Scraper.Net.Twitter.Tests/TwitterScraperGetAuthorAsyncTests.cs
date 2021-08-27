@@ -18,7 +18,7 @@ namespace Scraper.Net.Twitter.Tests
 
             var config = rootConfig.Get<TwitterConfig>();
 
-            _scraper = new TwitterScraper(config, NullLogger<TwitterScraper>.Instance);
+            _scraper = new TwitterScraper(config);
         }
 
         [TestMethod]

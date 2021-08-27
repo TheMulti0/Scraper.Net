@@ -51,7 +51,18 @@ namespace Scraper.Net
             IPlatformScraper scraper = GetScraper(platform);
             
             IAsyncEnumerable<Post> scrapedPosts = scraper.GetPostsAsync(id, ct)
-                .Where(post => _postFilters.All(filter => filter(post, platform)));
+                .Where(post => _postFilters.All(filter =>
+                {
+                    try
+                    {
+                        return filter(post, platform);
+                    }
+                    catch (Exception e)
+                    {
+                        _logger.LogError(e, "Failed to filter post {}", post.Url);
+                        return false;
+                    }
+                }));
             
             IAsyncEnumerable<Post> posts = _postProcessors.Aggregate(
                 scrapedPosts,

@@ -26,7 +26,7 @@ namespace Scraper.Net.Twitter.Tests
             var config = rootConfig.Get<TwitterConfig>();
 
             _twitterClient = TwitterClientFactory.CreateAsync(config).Result;
-            _scraper = new TwitterScraper(config, NullLogger<TwitterScraper>.Instance);
+            _scraper = new TwitterScraper(config);
             _textCleaner = new TextCleaner();
             _mediaItemsExtractor = new MediaItemsExtractor();
         }

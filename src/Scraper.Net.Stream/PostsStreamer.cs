@@ -53,7 +53,18 @@ namespace Scraper.Net.Stream
                 scheduler);
             
             return stream
-                .Where(post => _filter(post, platform)); // Apply filter
+                .Where(post =>
+                {
+                    try
+                    {
+                        return _filter(post, platform);
+                    }
+                    catch(Exception e)
+                    {
+                        _logger.LogError(e, "Failed to filter post {}", post.Url);
+                        return false;
+                    }
+                }); // Apply filter
         }
 
         private async IAsyncEnumerable<Post> PollAsync(
