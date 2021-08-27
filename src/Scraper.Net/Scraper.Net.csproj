@@ -2,7 +2,7 @@
 
     <PropertyGroup>
       <TargetFramework>net5.0</TargetFramework>
-      <Version>0.1.9</Version>
+      <Version>0.1.10</Version>
       <Title>Scraper.Net</Title>
       <Authors>TheMulti0</Authors>
       <RepositoryUrl>https://github.com/Scraper-Net/Scraper.Net</RepositoryUrl>
@@ -11,7 +11,6 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.0" />
       <PackageReference Include="System.Interactive.Async" Version="5.0.0" />
     </ItemGroup>
 

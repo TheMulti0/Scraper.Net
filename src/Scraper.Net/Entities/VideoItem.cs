@@ -5,16 +5,20 @@ namespace Scraper.Net
 {
     public record VideoItem : IMediaItem
     {
-        public string Url { get; }
-        public UrlType UrlType { get; }
-        public string ThumbnailUrl { get; }
+        public string Url { get; init; }
+        public UrlType UrlType { get; init; }
+        public string ThumbnailUrl { get; init; }
         [JsonConverter(typeof(NullableTimeSpanConverter))]
-        public TimeSpan? Duration { get; }
-        public int? Width { get; }
-        public int? Height { get; }
+        public TimeSpan? Duration { get; init; }
+        public int? Width { get; init; }
+        public int? Height { get; init; }
+
+        public VideoItem()
+        {
+            
+        }
 
         [JsonConstructor]
-        [Newtonsoft.Json.JsonConstructor]
         public VideoItem(
             string url,
             UrlType urlType,
