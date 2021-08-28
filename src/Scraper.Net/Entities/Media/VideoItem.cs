@@ -15,7 +15,6 @@ namespace Scraper.Net
 
         public VideoItem()
         {
-            
         }
 
         [JsonConstructor]
@@ -52,6 +51,22 @@ namespace Scraper.Net
             }
             Width = width;
             Height = height;
+        }
+        
+        public void Deconstruct(
+            out string url,
+            out UrlType urlType,
+            out string thumbnailUrl,
+            out TimeSpan? duration,
+            out int? width,
+            out int? height)
+        {
+            url = Url;
+            urlType = UrlType;
+            thumbnailUrl = ThumbnailUrl;
+            duration = Duration;
+            width = Width;
+            height = Height;
         }
     }
 }
