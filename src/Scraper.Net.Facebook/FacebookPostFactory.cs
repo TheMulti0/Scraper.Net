@@ -54,15 +54,22 @@ namespace Scraper.Net.Facebook
 
         private static IEnumerable<Image> GetImages(this RawFacebookPost raw)
         {
-            return raw.ImagesLowQuality.Select((lowQualityUrl, index) => new Image
+            IEnumerable<string> images = raw.ImagesLowQuality.Where(image => image != raw.VideoThumbnail);
+
+            Image ToImage(string lowQualityUrl, int index)
             {
-                Id = raw.ImageIds?.ElementAtOrDefault(index),
-                Url = raw.Images?.ElementAtOrDefault(index) ??
-                      lowQualityUrl,
-                LowQualityUrl = lowQualityUrl,
-                Description = raw.ImagesDescription?.ElementAtOrDefault(index) ??
-                              raw.ImagesLowQualityDescription?.ElementAtOrDefault(index)
-            });
+                return new Image
+                {
+                    Id = raw.ImageIds?.ElementAtOrDefault(index),
+                    Url = raw.Images?.ElementAtOrDefault(index) ?? lowQualityUrl,
+                    LowQualityUrl = lowQualityUrl,
+                    Description =
+                        raw.ImagesDescription?.ElementAtOrDefault(index) ??
+                        raw.ImagesLowQualityDescription?.ElementAtOrDefault(index)
+                };
+            }
+
+            return images.Select(ToImage);
         }
 
         private static Video GetVideo(this RawFacebookPost raw)
