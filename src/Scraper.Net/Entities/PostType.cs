@@ -4,6 +4,7 @@
     {
         Post,
         Repost,
-        Reply
+        Reply,
+        ReplyToSelf
     }
 }

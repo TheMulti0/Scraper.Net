@@ -98,21 +98,22 @@ namespace Scraper.Net.Twitter
                     CreationDate = tweet.CreatedAt.DateTime,
                     Url = tweet.Url,
                     MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),
-                    Type = GetPostType(tweet)
+                    Type = GetPostType(tweet, id)
                 };
             };
         }
 
-        private static PostType GetPostType(ITweet tweet)
+        private static PostType GetPostType(ITweet tweet, string userId)
         {
-            if (tweet.InReplyToScreenName != null)
+            if (tweet.InReplyToStatusId == null)
             {
-                return PostType.Reply;
+                return tweet.IsRetweet
+                    ? PostType.Repost
+                    : PostType.Post;
             }
-
-            return tweet.IsRetweet 
-                ? PostType.Repost 
-                : PostType.Post;
+            return tweet.InReplyToScreenName.Equals(userId, StringComparison.CurrentCultureIgnoreCase) 
+                ? PostType.ReplyToSelf 
+                : PostType.Reply;
         }
     }
 }
