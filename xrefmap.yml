@@ -542,6 +542,12 @@ references:
   commentId: F:Scraper.Net.PostType.Reply
   fullName: Scraper.Net.PostType.Reply
   nameWithType: PostType.Reply
+- uid: Scraper.Net.PostType.ReplyToSelf
+  name: ReplyToSelf
+  href: api/Scraper.Net.PostType.html#Scraper_Net_PostType_ReplyToSelf
+  commentId: F:Scraper.Net.PostType.ReplyToSelf
+  fullName: Scraper.Net.PostType.ReplyToSelf
+  nameWithType: PostType.ReplyToSelf
 - uid: Scraper.Net.PostType.Repost
   name: Repost
   href: api/Scraper.Net.PostType.html#Scraper_Net_PostType_Repost
