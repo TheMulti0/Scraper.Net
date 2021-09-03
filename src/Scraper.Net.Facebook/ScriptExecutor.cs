@@ -21,16 +21,16 @@ namespace Scraper.Net.Facebook
             _logger = logger;
         }
         
-        public async IAsyncEnumerable<string> ExecuteAsync(
+        public async IAsyncEnumerable<string> ExecuteAsync<TRequest>(
             string executablePath,
             string scriptName,
-            object request,
-            [EnumeratorCancellation] CancellationToken ct = default)
+            TRequest request,
+            [EnumeratorCancellation] CancellationToken ct = default) where TRequest : Request
         {
             string script = await GetScriptAsync(scriptName);
 
             Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
-            process.StandardError().Subscribe(Log(scriptName), ct);
+            process.StandardError().Subscribe(Log(scriptName, request.UserId), ct);
 
             const string blockStart = "{";
             const string blockEnd = "}";
@@ -108,9 +108,15 @@ namespace Scraper.Net.Facebook
             };
         }
 
-        private Action<string> Log(string scriptName)
+        private Action<string> Log(string scriptName, string category)
         {
-            return line => _logger.LogDebug("[{}]: {}", scriptName, line);
+            return line =>
+            {
+                string c = category == null 
+                    ? string.Empty 
+                    : $"[{category}]";
+                _logger.LogDebug("[{}]: {} {}", scriptName, c, line);
+            };
         }
 
         private static async IAsyncEnumerable<string> GetOutputJsonBlocks(
