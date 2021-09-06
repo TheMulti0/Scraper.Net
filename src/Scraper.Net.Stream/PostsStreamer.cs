@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Runtime.CompilerServices;
@@ -77,8 +78,9 @@ namespace Scraper.Net.Stream
             try
             {
                 _logger.LogInformation("Beginning to scrape [{}] {}", platform, id);
-            
-                await foreach (Post post in GetPostsAsync(id, platform, ct))
+
+                IOrderedAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct).OrderBy(post => post.CreationDate);
+                await foreach (Post post in posts.WithCancellation(ct))
                 {
                     yield return post;
                 }
