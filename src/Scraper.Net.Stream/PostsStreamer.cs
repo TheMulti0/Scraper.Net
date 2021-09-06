@@ -112,7 +112,11 @@ namespace Scraper.Net.Stream
                     _logger.LogError(e, "Failed to get posts for [{}] {}", platform, id);
                 }
 
-                yield return enumerator.Current;
+                Post post = enumerator.Current;
+                if (post != null)
+                {
+                    yield return post;
+                }
             }
         }
     }
