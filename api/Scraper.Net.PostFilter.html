@@ -80,7 +80,7 @@
   <h6><strong>Assembly</strong>: Scraper.Net.dll</h6>
   <h5 id="Scraper_Net_PostFilter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate Task&lt;bool&gt; PostFilter(Post post, string platform);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate Task&lt;bool&gt; PostFilter(Post post, string platform, CancellationToken ct = null);</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -103,6 +103,11 @@
         <td><span class="parametername">platform</span></td>
         <td><p>The platform of the post</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">ct</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -129,10 +134,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/eb00c212395888595ae9189d636f9e08b3544475/apiSpec/new?filename=Scraper_Net_PostFilter.md&amp;value=---%0Auid%3A%20Scraper.Net.PostFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/4528f40927832385489620bf2cb981dca88eb0c3/apiSpec/new?filename=Scraper_Net_PostFilter.md&amp;value=---%0Auid%3A%20Scraper.Net.PostFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/eb00c212395888595ae9189d636f9e08b3544475/src/Scraper.Net/PostFilter.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/4528f40927832385489620bf2cb981dca88eb0c3/src/Scraper.Net/PostFilter.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
