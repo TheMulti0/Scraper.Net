@@ -16,6 +16,28 @@ references:
   commentId: N:Scraper.Net
   fullName: Scraper.Net
   nameWithType: Scraper.Net
+- uid: Scraper.Net.AsyncEnumerableExtensions
+  name: AsyncEnumerableExtensions
+  href: api/Scraper.Net.AsyncEnumerableExtensions.html
+  commentId: T:Scraper.Net.AsyncEnumerableExtensions
+  fullName: Scraper.Net.AsyncEnumerableExtensions
+  nameWithType: AsyncEnumerableExtensions
+- uid: Scraper.Net.AsyncEnumerableExtensions.Catch*
+  name: Catch
+  href: api/Scraper.Net.AsyncEnumerableExtensions.html#Scraper_Net_AsyncEnumerableExtensions_Catch_
+  commentId: Overload:Scraper.Net.AsyncEnumerableExtensions.Catch
+  isSpec: "True"
+  fullName: Scraper.Net.AsyncEnumerableExtensions.Catch
+  nameWithType: AsyncEnumerableExtensions.Catch
+- uid: Scraper.Net.AsyncEnumerableExtensions.Catch``2(IAsyncEnumerable{``0},Action{``1})
+  name: Catch<TSource, TException>(IAsyncEnumerable<TSource>, Action<TException>)
+  href: api/Scraper.Net.AsyncEnumerableExtensions.html#Scraper_Net_AsyncEnumerableExtensions_Catch__2_IAsyncEnumerable___0__Action___1__
+  commentId: M:Scraper.Net.AsyncEnumerableExtensions.Catch``2(IAsyncEnumerable{``0},Action{``1})
+  name.vb: Catch(Of TSource, TException)(IAsyncEnumerable(Of TSource), Action(Of TException))
+  fullName: Scraper.Net.AsyncEnumerableExtensions.Catch<TSource, TException>(IAsyncEnumerable<TSource>, Action<TException>)
+  fullName.vb: Scraper.Net.AsyncEnumerableExtensions.Catch(Of TSource, TException)(IAsyncEnumerable(Of TSource), Action(Of TException))
+  nameWithType: AsyncEnumerableExtensions.Catch<TSource, TException>(IAsyncEnumerable<TSource>, Action<TException>)
+  nameWithType.vb: AsyncEnumerableExtensions.Catch(Of TSource, TException)(IAsyncEnumerable(Of TSource), Action(Of TException))
 - uid: Scraper.Net.Facebook
   name: Scraper.Net.Facebook
   href: api/Scraper.Net.Facebook.html
@@ -938,6 +960,28 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.InMemoryPostTimeFilter.Filter
   nameWithType: InMemoryPostTimeFilter.Filter
+- uid: Scraper.Net.Stream.ObservableExtensions
+  name: ObservableExtensions
+  href: api/Scraper.Net.Stream.ObservableExtensions.html
+  commentId: T:Scraper.Net.Stream.ObservableExtensions
+  fullName: Scraper.Net.Stream.ObservableExtensions
+  nameWithType: ObservableExtensions
+- uid: Scraper.Net.Stream.ObservableExtensions.WhereAwait*
+  name: WhereAwait
+  href: api/Scraper.Net.Stream.ObservableExtensions.html#Scraper_Net_Stream_ObservableExtensions_WhereAwait_
+  commentId: Overload:Scraper.Net.Stream.ObservableExtensions.WhereAwait
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.ObservableExtensions.WhereAwait
+  nameWithType: ObservableExtensions.WhereAwait
+- uid: Scraper.Net.Stream.ObservableExtensions.WhereAwait``1(IObservable{``0},Func{``0,Task{System.Boolean}})
+  name: WhereAwait<TSource>(IObservable<TSource>, Func<TSource, Task<Boolean>>)
+  href: api/Scraper.Net.Stream.ObservableExtensions.html#Scraper_Net_Stream_ObservableExtensions_WhereAwait__1_IObservable___0__Func___0_Task_System_Boolean___
+  commentId: M:Scraper.Net.Stream.ObservableExtensions.WhereAwait``1(IObservable{``0},Func{``0,Task{System.Boolean}})
+  name.vb: WhereAwait(Of TSource)(IObservable(Of TSource), Func(Of TSource, Task(Of Boolean)))
+  fullName: Scraper.Net.Stream.ObservableExtensions.WhereAwait<TSource>(IObservable<TSource>, Func<TSource, Task<System.Boolean>>)
+  fullName.vb: Scraper.Net.Stream.ObservableExtensions.WhereAwait(Of TSource)(IObservable(Of TSource), Func(Of TSource, Task(Of System.Boolean)))
+  nameWithType: ObservableExtensions.WhereAwait<TSource>(IObservable<TSource>, Func<TSource, Task<Boolean>>)
+  nameWithType.vb: ObservableExtensions.WhereAwait(Of TSource)(IObservable(Of TSource), Func(Of TSource, Task(Of Boolean)))
 - uid: Scraper.Net.Stream.PostsStreamer
   name: PostsStreamer
   href: api/Scraper.Net.Stream.PostsStreamer.html
