@@ -11,7 +11,7 @@ namespace Scraper.Net.Stream.Tests
     {
         private readonly PostsStreamer _streamer = new(
             new SinglePostScraperService(),
-            (_, _) => Task.FromResult(true),
+            (_, _, _) => Task.FromResult(true),
             new PostsStreamerConfig(),
             NullLogger<PostsStreamer>.Instance);
         
@@ -72,7 +72,7 @@ namespace Scraper.Net.Stream.Tests
         {
             PostsStreamer streamer = new(
                 new SinglePostScraperService(),
-                (_, _) => Task.FromResult(true),
+                (_, _, _) => Task.FromResult(true),
                 new PostsStreamerConfig
                 {
                     MaxDegreeOfParallelism = max 

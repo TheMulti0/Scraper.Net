@@ -57,7 +57,7 @@ namespace Scraper.Net.Tests
                 },
                 new PostFilter[]
                 {
-                    (post, platform) => Task.FromResult(false)
+                    (post, platform, ct) => Task.FromResult(false)
                 },
                 new List<IPostProcessor>(),
                 NullLogger<ScraperService>.Instance);

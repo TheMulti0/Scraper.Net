@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 
 namespace Scraper.Net
 {
@@ -7,5 +8,8 @@ namespace Scraper.Net
     /// </summary>
     /// <param name="post">A post to filter</param>
     /// <param name="platform">The platform of the post</param>
-    public delegate Task<bool> PostFilter(Post post, string platform);
+    public delegate Task<bool> PostFilter(
+        Post post,
+        string platform,
+        CancellationToken ct = default);
 }

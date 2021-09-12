@@ -59,7 +59,6 @@ namespace Scraper.Net
                 (p, pP) => ProcessPosts(p, pP, platform));
 
             var any = false;
-            
             await foreach (Post processedPost in posts.WithCancellation(ct))
             {
                 if (!any)
@@ -75,11 +74,11 @@ namespace Scraper.Net
 
         private ValueTask<bool> FilterAsync(Post post, string platform, CancellationToken ct)
         {
-            async ValueTask<bool> Filter(PostFilter filter)
+            async ValueTask<bool> Filter(PostFilter filter, CancellationToken c)
             {
                 try
                 {
-                    return await filter(post, platform);
+                    return await filter(post, platform, c);
                 }
                 catch (Exception e)
                 {
@@ -88,7 +87,7 @@ namespace Scraper.Net
                 }
             }
 
-            return _postFilters.AllAwaitAsync(Filter, ct);
+            return _postFilters.AllAwaitWithCancellationAsync(Filter, ct);
         }
 
         private IAsyncEnumerable<Post> ProcessPosts(
