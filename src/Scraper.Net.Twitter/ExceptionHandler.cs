@@ -28,40 +28,24 @@ namespace Scraper.Net.Twitter
             }
         }
         
-        public static async IAsyncEnumerable<T> HandleExceptionAsync<T>(string id, Func<IAsyncEnumerable<T>> func)
+        public static IAsyncEnumerable<T> HandleExceptionAsync<T>(string id, Func<IAsyncEnumerable<T>> func)
         {
-            IAsyncEnumerator<T> enumerator = func().GetAsyncEnumerator();
-            
-            while (true)
+            void HandleException(TwitterException e)
             {
-                T current;
-                
-                try
+                switch ((HttpStatusCode?)e.StatusCode)
                 {
-                    if (!await enumerator.MoveNextAsync())
-                    {
-                        break;
-                    }
-                    current = enumerator.Current;
+                    case HttpStatusCode.NotFound:
+                        throw new IdNotFoundException(id, e);
+
+                    case HttpStatusCode.TooManyRequests:
+                        throw new RateLimitedException(e);
+
+                    default:
+                        throw e;
                 }
-                catch (TwitterException e)
-                {
-                    switch ((HttpStatusCode?) e.StatusCode)
-                    {
-                        case HttpStatusCode.NotFound:
-                            throw new IdNotFoundException(id, e);
-                        
-                        case HttpStatusCode.TooManyRequests:
-                            throw new RateLimitedException(e);
-                        
-                        default:
-                            throw;
-                    }
-                }
-                
-                // the yield statement is outside the try catch block
-                yield return current;
             }
+
+            return func().Catch<T, TwitterException>(HandleException);
         }
     }
 }

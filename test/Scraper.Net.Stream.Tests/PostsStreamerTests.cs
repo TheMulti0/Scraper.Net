@@ -11,12 +11,12 @@ namespace Scraper.Net.Stream.Tests
     {
         private readonly PostsStreamer _streamer = new(
             new SinglePostScraperService(),
-            (_, _) => true,
+            (_, _) => Task.FromResult(true),
             new PostsStreamerConfig(),
             NullLogger<PostsStreamer>.Instance);
         
         [DataTestMethod]
-        [DataRow(100000, 1)]
+        [DataRow(50, 1)]
         [DataRow(50, 10)]
         public async Task TestStreamingWithSinglePostBatch(int intervalMs, int expectedPostCount)
         {
@@ -36,7 +36,7 @@ namespace Scraper.Net.Stream.Tests
                         }
                     });
 
-            await Task.Delay(interval * expectedPostCount * 1.5);
+            await Task.Delay(interval * expectedPostCount * 5);
 
             Assert.AreEqual(expectedPostCount, actualPostCount);
         }
@@ -73,7 +73,7 @@ namespace Scraper.Net.Stream.Tests
         {
             PostsStreamer streamer = new(
                 new SinglePostScraperService(),
-                (_, _) => true,
+                (_, _) => Task.FromResult(true),
                 new PostsStreamerConfig
                 {
                     MaxDegreeOfParallelism = max 

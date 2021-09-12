@@ -54,11 +54,11 @@ namespace Scraper.Net.Stream
                 scheduler);
             
             return stream
-                .Where(post =>
+                .WhereAwait(async post =>
                 {
                     try
                     {
-                        return _filter(post, platform);
+                        return await _filter(post, platform);
                     }
                     catch(Exception e)
                     {
@@ -79,7 +79,8 @@ namespace Scraper.Net.Stream
             {
                 _logger.LogInformation("Beginning to scrape [{}] {}", platform, id);
 
-                IOrderedAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct).OrderBy(post => post.CreationDate);
+                IOrderedAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct)
+                    .OrderBy(post => post.CreationDate);
                 await foreach (Post post in posts.WithCancellation(ct))
                 {
                     yield return post;
@@ -93,31 +94,15 @@ namespace Scraper.Net.Stream
             }
         }
 
-        private async IAsyncEnumerable<Post> GetPostsAsync(
+        private IAsyncEnumerable<Post> GetPostsAsync(
             string id,
             string platform,
-            [EnumeratorCancellation] CancellationToken ct)
+            CancellationToken ct)
         {
-            IAsyncEnumerator<Post> enumerator = _service.GetPostsAsync(id, platform, ct)
-                .GetAsyncEnumerator(ct);
-
-            for (var more = true; more;)
-            {
-                try
-                {
-                    more = await enumerator.MoveNextAsync();
-                }
-                catch (Exception e)
-                {
-                    _logger.LogError(e, "Failed to get posts for [{}] {}", platform, id);
-                }
-
-                Post post = enumerator.Current;
-                if (post != null)
-                {
-                    yield return post;
-                }
-            }
+            return _service
+                .GetPostsAsync(id, platform, ct)
+                .Catch<Post, Exception>(
+                    e => _logger.LogError(e, "Failed to get posts for [{}] {}", platform, id));
         }
     }
 }

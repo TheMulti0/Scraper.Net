@@ -17,7 +17,7 @@ namespace Scraper.Net
     public class ScraperService : IScraperService
     {
         private readonly IDictionary<string, IPlatformScraper> _platformScrapers;
-        private readonly IEnumerable<PostFilter> _postFilters;
+        private readonly IAsyncEnumerable<PostFilter> _postFilters;
         private readonly IEnumerable<IPostProcessor> _postProcessors;
         private readonly ILogger<ScraperService> _logger;
 
@@ -28,7 +28,7 @@ namespace Scraper.Net
             ILogger<ScraperService> logger)
         {
             _platformScrapers = platformScrapers;
-            _postFilters = postFilters;
+            _postFilters = postFilters.ToAsyncEnumerable();
             _postProcessors = postProcessors;
             _logger = logger;
         }
@@ -49,20 +49,10 @@ namespace Scraper.Net
             [EnumeratorCancellation] CancellationToken ct = default)
         {
             IPlatformScraper scraper = GetScraper(platform);
-            
-            IAsyncEnumerable<Post> scrapedPosts = scraper.GetPostsAsync(id, ct)
-                .Where(post => _postFilters.All(filter =>
-                {
-                    try
-                    {
-                        return filter(post, platform);
-                    }
-                    catch (Exception e)
-                    {
-                        _logger.LogError(e, "Failed to filter post {}", post.Url);
-                        return false;
-                    }
-                }));
+
+            IAsyncEnumerable<Post> scrapedPosts = scraper
+                .GetPostsAsync(id, ct)
+                .WhereAwait(post => FilterAsync(post, platform, ct));
             
             IAsyncEnumerable<Post> posts = _postProcessors.Aggregate(
                 scrapedPosts,
@@ -81,6 +71,24 @@ namespace Scraper.Net
             {
                 _logger.LogWarning("No posts found for [{}] {}", platform, id);
             }
+        }
+
+        private ValueTask<bool> FilterAsync(Post post, string platform, CancellationToken ct)
+        {
+            async ValueTask<bool> Filter(PostFilter filter)
+            {
+                try
+                {
+                    return await filter(post, platform);
+                }
+                catch (Exception e)
+                {
+                    _logger.LogError(e, "Failed to filter post {}", post.Url);
+                    return false;
+                }
+            }
+
+            return _postFilters.AllAwaitAsync(Filter, ct);
         }
 
         private IAsyncEnumerable<Post> ProcessPosts(
