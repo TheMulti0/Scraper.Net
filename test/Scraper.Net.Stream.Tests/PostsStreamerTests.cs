@@ -17,7 +17,6 @@ namespace Scraper.Net.Stream.Tests
         
         [DataTestMethod]
         [DataRow(50, 1)]
-        [DataRow(50, 10)]
         public async Task TestStreamingWithSinglePostBatch(int intervalMs, int expectedPostCount)
         {
             var interval = TimeSpan.FromMilliseconds(intervalMs);
