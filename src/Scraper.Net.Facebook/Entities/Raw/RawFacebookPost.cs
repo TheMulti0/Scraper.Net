@@ -105,7 +105,7 @@ namespace Scraper.Net.Facebook
         #region Stats
 
         [JsonPropertyName("comments")]
-        public int Comments { get; init; }
+        public int? Comments { get; init; }
         
         [JsonPropertyName("shares")]
         public int Shares { get; init; }
@@ -131,7 +131,7 @@ namespace Scraper.Net.Facebook
         public DateTime? SharedTime { get; init; }
 
         [JsonPropertyName("shared_user_id")]
-        public string SharedUserId { get; init; }
+        public object SharedUserId { get; init; }
 
         [JsonPropertyName("shared_username")]
         public string SharedUserName { get; init; }

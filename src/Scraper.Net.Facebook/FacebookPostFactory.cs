@@ -28,7 +28,7 @@ namespace Scraper.Net.Facebook
                 Video = raw.GetVideo(),
                 Stats = new Stats
                 {
-                    Comments = raw.Comments,
+                    Comments = raw.Comments ?? 0,
                     Shares = raw.Shares,
                     Likes = raw.Likes
                 },
@@ -107,7 +107,7 @@ namespace Scraper.Net.Facebook
                 CreationDate = raw.SharedTime,
                 Author = new Author
                 {
-                    Id = raw.SharedUserId,
+                    Id = raw.SharedUserId.ToString(),
                     UserName = raw.SharedUserName
                 }
             };
