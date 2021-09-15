@@ -79,8 +79,7 @@ namespace Scraper.Net.Stream
             {
                 _logger.LogInformation("Beginning to scrape [{}] {}", platform, id);
 
-                IOrderedAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct)
-                    .OrderBy(post => post.CreationDate);
+                IAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct);
                 await foreach (Post post in posts.WithCancellation(ct))
                 {
                     yield return post;
@@ -101,6 +100,7 @@ namespace Scraper.Net.Stream
         {
             return _service
                 .GetPostsAsync(id, platform, ct)
+                .OrderBy(post => post.CreationDate)
                 .Catch<Post, Exception>(
                     e => _logger.LogError(e, "Failed to get posts for [{}] {}", platform, id));
         }

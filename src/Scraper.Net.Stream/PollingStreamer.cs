@@ -60,7 +60,6 @@ namespace Scraper.Net.Stream
                             observer.OnError(ex);
                         }
 
-                        await s.Sleep(TimeSpan.FromDays(1), ct);
                         await s.Sleep(interval, ct);
                     }
                 }
