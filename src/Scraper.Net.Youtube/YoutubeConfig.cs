@@ -1,6 +1,6 @@
 ﻿namespace Scraper.Net.Youtube
 {
-    public class YoutubeScraperConfig
+    public class YoutubeConfig
     {
         public string ApiKey { get; set; }
 

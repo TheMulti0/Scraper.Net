@@ -17,7 +17,7 @@ namespace Scraper.Net.Youtube
         private readonly AsyncLazy<ChannelScraper> _channelScraper;
         private readonly AsyncLazy<VideosScraper> _videosScraper;
 
-        public YoutubeScraper(YoutubeScraperConfig config)
+        public YoutubeScraper(YoutubeConfig config)
         {
             var youtubeService =
                 new AsyncLazy<YouTubeService>(

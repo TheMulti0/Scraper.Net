@@ -18,7 +18,7 @@ namespace Scraper.Net.Youtube.Tests
                 .AddUserSecrets<YoutubeScraperTests>()
                 .Build();
             
-            var config = rootConfig.Get<YoutubeScraperConfig>();
+            var config = rootConfig.Get<YoutubeConfig>();
 
             _youtubeScraper = new YoutubeScraper(config);
         }
