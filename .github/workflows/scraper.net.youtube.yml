@@ -33,11 +33,11 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Set secrets
-        run: |
-          cd test/Scraper.Net.Youtube.Tests
-          dotnet user-secrets set ApiKey "${{ secrets.YOUTUBE_APIKEY }}"
-          dotnet user-secrets set AppName "${{ secrets.YOUTUBE_APPNAME }}"
-          cd ..
+      run: |
+        cd test/Scraper.Net.Youtube.Tests
+        dotnet user-secrets set ApiKey "${{ secrets.YOUTUBE_APIKEY }}"
+        dotnet user-secrets set AppName "${{ secrets.YOUTUBE_APPNAME }}"
+        cd ..
       
     - name: Test
       run: dotnet test --no-build test/Scraper.Net.Youtube.Tests
