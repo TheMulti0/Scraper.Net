@@ -1,0 +1,65 @@
+name: Test and publish Scraper.Net.Youtube
+
+on:
+  push:
+   paths:
+     - "src/Scraper.Net.Youtube/**"
+     - "test/Scraper.Net.Youtube.Tests/**"
+  pull_request:
+    paths:
+      - "src/Scraper.Net.Youtube/**"
+      - "test/Scraper.Net.Youtube.Tests/**"
+
+env:
+  DOTNET_VERSION: 5.0.x
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Set secrets
+        run: |
+          cd test/Scraper.Net.Youtube.Tests
+          dotnet user-secrets set ApiKey "${{ secrets.YOUTUBE_APIKEY }}"
+          dotnet user-secrets set AppName "${{ secrets.YOUTUBE_APPNAME }}"
+          cd ..
+      
+    - name: Test
+      run: dotnet test --no-build test/Scraper.Net.Youtube.Tests
+
+  publish:
+
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.workflow_run.head_branch }}
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+        
+    - name: Publish on version change
+      uses: rohith/publish-nuget@v2
+      with:
+        PROJECT_FILE_PATH: src/Scraper.Net.Youtube/Scraper.Net.Youtube.csproj
+        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+        TAG_COMMIT: false

@@ -2,9 +2,9 @@
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace Scraper.Net.Twitter
+namespace Scraper.Net
 {
-    internal class AsyncLazy<T> : Lazy<Task<T>>
+    public class AsyncLazy<T> : Lazy<Task<T>>
     {
         public AsyncLazy(Func<T> valueFactory) :
             base(() => Task.Factory.StartNew(valueFactory)) { }

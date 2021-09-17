@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Version>0.1.0</Version>
+        <Title>Scraper.Net.Youtube</Title>
+        <Authors>TheMulti0</Authors>
+        <RepositoryUrl>https://github.com/Scraper-Net/Scraper.Net</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Apis.YouTube.v3" Version="1.55.0.2440" />
+        <PackageReference Include="morelinq" Version="3.3.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
+    </ItemGroup>
+
+</Project>
