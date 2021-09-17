@@ -1,6 +1,7 @@
 name: Test and publish Scraper.Net
 
 on:
+  workflow_dispatch:
   push:
    paths:
      - "src/Scraper.Net/**"

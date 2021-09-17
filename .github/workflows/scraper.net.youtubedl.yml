@@ -1,6 +1,7 @@
 name: Test and publish Scraper.Net.YoutubeDl
 
 on:
+  workflow_dispatch:
   push:
    paths:
      - "src/Scraper.Net.YoutubeDl/**"
