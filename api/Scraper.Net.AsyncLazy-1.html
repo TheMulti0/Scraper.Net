@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class IdNotFoundException
+    <title>Class AsyncLazy&lt;T&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class IdNotFoundException
+    <meta name="title" content="Class AsyncLazy&lt;T&gt;
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,41 +68,55 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Scraper.Net.IdNotFoundException">
+            <article class="content wrap" id="_content" data-uid="Scraper.Net.AsyncLazy`1">
   
   
-  <h1 id="Scraper_Net_IdNotFoundException" data-uid="Scraper.Net.IdNotFoundException" class="text-break">Class IdNotFoundException
+  <h1 id="Scraper_Net_AsyncLazy_1" data-uid="Scraper.Net.AsyncLazy`1" class="text-break">Class AsyncLazy&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Thrown when author id is not found</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IdNotFoundException</span></div>
+    <div class="level1"><span class="xref">AsyncLazy&lt;T&gt;</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Scraper.Net.html">Scraper.Net</a></h6>
   <h6><strong>Assembly</strong>: Scraper.Net.dll</h6>
-  <h5 id="Scraper_Net_IdNotFoundException_syntax">Syntax</h5>
+  <h5 id="Scraper_Net_AsyncLazy_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IdNotFoundException : Exception</code></pre>
+    <pre><code class="lang-csharp hljs">public class AsyncLazy&lt;T&gt; : Lazy&lt;Task&lt;T&gt;&gt;</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_IdNotFoundException__ctor_System_String_.md&amp;value=---%0Auid%3A%20Scraper.Net.IdNotFoundException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_AsyncLazy_1__ctor_Func__0__.md&amp;value=---%0Auid%3A%20Scraper.Net.AsyncLazy%601.%23ctor(Func%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/Exceptions/IdNotFoundException.cs/#L10">View Source</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/AsyncLazy.cs/#L9">View Source</a>
   </span>
-  <a id="Scraper_Net_IdNotFoundException__ctor_" data-uid="Scraper.Net.IdNotFoundException.#ctor*"></a>
-  <h4 id="Scraper_Net_IdNotFoundException__ctor_System_String_" data-uid="Scraper.Net.IdNotFoundException.#ctor(System.String)">IdNotFoundException(String)</h4>
+  <a id="Scraper_Net_AsyncLazy_1__ctor_" data-uid="Scraper.Net.AsyncLazy`1.#ctor*"></a>
+  <h4 id="Scraper_Net_AsyncLazy_1__ctor_Func__0__" data-uid="Scraper.Net.AsyncLazy`1.#ctor(Func{`0})">AsyncLazy(Func&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IdNotFoundException(string id)</code></pre>
+    <pre><code class="lang-csharp hljs">public AsyncLazy(Func&lt;T&gt; valueFactory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,26 +129,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">id</span></td>
+        <td><span class="xref">Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">valueFactory</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_IdNotFoundException__ctor_System_String_Exception_.md&amp;value=---%0Auid%3A%20Scraper.Net.IdNotFoundException.%23ctor(System.String%2CException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_AsyncLazy_1__ctor_Func_Task__0___.md&amp;value=---%0Auid%3A%20Scraper.Net.AsyncLazy%601.%23ctor(Func%7BTask%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/Exceptions/IdNotFoundException.cs/#L14">View Source</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/AsyncLazy.cs/#L12">View Source</a>
   </span>
-  <a id="Scraper_Net_IdNotFoundException__ctor_" data-uid="Scraper.Net.IdNotFoundException.#ctor*"></a>
-  <h4 id="Scraper_Net_IdNotFoundException__ctor_System_String_Exception_" data-uid="Scraper.Net.IdNotFoundException.#ctor(System.String,Exception)">IdNotFoundException(String, Exception)</h4>
+  <a id="Scraper_Net_AsyncLazy_1__ctor_" data-uid="Scraper.Net.AsyncLazy`1.#ctor*"></a>
+  <h4 id="Scraper_Net_AsyncLazy_1__ctor_Func_Task__0___" data-uid="Scraper.Net.AsyncLazy`1.#ctor(Func{Task{`0}})">AsyncLazy(Func&lt;Task&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IdNotFoundException(string id, Exception e)</code></pre>
+    <pre><code class="lang-csharp hljs">public AsyncLazy(Func&lt;Task&lt;T&gt;&gt; taskFactory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,13 +161,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">id</span></td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Task</span>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">taskFactory</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_AsyncLazy_1_GetAwaiter.md&amp;value=---%0Auid%3A%20Scraper.Net.AsyncLazy%601.GetAwaiter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/AsyncLazy.cs/#L15">View Source</a>
+  </span>
+  <a id="Scraper_Net_AsyncLazy_1_GetAwaiter_" data-uid="Scraper.Net.AsyncLazy`1.GetAwaiter*"></a>
+  <h4 id="Scraper_Net_AsyncLazy_1_GetAwaiter" data-uid="Scraper.Net.AsyncLazy`1.GetAwaiter">GetAwaiter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskAwaiter&lt;T&gt; GetAwaiter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">Exception</span></td>
-        <td><span class="parametername">e</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TaskAwaiter</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -166,10 +207,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_IdNotFoundException.md&amp;value=---%0Auid%3A%20Scraper.Net.IdNotFoundException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/25ead7650da848d4ba1324f91dd30221042efde8/apiSpec/new?filename=Scraper_Net_AsyncLazy_1.md&amp;value=---%0Auid%3A%20Scraper.Net.AsyncLazy%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/Exceptions/IdNotFoundException.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/25ead7650da848d4ba1324f91dd30221042efde8/src/Scraper.Net/AsyncLazy.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

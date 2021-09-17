@@ -38,6 +38,59 @@ references:
   fullName.vb: Scraper.Net.AsyncEnumerableExtensions.Catch(Of TSource, TException)(IAsyncEnumerable(Of TSource), Action(Of TException))
   nameWithType: AsyncEnumerableExtensions.Catch<TSource, TException>(IAsyncEnumerable<TSource>, Action<TException>)
   nameWithType.vb: AsyncEnumerableExtensions.Catch(Of TSource, TException)(IAsyncEnumerable(Of TSource), Action(Of TException))
+- uid: Scraper.Net.AsyncLazy`1
+  name: AsyncLazy<T>
+  href: api/Scraper.Net.AsyncLazy-1.html
+  commentId: T:Scraper.Net.AsyncLazy`1
+  name.vb: AsyncLazy(Of T)
+  fullName: Scraper.Net.AsyncLazy<T>
+  fullName.vb: Scraper.Net.AsyncLazy(Of T)
+  nameWithType: AsyncLazy<T>
+  nameWithType.vb: AsyncLazy(Of T)
+- uid: Scraper.Net.AsyncLazy`1.#ctor(Func{`0})
+  name: AsyncLazy(Func<T>)
+  href: api/Scraper.Net.AsyncLazy-1.html#Scraper_Net_AsyncLazy_1__ctor_Func__0__
+  commentId: M:Scraper.Net.AsyncLazy`1.#ctor(Func{`0})
+  name.vb: AsyncLazy(Func(Of T))
+  fullName: Scraper.Net.AsyncLazy<T>.AsyncLazy(Func<T>)
+  fullName.vb: Scraper.Net.AsyncLazy(Of T).AsyncLazy(Func(Of T))
+  nameWithType: AsyncLazy<T>.AsyncLazy(Func<T>)
+  nameWithType.vb: AsyncLazy(Of T).AsyncLazy(Func(Of T))
+- uid: Scraper.Net.AsyncLazy`1.#ctor(Func{Task{`0}})
+  name: AsyncLazy(Func<Task<T>>)
+  href: api/Scraper.Net.AsyncLazy-1.html#Scraper_Net_AsyncLazy_1__ctor_Func_Task__0___
+  commentId: M:Scraper.Net.AsyncLazy`1.#ctor(Func{Task{`0}})
+  name.vb: AsyncLazy(Func(Of Task(Of T)))
+  fullName: Scraper.Net.AsyncLazy<T>.AsyncLazy(Func<Task<T>>)
+  fullName.vb: Scraper.Net.AsyncLazy(Of T).AsyncLazy(Func(Of Task(Of T)))
+  nameWithType: AsyncLazy<T>.AsyncLazy(Func<Task<T>>)
+  nameWithType.vb: AsyncLazy(Of T).AsyncLazy(Func(Of Task(Of T)))
+- uid: Scraper.Net.AsyncLazy`1.#ctor*
+  name: AsyncLazy
+  href: api/Scraper.Net.AsyncLazy-1.html#Scraper_Net_AsyncLazy_1__ctor_
+  commentId: Overload:Scraper.Net.AsyncLazy`1.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.AsyncLazy<T>.AsyncLazy
+  fullName.vb: Scraper.Net.AsyncLazy(Of T).AsyncLazy
+  nameWithType: AsyncLazy<T>.AsyncLazy
+  nameWithType.vb: AsyncLazy(Of T).AsyncLazy
+- uid: Scraper.Net.AsyncLazy`1.GetAwaiter
+  name: GetAwaiter()
+  href: api/Scraper.Net.AsyncLazy-1.html#Scraper_Net_AsyncLazy_1_GetAwaiter
+  commentId: M:Scraper.Net.AsyncLazy`1.GetAwaiter
+  fullName: Scraper.Net.AsyncLazy<T>.GetAwaiter()
+  fullName.vb: Scraper.Net.AsyncLazy(Of T).GetAwaiter()
+  nameWithType: AsyncLazy<T>.GetAwaiter()
+  nameWithType.vb: AsyncLazy(Of T).GetAwaiter()
+- uid: Scraper.Net.AsyncLazy`1.GetAwaiter*
+  name: GetAwaiter
+  href: api/Scraper.Net.AsyncLazy-1.html#Scraper_Net_AsyncLazy_1_GetAwaiter_
+  commentId: Overload:Scraper.Net.AsyncLazy`1.GetAwaiter
+  isSpec: "True"
+  fullName: Scraper.Net.AsyncLazy<T>.GetAwaiter
+  fullName.vb: Scraper.Net.AsyncLazy(Of T).GetAwaiter
+  nameWithType: AsyncLazy<T>.GetAwaiter
+  nameWithType.vb: AsyncLazy(Of T).GetAwaiter
 - uid: Scraper.Net.Facebook
   name: Scraper.Net.Facebook
   href: api/Scraper.Net.Facebook.html
@@ -1187,6 +1240,89 @@ references:
   commentId: F:Scraper.Net.UrlType.WebpageUrl
   fullName: Scraper.Net.UrlType.WebpageUrl
   nameWithType: UrlType.WebpageUrl
+- uid: Scraper.Net.Youtube
+  name: Scraper.Net.Youtube
+  href: api/Scraper.Net.Youtube.html
+  commentId: N:Scraper.Net.Youtube
+  fullName: Scraper.Net.Youtube
+  nameWithType: Scraper.Net.Youtube
+- uid: Scraper.Net.Youtube.YoutubeScraper
+  name: YoutubeScraper
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html
+  commentId: T:Scraper.Net.Youtube.YoutubeScraper
+  fullName: Scraper.Net.Youtube.YoutubeScraper
+  nameWithType: YoutubeScraper
+- uid: Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeScraperConfig)
+  name: YoutubeScraper(YoutubeScraperConfig)
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_Scraper_Net_Youtube_YoutubeScraperConfig_
+  commentId: M:Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeScraperConfig)
+  fullName: Scraper.Net.Youtube.YoutubeScraper.YoutubeScraper(Scraper.Net.Youtube.YoutubeScraperConfig)
+  nameWithType: YoutubeScraper.YoutubeScraper(YoutubeScraperConfig)
+- uid: Scraper.Net.Youtube.YoutubeScraper.#ctor*
+  name: YoutubeScraper
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeScraper.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeScraper.YoutubeScraper
+  nameWithType: YoutubeScraper.YoutubeScraper
+- uid: Scraper.Net.Youtube.YoutubeScraper.GetAuthorAsync(System.String,CancellationToken)
+  name: GetAuthorAsync(String, CancellationToken)
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper_GetAuthorAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Youtube.YoutubeScraper.GetAuthorAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Youtube.YoutubeScraper.GetAuthorAsync(System.String, CancellationToken)
+  nameWithType: YoutubeScraper.GetAuthorAsync(String, CancellationToken)
+- uid: Scraper.Net.Youtube.YoutubeScraper.GetAuthorAsync*
+  name: GetAuthorAsync
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper_GetAuthorAsync_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeScraper.GetAuthorAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeScraper.GetAuthorAsync
+  nameWithType: YoutubeScraper.GetAuthorAsync
+- uid: Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync(System.String,CancellationToken)
+  name: GetPostsAsync(String, CancellationToken)
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper_GetPostsAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync(System.String, CancellationToken)
+  nameWithType: YoutubeScraper.GetPostsAsync(String, CancellationToken)
+- uid: Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync*
+  name: GetPostsAsync
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper_GetPostsAsync_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync
+  nameWithType: YoutubeScraper.GetPostsAsync
+- uid: Scraper.Net.Youtube.YoutubeScraperConfig
+  name: YoutubeScraperConfig
+  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html
+  commentId: T:Scraper.Net.Youtube.YoutubeScraperConfig
+  fullName: Scraper.Net.Youtube.YoutubeScraperConfig
+  nameWithType: YoutubeScraperConfig
+- uid: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
+  name: ApiKey
+  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_ApiKey
+  commentId: P:Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
+  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
+  nameWithType: YoutubeScraperConfig.ApiKey
+- uid: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey*
+  name: ApiKey
+  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_ApiKey_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
+  nameWithType: YoutubeScraperConfig.ApiKey
+- uid: Scraper.Net.Youtube.YoutubeScraperConfig.AppName
+  name: AppName
+  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_AppName
+  commentId: P:Scraper.Net.Youtube.YoutubeScraperConfig.AppName
+  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.AppName
+  nameWithType: YoutubeScraperConfig.AppName
+- uid: Scraper.Net.Youtube.YoutubeScraperConfig.AppName*
+  name: AppName
+  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_AppName_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeScraperConfig.AppName
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.AppName
+  nameWithType: YoutubeScraperConfig.AppName
 - uid: Scraper.Net.YoutubeDl
   name: Scraper.Net.YoutubeDl
   href: api/Scraper.Net.YoutubeDl.html
