@@ -1246,18 +1246,69 @@ references:
   commentId: N:Scraper.Net.Youtube
   fullName: Scraper.Net.Youtube
   nameWithType: Scraper.Net.Youtube
+- uid: Scraper.Net.Youtube.ScraperBuilderExtensions
+  name: ScraperBuilderExtensions
+  href: api/Scraper.Net.Youtube.ScraperBuilderExtensions.html
+  commentId: T:Scraper.Net.Youtube.ScraperBuilderExtensions
+  fullName: Scraper.Net.Youtube.ScraperBuilderExtensions
+  nameWithType: ScraperBuilderExtensions
+- uid: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube(Scraper.Net.ScraperBuilder,Scraper.Net.Youtube.YoutubeConfig,System.String)
+  name: AddYoutube(ScraperBuilder, YoutubeConfig, String)
+  href: api/Scraper.Net.Youtube.ScraperBuilderExtensions.html#Scraper_Net_Youtube_ScraperBuilderExtensions_AddYoutube_Scraper_Net_ScraperBuilder_Scraper_Net_Youtube_YoutubeConfig_System_String_
+  commentId: M:Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube(Scraper.Net.ScraperBuilder,Scraper.Net.Youtube.YoutubeConfig,System.String)
+  fullName: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube(Scraper.Net.ScraperBuilder, Scraper.Net.Youtube.YoutubeConfig, System.String)
+  nameWithType: ScraperBuilderExtensions.AddYoutube(ScraperBuilder, YoutubeConfig, String)
+- uid: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube*
+  name: AddYoutube
+  href: api/Scraper.Net.Youtube.ScraperBuilderExtensions.html#Scraper_Net_Youtube_ScraperBuilderExtensions_AddYoutube_
+  commentId: Overload:Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube
+  nameWithType: ScraperBuilderExtensions.AddYoutube
+- uid: Scraper.Net.Youtube.YoutubeConfig
+  name: YoutubeConfig
+  href: api/Scraper.Net.Youtube.YoutubeConfig.html
+  commentId: T:Scraper.Net.Youtube.YoutubeConfig
+  fullName: Scraper.Net.Youtube.YoutubeConfig
+  nameWithType: YoutubeConfig
+- uid: Scraper.Net.Youtube.YoutubeConfig.ApiKey
+  name: ApiKey
+  href: api/Scraper.Net.Youtube.YoutubeConfig.html#Scraper_Net_Youtube_YoutubeConfig_ApiKey
+  commentId: P:Scraper.Net.Youtube.YoutubeConfig.ApiKey
+  fullName: Scraper.Net.Youtube.YoutubeConfig.ApiKey
+  nameWithType: YoutubeConfig.ApiKey
+- uid: Scraper.Net.Youtube.YoutubeConfig.ApiKey*
+  name: ApiKey
+  href: api/Scraper.Net.Youtube.YoutubeConfig.html#Scraper_Net_Youtube_YoutubeConfig_ApiKey_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeConfig.ApiKey
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeConfig.ApiKey
+  nameWithType: YoutubeConfig.ApiKey
+- uid: Scraper.Net.Youtube.YoutubeConfig.AppName
+  name: AppName
+  href: api/Scraper.Net.Youtube.YoutubeConfig.html#Scraper_Net_Youtube_YoutubeConfig_AppName
+  commentId: P:Scraper.Net.Youtube.YoutubeConfig.AppName
+  fullName: Scraper.Net.Youtube.YoutubeConfig.AppName
+  nameWithType: YoutubeConfig.AppName
+- uid: Scraper.Net.Youtube.YoutubeConfig.AppName*
+  name: AppName
+  href: api/Scraper.Net.Youtube.YoutubeConfig.html#Scraper_Net_Youtube_YoutubeConfig_AppName_
+  commentId: Overload:Scraper.Net.Youtube.YoutubeConfig.AppName
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.YoutubeConfig.AppName
+  nameWithType: YoutubeConfig.AppName
 - uid: Scraper.Net.Youtube.YoutubeScraper
   name: YoutubeScraper
   href: api/Scraper.Net.Youtube.YoutubeScraper.html
   commentId: T:Scraper.Net.Youtube.YoutubeScraper
   fullName: Scraper.Net.Youtube.YoutubeScraper
   nameWithType: YoutubeScraper
-- uid: Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeScraperConfig)
-  name: YoutubeScraper(YoutubeScraperConfig)
-  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_Scraper_Net_Youtube_YoutubeScraperConfig_
-  commentId: M:Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeScraperConfig)
-  fullName: Scraper.Net.Youtube.YoutubeScraper.YoutubeScraper(Scraper.Net.Youtube.YoutubeScraperConfig)
-  nameWithType: YoutubeScraper.YoutubeScraper(YoutubeScraperConfig)
+- uid: Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeConfig)
+  name: YoutubeScraper(YoutubeConfig)
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_Scraper_Net_Youtube_YoutubeConfig_
+  commentId: M:Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeConfig)
+  fullName: Scraper.Net.Youtube.YoutubeScraper.YoutubeScraper(Scraper.Net.Youtube.YoutubeConfig)
+  nameWithType: YoutubeScraper.YoutubeScraper(YoutubeConfig)
 - uid: Scraper.Net.Youtube.YoutubeScraper.#ctor*
   name: YoutubeScraper
   href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_
@@ -1291,38 +1342,6 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Youtube.YoutubeScraper.GetPostsAsync
   nameWithType: YoutubeScraper.GetPostsAsync
-- uid: Scraper.Net.Youtube.YoutubeScraperConfig
-  name: YoutubeScraperConfig
-  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html
-  commentId: T:Scraper.Net.Youtube.YoutubeScraperConfig
-  fullName: Scraper.Net.Youtube.YoutubeScraperConfig
-  nameWithType: YoutubeScraperConfig
-- uid: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
-  name: ApiKey
-  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_ApiKey
-  commentId: P:Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
-  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
-  nameWithType: YoutubeScraperConfig.ApiKey
-- uid: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey*
-  name: ApiKey
-  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_ApiKey_
-  commentId: Overload:Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
-  isSpec: "True"
-  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.ApiKey
-  nameWithType: YoutubeScraperConfig.ApiKey
-- uid: Scraper.Net.Youtube.YoutubeScraperConfig.AppName
-  name: AppName
-  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_AppName
-  commentId: P:Scraper.Net.Youtube.YoutubeScraperConfig.AppName
-  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.AppName
-  nameWithType: YoutubeScraperConfig.AppName
-- uid: Scraper.Net.Youtube.YoutubeScraperConfig.AppName*
-  name: AppName
-  href: api/Scraper.Net.Youtube.YoutubeScraperConfig.html#Scraper_Net_Youtube_YoutubeScraperConfig_AppName_
-  commentId: Overload:Scraper.Net.Youtube.YoutubeScraperConfig.AppName
-  isSpec: "True"
-  fullName: Scraper.Net.Youtube.YoutubeScraperConfig.AppName
-  nameWithType: YoutubeScraperConfig.AppName
 - uid: Scraper.Net.YoutubeDl
   name: Scraper.Net.YoutubeDl
   href: api/Scraper.Net.YoutubeDl.html
