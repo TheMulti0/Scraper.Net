@@ -4,16 +4,21 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
+using Microsoft.Extensions.Logging;
 
 namespace Scraper.Net.Youtube
 {
     internal class ChannelScraper
     {
         private readonly YouTubeService _service;
+        private readonly ILogger<ChannelScraper> _logger;
 
-        public ChannelScraper(YouTubeService service)
+        public ChannelScraper(
+            YouTubeService service,
+            ILogger<ChannelScraper> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         public Task<Channel> GetChannelFromUsername(string username, CancellationToken ct)
@@ -26,7 +31,7 @@ namespace Scraper.Net.Youtube
             return GetChannel(request => request.Id = id, ct);
         }
 
-        private async Task<Channel> GetChannel(Action<ChannelsResource.ListRequest> set, CancellationToken ct)
+        private async Task<Channel> GetChannel(Action<ChannelsResource.ListRequest> criteria, CancellationToken ct)
         {
             ChannelsResource.ListRequest request = _service.Channels.List(
                 new[]
@@ -34,11 +39,17 @@ namespace Scraper.Net.Youtube
                     "snippet",
                     "contentDetails"
                 });
-            set(request);
+            criteria(request);
 
             ChannelListResponse response = await request.ExecuteAsync(ct);
-            
-            return response.Items.FirstOrDefault();
+
+            if (response.Items != null)
+            {
+                return response.Items.FirstOrDefault();
+            }
+
+            _logger.LogWarning("Channel list resulted in {}/{} results", response.PageInfo.ResultsPerPage, response.PageInfo.TotalResults);
+            throw new NullReferenceException();
         }
     }
 }

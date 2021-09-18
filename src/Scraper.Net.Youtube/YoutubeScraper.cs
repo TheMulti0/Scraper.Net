@@ -8,6 +8,7 @@ using System.Xml;
 using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
+using Microsoft.Extensions.Logging;
 using MoreLinq;
 
 namespace Scraper.Net.Youtube
@@ -17,7 +18,9 @@ namespace Scraper.Net.Youtube
         private readonly AsyncLazy<ChannelScraper> _channelScraper;
         private readonly AsyncLazy<VideosScraper> _videosScraper;
 
-        public YoutubeScraper(YoutubeConfig config)
+        public YoutubeScraper(
+            YoutubeConfig config,
+            ILoggerFactory loggerFactory)
         {
             var youtubeService =
                 new AsyncLazy<YouTubeService>(
@@ -28,7 +31,7 @@ namespace Scraper.Net.Youtube
                             ApplicationName = config.AppName
                         }));
 
-            _channelScraper = new AsyncLazy<ChannelScraper>(async () => new ChannelScraper(await youtubeService));
+            _channelScraper = new AsyncLazy<ChannelScraper>(async () => new ChannelScraper(await youtubeService, loggerFactory.CreateLogger<ChannelScraper>()));
             _videosScraper = new AsyncLazy<VideosScraper>(async () => new VideosScraper(await youtubeService));
         }
 

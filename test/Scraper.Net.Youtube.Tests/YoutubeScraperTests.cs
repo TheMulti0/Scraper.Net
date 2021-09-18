@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Scraper.Net.Youtube.Tests
@@ -20,7 +21,7 @@ namespace Scraper.Net.Youtube.Tests
             
             var config = rootConfig.Get<YoutubeConfig>();
 
-            _youtubeScraper = new YoutubeScraper(config);
+            _youtubeScraper = new YoutubeScraper(config, NullLoggerFactory.Instance);
         }
         
         [TestMethod]
@@ -34,7 +35,7 @@ namespace Scraper.Net.Youtube.Tests
         [TestMethod]
         public async Task TestGetPostsAsync()
         {
-            List<Post> posts = await _youtubeScraper.GetPostsAsync("UC4x7LYSzgGH-TMKc9J8pwgQ")
+            List<Post> posts = await _youtubeScraper.GetPostsAsync("UCwobzUc3z-0PrFpoRxNszXQ")
                 .ToListAsync();
             
             Assert.IsTrue(posts.Any());
