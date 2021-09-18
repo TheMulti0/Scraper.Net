@@ -15,12 +15,12 @@ namespace Scraper.Net.Stream.Tests
             DateTime creationDate = DateTime.Today;
             yield return new Post
             {
-                CreationDate = creationDate
+                CreationDate = creationDate.AddSeconds(1)
             };
             await Task.Delay(1000, ct);
             yield return new Post
             {
-                CreationDate = creationDate.AddSeconds(1)
+                CreationDate = creationDate
             };
         }
     }
