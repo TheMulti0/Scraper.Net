@@ -1303,12 +1303,12 @@ references:
   commentId: T:Scraper.Net.Youtube.YoutubeScraper
   fullName: Scraper.Net.Youtube.YoutubeScraper
   nameWithType: YoutubeScraper
-- uid: Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeConfig)
-  name: YoutubeScraper(YoutubeConfig)
-  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_Scraper_Net_Youtube_YoutubeConfig_
-  commentId: M:Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeConfig)
-  fullName: Scraper.Net.Youtube.YoutubeScraper.YoutubeScraper(Scraper.Net.Youtube.YoutubeConfig)
-  nameWithType: YoutubeScraper.YoutubeScraper(YoutubeConfig)
+- uid: Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeConfig,ILoggerFactory)
+  name: YoutubeScraper(YoutubeConfig, ILoggerFactory)
+  href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_Scraper_Net_Youtube_YoutubeConfig_ILoggerFactory_
+  commentId: M:Scraper.Net.Youtube.YoutubeScraper.#ctor(Scraper.Net.Youtube.YoutubeConfig,ILoggerFactory)
+  fullName: Scraper.Net.Youtube.YoutubeScraper.YoutubeScraper(Scraper.Net.Youtube.YoutubeConfig, ILoggerFactory)
+  nameWithType: YoutubeScraper.YoutubeScraper(YoutubeConfig, ILoggerFactory)
 - uid: Scraper.Net.Youtube.YoutubeScraper.#ctor*
   name: YoutubeScraper
   href: api/Scraper.Net.Youtube.YoutubeScraper.html#Scraper_Net_Youtube_YoutubeScraper__ctor_
