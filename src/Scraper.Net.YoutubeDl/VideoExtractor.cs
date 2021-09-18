@@ -33,7 +33,7 @@ namespace Scraper.Net.YoutubeDl
                 highestFormat.Url ?? data.Url,
                 UrlType.DirectUrl,
                 highestThumbnail.Url,
-                highestFormat.FileSize,
+                highestFormat.FileSize ?? highestFormat.ApproximateFileSize,
                 data.Duration,
                 highestFormat.Width ?? highestThumbnail.Width,
                 highestFormat.Height ?? highestThumbnail.Height);
