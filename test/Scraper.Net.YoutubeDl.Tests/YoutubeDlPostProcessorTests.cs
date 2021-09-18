@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -34,7 +36,11 @@ namespace Scraper.Net.YoutubeDl.Tests
             {
                 var originalPost = new Post
                 {
-                    Url = url
+                    Url = url,
+                    MediaItems = new List<IMediaItem>
+                    {
+                        new VideoItem(url, UrlType.WebpageUrl, null, (TimeSpan?) null)
+                    }
                 };
 
                 Post post = await _youtubeDl.ProcessAsync(originalPost, "").FirstOrDefaultAsync();
