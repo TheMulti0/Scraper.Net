@@ -1367,6 +1367,38 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.YoutubeDl.ScraperBuilderExtensions.AddYoutubeDl
   nameWithType: ScraperBuilderExtensions.AddYoutubeDl
+- uid: Scraper.Net.YoutubeDl.VideoExtractor
+  name: VideoExtractor
+  href: api/Scraper.Net.YoutubeDl.VideoExtractor.html
+  commentId: T:Scraper.Net.YoutubeDl.VideoExtractor
+  fullName: Scraper.Net.YoutubeDl.VideoExtractor
+  nameWithType: VideoExtractor
+- uid: Scraper.Net.YoutubeDl.VideoExtractor.#ctor(YoutubeDL,OptionSet)
+  name: VideoExtractor(YoutubeDL, OptionSet)
+  href: api/Scraper.Net.YoutubeDl.VideoExtractor.html#Scraper_Net_YoutubeDl_VideoExtractor__ctor_YoutubeDL_OptionSet_
+  commentId: M:Scraper.Net.YoutubeDl.VideoExtractor.#ctor(YoutubeDL,OptionSet)
+  fullName: Scraper.Net.YoutubeDl.VideoExtractor.VideoExtractor(YoutubeDL, OptionSet)
+  nameWithType: VideoExtractor.VideoExtractor(YoutubeDL, OptionSet)
+- uid: Scraper.Net.YoutubeDl.VideoExtractor.#ctor*
+  name: VideoExtractor
+  href: api/Scraper.Net.YoutubeDl.VideoExtractor.html#Scraper_Net_YoutubeDl_VideoExtractor__ctor_
+  commentId: Overload:Scraper.Net.YoutubeDl.VideoExtractor.#ctor
+  isSpec: "True"
+  fullName: Scraper.Net.YoutubeDl.VideoExtractor.VideoExtractor
+  nameWithType: VideoExtractor.VideoExtractor
+- uid: Scraper.Net.YoutubeDl.VideoExtractor.ExtractAsync(System.String,CancellationToken)
+  name: ExtractAsync(String, CancellationToken)
+  href: api/Scraper.Net.YoutubeDl.VideoExtractor.html#Scraper_Net_YoutubeDl_VideoExtractor_ExtractAsync_System_String_CancellationToken_
+  commentId: M:Scraper.Net.YoutubeDl.VideoExtractor.ExtractAsync(System.String,CancellationToken)
+  fullName: Scraper.Net.YoutubeDl.VideoExtractor.ExtractAsync(System.String, CancellationToken)
+  nameWithType: VideoExtractor.ExtractAsync(String, CancellationToken)
+- uid: Scraper.Net.YoutubeDl.VideoExtractor.ExtractAsync*
+  name: ExtractAsync
+  href: api/Scraper.Net.YoutubeDl.VideoExtractor.html#Scraper_Net_YoutubeDl_VideoExtractor_ExtractAsync_
+  commentId: Overload:Scraper.Net.YoutubeDl.VideoExtractor.ExtractAsync
+  isSpec: "True"
+  fullName: Scraper.Net.YoutubeDl.VideoExtractor.ExtractAsync
+  nameWithType: VideoExtractor.ExtractAsync
 - uid: Scraper.Net.YoutubeDl.YoutubeDlException
   name: YoutubeDlException
   href: api/Scraper.Net.YoutubeDl.YoutubeDlException.html
