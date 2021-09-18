@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -98,6 +100,22 @@ namespace Scraper.Net.Stream.Tests
             await Task.Delay(100);
             
             Assert.AreEqual(expected, actualPostCount);
+        }
+
+        [TestMethod]
+        public async Task TestOrderingByDate()
+        {
+            var multipleStreamer = new PostsStreamer(
+                new MultiplePostsScraperService(),
+                (_, _, _) => Task.FromResult(true),
+                new PostsStreamerConfig(),
+                NullLogger<PostsStreamer>.Instance);
+
+            IEnumerable<Post> enumerable = multipleStreamer
+                .Stream("", "", TimeSpan.FromDays(1)).Take(2)
+                .ToEnumerable().ToList();
+            
+            Assert.IsTrue(enumerable.FirstOrDefault().CreationDate < enumerable.LastOrDefault().CreationDate);
         }
     }
 }
