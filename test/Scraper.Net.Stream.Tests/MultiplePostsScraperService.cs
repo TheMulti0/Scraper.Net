@@ -17,6 +17,7 @@ namespace Scraper.Net.Stream.Tests
             {
                 CreationDate = creationDate
             };
+            await Task.Delay(1000, ct);
             yield return new Post
             {
                 CreationDate = creationDate.AddSeconds(1)
