@@ -20,7 +20,7 @@ namespace Scraper.Net.YoutubeDl
             _overrideOptions = overrideOptions;
         }
 
-        public async Task<VideoItem> ExtractAsync(
+        public async Task<YoutubeDlVideoItem> ExtractAsync(
             string url,
             CancellationToken ct = default)
         {
@@ -29,10 +29,11 @@ namespace Scraper.Net.YoutubeDl
             FormatData highestFormat = GetHighestQualityFormat(data);
             ThumbnailData highestThumbnail = GetHighestQualityThumbnail(data);
             
-            return new VideoItem(
+            return new YoutubeDlVideoItem(
                 highestFormat.Url ?? data.Url,
                 UrlType.DirectUrl,
                 highestThumbnail.Url,
+                highestFormat.FileSize,
                 data.Duration,
                 highestFormat.Width ?? highestThumbnail.Width,
                 highestFormat.Height ?? highestThumbnail.Height);
