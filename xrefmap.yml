@@ -142,6 +142,18 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Facebook.FacebookConfig.PythonPath
   nameWithType: FacebookConfig.PythonPath
+- uid: Scraper.Net.Facebook.FacebookConstants
+  name: FacebookConstants
+  href: api/Scraper.Net.Facebook.FacebookConstants.html
+  commentId: T:Scraper.Net.Facebook.FacebookConstants
+  fullName: Scraper.Net.Facebook.FacebookConstants
+  nameWithType: FacebookConstants
+- uid: Scraper.Net.Facebook.FacebookConstants.PlatformName
+  name: PlatformName
+  href: api/Scraper.Net.Facebook.FacebookConstants.html#Scraper_Net_Facebook_FacebookConstants_PlatformName
+  commentId: F:Scraper.Net.Facebook.FacebookConstants.PlatformName
+  fullName: Scraper.Net.Facebook.FacebookConstants.PlatformName
+  nameWithType: FacebookConstants.PlatformName
 - uid: Scraper.Net.Facebook.FacebookScraper
   name: FacebookScraper
   href: api/Scraper.Net.Facebook.FacebookScraper.html
@@ -258,31 +270,69 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Facebook.FacebookScraperException.Type
   nameWithType: FacebookScraperException.Type
-- uid: Scraper.Net.Facebook.ScraperBuilderExtensions
-  name: ScraperBuilderExtensions
-  href: api/Scraper.Net.Facebook.ScraperBuilderExtensions.html
-  commentId: T:Scraper.Net.Facebook.ScraperBuilderExtensions
-  fullName: Scraper.Net.Facebook.ScraperBuilderExtensions
-  nameWithType: ScraperBuilderExtensions
-- uid: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook(Scraper.Net.ScraperBuilder,Scraper.Net.Facebook.FacebookConfig,System.String)
+- uid: Scraper.Net.Facebook.ScraperExtensions
+  name: ScraperExtensions
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html
+  commentId: T:Scraper.Net.Facebook.ScraperExtensions
+  fullName: Scraper.Net.Facebook.ScraperExtensions
+  nameWithType: ScraperExtensions
+- uid: Scraper.Net.Facebook.ScraperExtensions.AddFacebook(Scraper.Net.ScraperBuilder,Scraper.Net.Facebook.FacebookConfig,System.String)
   name: AddFacebook(ScraperBuilder, FacebookConfig, String)
-  href: api/Scraper.Net.Facebook.ScraperBuilderExtensions.html#Scraper_Net_Facebook_ScraperBuilderExtensions_AddFacebook_Scraper_Net_ScraperBuilder_Scraper_Net_Facebook_FacebookConfig_System_String_
-  commentId: M:Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook(Scraper.Net.ScraperBuilder,Scraper.Net.Facebook.FacebookConfig,System.String)
-  fullName: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook(Scraper.Net.ScraperBuilder, Scraper.Net.Facebook.FacebookConfig, System.String)
-  nameWithType: ScraperBuilderExtensions.AddFacebook(ScraperBuilder, FacebookConfig, String)
-- uid: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook*
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html#Scraper_Net_Facebook_ScraperExtensions_AddFacebook_Scraper_Net_ScraperBuilder_Scraper_Net_Facebook_FacebookConfig_System_String_
+  commentId: M:Scraper.Net.Facebook.ScraperExtensions.AddFacebook(Scraper.Net.ScraperBuilder,Scraper.Net.Facebook.FacebookConfig,System.String)
+  fullName: Scraper.Net.Facebook.ScraperExtensions.AddFacebook(Scraper.Net.ScraperBuilder, Scraper.Net.Facebook.FacebookConfig, System.String)
+  nameWithType: ScraperExtensions.AddFacebook(ScraperBuilder, FacebookConfig, String)
+- uid: Scraper.Net.Facebook.ScraperExtensions.AddFacebook*
   name: AddFacebook
-  href: api/Scraper.Net.Facebook.ScraperBuilderExtensions.html#Scraper_Net_Facebook_ScraperBuilderExtensions_AddFacebook_
-  commentId: Overload:Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html#Scraper_Net_Facebook_ScraperExtensions_AddFacebook_
+  commentId: Overload:Scraper.Net.Facebook.ScraperExtensions.AddFacebook
   isSpec: "True"
-  fullName: Scraper.Net.Facebook.ScraperBuilderExtensions.AddFacebook
-  nameWithType: ScraperBuilderExtensions.AddFacebook
+  fullName: Scraper.Net.Facebook.ScraperExtensions.AddFacebook
+  nameWithType: ScraperExtensions.AddFacebook
+- uid: Scraper.Net.Facebook.ScraperExtensions.GetFacebookAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetFacebookAuthor(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html#Scraper_Net_Facebook_ScraperExtensions_GetFacebookAuthor_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Facebook.ScraperExtensions.GetFacebookAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Facebook.ScraperExtensions.GetFacebookAuthor(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetFacebookAuthor(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Facebook.ScraperExtensions.GetFacebookAuthor*
+  name: GetFacebookAuthor
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html#Scraper_Net_Facebook_ScraperExtensions_GetFacebookAuthor_
+  commentId: Overload:Scraper.Net.Facebook.ScraperExtensions.GetFacebookAuthor
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.ScraperExtensions.GetFacebookAuthor
+  nameWithType: ScraperExtensions.GetFacebookAuthor
+- uid: Scraper.Net.Facebook.ScraperExtensions.GetFacebookPosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetFacebookPosts(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html#Scraper_Net_Facebook_ScraperExtensions_GetFacebookPosts_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Facebook.ScraperExtensions.GetFacebookPosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Facebook.ScraperExtensions.GetFacebookPosts(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetFacebookPosts(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Facebook.ScraperExtensions.GetFacebookPosts*
+  name: GetFacebookPosts
+  href: api/Scraper.Net.Facebook.ScraperExtensions.html#Scraper_Net_Facebook_ScraperExtensions_GetFacebookPosts_
+  commentId: Overload:Scraper.Net.Facebook.ScraperExtensions.GetFacebookPosts
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.ScraperExtensions.GetFacebookPosts
+  nameWithType: ScraperExtensions.GetFacebookPosts
 - uid: Scraper.Net.Feeds
   name: Scraper.Net.Feeds
   href: api/Scraper.Net.Feeds.html
   commentId: N:Scraper.Net.Feeds
   fullName: Scraper.Net.Feeds
   nameWithType: Scraper.Net.Feeds
+- uid: Scraper.Net.Feeds.FeedsExtensions
+  name: FeedsExtensions
+  href: api/Scraper.Net.Feeds.FeedsExtensions.html
+  commentId: T:Scraper.Net.Feeds.FeedsExtensions
+  fullName: Scraper.Net.Feeds.FeedsExtensions
+  nameWithType: FeedsExtensions
+- uid: Scraper.Net.Feeds.FeedsExtensions.PlatformName
+  name: PlatformName
+  href: api/Scraper.Net.Feeds.FeedsExtensions.html#Scraper_Net_Feeds_FeedsExtensions_PlatformName
+  commentId: F:Scraper.Net.Feeds.FeedsExtensions.PlatformName
+  fullName: Scraper.Net.Feeds.FeedsExtensions.PlatformName
+  nameWithType: FeedsExtensions.PlatformName
 - uid: Scraper.Net.Feeds.FeedsScraper
   name: FeedsScraper
   href: api/Scraper.Net.Feeds.FeedsScraper.html
@@ -315,25 +365,51 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Feeds.FeedsScraper.GetPostsAsync
   nameWithType: FeedsScraper.GetPostsAsync
-- uid: Scraper.Net.Feeds.ScraperBuilderExtensions
-  name: ScraperBuilderExtensions
-  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html
-  commentId: T:Scraper.Net.Feeds.ScraperBuilderExtensions
-  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions
-  nameWithType: ScraperBuilderExtensions
-- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds(Scraper.Net.ScraperBuilder,System.String)
+- uid: Scraper.Net.Feeds.ScraperExtensions
+  name: ScraperExtensions
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html
+  commentId: T:Scraper.Net.Feeds.ScraperExtensions
+  fullName: Scraper.Net.Feeds.ScraperExtensions
+  nameWithType: ScraperExtensions
+- uid: Scraper.Net.Feeds.ScraperExtensions.AddFeeds(Scraper.Net.ScraperBuilder,System.String)
   name: AddFeeds(ScraperBuilder, String)
-  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeeds_Scraper_Net_ScraperBuilder_System_String_
-  commentId: M:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds(Scraper.Net.ScraperBuilder,System.String)
-  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds(Scraper.Net.ScraperBuilder, System.String)
-  nameWithType: ScraperBuilderExtensions.AddFeeds(ScraperBuilder, String)
-- uid: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds*
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html#Scraper_Net_Feeds_ScraperExtensions_AddFeeds_Scraper_Net_ScraperBuilder_System_String_
+  commentId: M:Scraper.Net.Feeds.ScraperExtensions.AddFeeds(Scraper.Net.ScraperBuilder,System.String)
+  fullName: Scraper.Net.Feeds.ScraperExtensions.AddFeeds(Scraper.Net.ScraperBuilder, System.String)
+  nameWithType: ScraperExtensions.AddFeeds(ScraperBuilder, String)
+- uid: Scraper.Net.Feeds.ScraperExtensions.AddFeeds*
   name: AddFeeds
-  href: api/Scraper.Net.Feeds.ScraperBuilderExtensions.html#Scraper_Net_Feeds_ScraperBuilderExtensions_AddFeeds_
-  commentId: Overload:Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html#Scraper_Net_Feeds_ScraperExtensions_AddFeeds_
+  commentId: Overload:Scraper.Net.Feeds.ScraperExtensions.AddFeeds
   isSpec: "True"
-  fullName: Scraper.Net.Feeds.ScraperBuilderExtensions.AddFeeds
-  nameWithType: ScraperBuilderExtensions.AddFeeds
+  fullName: Scraper.Net.Feeds.ScraperExtensions.AddFeeds
+  nameWithType: ScraperExtensions.AddFeeds
+- uid: Scraper.Net.Feeds.ScraperExtensions.GetFeedsAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetFeedsAuthor(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html#Scraper_Net_Feeds_ScraperExtensions_GetFeedsAuthor_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Feeds.ScraperExtensions.GetFeedsAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.ScraperExtensions.GetFeedsAuthor(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetFeedsAuthor(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Feeds.ScraperExtensions.GetFeedsAuthor*
+  name: GetFeedsAuthor
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html#Scraper_Net_Feeds_ScraperExtensions_GetFeedsAuthor_
+  commentId: Overload:Scraper.Net.Feeds.ScraperExtensions.GetFeedsAuthor
+  isSpec: "True"
+  fullName: Scraper.Net.Feeds.ScraperExtensions.GetFeedsAuthor
+  nameWithType: ScraperExtensions.GetFeedsAuthor
+- uid: Scraper.Net.Feeds.ScraperExtensions.GetFeedsPosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetFeedsPosts(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html#Scraper_Net_Feeds_ScraperExtensions_GetFeedsPosts_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Feeds.ScraperExtensions.GetFeedsPosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Feeds.ScraperExtensions.GetFeedsPosts(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetFeedsPosts(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Feeds.ScraperExtensions.GetFeedsPosts*
+  name: GetFeedsPosts
+  href: api/Scraper.Net.Feeds.ScraperExtensions.html#Scraper_Net_Feeds_ScraperExtensions_GetFeedsPosts_
+  commentId: Overload:Scraper.Net.Feeds.ScraperExtensions.GetFeedsPosts
+  isSpec: "True"
+  fullName: Scraper.Net.Feeds.ScraperExtensions.GetFeedsPosts
+  nameWithType: ScraperExtensions.GetFeedsPosts
 - uid: Scraper.Net.IdNotFoundException
   name: IdNotFoundException
   href: api/Scraper.Net.IdNotFoundException.html
@@ -1158,25 +1234,69 @@ references:
   commentId: N:Scraper.Net.Twitter
   fullName: Scraper.Net.Twitter
   nameWithType: Scraper.Net.Twitter
-- uid: Scraper.Net.Twitter.ScraperBuilderExtensions
-  name: ScraperBuilderExtensions
-  href: api/Scraper.Net.Twitter.ScraperBuilderExtensions.html
-  commentId: T:Scraper.Net.Twitter.ScraperBuilderExtensions
-  fullName: Scraper.Net.Twitter.ScraperBuilderExtensions
-  nameWithType: ScraperBuilderExtensions
-- uid: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter(Scraper.Net.ScraperBuilder,TwitterConfig,System.String)
+- uid: Scraper.Net.Twitter.ScraperExtensions
+  name: ScraperExtensions
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html
+  commentId: T:Scraper.Net.Twitter.ScraperExtensions
+  fullName: Scraper.Net.Twitter.ScraperExtensions
+  nameWithType: ScraperExtensions
+- uid: Scraper.Net.Twitter.ScraperExtensions.AddTwitter(Scraper.Net.ScraperBuilder,TwitterConfig,System.String)
   name: AddTwitter(ScraperBuilder, TwitterConfig, String)
-  href: api/Scraper.Net.Twitter.ScraperBuilderExtensions.html#Scraper_Net_Twitter_ScraperBuilderExtensions_AddTwitter_Scraper_Net_ScraperBuilder_TwitterConfig_System_String_
-  commentId: M:Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter(Scraper.Net.ScraperBuilder,TwitterConfig,System.String)
-  fullName: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter(Scraper.Net.ScraperBuilder, TwitterConfig, System.String)
-  nameWithType: ScraperBuilderExtensions.AddTwitter(ScraperBuilder, TwitterConfig, String)
-- uid: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter*
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html#Scraper_Net_Twitter_ScraperExtensions_AddTwitter_Scraper_Net_ScraperBuilder_TwitterConfig_System_String_
+  commentId: M:Scraper.Net.Twitter.ScraperExtensions.AddTwitter(Scraper.Net.ScraperBuilder,TwitterConfig,System.String)
+  fullName: Scraper.Net.Twitter.ScraperExtensions.AddTwitter(Scraper.Net.ScraperBuilder, TwitterConfig, System.String)
+  nameWithType: ScraperExtensions.AddTwitter(ScraperBuilder, TwitterConfig, String)
+- uid: Scraper.Net.Twitter.ScraperExtensions.AddTwitter*
   name: AddTwitter
-  href: api/Scraper.Net.Twitter.ScraperBuilderExtensions.html#Scraper_Net_Twitter_ScraperBuilderExtensions_AddTwitter_
-  commentId: Overload:Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html#Scraper_Net_Twitter_ScraperExtensions_AddTwitter_
+  commentId: Overload:Scraper.Net.Twitter.ScraperExtensions.AddTwitter
   isSpec: "True"
-  fullName: Scraper.Net.Twitter.ScraperBuilderExtensions.AddTwitter
-  nameWithType: ScraperBuilderExtensions.AddTwitter
+  fullName: Scraper.Net.Twitter.ScraperExtensions.AddTwitter
+  nameWithType: ScraperExtensions.AddTwitter
+- uid: Scraper.Net.Twitter.ScraperExtensions.GetTwitterAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetTwitterAuthor(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html#Scraper_Net_Twitter_ScraperExtensions_GetTwitterAuthor_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Twitter.ScraperExtensions.GetTwitterAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Twitter.ScraperExtensions.GetTwitterAuthor(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetTwitterAuthor(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Twitter.ScraperExtensions.GetTwitterAuthor*
+  name: GetTwitterAuthor
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html#Scraper_Net_Twitter_ScraperExtensions_GetTwitterAuthor_
+  commentId: Overload:Scraper.Net.Twitter.ScraperExtensions.GetTwitterAuthor
+  isSpec: "True"
+  fullName: Scraper.Net.Twitter.ScraperExtensions.GetTwitterAuthor
+  nameWithType: ScraperExtensions.GetTwitterAuthor
+- uid: Scraper.Net.Twitter.ScraperExtensions.GetTwitterPosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetTwitterPosts(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html#Scraper_Net_Twitter_ScraperExtensions_GetTwitterPosts_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Twitter.ScraperExtensions.GetTwitterPosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Twitter.ScraperExtensions.GetTwitterPosts(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetTwitterPosts(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Twitter.ScraperExtensions.GetTwitterPosts*
+  name: GetTwitterPosts
+  href: api/Scraper.Net.Twitter.ScraperExtensions.html#Scraper_Net_Twitter_ScraperExtensions_GetTwitterPosts_
+  commentId: Overload:Scraper.Net.Twitter.ScraperExtensions.GetTwitterPosts
+  isSpec: "True"
+  fullName: Scraper.Net.Twitter.ScraperExtensions.GetTwitterPosts
+  nameWithType: ScraperExtensions.GetTwitterPosts
+- uid: Scraper.Net.Twitter.TwitterConstants
+  name: TwitterConstants
+  href: api/Scraper.Net.Twitter.TwitterConstants.html
+  commentId: T:Scraper.Net.Twitter.TwitterConstants
+  fullName: Scraper.Net.Twitter.TwitterConstants
+  nameWithType: TwitterConstants
+- uid: Scraper.Net.Twitter.TwitterConstants.PlatformName
+  name: PlatformName
+  href: api/Scraper.Net.Twitter.TwitterConstants.html#Scraper_Net_Twitter_TwitterConstants_PlatformName
+  commentId: F:Scraper.Net.Twitter.TwitterConstants.PlatformName
+  fullName: Scraper.Net.Twitter.TwitterConstants.PlatformName
+  nameWithType: TwitterConstants.PlatformName
+- uid: Scraper.Net.Twitter.TwitterConstants.TwitterBaseDomain
+  name: TwitterBaseDomain
+  href: api/Scraper.Net.Twitter.TwitterConstants.html#Scraper_Net_Twitter_TwitterConstants_TwitterBaseDomain
+  commentId: F:Scraper.Net.Twitter.TwitterConstants.TwitterBaseDomain
+  fullName: Scraper.Net.Twitter.TwitterConstants.TwitterBaseDomain
+  nameWithType: TwitterConstants.TwitterBaseDomain
 - uid: Scraper.Net.Twitter.TwitterScraper
   name: TwitterScraper
   href: api/Scraper.Net.Twitter.TwitterScraper.html
@@ -1246,25 +1366,51 @@ references:
   commentId: N:Scraper.Net.Youtube
   fullName: Scraper.Net.Youtube
   nameWithType: Scraper.Net.Youtube
-- uid: Scraper.Net.Youtube.ScraperBuilderExtensions
-  name: ScraperBuilderExtensions
-  href: api/Scraper.Net.Youtube.ScraperBuilderExtensions.html
-  commentId: T:Scraper.Net.Youtube.ScraperBuilderExtensions
-  fullName: Scraper.Net.Youtube.ScraperBuilderExtensions
-  nameWithType: ScraperBuilderExtensions
-- uid: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube(Scraper.Net.ScraperBuilder,Scraper.Net.Youtube.YoutubeConfig,System.String)
+- uid: Scraper.Net.Youtube.ScraperExtensions
+  name: ScraperExtensions
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html
+  commentId: T:Scraper.Net.Youtube.ScraperExtensions
+  fullName: Scraper.Net.Youtube.ScraperExtensions
+  nameWithType: ScraperExtensions
+- uid: Scraper.Net.Youtube.ScraperExtensions.AddYoutube(Scraper.Net.ScraperBuilder,Scraper.Net.Youtube.YoutubeConfig,System.String)
   name: AddYoutube(ScraperBuilder, YoutubeConfig, String)
-  href: api/Scraper.Net.Youtube.ScraperBuilderExtensions.html#Scraper_Net_Youtube_ScraperBuilderExtensions_AddYoutube_Scraper_Net_ScraperBuilder_Scraper_Net_Youtube_YoutubeConfig_System_String_
-  commentId: M:Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube(Scraper.Net.ScraperBuilder,Scraper.Net.Youtube.YoutubeConfig,System.String)
-  fullName: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube(Scraper.Net.ScraperBuilder, Scraper.Net.Youtube.YoutubeConfig, System.String)
-  nameWithType: ScraperBuilderExtensions.AddYoutube(ScraperBuilder, YoutubeConfig, String)
-- uid: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube*
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html#Scraper_Net_Youtube_ScraperExtensions_AddYoutube_Scraper_Net_ScraperBuilder_Scraper_Net_Youtube_YoutubeConfig_System_String_
+  commentId: M:Scraper.Net.Youtube.ScraperExtensions.AddYoutube(Scraper.Net.ScraperBuilder,Scraper.Net.Youtube.YoutubeConfig,System.String)
+  fullName: Scraper.Net.Youtube.ScraperExtensions.AddYoutube(Scraper.Net.ScraperBuilder, Scraper.Net.Youtube.YoutubeConfig, System.String)
+  nameWithType: ScraperExtensions.AddYoutube(ScraperBuilder, YoutubeConfig, String)
+- uid: Scraper.Net.Youtube.ScraperExtensions.AddYoutube*
   name: AddYoutube
-  href: api/Scraper.Net.Youtube.ScraperBuilderExtensions.html#Scraper_Net_Youtube_ScraperBuilderExtensions_AddYoutube_
-  commentId: Overload:Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html#Scraper_Net_Youtube_ScraperExtensions_AddYoutube_
+  commentId: Overload:Scraper.Net.Youtube.ScraperExtensions.AddYoutube
   isSpec: "True"
-  fullName: Scraper.Net.Youtube.ScraperBuilderExtensions.AddYoutube
-  nameWithType: ScraperBuilderExtensions.AddYoutube
+  fullName: Scraper.Net.Youtube.ScraperExtensions.AddYoutube
+  nameWithType: ScraperExtensions.AddYoutube
+- uid: Scraper.Net.Youtube.ScraperExtensions.GetYoutubeAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetYoutubeAuthor(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html#Scraper_Net_Youtube_ScraperExtensions_GetYoutubeAuthor_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Youtube.ScraperExtensions.GetYoutubeAuthor(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Youtube.ScraperExtensions.GetYoutubeAuthor(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetYoutubeAuthor(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Youtube.ScraperExtensions.GetYoutubeAuthor*
+  name: GetYoutubeAuthor
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html#Scraper_Net_Youtube_ScraperExtensions_GetYoutubeAuthor_
+  commentId: Overload:Scraper.Net.Youtube.ScraperExtensions.GetYoutubeAuthor
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.ScraperExtensions.GetYoutubeAuthor
+  nameWithType: ScraperExtensions.GetYoutubeAuthor
+- uid: Scraper.Net.Youtube.ScraperExtensions.GetYoutubePosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  name: GetYoutubePosts(IScraperService, String, CancellationToken)
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html#Scraper_Net_Youtube_ScraperExtensions_GetYoutubePosts_Scraper_Net_IScraperService_System_String_CancellationToken_
+  commentId: M:Scraper.Net.Youtube.ScraperExtensions.GetYoutubePosts(Scraper.Net.IScraperService,System.String,CancellationToken)
+  fullName: Scraper.Net.Youtube.ScraperExtensions.GetYoutubePosts(Scraper.Net.IScraperService, System.String, CancellationToken)
+  nameWithType: ScraperExtensions.GetYoutubePosts(IScraperService, String, CancellationToken)
+- uid: Scraper.Net.Youtube.ScraperExtensions.GetYoutubePosts*
+  name: GetYoutubePosts
+  href: api/Scraper.Net.Youtube.ScraperExtensions.html#Scraper_Net_Youtube_ScraperExtensions_GetYoutubePosts_
+  commentId: Overload:Scraper.Net.Youtube.ScraperExtensions.GetYoutubePosts
+  isSpec: "True"
+  fullName: Scraper.Net.Youtube.ScraperExtensions.GetYoutubePosts
+  nameWithType: ScraperExtensions.GetYoutubePosts
 - uid: Scraper.Net.Youtube.YoutubeConfig
   name: YoutubeConfig
   href: api/Scraper.Net.Youtube.YoutubeConfig.html
@@ -1297,6 +1443,24 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Youtube.YoutubeConfig.AppName
   nameWithType: YoutubeConfig.AppName
+- uid: Scraper.Net.Youtube.YoutubeConstants
+  name: YoutubeConstants
+  href: api/Scraper.Net.Youtube.YoutubeConstants.html
+  commentId: T:Scraper.Net.Youtube.YoutubeConstants
+  fullName: Scraper.Net.Youtube.YoutubeConstants
+  nameWithType: YoutubeConstants
+- uid: Scraper.Net.Youtube.YoutubeConstants.BaseUrl
+  name: BaseUrl
+  href: api/Scraper.Net.Youtube.YoutubeConstants.html#Scraper_Net_Youtube_YoutubeConstants_BaseUrl
+  commentId: F:Scraper.Net.Youtube.YoutubeConstants.BaseUrl
+  fullName: Scraper.Net.Youtube.YoutubeConstants.BaseUrl
+  nameWithType: YoutubeConstants.BaseUrl
+- uid: Scraper.Net.Youtube.YoutubeConstants.PlatformName
+  name: PlatformName
+  href: api/Scraper.Net.Youtube.YoutubeConstants.html#Scraper_Net_Youtube_YoutubeConstants_PlatformName
+  commentId: F:Scraper.Net.Youtube.YoutubeConstants.PlatformName
+  fullName: Scraper.Net.Youtube.YoutubeConstants.PlatformName
+  nameWithType: YoutubeConstants.PlatformName
 - uid: Scraper.Net.Youtube.YoutubeScraper
   name: YoutubeScraper
   href: api/Scraper.Net.Youtube.YoutubeScraper.html
