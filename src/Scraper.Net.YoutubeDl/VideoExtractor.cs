@@ -30,25 +30,29 @@ namespace Scraper.Net.YoutubeDl
             ThumbnailData highestThumbnail = GetHighestQualityThumbnail(data);
             
             return new YoutubeDlVideoItem(
-                highestFormat.Url ?? data.Url,
+                highestFormat?.Url ?? data.Url,
                 UrlType.DirectUrl,
                 highestThumbnail.Url,
-                highestFormat.FileSize ?? highestFormat.ApproximateFileSize,
+                highestFormat?.FileSize ?? highestFormat?.ApproximateFileSize,
                 data.Duration,
-                highestFormat.Width ?? highestThumbnail.Width,
-                highestFormat.Height ?? highestThumbnail.Height);
+                highestFormat?.Width ?? highestThumbnail.Width,
+                highestFormat?.Height ?? highestThumbnail.Height);
         }
 
         private static FormatData GetHighestQualityFormat(VideoData data)
         {
             const string noCodecName = "none";
 
-            return data.Formats.LastOrDefault(
-                format => format.AudioCodec != noCodecName && format.VideoCodec != noCodecName);
+            return data.Formats
+                .OrderBy(format => format.Bitrate)
+                .FirstOrDefault(format => format.AudioCodec != noCodecName &&
+                                          format.VideoCodec != noCodecName);
         }
 
         private static ThumbnailData GetHighestQualityThumbnail(VideoData data) 
-            => data.Thumbnails.LastOrDefault();
+            => data.Thumbnails
+                .OrderBy(thumbnailData => thumbnailData.Width)
+                .FirstOrDefault();
 
         private async Task<VideoData> GetVideoData(string url, CancellationToken ct)
         {
