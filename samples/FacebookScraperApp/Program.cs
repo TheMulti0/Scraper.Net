@@ -50,7 +50,7 @@ namespace FacebookScraperApp
         {
             try
             {
-                IAsyncEnumerable<Post> posts = service.GetPostsAsync(id, "facebook");
+                IAsyncEnumerable<Post> posts = service.GetFacebookPosts(id);
 
                 await foreach (Post post in posts)
                 {

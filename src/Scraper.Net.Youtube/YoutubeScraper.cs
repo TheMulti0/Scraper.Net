@@ -59,7 +59,7 @@ namespace Scraper.Net.Youtube
             {
                 VideoSnippet snippet = video.Snippet;
 
-                var url = $"https://www.youtube.com/watch?v={video.Id}";
+                var url = $"{YoutubeConstants.BaseUrl}/watch?v={video.Id}";
 
                 VideoItem videoItem = GetVideoItem(video, url);
 

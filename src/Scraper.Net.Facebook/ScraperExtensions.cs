@@ -1,10 +1,13 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
 namespace Scraper.Net.Facebook
 {
-    public static class ScraperBuilderExtensions
+    public static class ScraperExtensions
     {
         /// <summary>
         /// Adds a <see cref="FacebookScraper"/>
@@ -16,7 +19,7 @@ namespace Scraper.Net.Facebook
         public static ScraperBuilder AddFacebook(
             this ScraperBuilder builder,
             FacebookConfig config = null,
-            string platform = "facebook")
+            string platform = FacebookConstants.PlatformName)
         {
             return builder
                 .AddScraper(provider =>
@@ -29,5 +32,17 @@ namespace Scraper.Net.Facebook
                     return (scraper, platform);
                 });
         }
+        
+        public static Task<Net.Author> GetFacebookAuthor(
+            this IScraperService service,
+            string id,
+            CancellationToken ct = default)
+            => service.GetAuthorAsync(id, FacebookConstants.PlatformName, ct);
+
+        public static IAsyncEnumerable<Post> GetFacebookPosts(
+            this IScraperService service,
+            string id,
+            CancellationToken ct = default)
+            => service.GetPostsAsync(id, FacebookConstants.PlatformName, ct);
     }
 }

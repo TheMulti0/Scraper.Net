@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Scraper.Net.Twitter
 {
-    public static class ScraperBuilderExtensions
+    public static class ScraperExtensions
     {
         /// <summary>
         /// Adds a <see cref="TwitterScraper"/>
@@ -15,7 +18,7 @@ namespace Scraper.Net.Twitter
         public static ScraperBuilder AddTwitter(
             this ScraperBuilder builder,
             TwitterConfig config = null,
-            string platform = "twitter")
+            string platform = TwitterConstants.PlatformName)
         {
             return builder
                 .AddScraper(provider =>
@@ -27,5 +30,17 @@ namespace Scraper.Net.Twitter
                     return (scraper, platform);
                 });
         }
+        
+        public static Task<Author> GetTwitterAuthor(
+            this IScraperService service,
+            string id,
+            CancellationToken ct = default)
+            => service.GetAuthorAsync(id, TwitterConstants.PlatformName, ct);
+
+        public static IAsyncEnumerable<Post> GetTwitterPosts(
+            this IScraperService service,
+            string id,
+            CancellationToken ct = default)
+            => service.GetPostsAsync(id, TwitterConstants.PlatformName, ct);
     }
 }

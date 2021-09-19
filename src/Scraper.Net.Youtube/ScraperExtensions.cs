@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Scraper.Net.Youtube
 {
-    public static class ScraperBuilderExtensions
+    public static class ScraperExtensions
     {
         /// <summary>
         /// Adds a <see cref="YoutubeScraper"/>
@@ -15,7 +18,7 @@ namespace Scraper.Net.Youtube
         public static ScraperBuilder AddYoutube(
             this ScraperBuilder builder,
             YoutubeConfig config = null,
-            string platform = "youtube")
+            string platform = YoutubeConstants.PlatformName)
         {
             return builder
                 .AddScraper(provider =>
@@ -27,5 +30,17 @@ namespace Scraper.Net.Youtube
                     return (scraper, platform);
                 });
         }
+        
+        public static Task<Author> GetYoutubeAuthor(
+            this IScraperService service,
+            string id,
+            CancellationToken ct = default)
+            => service.GetAuthorAsync(id, YoutubeConstants.PlatformName, ct);
+
+        public static IAsyncEnumerable<Post> GetYoutubePosts(
+            this IScraperService service,
+            string id,
+            CancellationToken ct = default)
+            => service.GetPostsAsync(id, YoutubeConstants.PlatformName, ct);
     }
 }
