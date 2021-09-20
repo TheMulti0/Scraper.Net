@@ -16,6 +16,7 @@ namespace Scraper.Net.YoutubeDl.Tests
         [DataRow("https://facebook.com/shirlypinto89/posts/819315905613113")]
         [DataRow("https://facebook.com/naftalibennett/posts/4317128274975474")]
         [DataRow("https://facebook.com/%d7%a0%d7%99%d7%a8-%d7%90%d7%95%d7%a8%d7%91%d7%9a-nir-orbach-639391266187801/posts/3921940434599518")]
+        [DataRow("https://facebook.com/matankahanany/posts/1193654484450604")]
         public async Task TestFacebook(string url)
         {
             await Test(url);

@@ -43,7 +43,7 @@ namespace Scraper.Net.YoutubeDl
         {
             const string noCodecName = "none";
 
-            return data.Formats
+            return data.Formats?
                 .OrderBy(format => format.Bitrate)
                 .FirstOrDefault(format => format.AudioCodec != noCodecName &&
                                           format.VideoCodec != noCodecName);
@@ -58,7 +58,7 @@ namespace Scraper.Net.YoutubeDl
         {
             RunResult<VideoData> result = await _youtubeDl.RunVideoDataFetch(url, ct, overrideOptions: _overrideOptions);
 
-            if (result.Success)
+            if (result.Success && result.Data?.Url != null)
             {
                 return result.Data;
             }
