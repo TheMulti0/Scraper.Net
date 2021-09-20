@@ -32,11 +32,11 @@ namespace Scraper.Net.YoutubeDl
             return new YoutubeDlVideoItem(
                 highestFormat?.Url ?? data.Url,
                 UrlType.DirectUrl,
-                highestThumbnail.Url,
+                highestThumbnail?.Url,
                 highestFormat?.FileSize ?? highestFormat?.ApproximateFileSize,
                 data.Duration,
-                highestFormat?.Width ?? highestThumbnail.Width,
-                highestFormat?.Height ?? highestThumbnail.Height);
+                highestFormat?.Width ?? highestThumbnail?.Width,
+                highestFormat?.Height ?? highestThumbnail?.Height);
         }
 
         private static FormatData GetHighestQualityFormat(VideoData data)
@@ -50,7 +50,7 @@ namespace Scraper.Net.YoutubeDl
         }
 
         private static ThumbnailData GetHighestQualityThumbnail(VideoData data) 
-            => data.Thumbnails
+            => data.Thumbnails?
                 .OrderBy(thumbnailData => thumbnailData.Width)
                 .FirstOrDefault();
 
