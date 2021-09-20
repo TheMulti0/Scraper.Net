@@ -3,7 +3,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using YoutubeDLSharp;
-using YoutubeDLSharp.Options;
 
 namespace Scraper.Net.YoutubeDl
 {

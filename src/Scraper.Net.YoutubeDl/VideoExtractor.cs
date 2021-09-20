@@ -58,7 +58,7 @@ namespace Scraper.Net.YoutubeDl
         {
             RunResult<VideoData> result = await _youtubeDl.RunVideoDataFetch(url, ct, overrideOptions: _overrideOptions);
 
-            if (result.Success && result.Data?.Url != null)
+            if (result.Success && result.Data?.Url == null)
             {
                 return result.Data;
             }
