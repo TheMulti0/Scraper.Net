@@ -22,5 +22,7 @@ namespace Scraper.Net
         public DateTime? CreationDate { get; init; }
 
         public IEnumerable<IMediaItem> MediaItems { get; init; } = Enumerable.Empty<IMediaItem>();
+
+        public Post ReplyPost { get; init; }
     }
 }

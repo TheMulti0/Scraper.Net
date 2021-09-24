@@ -69,7 +69,7 @@ namespace Scraper.Net.Twitter
 
             IAsyncEnumerable<ITweet> tweets = GetTweetsAsync(id, tweetScraper);
             
-            IAsyncEnumerable<Post> posts = tweets.SelectAwaitWithCancellation(ToPost(id));
+            IAsyncEnumerable<Post> posts = ToPosts(tweets, id, ct);
             
             await foreach (Post post in posts.WithCancellation(ct))
             {
@@ -82,23 +82,64 @@ namespace Scraper.Net.Twitter
             return ExceptionHandler.HandleExceptionAsync(id, () => tweetScraper.GetTweetsAsync(id));
         }
 
-        private Func<ITweet, CancellationToken, ValueTask<Post>> ToPost(string id)
+        private async IAsyncEnumerable<Post> ToPosts(
+            IAsyncEnumerable<ITweet> tweets,
+            string id,
+            [EnumeratorCancellation] CancellationToken ct)
         {
-            return async (tweet, ct) =>
+            var enumerator = tweets.GetAsyncEnumerator(ct);
+
+            while (true)
             {
-                string text = tweet.IsRetweet 
-                    ? tweet.RetweetedTweet.Text 
-                    : tweet.FullText;
-                
-                return new Post
+                if (!await enumerator.MoveNextAsync())
                 {
-                    Content = await _textCleaner.CleanTextAsync(text, ct),
-                    AuthorId = id,
-                    CreationDate = tweet.CreatedAt.DateTime,
-                    Url = tweet.Url,
-                    MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),
-                    Type = GetPostType(tweet, id)
-                };
+                    break;
+                }
+
+                var batch = GroupReplies(enumerator, enumerator.Current);
+
+                yield return await batch
+                    .SelectAwaitWithCancellation((tweet, c) => ToPost(tweet, id, c))
+                    .AggregateAsync(
+                        (reply, source) => source with { ReplyPost = reply },
+                        ct);
+            }
+        }
+
+        private static async IAsyncEnumerable<ITweet> GroupReplies(
+            IAsyncEnumerator<ITweet> enumerator,
+            ITweet current)
+        {
+            ITweet prev = null;
+
+            do
+            {
+                yield return current;
+
+                prev = current;
+                if (!await enumerator.MoveNextAsync())
+                {
+                    break;
+                }
+                current = enumerator.Current;
+            }
+            while (prev?.InReplyToStatusId == current.Id);
+        }
+
+        private async ValueTask<Post> ToPost(ITweet tweet, string id, CancellationToken ct)
+        {
+            string text = tweet.IsRetweet 
+                ? tweet.RetweetedTweet.Text 
+                : tweet.FullText;
+            
+            return new Post
+            {
+                Content = await _textCleaner.CleanTextAsync(text, ct),
+                AuthorId = id,
+                CreationDate = tweet.CreatedAt.DateTime,
+                Url = tweet.Url,
+                MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),
+                Type = GetPostType(tweet, id)
             };
         }
 
