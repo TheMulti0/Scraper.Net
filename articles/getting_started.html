@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting started </title>
+    <title>Installation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting started ">
+    <meta name="title" content="Installation ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,13 +66,9 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="guides.getting_started">
-<h1 id="getting-started">Getting started</h1>
+            <article class="content wrap" id="_content" data-uid="articles.getting_started">
+<h1 id="installation">Installation</h1>
 
-<p>Scraper.Net is the base project containing the main services and abstractions.</p>
-<p>Platform specific scraping capabilities are implemented in separate projects (which all reference the base project), or can be self implemented.</p>
-<p>Without a platform specific implementation the base project supplies no real functionality.</p>
-<h2 id="installation">Installation</h2>
 <p>To get started, install the implementation package\s of choice</p>
 <p>The following installation procedure is written for the Facebook package but is the same for other packages</p>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
@@ -97,7 +93,7 @@
 </code></pre>
 </section>
 </div>
-<h2 id="usage">Usage</h2>
+<h1 id="usage">Usage</h1>
 <pre><code class="lang-cs">var provider = new ServiceCollection()
     .AddLogging()
     .AddScraper(builder =&gt; builder.AddFacebook())
@@ -123,7 +119,7 @@ await foreach (var post in posts)
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/9aee4e7d7919cc202eb85f70b12dfed124418bce/docs/articles/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/c3e67ef3252782e70f791477c9a8a51b0e3bb1df/docs/articles/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

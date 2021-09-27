@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="articles.introduction">
+<h1 id="introduction">Introduction</h1>
+
+<p>Scraper.Net is the base project containing the main services and abstractions.</p>
+<p>Platform specific scraping capabilities are implemented in separate projects (which all reference the base project), or can be self implemented.</p>
+<p>Without a platform specific implementation the base project supplies no real functionality.</p>
+<p>Although it is possible to use this library without a DI container, there is a first-class support for Microsoft's DI container which simplifies the process of instanciating the scraper and its dependencies.</p>
+<hr>
+<h2 id="scraping">Scraping</h2>
+<p>The class you should use for scraping is <a class="xref" href="../api/Scraper.Net.IScraperService.html"><code>IScraperService</code></a>.</p>
+<p>It wraps multiple platform scrapers, post-filters and post-processors (more on those later).</p>
+<p>Each method requires specifying the identifier you wish to scrape, and the platform identifier (both strings).</p>
+<p>For example, if I want to scrape a Twitter user called <code>@POTUS</code>, I would include in my method call the id <code>POTUS</code> and platform id <code>twitter</code>.</p>
+<p>With that said, the officially implemented libraries include extension methods to the scraper service that don't require specifying the platform id.</p>
+<p>For example instead of calling: <code>service.GetPostsAsync(&quot;mychannelid&quot;, &quot;youtube&quot;)</code>, I can <code>service.GetYoutubePosts(&quot;mychannelid&quot;)</code></p>
+<blockquote>
+<p>Note: The id of each platform scraper is specified within the construction of a ScraperService and can be decided.</p>
+</blockquote>
+<h3 id="implemented-platforms">Implemented platforms</h3>
+<p>The official platforms implemented are:</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.nuget.org/packages/Scraper.Net.Facebook">Scraper.Net.Facebook</a></td>
+<td>Uses the python library <a href="https://github.com/kevinzg/facebook-scraper">facebook-scraper</a> to provide facebook pages scraping capabilities.</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Scraper.Net.Twitter">Scraper.Net.Twitter</a></td>
+<td>Scrapes from Twitter using Twitter's official v1 API.</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Scraper.Net.Feeds">Scraper.Net.Feeds</a></td>
+<td>Scrapes feeds that support the SyndicationFeed standard (Atom/RSS 1.0/2.0).</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Scraper.Net.Youtube">Scraper.Net.Youtube</a></td>
+<td>Scrapes Youtube videos and channels using Google's YouTube v3 Data API.</td>
+</tr>
+</tbody>
+</table>
+<p>In order to create an implementation, all you have to do is implement the <a class="xref" href="../api/Scraper.Net.IPlatformScraper.html"><code>IPlatformScraper</code></a> interface and register your custom scraper's instance in your service.</p>
+<hr>
+<h2 id="post-filtering">Post filtering</h2>
+<p>It is possible to include asynchronous post filters that receive a <a href="xref:Scraper.Net.Post">Post</a> and platform and return true if the scraped post should be returned to the caller.</p>
+<blockquote>
+<p>See <a class="xref" href="../api/Scraper.Net.PostFilter.html">PostFilter</a></p>
+</blockquote>
+<hr>
+<h2 id="post-processing">Post processing</h2>
+<p>It is also possible to register a post processor.</p>
+<p>The purpose of this class is to receive a post and asynchronously produce one or more posts.</p>
+<h3 id="implemented-post-processors">Implemented post processors</h3>
+<p>The official post processors implemented are:</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.nuget.org/packages/Scraper.Net.YoutubeDl">Scraper.Net.YoutubeDl</a></td>
+<td>Uses the python library <a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a> to extract higher quality videos for posts that include videos.</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Scraper.Net.Screenshot">Scraper.Net.Screenshot</a></td>
+<td>Uses <a href="https://htmlcsstoimage.com/">HTML/CSS to Image API</a> to screenshot post's webpages.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>See <a class="xref" href="../api/Scraper.Net.IPostProcessor.html">IPostProcessor</a></p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/c3e67ef3252782e70f791477c9a8a51b0e3bb1df/docs/articles/introduction.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

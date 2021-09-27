@@ -4,9 +4,15 @@ references:
 - uid: api.home
   name: API Reference
   href: api/index.html
-- uid: guides.getting_started
-  name: Getting started
+- uid: articles.di
+  name: articles.di
+  href: articles/di.html
+- uid: articles.getting_started
+  name: Installation
   href: articles/getting_started.html
+- uid: articles.introduction
+  name: Introduction
+  href: articles/introduction.html
 - uid: root.home
   name: Scraper.Net
   href: index.html
