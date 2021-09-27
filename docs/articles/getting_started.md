@@ -1,16 +1,8 @@
 ---
-uid: guides.getting_started
+uid: articles.getting_started
 ---
 
-# Getting started
-
-Scraper.Net is the base project containing the main services and abstractions.
-
-Platform specific scraping capabilities are implemented in separate projects (which all reference the base project), or can be self implemented.
-
-Without a platform specific implementation the base project supplies no real functionality.
-
-## Installation
+# Installation
 
 To get started, install the implementation package\s of choice 
 
@@ -32,7 +24,7 @@ Add this to your project's `.csproj` file:
 
 ***
 
-## Usage
+# Usage
 
 ```cs
 var provider = new ServiceCollection()
