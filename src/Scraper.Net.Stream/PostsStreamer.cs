@@ -48,9 +48,7 @@ namespace Scraper.Net.Stream
             TimeSpan interval,
             IScheduler scheduler = null)
         {
-            IObservable<Unit> trigger = Observable
-                .Timer(TimeSpan.Zero, interval)
-                .Select(_ => Unit.Default);
+            IObservable<Unit> trigger = Interval(interval);
             
             return Stream(
                 id,
@@ -58,7 +56,7 @@ namespace Scraper.Net.Stream
                 trigger,
                 scheduler);
         }
-        
+
         public IObservable<Post> Stream(
             string id,
             string platform,
@@ -66,16 +64,20 @@ namespace Scraper.Net.Stream
             IObservable<Unit> trigger,
             IScheduler scheduler = null)
         {
-            IObservable<Unit> combinedTrigger = Observable
-                .Timer(TimeSpan.Zero, interval)
-                .Select(_ => Unit.Default)
-                .Merge(trigger);
+            IObservable<Unit> combinedTrigger = Interval(interval).Merge(trigger);
             
             return Stream(
                 id,
                 platform,
                 combinedTrigger,
                 scheduler);
+        }
+
+        private static IObservable<Unit> Interval(TimeSpan interval)
+        {
+            return Observable
+                .Timer(TimeSpan.Zero, interval)
+                .Select(_ => Unit.Default);
         }
 
         public IObservable<Post> Stream(

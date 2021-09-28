@@ -24,21 +24,12 @@ namespace Scraper.Net.Stream.Tests
         {
             var interval = TimeSpan.FromMilliseconds(intervalMs);
 
-            int actualPostCount = 0;
-
-            _streamer
+            var actualPostCount = _streamer
                 .Stream("", "", interval)
                 .Take(expectedPostCount)
-                .Subscribe(
-                    _ =>
-                    {
-                        lock (this)
-                        {
-                            actualPostCount++;
-                        }
-                    });
-
-            await Task.Delay(interval * expectedPostCount);
+                .Timeout(interval * expectedPostCount)
+                .ToEnumerable()
+                .Count();
 
             Assert.AreEqual(expectedPostCount, actualPostCount);
         }
@@ -95,23 +86,14 @@ namespace Scraper.Net.Stream.Tests
                 NullLogger<PostsStreamer>.Instance);
             
             const int expected = 1;
-            int actualPostCount = 0;
 
-            streamer
+            var post = streamer
                 .Stream("", "", TimeSpan.FromDays(1))
                 .Take(expected)
-                .Subscribe(
-                    _ =>
-                    {
-                        lock (this)
-                        {
-                            actualPostCount++;
-                        }
-                    });
-
-            await Task.Delay(100);
+                .Timeout(TimeSpan.FromMilliseconds(100))
+                .FirstOrDefaultAsync();
             
-            Assert.AreEqual(expected, actualPostCount);
+            Assert.IsNotNull(post);
         }
 
         [TestMethod]
