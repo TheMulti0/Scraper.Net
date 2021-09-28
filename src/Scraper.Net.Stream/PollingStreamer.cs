@@ -49,18 +49,15 @@ namespace Scraper.Net.Stream
                 {
                     CancellationToken ct = GetCancellationToken(cancellationToken, pollingTimeout);
 
-                    while (!ct.IsCancellationRequested)
+                    try
                     {
-                        try
-                        {
-                            IAsyncEnumerable<TResult> asyncEnumerable = asyncFunction(ct);
+                        IAsyncEnumerable<TResult> asyncEnumerable = asyncFunction(ct);
 
-                            await asyncEnumerable.ForEachAsync(observer.OnNext, ct);
-                        }
-                        catch (Exception ex)
-                        {
-                            observer.OnError(ex);
-                        }
+                        await asyncEnumerable.ForEachAsync(observer.OnNext, ct);
+                    }
+                    catch (Exception ex)
+                    {
+                        observer.OnError(ex);
                     }
                 }
 
