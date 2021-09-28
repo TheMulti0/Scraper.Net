@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Runtime.CompilerServices;
@@ -47,9 +48,45 @@ namespace Scraper.Net.Stream
             TimeSpan interval,
             IScheduler scheduler = null)
         {
+            IObservable<Unit> trigger = Observable
+                .Timer(TimeSpan.Zero, interval)
+                .Select(_ => Unit.Default);
+            
+            return Stream(
+                id,
+                platform,
+                trigger,
+                scheduler);
+        }
+        
+        public IObservable<Post> Stream(
+            string id,
+            string platform,
+            TimeSpan interval,
+            IObservable<Unit> trigger,
+            IScheduler scheduler = null)
+        {
+            IObservable<Unit> combinedTrigger = Observable
+                .Timer(TimeSpan.Zero, interval)
+                .Select(_ => Unit.Default)
+                .Merge(trigger);
+            
+            return Stream(
+                id,
+                platform,
+                combinedTrigger,
+                scheduler);
+        }
+
+        public IObservable<Post> Stream(
+            string id,
+            string platform,
+            IObservable<Unit> trigger,
+            IScheduler scheduler = null)
+        {
             IObservable<Post> stream = PollingStreamer.Stream(
                 ct => PollAsync(id, platform, ct),
-                interval,
+                trigger,
                 _pollingTimeout,
                 scheduler);
             

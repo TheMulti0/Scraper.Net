@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Threading;
@@ -12,7 +13,7 @@ namespace Scraper.Net.Stream
     {
         public static IObservable<T> Stream<T>(
             Func<CancellationToken, IAsyncEnumerable<T>> asyncFunction,
-            TimeSpan interval,
+            IObservable<Unit> trigger,
             TimeSpan? pollingTimeout = null,
             IScheduler scheduler = null)
         {
@@ -20,9 +21,10 @@ namespace Scraper.Net.Stream
             
             IObservable<T> stream = Poll(
                 asyncFunction,
-                interval,
+                trigger,
                 pollingTimeout,
                 scheduler);
+            
 
             // Continue polling even if one batch threw an exception, except IdNotFoundException which breaks the stream
             return stream
@@ -37,13 +39,13 @@ namespace Scraper.Net.Stream
 
         private static IObservable<TResult> Poll<TResult>(
             Func<CancellationToken, IAsyncEnumerable<TResult>> asyncFunction,
-            TimeSpan interval,
+            IObservable<Unit> trigger,
             TimeSpan? pollingTimeout,
             IScheduler scheduler)
         {
             IDisposable SchedulePollLoop(IObserver<TResult> observer)
             {
-                async Task PollLoop(IScheduler s, CancellationToken cancellationToken)
+                async Task PollLoop(CancellationToken cancellationToken)
                 {
                     CancellationToken ct = GetCancellationToken(cancellationToken, pollingTimeout);
 
@@ -59,12 +61,10 @@ namespace Scraper.Net.Stream
                         {
                             observer.OnError(ex);
                         }
-
-                        await s.Sleep(interval, ct);
                     }
                 }
 
-                return scheduler.ScheduleAsync(PollLoop);
+                return trigger.SubscribeAsync(PollLoop, scheduler);
             }
 
             return Observable.Create<TResult>(SchedulePollLoop);

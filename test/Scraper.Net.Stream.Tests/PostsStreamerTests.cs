@@ -66,6 +66,18 @@ namespace Scraper.Net.Stream.Tests
             
             await obs; // Should not throw an exception 
         }
+        
+        [TestMethod]
+        public async Task TestOneTimeExceptionRecovery()
+        {
+            TimeSpan interval = TimeSpan.FromSeconds(1);
+
+            var obs = _streamer
+                .Stream("onetime", "", interval)
+                .Take(2);
+            
+            await obs; // Should not throw an exception 
+        }
 
         [DataTestMethod]
         [DataRow(1)]
@@ -111,11 +123,14 @@ namespace Scraper.Net.Stream.Tests
                 new PostsStreamerConfig(),
                 NullLogger<PostsStreamer>.Instance);
 
-            IEnumerable<Post> enumerable = multipleStreamer
-                .Stream("", "", TimeSpan.FromDays(1)).Take(2)
-                .ToEnumerable().ToList();
-            
-            Assert.IsTrue(enumerable.FirstOrDefault().CreationDate < enumerable.LastOrDefault().CreationDate);
+            IAsyncEnumerable<Post> enumerable = multipleStreamer
+                .Stream("", "", TimeSpan.FromDays(1))
+                .Take(2)
+                .ToAsyncEnumerable();
+
+            Post first = await enumerable.FirstAsync();
+            Post last = await enumerable.LastAsync();
+            Assert.IsTrue(first.CreationDate < last.CreationDate);
         }
     }
 }
