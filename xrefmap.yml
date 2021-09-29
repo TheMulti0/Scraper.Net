@@ -1108,15 +1108,15 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync
   nameWithType: ObservableExtensions.SubscribeAsync
-- uid: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{CancellationToken,Task},IScheduler)
-  name: SubscribeAsync<T>(IObservable<T>, Func<CancellationToken, Task>, IScheduler)
-  href: api/Scraper.Net.Stream.ObservableExtensions.html#Scraper_Net_Stream_ObservableExtensions_SubscribeAsync__1_IObservable___0__Func_CancellationToken_Task__IScheduler_
-  commentId: M:Scraper.Net.Stream.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{CancellationToken,Task},IScheduler)
-  name.vb: SubscribeAsync(Of T)(IObservable(Of T), Func(Of CancellationToken, Task), IScheduler)
-  fullName: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<CancellationToken, Task>, IScheduler)
-  fullName.vb: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of CancellationToken, Task), IScheduler)
-  nameWithType: ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<CancellationToken, Task>, IScheduler)
-  nameWithType.vb: ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of CancellationToken, Task), IScheduler)
+- uid: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{``0,CancellationToken,Task},IScheduler)
+  name: SubscribeAsync<T>(IObservable<T>, Func<T, CancellationToken, Task>, IScheduler)
+  href: api/Scraper.Net.Stream.ObservableExtensions.html#Scraper_Net_Stream_ObservableExtensions_SubscribeAsync__1_IObservable___0__Func___0_CancellationToken_Task__IScheduler_
+  commentId: M:Scraper.Net.Stream.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{``0,CancellationToken,Task},IScheduler)
+  name.vb: SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, CancellationToken, Task), IScheduler)
+  fullName: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<T, CancellationToken, Task>, IScheduler)
+  fullName.vb: Scraper.Net.Stream.ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, CancellationToken, Task), IScheduler)
+  nameWithType: ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<T, CancellationToken, Task>, IScheduler)
+  nameWithType.vb: ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, CancellationToken, Task), IScheduler)
 - uid: Scraper.Net.Stream.ObservableExtensions.WhereAwait*
   name: WhereAwait
   href: api/Scraper.Net.Stream.ObservableExtensions.html#Scraper_Net_Stream_ObservableExtensions_WhereAwait_
@@ -1155,24 +1155,24 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.PostsStreamer.PostsStreamer
   nameWithType: PostsStreamer.PostsStreamer
-- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,IObservable{Unit},IScheduler)
-  name: Stream(String, String, IObservable<Unit>, IScheduler)
-  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_IObservable_Unit__IScheduler_
-  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,IObservable{Unit},IScheduler)
-  name.vb: Stream(String, String, IObservable(Of Unit), IScheduler)
-  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, IObservable<Unit>, IScheduler)
-  fullName.vb: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, IObservable(Of Unit), IScheduler)
-  nameWithType: PostsStreamer.Stream(String, String, IObservable<Unit>, IScheduler)
-  nameWithType.vb: PostsStreamer.Stream(String, String, IObservable(Of Unit), IScheduler)
-- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IObservable{Unit},IScheduler)
-  name: Stream(String, String, TimeSpan, IObservable<Unit>, IScheduler)
-  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_TimeSpan_IObservable_Unit__IScheduler_
-  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IObservable{Unit},IScheduler)
-  name.vb: Stream(String, String, TimeSpan, IObservable(Of Unit), IScheduler)
-  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan, IObservable<Unit>, IScheduler)
-  fullName.vb: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan, IObservable(Of Unit), IScheduler)
-  nameWithType: PostsStreamer.Stream(String, String, TimeSpan, IObservable<Unit>, IScheduler)
-  nameWithType.vb: PostsStreamer.Stream(String, String, TimeSpan, IObservable(Of Unit), IScheduler)
+- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,IObservable{PollOptions},IScheduler)
+  name: Stream(String, String, IObservable<PollOptions>, IScheduler)
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_IObservable_PollOptions__IScheduler_
+  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,IObservable{PollOptions},IScheduler)
+  name.vb: Stream(String, String, IObservable(Of PollOptions), IScheduler)
+  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, IObservable<PollOptions>, IScheduler)
+  fullName.vb: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, IObservable(Of PollOptions), IScheduler)
+  nameWithType: PostsStreamer.Stream(String, String, IObservable<PollOptions>, IScheduler)
+  nameWithType.vb: PostsStreamer.Stream(String, String, IObservable(Of PollOptions), IScheduler)
+- uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IObservable{PollOptions},IScheduler)
+  name: Stream(String, String, TimeSpan, IObservable<PollOptions>, IScheduler)
+  href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_TimeSpan_IObservable_PollOptions__IScheduler_
+  commentId: M:Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IObservable{PollOptions},IScheduler)
+  name.vb: Stream(String, String, TimeSpan, IObservable(Of PollOptions), IScheduler)
+  fullName: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan, IObservable<PollOptions>, IScheduler)
+  fullName.vb: Scraper.Net.Stream.PostsStreamer.Stream(System.String, System.String, TimeSpan, IObservable(Of PollOptions), IScheduler)
+  nameWithType: PostsStreamer.Stream(String, String, TimeSpan, IObservable<PollOptions>, IScheduler)
+  nameWithType.vb: PostsStreamer.Stream(String, String, TimeSpan, IObservable(Of PollOptions), IScheduler)
 - uid: Scraper.Net.Stream.PostsStreamer.Stream(System.String,System.String,TimeSpan,IScheduler)
   name: Stream(String, String, TimeSpan, IScheduler)
   href: api/Scraper.Net.Stream.PostsStreamer.html#Scraper_Net_Stream_PostsStreamer_Stream_System_String_System_String_TimeSpan_IScheduler_
