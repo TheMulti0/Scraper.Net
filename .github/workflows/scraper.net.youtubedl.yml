@@ -29,7 +29,7 @@ jobs:
 
     - name: Setup youtube-dl
       run: |
-        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2021.09.25/yt-dlp -o /usr/local/bin/youtube-dl
         sudo chmod a+rx /usr/local/bin/youtube-dl
 
     - name: Restore dependencies
