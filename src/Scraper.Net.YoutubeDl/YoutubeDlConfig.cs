@@ -13,9 +13,9 @@ namespace Scraper.Net.YoutubeDl
 
         public string YoutubeDlPath { get; init; }
 #if _WINDOWS
-            = "youtube-dl.exe";
+            = "yt-dlp.exe";
 #else
-            = "/usr/local/bin/youtube-dl";
+            = "/usr/local/bin/yt-dlp";
 #endif
 
         public OptionSet OverrideOptions { get; init; }

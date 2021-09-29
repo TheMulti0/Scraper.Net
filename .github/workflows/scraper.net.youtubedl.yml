@@ -27,10 +27,10 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - name: Setup youtube-dl
+    - name: Setup yt-dlp
       run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2021.09.25/yt-dlp -o /usr/local/bin/youtube-dl
-        sudo chmod a+rx /usr/local/bin/youtube-dl
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
 
     - name: Restore dependencies
       run: dotnet restore
