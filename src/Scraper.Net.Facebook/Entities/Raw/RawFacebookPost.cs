@@ -21,11 +21,17 @@ namespace Scraper.Net.Facebook
         [JsonConverter(typeof(DateTimeConverterUsingDateTimeParse))]
         public DateTime? Time { get; init; }
         
+        [JsonPropertyName("timestamp")]
+        public long UnixTimestamp { get; init; }
+        
         [JsonPropertyName("post_url")]
         public string PostUrl { get; init; }
         
         [JsonPropertyName("is_live")]
         public bool IsLive { get; init; }
+
+        [JsonPropertyName("was_live")]
+        public bool WasLive { get; init; }
         
         [JsonPropertyName("link")]
         public string Link { get; init; }

@@ -43,7 +43,7 @@ namespace Scraper.Net.Feeds
         {
             SyndicationFeed feed = GetFeed(id);
 
-            return feed.Items.Select(item => ToPost(item, id)).ToAsyncEnumerable();
+            return feed.Items.Select(item => ToPost(item, feed, id)).ToAsyncEnumerable();
         }
 
         private static SyndicationFeed GetFeed(string id)
@@ -53,12 +53,17 @@ namespace Scraper.Net.Feeds
             return SyndicationFeed.Load(reader);
         }
 
-        private static Post ToPost(SyndicationItem item, string url)
+        private static Post ToPost(SyndicationItem item, SyndicationFeed feed, string url)
         {
             return new()
             {
                 Content = item.Title.Text + "\n \n" + item.Summary.Text,
-                AuthorId = url,
+                Author = new PostAuthor
+                {
+                    Id = url,
+                    DisplayName = feed.Title?.Text,
+                    Url = url
+                },
                 CreationDate = item.PublishDate.DateTime,
                 Url = item.Links.FirstOrDefault()?.Uri.ToString(),
                 MediaItems = GetMediaItems(item),

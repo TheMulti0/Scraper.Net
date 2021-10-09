@@ -61,24 +61,45 @@ namespace Scraper.Net.Facebook
         {
             IAsyncEnumerable<FacebookPost> posts = _postsScraper.GetFacebookPostsAsync(id, null, ct);
             
-            await foreach (Post post in posts.Select(ToPost(id)).WithCancellation(ct))
+            await foreach (FacebookPost facebookPost in posts.WithCancellation(ct))
             {
-                yield return post;
+                yield return ToPost(facebookPost, id);
             }
         }
 
-        private Func<FacebookPost, Post> ToPost(string id)
+        private static Post ToPost(FacebookPost post, string id)
         {
-            return post => new Post
+            return new Post
             {
                 Content = CleanText(post),
-                AuthorId = id,
+                Author = new PostAuthor
+                {
+                    Id = id,
+                    DisplayName = post.Author?.UserName,
+                    Url = post.Author?.Url
+                },
+                OriginalAuthor = GetOriginalAuthor(post),
                 CreationDate = post.CreationDate,
                 Url = post.Url,
                 MediaItems = GetMediaItems(post),
                 Type = post.SharedPost == null ? PostType.Post : PostType.Repost,
                 IsLivestream = post.IsLive
             };
+        }
+
+        private static PostAuthor GetOriginalAuthor(FacebookPost post)
+        {
+            if (post.SharedPost?.Author != null)
+            {
+                return new PostAuthor
+                {
+                    Id = post.SharedPost.Author.Id,
+                    DisplayName = post.SharedPost.Author.UserName,
+                    Url = post.SharedPost.Author.Url
+                };
+            }
+            
+            return null;
         }
 
         private static string CleanText(FacebookPost post)
