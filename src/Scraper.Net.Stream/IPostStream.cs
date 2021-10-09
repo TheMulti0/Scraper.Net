@@ -7,8 +7,10 @@ namespace Scraper.Net.Stream
     /// <summary>
     /// A stream of new posts, updated by periodic updates or manual update triggers
     /// </summary>
-    public interface IPostStream : IObservable<Post>
+    public interface IPostStream
     {
+        public IObservable<Post> Posts { get; }
+        
         /// <summary>
         /// Performs a manual update (scrape) for new posts,
         /// if a new batch is found, it will be pushed to the stream,

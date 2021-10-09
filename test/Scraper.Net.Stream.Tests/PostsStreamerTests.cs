@@ -23,12 +23,13 @@ namespace Scraper.Net.Stream.Tests
         [DataTestMethod]
         [DataRow(50, 1)]
         [DataRow(50, 5)]
-        public async Task TestStreamingWithSinglePostBatch(int intervalMs, int expectedPostCount)
+        public void TestStreamingWithSinglePostBatch(int intervalMs, int expectedPostCount)
         {
             var interval = TimeSpan.FromMilliseconds(intervalMs);
 
             var actualPostCount = _streamer
                 .Stream("", "", interval)
+                .Posts
                 .Take(expectedPostCount)
                 .Timeout(interval * expectedPostCount)
                 .ToEnumerable()
@@ -42,6 +43,7 @@ namespace Scraper.Net.Stream.Tests
         {
             var obs = _streamer
                 .Stream("noid", "", _oneInterval)
+                .Posts
                 .Take(1);
             
             await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await obs);
@@ -52,6 +54,7 @@ namespace Scraper.Net.Stream.Tests
         {
             var obs = _streamer
                 .Stream("onetime", "", _recurringInterval)
+                .Posts
                 .Take(1);
             
             await obs; // Should not throw an exception 
@@ -62,6 +65,7 @@ namespace Scraper.Net.Stream.Tests
         {
             var obs = _streamer
                 .Stream("onetime", "", _recurringInterval)
+                .Posts
                 .Take(2);
             
             await obs; // Should not throw an exception 
@@ -71,7 +75,7 @@ namespace Scraper.Net.Stream.Tests
         [DataRow(1)]
         [DataRow(4)]
         [DataRow(-1)]
-        public async Task TestMaxDegreeOfParallelism(int max)
+        public void TestMaxDegreeOfParallelism(int max)
         {
             PostStreamFactory streamer = new(
                 new SinglePostScraperService(),
@@ -86,6 +90,7 @@ namespace Scraper.Net.Stream.Tests
 
             var post = streamer
                 .Stream("", "", _oneInterval)
+                .Posts
                 .Take(expected)
                 .Timeout(_recurringInterval)
                 .FirstOrDefaultAsync();
@@ -103,7 +108,8 @@ namespace Scraper.Net.Stream.Tests
                 NullLogger<IPostStream>.Instance);
 
             IObservable<Post> observable = multipleStreamer
-                .Stream("", "", _oneInterval);
+                .Stream("", "", _oneInterval)
+                .Posts;
 
             Post first = await observable.FirstAsync();
             Post last = await observable.FirstAsync();
@@ -117,6 +123,7 @@ namespace Scraper.Net.Stream.Tests
             
             var stream = _streamer
                 .Stream("", "", _recurringInterval)
+                .Posts
                 .Take(count);
 
             var subject1 = new Subject<Post>();
