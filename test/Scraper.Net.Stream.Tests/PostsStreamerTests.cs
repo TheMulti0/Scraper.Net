@@ -31,7 +31,7 @@ namespace Scraper.Net.Stream.Tests
                 .Stream("", "", interval)
                 .Posts
                 .Take(expectedPostCount)
-                .Timeout(interval * expectedPostCount)
+                .Timeout(interval * expectedPostCount * 1.5)
                 .ToEnumerable()
                 .Count();
 
@@ -134,7 +134,7 @@ namespace Scraper.Net.Stream.Tests
 
             for (int i = 0; i < count; i++)
             {
-                Assert.AreEqual((await subject1.FirstAsync()).CreationDate, (await subject2.FirstAsync()).CreationDate);
+                Assert.AreEqual((await subject1.FirstAsync()).Content, (await subject2.FirstAsync()).Content);
             }
         }
     }

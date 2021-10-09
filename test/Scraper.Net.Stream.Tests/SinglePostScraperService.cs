@@ -15,19 +15,22 @@ namespace Scraper.Net.Stream.Tests
             throw new NotImplementedException();
         }
 
-        public IAsyncEnumerable<Post> GetPostsAsync(string id, string platform, CancellationToken ct = default)
+        public async IAsyncEnumerable<Post> GetPostsAsync(string id, string platform, CancellationToken ct = default)
         {
+            _counter++;
+            
             switch (id)
             {
                 case "noid":
                     throw new IdNotFoundException(id);
-                case "onetime" when _counter++ < 1:
+                case "onetime" when _counter < 1:
                     throw new InvalidOperationException();
                 default:
-                    return AsyncEnumerable.Repeat(new Post
+                    yield return new Post
                     {
-                        CreationDate = DateTime.Now
-                    }, 1);
+                        Content = _counter.ToString()
+                    };
+                    break;
             }
         }
     }
