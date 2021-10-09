@@ -135,6 +135,19 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Facebook.FacebookConfig.MaxPageCount
   nameWithType: FacebookConfig.MaxPageCount
+- uid: Scraper.Net.Facebook.FacebookConfig.PostsPerPage
+  name: PostsPerPage
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_PostsPerPage
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.PostsPerPage
+  fullName: Scraper.Net.Facebook.FacebookConfig.PostsPerPage
+  nameWithType: FacebookConfig.PostsPerPage
+- uid: Scraper.Net.Facebook.FacebookConfig.PostsPerPage*
+  name: PostsPerPage
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_PostsPerPage_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.PostsPerPage
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookConfig.PostsPerPage
+  nameWithType: FacebookConfig.PostsPerPage
 - uid: Scraper.Net.Facebook.FacebookConfig.PythonPath
   name: PythonPath
   href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_PythonPath
