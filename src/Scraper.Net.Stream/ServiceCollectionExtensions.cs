@@ -7,7 +7,7 @@ namespace Scraper.Net.Stream
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Adds a <see cref="PostsStreamer"/>
+        /// Adds a <see cref="PostStreamFactory"/>
         /// </summary>
         /// <param name="services"></param>
         /// <param name="filter">A filter to distinct between old and new posts</param>
@@ -16,13 +16,13 @@ namespace Scraper.Net.Stream
         public static IServiceCollection AddStream(
             this IServiceCollection services,
             PostFilter filter,
-            PostsStreamerConfig config = null)
+            PostStreamConfig config = null)
         {
             return services.AddStream(_ => filter, config);
         }
 
         /// <summary>
-        /// Adds a <see cref="PostsStreamer"/>
+        /// Adds a <see cref="PostStreamFactory"/>
         /// </summary>
         /// <param name="services"></param>
         /// <param name="action">Creates a filter to distinct between old and new posts</param>
@@ -31,14 +31,14 @@ namespace Scraper.Net.Stream
         public static IServiceCollection AddStream(
             this IServiceCollection services,
             Func<IServiceProvider, PostFilter> action,
-            PostsStreamerConfig config = null)
+            PostStreamConfig config = null)
         {
             return services.AddSingleton(
-                provider => new PostsStreamer(
+                provider => new PostStreamFactory(
                     provider.GetRequiredService<IScraperService>(),
                     action(provider),
-                    config ?? new PostsStreamerConfig(),
-                    provider.GetRequiredService<ILogger<PostsStreamer>>()));
+                    config ?? new PostStreamConfig(),
+                    provider.GetRequiredService<ILogger<IPostStream>>()));
         }
     }
 }

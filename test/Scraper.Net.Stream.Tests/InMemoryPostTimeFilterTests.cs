@@ -24,9 +24,9 @@ namespace Scraper.Net.Stream.Tests
             }
         }
 
-        private static void AssertFilterOfPostWithTime(bool expected, DateTime? creationDate)
+        private static async Task AssertFilterOfPostWithTime(bool expected, DateTime? creationDate)
         {
-            bool filter = InMemoryPostTimeFilter.Filter(
+            bool filter = await InMemoryPostTimeFilter.Filter(
                 new Post
                 {
                     CreationDate = creationDate

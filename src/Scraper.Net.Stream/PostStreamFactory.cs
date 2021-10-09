@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive;
 using System.Reactive.Concurrency;
-using System.Reactive.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,21 +10,21 @@ using Microsoft.Extensions.Logging;
 namespace Scraper.Net.Stream
 {
     /// <summary>
-    /// Periodically polls for posts, distincts duplicates and exposes a stream of new posts
+    /// Creates a <see cref="IPostStream"/>
     /// </summary>
-    public class PostsStreamer
+    public class PostStreamFactory
     {
         private readonly IScraperService _service;
         private readonly PostFilter _filter;
         private readonly SemaphoreSlim _semaphore;
         private readonly TimeSpan? _pollingTimeout;
-        private readonly ILogger<PostsStreamer> _logger;
+        private readonly ILogger<IPostStream> _logger;
 
-        public PostsStreamer(
+        public PostStreamFactory(
             IScraperService service,
             PostFilter filter,
-            PostsStreamerConfig config,
-            ILogger<PostsStreamer> logger)
+            PostStreamConfig config,
+            ILogger<IPostStream> logger)
         {
             _service = service;
             _filter = filter;
@@ -41,70 +39,31 @@ namespace Scraper.Net.Stream
             
             _logger = logger;
         }
-
-        public IObservable<Post> Stream(
+        public IPostStream Stream(
             string id,
             string platform,
             TimeSpan interval,
             IScheduler scheduler = null)
         {
-            IObservable<Unit> trigger = Interval(interval);
-            
-            return Stream(
-                id,
-                platform,
-                trigger,
-                scheduler);
-        }
-
-        public IObservable<Post> Stream(
-            string id,
-            string platform,
-            TimeSpan interval,
-            IObservable<Unit> trigger,
-            IScheduler scheduler = null)
-        {
-            IObservable<Unit> combinedTrigger = Interval(interval).Merge(trigger);
-            
-            return Stream(
-                id,
-                platform,
-                combinedTrigger,
-                scheduler);
-        }
-
-        private static IObservable<Unit> Interval(TimeSpan interval)
-        {
-            return Observable
-                .Timer(TimeSpan.Zero, interval)
-                .Select(_ => Unit.Default);
-        }
-
-        public IObservable<Post> Stream(
-            string id,
-            string platform,
-            IObservable<Unit> trigger,
-            IScheduler scheduler = null)
-        {
-            IObservable<Post> stream = PollingStreamer.Stream(
-                ct => PollAsync(id, platform, ct),
-                trigger,
-                _pollingTimeout,
-                scheduler);
-            
-            return stream
-                .WhereAwait(async post =>
+            async Task<bool> Filter(Post post)
+            {
+                try
                 {
-                    try
-                    {
-                        return await _filter(post, platform);
-                    }
-                    catch(Exception e)
-                    {
-                        _logger.LogError(e, "Failed to filter post {}", post.Url);
-                        return false;
-                    }
-                }); // Apply filter
+                    return await _filter(post, platform);
+                }
+                catch (Exception e)
+                {
+                    _logger.LogError(e, "Failed to filter post {}", post.Url);
+                    return false;
+                }
+            }
+
+            return new PostStream(
+                interval,
+                _pollingTimeout,
+                scheduler,
+                ct => PollAsync(id, platform, ct),
+                Filter);
         }
 
         private async IAsyncEnumerable<Post> PollAsync(
@@ -140,7 +99,8 @@ namespace Scraper.Net.Stream
             return _service
                 .GetPostsAsync(id, platform, ct)
                 .OrderBy(post => post.CreationDate)
-                .Catch<Post, Exception>(
+                .Do(
+                    _ => { },
                     e => _logger.LogError(e, "Failed to get posts for [{}] {}", platform, id));
         }
     }

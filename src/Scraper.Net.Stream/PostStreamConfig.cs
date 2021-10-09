@@ -2,7 +2,7 @@
 
 namespace Scraper.Net.Stream
 {
-    public class PostsStreamerConfig
+    public class PostStreamConfig
     {
         public int MaxDegreeOfParallelism { get; set; }
 

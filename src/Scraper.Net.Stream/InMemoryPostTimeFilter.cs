@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Scraper.Net.Stream
 {
@@ -7,7 +9,10 @@ namespace Scraper.Net.Stream
     {
         private static readonly Dictionary<string, DateTime> LatestPostsTimes = new();
         
-        public static bool Filter(Post post, string platform)
+        public static async Task<bool> Filter(
+            Post post,
+            string platform,
+            CancellationToken ct = default)
         {
             if (post.CreationDate == null)
             {

@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,12 +11,15 @@ namespace Scraper.Net.Stream.Tests
     [TestClass]
     public class PostsStreamerTests
     {
-        private readonly PostsStreamer _streamer = new(
+        private readonly PostStreamFactory _streamer = new(
             new SinglePostScraperService(),
             (_, _, _) => Task.FromResult(true),
-            new PostsStreamerConfig(),
-            NullLogger<PostsStreamer>.Instance);
-        
+            new PostStreamConfig(),
+            NullLogger<IPostStream>.Instance);
+
+        private readonly TimeSpan _oneInterval = TimeSpan.FromDays(1);
+        private readonly TimeSpan _recurringInterval = TimeSpan.FromMilliseconds(100);
+
         [DataTestMethod]
         [DataRow(50, 1)]
         [DataRow(50, 5)]
@@ -37,10 +40,8 @@ namespace Scraper.Net.Stream.Tests
         [TestMethod]
         public async Task TestIdNotFoundException()
         {
-            TimeSpan interval = TimeSpan.FromSeconds(1);
-
             var obs = _streamer
-                .Stream("noid", "", interval)
+                .Stream("noid", "", _oneInterval)
                 .Take(1);
             
             await Assert.ThrowsExceptionAsync<IdNotFoundException>(async () => await obs);
@@ -49,10 +50,8 @@ namespace Scraper.Net.Stream.Tests
         [TestMethod]
         public async Task TestOneTimeException()
         {
-            TimeSpan interval = TimeSpan.FromSeconds(1);
-
             var obs = _streamer
-                .Stream("onetime", "", interval)
+                .Stream("onetime", "", _recurringInterval)
                 .Take(1);
             
             await obs; // Should not throw an exception 
@@ -61,10 +60,8 @@ namespace Scraper.Net.Stream.Tests
         [TestMethod]
         public async Task TestOneTimeExceptionRecovery()
         {
-            TimeSpan interval = TimeSpan.FromSeconds(1);
-
             var obs = _streamer
-                .Stream("onetime", "", interval)
+                .Stream("onetime", "", _recurringInterval)
                 .Take(2);
             
             await obs; // Should not throw an exception 
@@ -76,21 +73,21 @@ namespace Scraper.Net.Stream.Tests
         [DataRow(-1)]
         public async Task TestMaxDegreeOfParallelism(int max)
         {
-            PostsStreamer streamer = new(
+            PostStreamFactory streamer = new(
                 new SinglePostScraperService(),
                 (_, _, _) => Task.FromResult(true),
-                new PostsStreamerConfig
+                new PostStreamConfig
                 {
                     MaxDegreeOfParallelism = max 
                 },
-                NullLogger<PostsStreamer>.Instance);
+                NullLogger<IPostStream>.Instance);
             
             const int expected = 1;
 
             var post = streamer
-                .Stream("", "", TimeSpan.FromDays(1))
+                .Stream("", "", _oneInterval)
                 .Take(expected)
-                .Timeout(TimeSpan.FromMilliseconds(100))
+                .Timeout(_recurringInterval)
                 .FirstOrDefaultAsync();
             
             Assert.IsNotNull(post);
@@ -99,20 +96,39 @@ namespace Scraper.Net.Stream.Tests
         [TestMethod]
         public async Task TestOrderingByDate()
         {
-            var multipleStreamer = new PostsStreamer(
+            var multipleStreamer = new PostStreamFactory(
                 new MultiplePostsScraperService(),
                 (_, _, _) => Task.FromResult(true),
-                new PostsStreamerConfig(),
-                NullLogger<PostsStreamer>.Instance);
+                new PostStreamConfig(),
+                NullLogger<IPostStream>.Instance);
 
-            IAsyncEnumerable<Post> enumerable = multipleStreamer
-                .Stream("", "", TimeSpan.FromDays(1))
-                .Take(2)
-                .ToAsyncEnumerable();
+            IObservable<Post> observable = multipleStreamer
+                .Stream("", "", _oneInterval);
 
-            Post first = await enumerable.FirstAsync();
-            Post last = await enumerable.LastAsync();
+            Post first = await observable.FirstAsync();
+            Post last = await observable.FirstAsync();
             Assert.IsTrue(first.CreationDate < last.CreationDate);
+        }
+        
+        [TestMethod]
+        public async Task TestSingleSubscription()
+        {
+            var count = 2;
+            
+            var stream = _streamer
+                .Stream("", "", _recurringInterval)
+                .Take(count);
+
+            var subject1 = new Subject<Post>();
+            var subject2 = new Subject<Post>();
+            
+            stream.Subscribe(subject1);
+            stream.Subscribe(subject2);
+
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual((await subject1.FirstAsync()).CreationDate, (await subject2.FirstAsync()).CreationDate);
+            }
         }
     }
 }

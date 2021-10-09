@@ -24,7 +24,10 @@ namespace Scraper.Net.Stream.Tests
                 case "onetime" when _counter++ < 1:
                     throw new InvalidOperationException();
                 default:
-                    return AsyncEnumerable.Repeat(new Post(), 1);
+                    return AsyncEnumerable.Repeat(new Post
+                    {
+                        CreationDate = DateTime.Now
+                    }, 1);
             }
         }
     }
