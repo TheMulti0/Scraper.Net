@@ -90,18 +90,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6a0cab3b62774b1e456cd44b2bedef8a111734f0/apiSpec/new?filename=Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_Post_System_String_.md&amp;value=---%0Auid%3A%20Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/new/a9a94c43a5b5d786b14ade9213e72013db5491cf/apiSpec/new?filename=Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_Post_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6a0cab3b62774b1e456cd44b2bedef8a111734f0/src/Scraper.Net.Stream/InMemoryPostTimeFilter.cs/#L10">View Source</a>
+    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/a9a94c43a5b5d786b14ade9213e72013db5491cf/src/Scraper.Net.Stream/InMemoryPostTimeFilter.cs/#L12">View Source</a>
   </span>
   <a id="Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_" data-uid="Scraper.Net.Stream.InMemoryPostTimeFilter.Filter*"></a>
-  <h4 id="Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_Post_System_String_" data-uid="Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post,System.String)">Filter(Post, String)</h4>
+  <h4 id="Scraper_Net_Stream_InMemoryPostTimeFilter_Filter_Post_System_String_CancellationToken_" data-uid="Scraper.Net.Stream.InMemoryPostTimeFilter.Filter(Post,System.String,CancellationToken)">Filter(Post, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Filter(Post post, string platform)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; Filter(Post post, string platform, CancellationToken ct = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,6 +123,11 @@
         <td><span class="parametername">platform</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">ct</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -135,7 +140,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -148,10 +153,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/6a0cab3b62774b1e456cd44b2bedef8a111734f0/apiSpec/new?filename=Scraper_Net_Stream_InMemoryPostTimeFilter.md&amp;value=---%0Auid%3A%20Scraper.Net.Stream.InMemoryPostTimeFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/new/a9a94c43a5b5d786b14ade9213e72013db5491cf/apiSpec/new?filename=Scraper_Net_Stream_InMemoryPostTimeFilter.md&amp;value=---%0Auid%3A%20Scraper.Net.Stream.InMemoryPostTimeFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/6a0cab3b62774b1e456cd44b2bedef8a111734f0/src/Scraper.Net.Stream/InMemoryPostTimeFilter.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Scraper-Net/Scraper.Net/blob/a9a94c43a5b5d786b14ade9213e72013db5491cf/src/Scraper.Net.Stream/InMemoryPostTimeFilter.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
