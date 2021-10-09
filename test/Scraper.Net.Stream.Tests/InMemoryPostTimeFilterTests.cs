@@ -9,16 +9,16 @@ namespace Scraper.Net.Stream.Tests
     public class InMemoryPostTimeFilterTests
     {
         [TestMethod]
-        public void TestFilter()
+        public async Task TestFilter()
         {
             int year = 2000;
 
             for (int i = 0; i < 3; i++)
             {
-                AssertFilterOfPostWithTime(false, null);
-                AssertFilterOfPostWithTime(true, new DateTime(year, 1, 1));
-                AssertFilterOfPostWithTime(false, new DateTime(year - 1, 1, 1));
-                AssertFilterOfPostWithTime(true, new DateTime(year + 1, 1, 1));
+                await AssertFilterOfPostWithTime(false, null);
+                await AssertFilterOfPostWithTime(true, new DateTime(year, 1, 1));
+                await AssertFilterOfPostWithTime(false, new DateTime(year - 1, 1, 1));
+                await AssertFilterOfPostWithTime(true, new DateTime(year + 1, 1, 1));
 
                 year += 10;
             }
