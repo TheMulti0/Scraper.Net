@@ -1123,6 +1123,19 @@ references:
   commentId: T:Scraper.Net.Stream.IPostStream
   fullName: Scraper.Net.Stream.IPostStream
   nameWithType: IPostStream
+- uid: Scraper.Net.Stream.IPostStream.Posts
+  name: Posts
+  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_Posts
+  commentId: P:Scraper.Net.Stream.IPostStream.Posts
+  fullName: Scraper.Net.Stream.IPostStream.Posts
+  nameWithType: IPostStream.Posts
+- uid: Scraper.Net.Stream.IPostStream.Posts*
+  name: Posts
+  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_Posts_
+  commentId: Overload:Scraper.Net.Stream.IPostStream.Posts
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.IPostStream.Posts
+  nameWithType: IPostStream.Posts
 - uid: Scraper.Net.Stream.IPostStream.UpdateAsync(CancellationToken)
   name: UpdateAsync(CancellationToken)
   href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_UpdateAsync_CancellationToken_
