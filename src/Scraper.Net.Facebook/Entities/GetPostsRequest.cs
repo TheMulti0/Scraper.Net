@@ -6,5 +6,8 @@ namespace Scraper.Net.Facebook
     {
         [JsonPropertyName("pages")]
         public int Pages { get; init; }
+
+        [JsonPropertyName("posts_per_page")]
+        public int PostsPerPage { get; init; }
     }
 }

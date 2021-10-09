@@ -9,6 +9,7 @@ from facebook_scraper import get_posts, set_proxy
 class GetPostsRequest:
     user_id: str
     pages: int
+    posts_per_page: int
     proxy: Optional[str]
     timeout: int
     cookies_filename: Optional[str]
@@ -64,7 +65,8 @@ def get_facebook_posts(request: GetPostsRequest):
         request.user_id,
         pages=request.pages,
         cookies=request.cookies_filename,
-        timeout=request.timeout)
+        timeout=request.timeout,
+        options={"posts_per_page": request.posts_per_page})
 
 
 def serialize(obj):

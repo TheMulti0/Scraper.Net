@@ -33,6 +33,7 @@ namespace Scraper.Net.Facebook.Tests
                 List<Post> posts = await _scraper.GetPostsAsync(User).ToListAsync();
 
                 Assert.IsNotNull(posts);
+                Assert.IsTrue(posts.Any());
                 CollectionAssert.AllItemsAreNotNull(posts);    
             }
             catch (LoginRequiredException)
