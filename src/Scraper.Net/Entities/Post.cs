@@ -17,12 +17,14 @@ namespace Scraper.Net
 
         public bool IsLivestream { get; init; }
 
-        public string AuthorId { get; init; }
+        public PostAuthor Author { get; init; }
+
+        public PostAuthor? OriginalAuthor { get; init; }
 
         public DateTime? CreationDate { get; init; }
 
         public IEnumerable<IMediaItem> MediaItems { get; init; } = Enumerable.Empty<IMediaItem>();
 
-        public Post ReplyPost { get; init; }
+        public Post? ReplyPost { get; init; }
     }
 }

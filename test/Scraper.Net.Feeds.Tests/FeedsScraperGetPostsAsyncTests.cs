@@ -31,7 +31,7 @@ namespace Scraper.Net.Feeds.Tests
             {
                 Assert.IsNotNull(post.Content);
                 Assert.IsNotNull(post.Url);
-                Assert.IsNotNull(post.AuthorId);
+                Assert.IsNotNull(post.Author.Id);
             }
         }
     }

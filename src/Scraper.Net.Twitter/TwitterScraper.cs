@@ -131,16 +131,50 @@ namespace Scraper.Net.Twitter
             string text = tweet.IsRetweet 
                 ? tweet.RetweetedTweet.Text 
                 : tweet.FullText;
-            
+
+            PostType postType = GetPostType(tweet, id);
+            PostAuthor originalAuthor = GetOriginalAuthor(tweet, postType);
+
             return new Post
             {
                 Content = await _textCleaner.CleanTextAsync(text, ct),
-                AuthorId = id,
+                Author = new PostAuthor
+                {
+                    Id = id,
+                    DisplayName = tweet.CreatedBy.Name,
+                    Url = tweet.CreatedBy.Url
+                },
+                OriginalAuthor = originalAuthor,
                 CreationDate = tweet.CreatedAt.DateTime,
                 Url = tweet.Url,
                 MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),
-                Type = GetPostType(tweet, id)
+                Type = postType
             };
+        }
+
+        private static PostAuthor GetOriginalAuthor(ITweet tweet, PostType postType)
+        {
+            switch (postType)
+            {
+                case PostType.Repost:
+                    return new PostAuthor
+                    {
+                        Id = tweet.RetweetedTweet.CreatedBy.ScreenName,
+                        DisplayName = tweet.RetweetedTweet.CreatedBy.Name,
+                        Url = tweet.RetweetedTweet.CreatedBy.Url
+                    };
+                
+                case PostType.Reply:
+                    return new PostAuthor
+                    {
+                        Id = tweet.InReplyToScreenName,
+                        DisplayName = tweet.InReplyToScreenName,
+                        Url = $"{TwitterConstants.TwitterBaseUrl}/{tweet.InReplyToScreenName}"
+                    };
+                
+                default:
+                    return null;
+            }
         }
 
         private static PostType GetPostType(ITweet tweet, string userId)

@@ -39,7 +39,7 @@ namespace Scraper.Net.Youtube
             string id,
             CancellationToken ct = default)
         {
-            Channel channel = await (await _channelScraper).GetChannelFromId(id, ct);
+            Channel channel = await GetChannel(id, ct);
             ChannelSnippet snippet = channel.Snippet;
 
             return new Author
@@ -51,43 +51,57 @@ namespace Scraper.Net.Youtube
             };
         }
 
-        public IAsyncEnumerable<Post> GetPostsAsync(
+        public async IAsyncEnumerable<Post> GetPostsAsync(
             string id,
-            CancellationToken ct = default)
+            [EnumeratorCancellation] CancellationToken ct = default)
         {
-            Post ToPost(Video video)
+            Channel channel = await GetChannel(id, ct);
+            
+            await foreach (Video video in GetFullVideos(channel, ct))
             {
-                VideoSnippet snippet = video.Snippet;
-
-                var url = $"{YoutubeConstants.BaseUrl}/watch?v={video.Id}";
-
-                VideoItem videoItem = GetVideoItem(video, url);
-
-                return new Post
-                {
-                    AuthorId = id,
-                    Content = $"{snippet.Title}\n \n{snippet.Description}",
-                    Url = url,
-                    CreationDate = snippet.PublishedAt,
-                    IsLivestream = snippet.LiveBroadcastContent == "live",
-                    MediaItems = new[]
-                    {
-                        videoItem
-                    }
-                };
+                yield return ToPost(video, id, channel);
             }
+        }
 
-            return GetFullVideos(id, ct)
-                .Select(ToPost);
+        private static Post ToPost(Video video, string id, Channel channel)
+        {
+            VideoSnippet snippet = video.Snippet;
+
+            var channelUrl = $"{YoutubeConstants.BaseUrl}/c/{channel.Snippet.CustomUrl}";
+            var videoUrl = $"{YoutubeConstants.BaseUrl}/watch?v={video.Id}";
+
+            VideoItem videoItem = GetVideoItem(video, videoUrl);
+
+            return new Post
+            {
+                Author = new PostAuthor
+                {
+                    Id = id,
+                    DisplayName = channel.Snippet.Title,
+                    Url = channelUrl
+                },
+                Content = $"{snippet.Title}\n \n{snippet.Description}",
+                Url = videoUrl,
+                CreationDate = snippet.PublishedAt,
+                IsLivestream = snippet.LiveBroadcastContent == "live",
+                MediaItems = new[]
+                {
+                    videoItem
+                }
+            };
+        }
+
+        private async Task<Channel> GetChannel(string id, CancellationToken ct)
+        {
+            ChannelScraper channelScraper = await _channelScraper;
+            
+            return await channelScraper.GetChannelFromId(id, ct);
         }
 
         private async IAsyncEnumerable<Video> GetFullVideos(
-            string id,
+            Channel channel,
             [EnumeratorCancellation] CancellationToken ct)
         {
-            ChannelScraper channelScraper = await _channelScraper;
-            Channel channel = await channelScraper.GetChannelFromId(id, ct);
-
             VideosScraper videosScraper = await _videosScraper;
             var videoIds = await GetVideoIds(videosScraper, channel.Id, ct);
 
