@@ -64,12 +64,15 @@ namespace Scraper.Net.Facebook
 
             using var streamReader = new StreamReader(scriptStream);
 
-            return await streamReader.ReadToEndAsync();
+            string script = await streamReader.ReadToEndAsync();
+            
+            return script.EscapeQuotes();
         }
 
         private static string GetRequestJson(object request)
         {
-            return JsonSerializer.Serialize(request).Replace("\"", "\\\"");
+            return JsonSerializer.Serialize(request)
+                .EscapeQuotes();
         }
 
         private static Process StartProcess(

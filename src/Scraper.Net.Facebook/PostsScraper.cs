@@ -90,6 +90,7 @@ namespace Scraper.Net.Facebook
         {
             UserId = id,
             Pages = _config.MaxPageCount,
+            PostsPerPage = _config.PostsPerPage,
             Proxy = proxy,
             CookiesFileName = _config.CookiesFileName
         };
