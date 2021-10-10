@@ -118,9 +118,17 @@ namespace Scraper.Net.Facebook
 
         private static string GetSharedPostText(FacebookPost post)
         {
-            var regex = new Regex(SharePrefixPattern.Replace("{0}", post.SharedPost.Author.UserName));
+            FacebookSharedPost sharedPost = post.SharedPost;
+            string author = sharedPost.Author.UserName;
 
-            return regex.Replace(post.SharedPost.Text, string.Empty);
+            if (author == null)
+            {
+                return null;
+            }
+            
+            var regex = new Regex(SharePrefixPattern.Replace("{0}", author));
+
+            return regex.Replace(sharedPost.Text, string.Empty);
         }
 
         private static IEnumerable<IMediaItem> GetMediaItems(FacebookPost post)
