@@ -22,7 +22,7 @@ namespace Scraper.Net.Facebook
         public DateTime? Time { get; init; }
         
         [JsonPropertyName("timestamp")]
-        public long UnixTimestamp { get; init; }
+        public long? UnixTimestamp { get; init; }
         
         [JsonPropertyName("post_url")]
         public string PostUrl { get; init; }
