@@ -17,6 +17,10 @@ namespace Scraper.Net.Facebook
     public class FacebookScraper : IPlatformScraper
     {
         private const string SharePrefixPattern = @"‏{0}‏\n‏\d{1,2}‏\s[\w\u0590-\u05FF]+\s·\n";
+        private const string PostHyperlinkPattern = @"\/story\.php\?story_fbid=(?<postId>\d+)&id=\d+";
+
+        private static readonly Regex PostHyperlinkRegex = new Regex(PostHyperlinkPattern);
+        
         private readonly PostsScraper _postsScraper;
         private readonly PageInfoScraper _pageInfoScraper;
 
@@ -72,6 +76,7 @@ namespace Scraper.Net.Facebook
             return new Post
             {
                 Content = CleanText(post),
+                Hyperlinks = GetHyperlinks(post),
                 Author = new PostAuthor
                 {
                     Id = id,
@@ -85,6 +90,33 @@ namespace Scraper.Net.Facebook
                 Type = post.SharedPost == null ? PostType.Post : PostType.Repost,
                 IsLivestream = post.IsLive
             };
+        }
+
+        private static IEnumerable<Hyperlink> GetHyperlinks(FacebookPost post)
+        {
+            bool FilterLink(Link link)
+            {
+                if (link.Text == null)
+                {
+                    return false;
+                }
+
+                Group group = PostHyperlinkRegex
+                    .Match(link.Url)
+                    .Groups["postId"];
+
+                return group.Value != post.Id;
+            }
+
+            Hyperlink ToHyperlink(Link link) => new()
+            {
+                Text = link.Text,
+                Url = $"{FacebookConstants.FacebookBaseUrl}{link.Url}"
+            };
+
+            return post.Links
+                .Where(FilterLink)
+                .Select(ToHyperlink);
         }
 
         private static PostAuthor GetOriginalAuthor(FacebookPost post)

@@ -23,7 +23,7 @@ namespace Scraper.Net.Facebook
                     UserName = raw.UserName
                 },
                 IsLive = raw.IsLive,
-                Link = raw.Link,
+                Links = raw.Links,
                 Images = raw.GetImages().ToArray(),
                 Video = raw.GetVideo(),
                 Stats = new Stats

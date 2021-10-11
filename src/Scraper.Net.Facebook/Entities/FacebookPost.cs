@@ -19,7 +19,7 @@ namespace Scraper.Net.Facebook
 
         public bool IsLive { get; init; }
         
-        public string Link { get; init; }
+        public IEnumerable<Link> Links { get; init; }
 
         public IEnumerable<Image> Images { get; init; }
 

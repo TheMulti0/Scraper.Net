@@ -13,6 +13,8 @@ namespace Scraper.Net
 
         public string Content { get; init; }
 
+        public IEnumerable<Hyperlink> Hyperlinks { get; init; } = Enumerable.Empty<Hyperlink>();
+
         public PostType Type { get; init; }
 
         public bool IsLivestream { get; init; }

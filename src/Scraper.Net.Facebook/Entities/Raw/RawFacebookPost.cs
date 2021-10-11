@@ -36,6 +36,9 @@ namespace Scraper.Net.Facebook
         [JsonPropertyName("link")]
         public string Link { get; init; }
 
+        [JsonPropertyName("links")]
+        public Link[] Links { get; init; }
+
         #region Image
 
         [JsonPropertyName("image")]

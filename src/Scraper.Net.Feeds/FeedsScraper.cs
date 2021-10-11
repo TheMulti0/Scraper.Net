@@ -58,6 +58,11 @@ namespace Scraper.Net.Feeds
             return new()
             {
                 Content = item.Title.Text + "\n \n" + item.Summary.Text,
+                Hyperlinks = item.Links.Where(link => link.Title != null).Select(link => new Hyperlink
+                {
+                    Text = link.Title,
+                    Url = link.GetAbsoluteUri().ToString()
+                }),
                 Author = new PostAuthor
                 {
                     Id = url,
