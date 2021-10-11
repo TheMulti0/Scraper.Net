@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi;
@@ -19,6 +20,9 @@ namespace Scraper.Net.Twitter
         private readonly AsyncLazy<UserScraper> _userScraper;
         private readonly TextCleaner _textCleaner;
         private readonly MediaItemsExtractor _mediaItemsExtractor;
+        
+        private const string TwitterUserNamePattern = @"@(?<userName>[\w\d-_]+)";
+        private static readonly Regex TwitterUserNameRegex = new(TwitterUserNamePattern);
 
         public TwitterScraper(TwitterConfig config)
         {
@@ -110,7 +114,7 @@ namespace Scraper.Net.Twitter
             IAsyncEnumerator<ITweet> enumerator,
             ITweet current)
         {
-            ITweet prev = null;
+            ITweet prev;
 
             do
             {
@@ -132,12 +136,14 @@ namespace Scraper.Net.Twitter
                 ? tweet.RetweetedTweet.Text 
                 : tweet.FullText;
 
+            string content = await _textCleaner.CleanTextAsync(text, ct);
             PostType postType = GetPostType(tweet, id);
             PostAuthor originalAuthor = GetOriginalAuthor(tweet, postType);
-
+            
             return new Post
             {
-                Content = await _textCleaner.CleanTextAsync(text, ct),
+                Content = content,
+                Hyperlinks = GetHyperlinks(content),
                 Author = new PostAuthor
                 {
                     Id = id,
@@ -150,6 +156,27 @@ namespace Scraper.Net.Twitter
                 MediaItems = _mediaItemsExtractor.ExtractMediaItems(tweet),
                 Type = postType
             };
+        }
+
+        private static IEnumerable<Hyperlink> GetHyperlinks(string content)
+        {
+            MatchCollection matches = TwitterUserNameRegex.Matches(content);
+
+            Hyperlink ToHyperlink(Group group)
+            {
+                string userName = group.Value;
+
+                return new Hyperlink
+                {
+                    Text = $"@{userName}",
+                    Url = $"{TwitterConstants.TwitterBaseUrl}/{userName}"
+                };
+            }
+
+            return matches
+                .Select(match => match.Groups["userName"])
+                .Where(group => group.Success)
+                .Select(ToHyperlink);
         }
 
         private static PostAuthor GetOriginalAuthor(ITweet tweet, PostType postType)
