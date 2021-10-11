@@ -104,7 +104,7 @@ namespace Scraper.Net.Facebook
 
         private static string CleanText(FacebookPost post)
         {
-            if (post.SharedPost == null)
+            if (post.SharedPost?.Text == null)
             {
                 return post.EntireText;
             }
@@ -120,15 +120,15 @@ namespace Scraper.Net.Facebook
         {
             FacebookSharedPost sharedPost = post.SharedPost;
             string author = sharedPost.Author.UserName;
+            string text = sharedPost.Text;
 
             if (author == null)
             {
-                return null;
+                return text;
             }
             
             var regex = new Regex(SharePrefixPattern.Replace("{0}", author));
-
-            return regex.Replace(sharedPost.Text, string.Empty);
+            return regex.Replace(text, string.Empty);
         }
 
         private static IEnumerable<IMediaItem> GetMediaItems(FacebookPost post)
