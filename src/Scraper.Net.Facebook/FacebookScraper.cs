@@ -17,9 +17,9 @@ namespace Scraper.Net.Facebook
     public class FacebookScraper : IPlatformScraper
     {
         private const string SharePrefixPattern = @"‏{0}‏\n‏\d{1,2}‏\s[\w\u0590-\u05FF]+\s·\n";
-        private const string PostHyperlinkPattern = @"\/story\.php\?story_fbid=(?<postId>\d+)&id=\d+";
+        private const string PostHyperlinkPattern = @"\/story\.php\?story_fbid=(?<postId>\d+)";
 
-        private static readonly Regex PostHyperlinkRegex = new Regex(PostHyperlinkPattern);
+        private static readonly Regex PostHyperlinkRegex = new(PostHyperlinkPattern);
         
         private readonly PostsScraper _postsScraper;
         private readonly PageInfoScraper _pageInfoScraper;
