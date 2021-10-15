@@ -9,7 +9,7 @@ namespace Scraper.Net.Stream
     /// </summary>
     public interface IPostStream
     {
-        public DateTime? NextPollTime { get; }
+        IObservable<DateTime?> DueTime { get; }
 
         public IObservable<Post> Posts { get; }
         

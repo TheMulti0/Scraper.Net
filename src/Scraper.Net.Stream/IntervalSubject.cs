@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reactive.Concurrency;
 using System.Reactive.Subjects;
 using System.Threading;
@@ -9,24 +10,21 @@ namespace Scraper.Net.Stream
     internal class IntervalSubject<T> : IConnectableObservable<T>, ISubject<T>
     {
         private readonly Subject<T> _subject = new();
-        
-        private readonly TimeSpan _interval;
+             
         private readonly TimeSpan? _updateTimeout;
         private readonly IScheduler _scheduler;
-        private readonly Func<TimeSpan> _getRemainingSleepTime;
+        private readonly IObservable<DateTime?> _dueTime;
         private readonly Func<IObserver<T>, CancellationToken, Task> _updateAsync;
 
         public IntervalSubject(
-            TimeSpan interval,
             TimeSpan? updateTimeout,
             IScheduler scheduler,
-            Func<TimeSpan> getRemainingSleepTime,
+            IObservable<DateTime?> dueTime,
             Func<IObserver<T>, CancellationToken, Task> updateAsync)
         {
-            _interval = interval;
             _updateTimeout = updateTimeout;
             _scheduler = scheduler;
-            _getRemainingSleepTime = getRemainingSleepTime;
+            _dueTime = dueTime;
             _updateAsync = updateAsync;
         }
 
@@ -36,13 +34,25 @@ namespace Scraper.Net.Stream
             {
                 while (!ct.IsCancellationRequested)
                 {
-                    await s.Sleep(_getRemainingSleepTime(), ct);
+                    IDisposable lastOperation = null;
+                    
+                    await foreach (DateTime? dueTime in _dueTime.ToAsyncEnumerable().WithCancellation(ct))
+                    {
+                        lastOperation?.Dispose();
 
-                    await _updateAsync(_subject, ct.WithTimeout(_updateTimeout));
+                        lastOperation = dueTime == null 
+                            ? _scheduler.ScheduleAsync(OnDueTime) 
+                            : _scheduler.ScheduleAsync((DateTimeOffset) dueTime, OnDueTime);
+                    }
                 }
             }
 
             return _scheduler.ScheduleAsync(Loop);
+        }
+
+        private async Task OnDueTime(IScheduler scheduler, CancellationToken ct)
+        {
+            await _updateAsync(_subject, ct.WithTimeout(_updateTimeout));
         }
 
         public IDisposable Subscribe(IObserver<T> observer) => _subject.Subscribe(observer);

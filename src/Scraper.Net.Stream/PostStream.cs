@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,10 +15,11 @@ namespace Scraper.Net.Stream
         private readonly IntervalSubject<Post> _intervalSubject;
         private readonly TimeSpan _interval;
         private readonly Func<CancellationToken, IAsyncEnumerable<Post>> _pollAsync;
-        
-        public DateTime? NextPollTime { get; private set; }
+        private readonly BehaviorSubject<DateTime?> _dueTime;
 
         public IObservable<Post> Posts { get; }
+
+        public IObservable<DateTime?> DueTime => _dueTime;
 
         public PostStream(
             TimeSpan interval,
@@ -26,13 +28,12 @@ namespace Scraper.Net.Stream
             IScheduler scheduler,
             Func<CancellationToken, IAsyncEnumerable<Post>> pollAsync)
         {
-            NextPollTime = nextPollTime;
+            _dueTime = new BehaviorSubject<DateTime?>(nextPollTime);
 
             _intervalSubject = new IntervalSubject<Post>(
-                interval,
                 pollingTimeout,
                 scheduler ?? Scheduler.Default,
-                GetRemainingSleepTime,
+                _dueTime,
                 async (observer, token) => await UpdateObserverAsync(observer, token).ToListAsync(token));
             
             Posts = _intervalSubject
@@ -40,16 +41,6 @@ namespace Scraper.Net.Stream
 
             _interval = interval;
             _pollAsync = pollAsync;
-        }
-
-        private TimeSpan GetRemainingSleepTime()
-        {
-            if (NextPollTime == null || NextPollTime <= DateTime.Now)
-            {
-                return TimeSpan.Zero;
-            }
-
-            return (DateTime) NextPollTime - DateTime.Now;
         }
 
         public IAsyncEnumerable<Post> UpdateAsync(CancellationToken ct) => UpdateObserverAsync(_intervalSubject, ct);
@@ -75,7 +66,7 @@ namespace Scraper.Net.Stream
                 yield return post;
             }
 
-            NextPollTime = DateTime.Now + _interval;
+            _dueTime.OnNext(DateTime.Now + _interval);
         }
     }
 }
