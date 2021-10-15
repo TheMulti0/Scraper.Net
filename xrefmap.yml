@@ -1136,6 +1136,19 @@ references:
   commentId: T:Scraper.Net.Stream.IPostStream
   fullName: Scraper.Net.Stream.IPostStream
   nameWithType: IPostStream
+- uid: Scraper.Net.Stream.IPostStream.NextPollTime
+  name: NextPollTime
+  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_NextPollTime
+  commentId: P:Scraper.Net.Stream.IPostStream.NextPollTime
+  fullName: Scraper.Net.Stream.IPostStream.NextPollTime
+  nameWithType: IPostStream.NextPollTime
+- uid: Scraper.Net.Stream.IPostStream.NextPollTime*
+  name: NextPollTime
+  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_NextPollTime_
+  commentId: Overload:Scraper.Net.Stream.IPostStream.NextPollTime
+  isSpec: "True"
+  fullName: Scraper.Net.Stream.IPostStream.NextPollTime
+  nameWithType: IPostStream.NextPollTime
 - uid: Scraper.Net.Stream.IPostStream.Posts
   name: Posts
   href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_Posts
@@ -1238,12 +1251,15 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Stream.PostStreamFactory.PostStreamFactory
   nameWithType: PostStreamFactory.PostStreamFactory
-- uid: Scraper.Net.Stream.PostStreamFactory.Stream(System.String,System.String,TimeSpan,IScheduler)
-  name: Stream(String, String, TimeSpan, IScheduler)
-  href: api/Scraper.Net.Stream.PostStreamFactory.html#Scraper_Net_Stream_PostStreamFactory_Stream_System_String_System_String_TimeSpan_IScheduler_
-  commentId: M:Scraper.Net.Stream.PostStreamFactory.Stream(System.String,System.String,TimeSpan,IScheduler)
-  fullName: Scraper.Net.Stream.PostStreamFactory.Stream(System.String, System.String, TimeSpan, IScheduler)
-  nameWithType: PostStreamFactory.Stream(String, String, TimeSpan, IScheduler)
+- uid: Scraper.Net.Stream.PostStreamFactory.Stream(System.String,System.String,TimeSpan,System.Nullable{DateTime},IScheduler)
+  name: Stream(String, String, TimeSpan, Nullable<DateTime>, IScheduler)
+  href: api/Scraper.Net.Stream.PostStreamFactory.html#Scraper_Net_Stream_PostStreamFactory_Stream_System_String_System_String_TimeSpan_System_Nullable_DateTime__IScheduler_
+  commentId: M:Scraper.Net.Stream.PostStreamFactory.Stream(System.String,System.String,TimeSpan,System.Nullable{DateTime},IScheduler)
+  name.vb: Stream(String, String, TimeSpan, Nullable(Of DateTime), IScheduler)
+  fullName: Scraper.Net.Stream.PostStreamFactory.Stream(System.String, System.String, TimeSpan, System.Nullable<DateTime>, IScheduler)
+  fullName.vb: Scraper.Net.Stream.PostStreamFactory.Stream(System.String, System.String, TimeSpan, System.Nullable(Of DateTime), IScheduler)
+  nameWithType: PostStreamFactory.Stream(String, String, TimeSpan, Nullable<DateTime>, IScheduler)
+  nameWithType.vb: PostStreamFactory.Stream(String, String, TimeSpan, Nullable(Of DateTime), IScheduler)
 - uid: Scraper.Net.Stream.PostStreamFactory.Stream*
   name: Stream
   href: api/Scraper.Net.Stream.PostStreamFactory.html#Scraper_Net_Stream_PostStreamFactory_Stream_
