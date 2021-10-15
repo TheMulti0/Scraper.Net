@@ -1136,19 +1136,19 @@ references:
   commentId: T:Scraper.Net.Stream.IPostStream
   fullName: Scraper.Net.Stream.IPostStream
   nameWithType: IPostStream
-- uid: Scraper.Net.Stream.IPostStream.NextPollTime
-  name: NextPollTime
-  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_NextPollTime
-  commentId: P:Scraper.Net.Stream.IPostStream.NextPollTime
-  fullName: Scraper.Net.Stream.IPostStream.NextPollTime
-  nameWithType: IPostStream.NextPollTime
-- uid: Scraper.Net.Stream.IPostStream.NextPollTime*
-  name: NextPollTime
-  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_NextPollTime_
-  commentId: Overload:Scraper.Net.Stream.IPostStream.NextPollTime
+- uid: Scraper.Net.Stream.IPostStream.DueTime
+  name: DueTime
+  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_DueTime
+  commentId: P:Scraper.Net.Stream.IPostStream.DueTime
+  fullName: Scraper.Net.Stream.IPostStream.DueTime
+  nameWithType: IPostStream.DueTime
+- uid: Scraper.Net.Stream.IPostStream.DueTime*
+  name: DueTime
+  href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_DueTime_
+  commentId: Overload:Scraper.Net.Stream.IPostStream.DueTime
   isSpec: "True"
-  fullName: Scraper.Net.Stream.IPostStream.NextPollTime
-  nameWithType: IPostStream.NextPollTime
+  fullName: Scraper.Net.Stream.IPostStream.DueTime
+  nameWithType: IPostStream.DueTime
 - uid: Scraper.Net.Stream.IPostStream.Posts
   name: Posts
   href: api/Scraper.Net.Stream.IPostStream.html#Scraper_Net_Stream_IPostStream_Posts
