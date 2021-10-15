@@ -12,30 +12,46 @@ namespace Scraper.Net.Stream
     internal class PostStream : IPostStream
     {
         private readonly IntervalSubject<Post> _intervalSubject;
+        private readonly TimeSpan _interval;
         private readonly Func<CancellationToken, IAsyncEnumerable<Post>> _pollAsync;
+        
+        public DateTime? NextPollTime { get; private set; }
 
         public IObservable<Post> Posts { get; }
 
         public PostStream(
             TimeSpan interval,
             TimeSpan? pollingTimeout,
+            DateTime? nextPollTime,
             IScheduler scheduler,
             Func<CancellationToken, IAsyncEnumerable<Post>> pollAsync,
             Func<Post, Task<bool>> filter)
         {
-            scheduler ??= Scheduler.Default;
-            
+            NextPollTime = nextPollTime;
+
             _intervalSubject = new IntervalSubject<Post>(
                 interval,
                 pollingTimeout,
-                scheduler,
+                scheduler ?? Scheduler.Default,
+                GetRemainingSleepTime,
                 async (observer, token) => await UpdateObserverAsync(observer, token).ToListAsync(token));
             
             Posts = _intervalSubject
                 .RefCount()
                 .WhereAwait(filter);
 
+            _interval = interval;
             _pollAsync = pollAsync;
+        }
+
+        private TimeSpan GetRemainingSleepTime()
+        {
+            if (NextPollTime == null || NextPollTime <= DateTime.Now)
+            {
+                return TimeSpan.Zero;
+            }
+
+            return (DateTime) NextPollTime - DateTime.Now;
         }
 
         public IAsyncEnumerable<Post> UpdateAsync(CancellationToken ct) => UpdateObserverAsync(_intervalSubject, ct);
@@ -60,6 +76,8 @@ namespace Scraper.Net.Stream
 
                 yield return post;
             }
+
+            NextPollTime = DateTime.Now + _interval;
         }
     }
 }

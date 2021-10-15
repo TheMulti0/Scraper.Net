@@ -2,7 +2,7 @@
 
     <PropertyGroup>
       <TargetFramework>net5.0</TargetFramework>
-      <Version>0.2.1</Version>
+      <Version>0.2.2</Version>
       <Title>Scraper.Net.Stream</Title>
       <Authors>TheMulti0</Authors>
       <RepositoryUrl>https://github.com/TheMulti0/Scraper.Net</RepositoryUrl>

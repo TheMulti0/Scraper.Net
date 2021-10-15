@@ -9,21 +9,25 @@ namespace Scraper.Net.Stream
     internal class IntervalSubject<T> : IConnectableObservable<T>, ISubject<T>
     {
         private readonly Subject<T> _subject = new();
-        private readonly Func<IObserver<T>, CancellationToken, Task> _update;
+        
         private readonly TimeSpan _interval;
         private readonly TimeSpan? _updateTimeout;
         private readonly IScheduler _scheduler;
+        private readonly Func<TimeSpan> _getRemainingSleepTime;
+        private readonly Func<IObserver<T>, CancellationToken, Task> _updateAsync;
 
         public IntervalSubject(
             TimeSpan interval,
             TimeSpan? updateTimeout,
             IScheduler scheduler,
-            Func<IObserver<T>, CancellationToken, Task> update)
+            Func<TimeSpan> getRemainingSleepTime,
+            Func<IObserver<T>, CancellationToken, Task> updateAsync)
         {
-            _update = update;
             _interval = interval;
             _updateTimeout = updateTimeout;
             _scheduler = scheduler;
+            _getRemainingSleepTime = getRemainingSleepTime;
+            _updateAsync = updateAsync;
         }
 
         public IDisposable Connect()
@@ -32,9 +36,9 @@ namespace Scraper.Net.Stream
             {
                 while (!ct.IsCancellationRequested)
                 {
-                    await _update(_subject, ct.WithTimeout(_updateTimeout));
+                    await s.Sleep(_getRemainingSleepTime(), ct);
 
-                    await s.Sleep(_interval, ct);
+                    await _updateAsync(_subject, ct.WithTimeout(_updateTimeout));
                 }
             }
 

@@ -43,6 +43,7 @@ namespace Scraper.Net.Stream
             string id,
             string platform,
             TimeSpan interval,
+            DateTime? nextPollTime = null,
             IScheduler scheduler = null)
         {
             async Task<bool> Filter(Post post)
@@ -61,6 +62,7 @@ namespace Scraper.Net.Stream
             return new PostStream(
                 interval,
                 _pollingTimeout,
+                nextPollTime,
                 scheduler,
                 ct => PollAsync(id, platform, ct),
                 Filter);
