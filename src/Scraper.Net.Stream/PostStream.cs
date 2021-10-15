@@ -24,8 +24,7 @@ namespace Scraper.Net.Stream
             TimeSpan? pollingTimeout,
             DateTime? nextPollTime,
             IScheduler scheduler,
-            Func<CancellationToken, IAsyncEnumerable<Post>> pollAsync,
-            Func<Post, Task<bool>> filter)
+            Func<CancellationToken, IAsyncEnumerable<Post>> pollAsync)
         {
             NextPollTime = nextPollTime;
 
@@ -37,8 +36,7 @@ namespace Scraper.Net.Stream
                 async (observer, token) => await UpdateObserverAsync(observer, token).ToListAsync(token));
             
             Posts = _intervalSubject
-                .RefCount()
-                .WhereAwait(filter);
+                .RefCount();
 
             _interval = interval;
             _pollAsync = pollAsync;

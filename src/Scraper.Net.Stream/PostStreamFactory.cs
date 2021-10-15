@@ -46,7 +46,7 @@ namespace Scraper.Net.Stream
             DateTime? nextPollTime = null,
             IScheduler scheduler = null)
         {
-            async Task<bool> Filter(Post post)
+            async ValueTask<bool> Filter(Post post)
             {
                 try
                 {
@@ -64,13 +64,13 @@ namespace Scraper.Net.Stream
                 _pollingTimeout,
                 nextPollTime,
                 scheduler,
-                ct => PollAsync(id, platform, ct),
-                Filter);
+                ct => PollAsync(id, platform, Filter, ct));
         }
 
         private async IAsyncEnumerable<Post> PollAsync(
             string id,
             string platform,
+            Func<Post, ValueTask<bool>> filter,
             [EnumeratorCancellation] CancellationToken ct)
         {
             await (_semaphore?.WaitAsync(ct) ?? Task.CompletedTask);
@@ -79,7 +79,7 @@ namespace Scraper.Net.Stream
             {
                 _logger.LogInformation("Beginning to scrape [{}] {}", platform, id);
 
-                IAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct);
+                IAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct).TakeWhileAwait(filter);
                 await foreach (Post post in posts.WithCancellation(ct))
                 {
                     yield return post;
