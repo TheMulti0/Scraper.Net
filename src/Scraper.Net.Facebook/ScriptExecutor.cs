@@ -14,6 +14,7 @@ namespace Scraper.Net.Facebook
     internal class ScriptExecutor
     {
         private readonly Dictionary<string, string> _scripts = new();
+        private readonly SemaphoreSlim _semaphore = new(1, 1);
         private readonly ILogger<ScriptExecutor> _logger;
 
         public ScriptExecutor(ILogger<ScriptExecutor> logger)
@@ -27,7 +28,7 @@ namespace Scraper.Net.Facebook
             TRequest request,
             [EnumeratorCancellation] CancellationToken ct = default) where TRequest : Request
         {
-            string script = await GetScriptAsync(scriptName);
+            string script = await GetScriptAsync(scriptName, ct);
 
             Process process = StartProcess(executablePath, script, GetRequestJson(request), ct);
             process.StandardError().Subscribe(Log(scriptName, request.UserId), ct);
@@ -41,18 +42,27 @@ namespace Scraper.Net.Facebook
             }
         }
 
-        private async Task<string> GetScriptAsync(string scriptName)
+        private async Task<string> GetScriptAsync(string scriptName, CancellationToken ct)
         {
-            if (_scripts.ContainsKey(scriptName))
+            await _semaphore.WaitAsync(ct);
+
+            try
             {
-                return _scripts[scriptName];
+                if (_scripts.ContainsKey(scriptName))
+                {
+                    return _scripts[scriptName];
+                }
+            
+                string script = await GetScriptFromResourcesAsync(scriptName);
+            
+                _scripts.Add(scriptName, script);
+            
+                return script;
             }
-            
-            string script = await GetScriptFromResourcesAsync(scriptName);
-            
-            _scripts.Add(scriptName, script);
-            
-            return script;
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
         private static async Task<string> GetScriptFromResourcesAsync(string scriptName)
