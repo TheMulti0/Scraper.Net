@@ -79,7 +79,7 @@ namespace Scraper.Net.Stream
             {
                 _logger.LogInformation("Beginning to scrape [{}] {}", platform, id);
 
-                IAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct).TakeWhileAwait(filter);
+                IAsyncEnumerable<Post> posts = GetPostsAsync(id, platform, ct).WhereAwait(filter);
                 await foreach (Post post in posts.WithCancellation(ct))
                 {
                     yield return post;
