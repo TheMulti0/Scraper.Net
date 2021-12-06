@@ -11,7 +11,7 @@ namespace Scraper.Net.Facebook.Tests
     [TestClass]
     public class FacebookScraperGetPostsAsyncTests
     {
-        private const string User = "NaftaliBennett";
+        private const string User = "yomtovkalfon";
         private static FacebookScraper _scraper;
 
         [ClassInitialize]

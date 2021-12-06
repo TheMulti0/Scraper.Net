@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "PostsListener.Client.Sample": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
