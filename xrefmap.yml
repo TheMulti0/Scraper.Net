@@ -13,9 +13,1620 @@ references:
 - uid: articles.introduction
   name: Introduction
   href: articles/introduction.html
+- uid: PostsListener
+  name: PostsListener
+  href: api/PostsListener.html
+  commentId: N:PostsListener
+  fullName: PostsListener
+  nameWithType: PostsListener
+- uid: PostsListener.AddOrUpdateNewPostSubscriptionConsumer
+  name: AddOrUpdateNewPostSubscriptionConsumer
+  href: api/PostsListener.AddOrUpdateNewPostSubscriptionConsumer.html
+  commentId: T:PostsListener.AddOrUpdateNewPostSubscriptionConsumer
+  fullName: PostsListener.AddOrUpdateNewPostSubscriptionConsumer
+  nameWithType: AddOrUpdateNewPostSubscriptionConsumer
+- uid: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.#ctor(PostsListener.ISubscriptionsManager,ILogger{PostsListener.AddOrUpdateNewPostSubscriptionConsumer})
+  name: AddOrUpdateNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger<AddOrUpdateNewPostSubscriptionConsumer>)
+  href: api/PostsListener.AddOrUpdateNewPostSubscriptionConsumer.html#PostsListener_AddOrUpdateNewPostSubscriptionConsumer__ctor_PostsListener_ISubscriptionsManager_ILogger_PostsListener_AddOrUpdateNewPostSubscriptionConsumer__
+  commentId: M:PostsListener.AddOrUpdateNewPostSubscriptionConsumer.#ctor(PostsListener.ISubscriptionsManager,ILogger{PostsListener.AddOrUpdateNewPostSubscriptionConsumer})
+  name.vb: AddOrUpdateNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger(Of AddOrUpdateNewPostSubscriptionConsumer))
+  fullName: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.AddOrUpdateNewPostSubscriptionConsumer(PostsListener.ISubscriptionsManager, ILogger<PostsListener.AddOrUpdateNewPostSubscriptionConsumer>)
+  fullName.vb: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.AddOrUpdateNewPostSubscriptionConsumer(PostsListener.ISubscriptionsManager, ILogger(Of PostsListener.AddOrUpdateNewPostSubscriptionConsumer))
+  nameWithType: AddOrUpdateNewPostSubscriptionConsumer.AddOrUpdateNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger<AddOrUpdateNewPostSubscriptionConsumer>)
+  nameWithType.vb: AddOrUpdateNewPostSubscriptionConsumer.AddOrUpdateNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger(Of AddOrUpdateNewPostSubscriptionConsumer))
+- uid: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.#ctor*
+  name: AddOrUpdateNewPostSubscriptionConsumer
+  href: api/PostsListener.AddOrUpdateNewPostSubscriptionConsumer.html#PostsListener_AddOrUpdateNewPostSubscriptionConsumer__ctor_
+  commentId: Overload:PostsListener.AddOrUpdateNewPostSubscriptionConsumer.#ctor
+  isSpec: "True"
+  fullName: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.AddOrUpdateNewPostSubscriptionConsumer
+  nameWithType: AddOrUpdateNewPostSubscriptionConsumer.AddOrUpdateNewPostSubscriptionConsumer
+- uid: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume(ConsumeContext{AddOrUpdateNewPostSubscription})
+  name: Consume(ConsumeContext<AddOrUpdateNewPostSubscription>)
+  href: api/PostsListener.AddOrUpdateNewPostSubscriptionConsumer.html#PostsListener_AddOrUpdateNewPostSubscriptionConsumer_Consume_ConsumeContext_AddOrUpdateNewPostSubscription__
+  commentId: M:PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume(ConsumeContext{AddOrUpdateNewPostSubscription})
+  name.vb: Consume(ConsumeContext(Of AddOrUpdateNewPostSubscription))
+  fullName: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume(ConsumeContext<AddOrUpdateNewPostSubscription>)
+  fullName.vb: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume(ConsumeContext(Of AddOrUpdateNewPostSubscription))
+  nameWithType: AddOrUpdateNewPostSubscriptionConsumer.Consume(ConsumeContext<AddOrUpdateNewPostSubscription>)
+  nameWithType.vb: AddOrUpdateNewPostSubscriptionConsumer.Consume(ConsumeContext(Of AddOrUpdateNewPostSubscription))
+- uid: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume*
+  name: Consume
+  href: api/PostsListener.AddOrUpdateNewPostSubscriptionConsumer.html#PostsListener_AddOrUpdateNewPostSubscriptionConsumer_Consume_
+  commentId: Overload:PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume
+  isSpec: "True"
+  fullName: PostsListener.AddOrUpdateNewPostSubscriptionConsumer.Consume
+  nameWithType: AddOrUpdateNewPostSubscriptionConsumer.Consume
+- uid: PostsListener.Client
+  name: PostsListener.Client
+  href: api/PostsListener.Client.html
+  commentId: N:PostsListener.Client
+  fullName: PostsListener.Client
+  nameWithType: PostsListener.Client
+- uid: PostsListener.Client.INewPostSubscriptionsClient
+  name: INewPostSubscriptionsClient
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html
+  commentId: T:PostsListener.Client.INewPostSubscriptionsClient
+  fullName: PostsListener.Client.INewPostSubscriptionsClient
+  nameWithType: INewPostSubscriptionsClient
+- uid: PostsListener.Client.INewPostSubscriptionsClient.AddOrUpdateSubscription(System.String,System.String,TimeSpan,DateTime,CancellationToken)
+  name: AddOrUpdateSubscription(String, String, TimeSpan, DateTime, CancellationToken)
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_AddOrUpdateSubscription_System_String_System_String_TimeSpan_DateTime_CancellationToken_
+  commentId: M:PostsListener.Client.INewPostSubscriptionsClient.AddOrUpdateSubscription(System.String,System.String,TimeSpan,DateTime,CancellationToken)
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.AddOrUpdateSubscription(System.String, System.String, TimeSpan, DateTime, CancellationToken)
+  nameWithType: INewPostSubscriptionsClient.AddOrUpdateSubscription(String, String, TimeSpan, DateTime, CancellationToken)
+- uid: PostsListener.Client.INewPostSubscriptionsClient.AddOrUpdateSubscription*
+  name: AddOrUpdateSubscription
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_AddOrUpdateSubscription_
+  commentId: Overload:PostsListener.Client.INewPostSubscriptionsClient.AddOrUpdateSubscription
+  isSpec: "True"
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.AddOrUpdateSubscription
+  nameWithType: INewPostSubscriptionsClient.AddOrUpdateSubscription
+- uid: PostsListener.Client.INewPostSubscriptionsClient.GetSubscriptionsAsync(CancellationToken)
+  name: GetSubscriptionsAsync(CancellationToken)
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_GetSubscriptionsAsync_CancellationToken_
+  commentId: M:PostsListener.Client.INewPostSubscriptionsClient.GetSubscriptionsAsync(CancellationToken)
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.GetSubscriptionsAsync(CancellationToken)
+  nameWithType: INewPostSubscriptionsClient.GetSubscriptionsAsync(CancellationToken)
+- uid: PostsListener.Client.INewPostSubscriptionsClient.GetSubscriptionsAsync*
+  name: GetSubscriptionsAsync
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_GetSubscriptionsAsync_
+  commentId: Overload:PostsListener.Client.INewPostSubscriptionsClient.GetSubscriptionsAsync
+  isSpec: "True"
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.GetSubscriptionsAsync
+  nameWithType: INewPostSubscriptionsClient.GetSubscriptionsAsync
+- uid: PostsListener.Client.INewPostSubscriptionsClient.RemoveSubscription(System.String,System.String,CancellationToken)
+  name: RemoveSubscription(String, String, CancellationToken)
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_RemoveSubscription_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.Client.INewPostSubscriptionsClient.RemoveSubscription(System.String,System.String,CancellationToken)
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.RemoveSubscription(System.String, System.String, CancellationToken)
+  nameWithType: INewPostSubscriptionsClient.RemoveSubscription(String, String, CancellationToken)
+- uid: PostsListener.Client.INewPostSubscriptionsClient.RemoveSubscription*
+  name: RemoveSubscription
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_RemoveSubscription_
+  commentId: Overload:PostsListener.Client.INewPostSubscriptionsClient.RemoveSubscription
+  isSpec: "True"
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.RemoveSubscription
+  nameWithType: INewPostSubscriptionsClient.RemoveSubscription
+- uid: PostsListener.Client.INewPostSubscriptionsClient.TriggerPoll(System.String,System.String,CancellationToken)
+  name: TriggerPoll(String, String, CancellationToken)
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_TriggerPoll_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.Client.INewPostSubscriptionsClient.TriggerPoll(System.String,System.String,CancellationToken)
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.TriggerPoll(System.String, System.String, CancellationToken)
+  nameWithType: INewPostSubscriptionsClient.TriggerPoll(String, String, CancellationToken)
+- uid: PostsListener.Client.INewPostSubscriptionsClient.TriggerPoll*
+  name: TriggerPoll
+  href: api/PostsListener.Client.INewPostSubscriptionsClient.html#PostsListener_Client_INewPostSubscriptionsClient_TriggerPoll_
+  commentId: Overload:PostsListener.Client.INewPostSubscriptionsClient.TriggerPoll
+  isSpec: "True"
+  fullName: PostsListener.Client.INewPostSubscriptionsClient.TriggerPoll
+  nameWithType: INewPostSubscriptionsClient.TriggerPoll
+- uid: PostsListener.Client.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/PostsListener.Client.ServiceCollectionExtensions.html
+  commentId: T:PostsListener.Client.ServiceCollectionExtensions
+  fullName: PostsListener.Client.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient(IServiceCollectionBusConfigurator)
+  name: AddPostsListenerClient(IServiceCollectionBusConfigurator)
+  href: api/PostsListener.Client.ServiceCollectionExtensions.html#PostsListener_Client_ServiceCollectionExtensions_AddPostsListenerClient_IServiceCollectionBusConfigurator_
+  commentId: M:PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient(IServiceCollectionBusConfigurator)
+  fullName: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient(IServiceCollectionBusConfigurator)
+  nameWithType: ServiceCollectionExtensions.AddPostsListenerClient(IServiceCollectionBusConfigurator)
+- uid: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient*
+  name: AddPostsListenerClient
+  href: api/PostsListener.Client.ServiceCollectionExtensions.html#PostsListener_Client_ServiceCollectionExtensions_AddPostsListenerClient_
+  commentId: Overload:PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient
+  isSpec: "True"
+  fullName: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient
+  nameWithType: ServiceCollectionExtensions.AddPostsListenerClient
+- uid: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient``1(IServiceCollectionBusConfigurator,System.Int32)
+  name: AddPostsListenerClient<TNewPostConsumer>(IServiceCollectionBusConfigurator, Int32)
+  href: api/PostsListener.Client.ServiceCollectionExtensions.html#PostsListener_Client_ServiceCollectionExtensions_AddPostsListenerClient__1_IServiceCollectionBusConfigurator_System_Int32_
+  commentId: M:PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient``1(IServiceCollectionBusConfigurator,System.Int32)
+  name.vb: AddPostsListenerClient(Of TNewPostConsumer)(IServiceCollectionBusConfigurator, Int32)
+  fullName: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient<TNewPostConsumer>(IServiceCollectionBusConfigurator, System.Int32)
+  fullName.vb: PostsListener.Client.ServiceCollectionExtensions.AddPostsListenerClient(Of TNewPostConsumer)(IServiceCollectionBusConfigurator, System.Int32)
+  nameWithType: ServiceCollectionExtensions.AddPostsListenerClient<TNewPostConsumer>(IServiceCollectionBusConfigurator, Int32)
+  nameWithType.vb: ServiceCollectionExtensions.AddPostsListenerClient(Of TNewPostConsumer)(IServiceCollectionBusConfigurator, Int32)
+- uid: PostsListener.GetNewPostSubscriptionsConsumer
+  name: GetNewPostSubscriptionsConsumer
+  href: api/PostsListener.GetNewPostSubscriptionsConsumer.html
+  commentId: T:PostsListener.GetNewPostSubscriptionsConsumer
+  fullName: PostsListener.GetNewPostSubscriptionsConsumer
+  nameWithType: GetNewPostSubscriptionsConsumer
+- uid: PostsListener.GetNewPostSubscriptionsConsumer.#ctor(PostsListener.ISubscriptionsManager)
+  name: GetNewPostSubscriptionsConsumer(ISubscriptionsManager)
+  href: api/PostsListener.GetNewPostSubscriptionsConsumer.html#PostsListener_GetNewPostSubscriptionsConsumer__ctor_PostsListener_ISubscriptionsManager_
+  commentId: M:PostsListener.GetNewPostSubscriptionsConsumer.#ctor(PostsListener.ISubscriptionsManager)
+  fullName: PostsListener.GetNewPostSubscriptionsConsumer.GetNewPostSubscriptionsConsumer(PostsListener.ISubscriptionsManager)
+  nameWithType: GetNewPostSubscriptionsConsumer.GetNewPostSubscriptionsConsumer(ISubscriptionsManager)
+- uid: PostsListener.GetNewPostSubscriptionsConsumer.#ctor*
+  name: GetNewPostSubscriptionsConsumer
+  href: api/PostsListener.GetNewPostSubscriptionsConsumer.html#PostsListener_GetNewPostSubscriptionsConsumer__ctor_
+  commentId: Overload:PostsListener.GetNewPostSubscriptionsConsumer.#ctor
+  isSpec: "True"
+  fullName: PostsListener.GetNewPostSubscriptionsConsumer.GetNewPostSubscriptionsConsumer
+  nameWithType: GetNewPostSubscriptionsConsumer.GetNewPostSubscriptionsConsumer
+- uid: PostsListener.GetNewPostSubscriptionsConsumer.Consume(ConsumeContext{GetNewPostSubscriptions})
+  name: Consume(ConsumeContext<GetNewPostSubscriptions>)
+  href: api/PostsListener.GetNewPostSubscriptionsConsumer.html#PostsListener_GetNewPostSubscriptionsConsumer_Consume_ConsumeContext_GetNewPostSubscriptions__
+  commentId: M:PostsListener.GetNewPostSubscriptionsConsumer.Consume(ConsumeContext{GetNewPostSubscriptions})
+  name.vb: Consume(ConsumeContext(Of GetNewPostSubscriptions))
+  fullName: PostsListener.GetNewPostSubscriptionsConsumer.Consume(ConsumeContext<GetNewPostSubscriptions>)
+  fullName.vb: PostsListener.GetNewPostSubscriptionsConsumer.Consume(ConsumeContext(Of GetNewPostSubscriptions))
+  nameWithType: GetNewPostSubscriptionsConsumer.Consume(ConsumeContext<GetNewPostSubscriptions>)
+  nameWithType.vb: GetNewPostSubscriptionsConsumer.Consume(ConsumeContext(Of GetNewPostSubscriptions))
+- uid: PostsListener.GetNewPostSubscriptionsConsumer.Consume*
+  name: Consume
+  href: api/PostsListener.GetNewPostSubscriptionsConsumer.html#PostsListener_GetNewPostSubscriptionsConsumer_Consume_
+  commentId: Overload:PostsListener.GetNewPostSubscriptionsConsumer.Consume
+  isSpec: "True"
+  fullName: PostsListener.GetNewPostSubscriptionsConsumer.Consume
+  nameWithType: GetNewPostSubscriptionsConsumer.Consume
+- uid: PostsListener.ILastPostsPersistence
+  name: ILastPostsPersistence
+  href: api/PostsListener.ILastPostsPersistence.html
+  commentId: T:PostsListener.ILastPostsPersistence
+  fullName: PostsListener.ILastPostsPersistence
+  nameWithType: ILastPostsPersistence
+- uid: PostsListener.ILastPostsPersistence.AddOrUpdateAsync(System.String,System.String,DateTime,CancellationToken)
+  name: AddOrUpdateAsync(String, String, DateTime, CancellationToken)
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_AddOrUpdateAsync_System_String_System_String_DateTime_CancellationToken_
+  commentId: M:PostsListener.ILastPostsPersistence.AddOrUpdateAsync(System.String,System.String,DateTime,CancellationToken)
+  fullName: PostsListener.ILastPostsPersistence.AddOrUpdateAsync(System.String, System.String, DateTime, CancellationToken)
+  nameWithType: ILastPostsPersistence.AddOrUpdateAsync(String, String, DateTime, CancellationToken)
+- uid: PostsListener.ILastPostsPersistence.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.ILastPostsPersistence.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.ILastPostsPersistence.AddOrUpdateAsync
+  nameWithType: ILastPostsPersistence.AddOrUpdateAsync
+- uid: PostsListener.ILastPostsPersistence.GetAsync(CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_GetAsync_CancellationToken_
+  commentId: M:PostsListener.ILastPostsPersistence.GetAsync(CancellationToken)
+  fullName: PostsListener.ILastPostsPersistence.GetAsync(CancellationToken)
+  nameWithType: ILastPostsPersistence.GetAsync(CancellationToken)
+- uid: PostsListener.ILastPostsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  name: GetAsync(String, String, CancellationToken)
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_GetAsync_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.ILastPostsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  fullName: PostsListener.ILastPostsPersistence.GetAsync(System.String, System.String, CancellationToken)
+  nameWithType: ILastPostsPersistence.GetAsync(String, String, CancellationToken)
+- uid: PostsListener.ILastPostsPersistence.GetAsync*
+  name: GetAsync
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_GetAsync_
+  commentId: Overload:PostsListener.ILastPostsPersistence.GetAsync
+  isSpec: "True"
+  fullName: PostsListener.ILastPostsPersistence.GetAsync
+  nameWithType: ILastPostsPersistence.GetAsync
+- uid: PostsListener.ILastPostsPersistence.RemoveAsync(LastPost,CancellationToken)
+  name: RemoveAsync(LastPost, CancellationToken)
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_RemoveAsync_LastPost_CancellationToken_
+  commentId: M:PostsListener.ILastPostsPersistence.RemoveAsync(LastPost,CancellationToken)
+  fullName: PostsListener.ILastPostsPersistence.RemoveAsync(LastPost, CancellationToken)
+  nameWithType: ILastPostsPersistence.RemoveAsync(LastPost, CancellationToken)
+- uid: PostsListener.ILastPostsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.ILastPostsPersistence.html#PostsListener_ILastPostsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.ILastPostsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.ILastPostsPersistence.RemoveAsync
+  nameWithType: ILastPostsPersistence.RemoveAsync
+- uid: PostsListener.InMemoryLastPostsPersistence
+  name: InMemoryLastPostsPersistence
+  href: api/PostsListener.InMemoryLastPostsPersistence.html
+  commentId: T:PostsListener.InMemoryLastPostsPersistence
+  fullName: PostsListener.InMemoryLastPostsPersistence
+  nameWithType: InMemoryLastPostsPersistence
+- uid: PostsListener.InMemoryLastPostsPersistence.#ctor(ILogger{PostsListener.InMemoryLastPostsPersistence})
+  name: InMemoryLastPostsPersistence(ILogger<InMemoryLastPostsPersistence>)
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence__ctor_ILogger_PostsListener_InMemoryLastPostsPersistence__
+  commentId: M:PostsListener.InMemoryLastPostsPersistence.#ctor(ILogger{PostsListener.InMemoryLastPostsPersistence})
+  name.vb: InMemoryLastPostsPersistence(ILogger(Of InMemoryLastPostsPersistence))
+  fullName: PostsListener.InMemoryLastPostsPersistence.InMemoryLastPostsPersistence(ILogger<PostsListener.InMemoryLastPostsPersistence>)
+  fullName.vb: PostsListener.InMemoryLastPostsPersistence.InMemoryLastPostsPersistence(ILogger(Of PostsListener.InMemoryLastPostsPersistence))
+  nameWithType: InMemoryLastPostsPersistence.InMemoryLastPostsPersistence(ILogger<InMemoryLastPostsPersistence>)
+  nameWithType.vb: InMemoryLastPostsPersistence.InMemoryLastPostsPersistence(ILogger(Of InMemoryLastPostsPersistence))
+- uid: PostsListener.InMemoryLastPostsPersistence.#ctor*
+  name: InMemoryLastPostsPersistence
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence__ctor_
+  commentId: Overload:PostsListener.InMemoryLastPostsPersistence.#ctor
+  isSpec: "True"
+  fullName: PostsListener.InMemoryLastPostsPersistence.InMemoryLastPostsPersistence
+  nameWithType: InMemoryLastPostsPersistence.InMemoryLastPostsPersistence
+- uid: PostsListener.InMemoryLastPostsPersistence.AddOrUpdateAsync(System.String,System.String,DateTime,CancellationToken)
+  name: AddOrUpdateAsync(String, String, DateTime, CancellationToken)
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_AddOrUpdateAsync_System_String_System_String_DateTime_CancellationToken_
+  commentId: M:PostsListener.InMemoryLastPostsPersistence.AddOrUpdateAsync(System.String,System.String,DateTime,CancellationToken)
+  fullName: PostsListener.InMemoryLastPostsPersistence.AddOrUpdateAsync(System.String, System.String, DateTime, CancellationToken)
+  nameWithType: InMemoryLastPostsPersistence.AddOrUpdateAsync(String, String, DateTime, CancellationToken)
+- uid: PostsListener.InMemoryLastPostsPersistence.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.InMemoryLastPostsPersistence.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemoryLastPostsPersistence.AddOrUpdateAsync
+  nameWithType: InMemoryLastPostsPersistence.AddOrUpdateAsync
+- uid: PostsListener.InMemoryLastPostsPersistence.GetAsync(CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_GetAsync_CancellationToken_
+  commentId: M:PostsListener.InMemoryLastPostsPersistence.GetAsync(CancellationToken)
+  fullName: PostsListener.InMemoryLastPostsPersistence.GetAsync(CancellationToken)
+  nameWithType: InMemoryLastPostsPersistence.GetAsync(CancellationToken)
+- uid: PostsListener.InMemoryLastPostsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  name: GetAsync(String, String, CancellationToken)
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_GetAsync_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.InMemoryLastPostsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  fullName: PostsListener.InMemoryLastPostsPersistence.GetAsync(System.String, System.String, CancellationToken)
+  nameWithType: InMemoryLastPostsPersistence.GetAsync(String, String, CancellationToken)
+- uid: PostsListener.InMemoryLastPostsPersistence.GetAsync*
+  name: GetAsync
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_GetAsync_
+  commentId: Overload:PostsListener.InMemoryLastPostsPersistence.GetAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemoryLastPostsPersistence.GetAsync
+  nameWithType: InMemoryLastPostsPersistence.GetAsync
+- uid: PostsListener.InMemoryLastPostsPersistence.RemoveAsync(LastPost,CancellationToken)
+  name: RemoveAsync(LastPost, CancellationToken)
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_RemoveAsync_LastPost_CancellationToken_
+  commentId: M:PostsListener.InMemoryLastPostsPersistence.RemoveAsync(LastPost,CancellationToken)
+  fullName: PostsListener.InMemoryLastPostsPersistence.RemoveAsync(LastPost, CancellationToken)
+  nameWithType: InMemoryLastPostsPersistence.RemoveAsync(LastPost, CancellationToken)
+- uid: PostsListener.InMemoryLastPostsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.InMemoryLastPostsPersistence.html#PostsListener_InMemoryLastPostsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.InMemoryLastPostsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemoryLastPostsPersistence.RemoveAsync
+  nameWithType: InMemoryLastPostsPersistence.RemoveAsync
+- uid: PostsListener.InMemoryPostUrlsPersistence
+  name: InMemoryPostUrlsPersistence
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html
+  commentId: T:PostsListener.InMemoryPostUrlsPersistence
+  fullName: PostsListener.InMemoryPostUrlsPersistence
+  nameWithType: InMemoryPostUrlsPersistence
+- uid: PostsListener.InMemoryPostUrlsPersistence.#ctor(ILogger{PostsListener.InMemoryPostUrlsPersistence})
+  name: InMemoryPostUrlsPersistence(ILogger<InMemoryPostUrlsPersistence>)
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence__ctor_ILogger_PostsListener_InMemoryPostUrlsPersistence__
+  commentId: M:PostsListener.InMemoryPostUrlsPersistence.#ctor(ILogger{PostsListener.InMemoryPostUrlsPersistence})
+  name.vb: InMemoryPostUrlsPersistence(ILogger(Of InMemoryPostUrlsPersistence))
+  fullName: PostsListener.InMemoryPostUrlsPersistence.InMemoryPostUrlsPersistence(ILogger<PostsListener.InMemoryPostUrlsPersistence>)
+  fullName.vb: PostsListener.InMemoryPostUrlsPersistence.InMemoryPostUrlsPersistence(ILogger(Of PostsListener.InMemoryPostUrlsPersistence))
+  nameWithType: InMemoryPostUrlsPersistence.InMemoryPostUrlsPersistence(ILogger<InMemoryPostUrlsPersistence>)
+  nameWithType.vb: InMemoryPostUrlsPersistence.InMemoryPostUrlsPersistence(ILogger(Of InMemoryPostUrlsPersistence))
+- uid: PostsListener.InMemoryPostUrlsPersistence.#ctor*
+  name: InMemoryPostUrlsPersistence
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence__ctor_
+  commentId: Overload:PostsListener.InMemoryPostUrlsPersistence.#ctor
+  isSpec: "True"
+  fullName: PostsListener.InMemoryPostUrlsPersistence.InMemoryPostUrlsPersistence
+  nameWithType: InMemoryPostUrlsPersistence.InMemoryPostUrlsPersistence
+- uid: PostsListener.InMemoryPostUrlsPersistence.AddAsync(System.String,CancellationToken)
+  name: AddAsync(String, CancellationToken)
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence_AddAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.InMemoryPostUrlsPersistence.AddAsync(System.String,CancellationToken)
+  fullName: PostsListener.InMemoryPostUrlsPersistence.AddAsync(System.String, CancellationToken)
+  nameWithType: InMemoryPostUrlsPersistence.AddAsync(String, CancellationToken)
+- uid: PostsListener.InMemoryPostUrlsPersistence.AddAsync*
+  name: AddAsync
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence_AddAsync_
+  commentId: Overload:PostsListener.InMemoryPostUrlsPersistence.AddAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemoryPostUrlsPersistence.AddAsync
+  nameWithType: InMemoryPostUrlsPersistence.AddAsync
+- uid: PostsListener.InMemoryPostUrlsPersistence.ExistsAsync(System.String,CancellationToken)
+  name: ExistsAsync(String, CancellationToken)
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence_ExistsAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.InMemoryPostUrlsPersistence.ExistsAsync(System.String,CancellationToken)
+  fullName: PostsListener.InMemoryPostUrlsPersistence.ExistsAsync(System.String, CancellationToken)
+  nameWithType: InMemoryPostUrlsPersistence.ExistsAsync(String, CancellationToken)
+- uid: PostsListener.InMemoryPostUrlsPersistence.ExistsAsync*
+  name: ExistsAsync
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence_ExistsAsync_
+  commentId: Overload:PostsListener.InMemoryPostUrlsPersistence.ExistsAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemoryPostUrlsPersistence.ExistsAsync
+  nameWithType: InMemoryPostUrlsPersistence.ExistsAsync
+- uid: PostsListener.InMemoryPostUrlsPersistence.RemoveAsync(System.String,CancellationToken)
+  name: RemoveAsync(String, CancellationToken)
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence_RemoveAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.InMemoryPostUrlsPersistence.RemoveAsync(System.String,CancellationToken)
+  fullName: PostsListener.InMemoryPostUrlsPersistence.RemoveAsync(System.String, CancellationToken)
+  nameWithType: InMemoryPostUrlsPersistence.RemoveAsync(String, CancellationToken)
+- uid: PostsListener.InMemoryPostUrlsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.InMemoryPostUrlsPersistence.html#PostsListener_InMemoryPostUrlsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.InMemoryPostUrlsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemoryPostUrlsPersistence.RemoveAsync
+  nameWithType: InMemoryPostUrlsPersistence.RemoveAsync
+- uid: PostsListener.InMemorySubscriptionsPersistence
+  name: InMemorySubscriptionsPersistence
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html
+  commentId: T:PostsListener.InMemorySubscriptionsPersistence
+  fullName: PostsListener.InMemorySubscriptionsPersistence
+  nameWithType: InMemorySubscriptionsPersistence
+- uid: PostsListener.InMemorySubscriptionsPersistence.#ctor(ILogger{PostsListener.InMemorySubscriptionsPersistence})
+  name: InMemorySubscriptionsPersistence(ILogger<InMemorySubscriptionsPersistence>)
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence__ctor_ILogger_PostsListener_InMemorySubscriptionsPersistence__
+  commentId: M:PostsListener.InMemorySubscriptionsPersistence.#ctor(ILogger{PostsListener.InMemorySubscriptionsPersistence})
+  name.vb: InMemorySubscriptionsPersistence(ILogger(Of InMemorySubscriptionsPersistence))
+  fullName: PostsListener.InMemorySubscriptionsPersistence.InMemorySubscriptionsPersistence(ILogger<PostsListener.InMemorySubscriptionsPersistence>)
+  fullName.vb: PostsListener.InMemorySubscriptionsPersistence.InMemorySubscriptionsPersistence(ILogger(Of PostsListener.InMemorySubscriptionsPersistence))
+  nameWithType: InMemorySubscriptionsPersistence.InMemorySubscriptionsPersistence(ILogger<InMemorySubscriptionsPersistence>)
+  nameWithType.vb: InMemorySubscriptionsPersistence.InMemorySubscriptionsPersistence(ILogger(Of InMemorySubscriptionsPersistence))
+- uid: PostsListener.InMemorySubscriptionsPersistence.#ctor*
+  name: InMemorySubscriptionsPersistence
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence__ctor_
+  commentId: Overload:PostsListener.InMemorySubscriptionsPersistence.#ctor
+  isSpec: "True"
+  fullName: PostsListener.InMemorySubscriptionsPersistence.InMemorySubscriptionsPersistence
+  nameWithType: InMemorySubscriptionsPersistence.InMemorySubscriptionsPersistence
+- uid: PostsListener.InMemorySubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity,CancellationToken)
+  name: AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_AddOrUpdateAsync_SubscriptionEntity_CancellationToken_
+  commentId: M:PostsListener.InMemorySubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity,CancellationToken)
+  fullName: PostsListener.InMemorySubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+  nameWithType: InMemorySubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+- uid: PostsListener.InMemorySubscriptionsPersistence.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.InMemorySubscriptionsPersistence.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemorySubscriptionsPersistence.AddOrUpdateAsync
+  nameWithType: InMemorySubscriptionsPersistence.AddOrUpdateAsync
+- uid: PostsListener.InMemorySubscriptionsPersistence.GetAsync(CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_GetAsync_CancellationToken_
+  commentId: M:PostsListener.InMemorySubscriptionsPersistence.GetAsync(CancellationToken)
+  fullName: PostsListener.InMemorySubscriptionsPersistence.GetAsync(CancellationToken)
+  nameWithType: InMemorySubscriptionsPersistence.GetAsync(CancellationToken)
+- uid: PostsListener.InMemorySubscriptionsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  name: GetAsync(String, String, CancellationToken)
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_GetAsync_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.InMemorySubscriptionsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  fullName: PostsListener.InMemorySubscriptionsPersistence.GetAsync(System.String, System.String, CancellationToken)
+  nameWithType: InMemorySubscriptionsPersistence.GetAsync(String, String, CancellationToken)
+- uid: PostsListener.InMemorySubscriptionsPersistence.GetAsync*
+  name: GetAsync
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_GetAsync_
+  commentId: Overload:PostsListener.InMemorySubscriptionsPersistence.GetAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemorySubscriptionsPersistence.GetAsync
+  nameWithType: InMemorySubscriptionsPersistence.GetAsync
+- uid: PostsListener.InMemorySubscriptionsPersistence.RemoveAsync(SubscriptionEntity,CancellationToken)
+  name: RemoveAsync(SubscriptionEntity, CancellationToken)
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_RemoveAsync_SubscriptionEntity_CancellationToken_
+  commentId: M:PostsListener.InMemorySubscriptionsPersistence.RemoveAsync(SubscriptionEntity,CancellationToken)
+  fullName: PostsListener.InMemorySubscriptionsPersistence.RemoveAsync(SubscriptionEntity, CancellationToken)
+  nameWithType: InMemorySubscriptionsPersistence.RemoveAsync(SubscriptionEntity, CancellationToken)
+- uid: PostsListener.InMemorySubscriptionsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.InMemorySubscriptionsPersistence.html#PostsListener_InMemorySubscriptionsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.InMemorySubscriptionsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.InMemorySubscriptionsPersistence.RemoveAsync
+  nameWithType: InMemorySubscriptionsPersistence.RemoveAsync
+- uid: PostsListener.IPostUrlsPersistence
+  name: IPostUrlsPersistence
+  href: api/PostsListener.IPostUrlsPersistence.html
+  commentId: T:PostsListener.IPostUrlsPersistence
+  fullName: PostsListener.IPostUrlsPersistence
+  nameWithType: IPostUrlsPersistence
+- uid: PostsListener.IPostUrlsPersistence.AddAsync(System.String,CancellationToken)
+  name: AddAsync(String, CancellationToken)
+  href: api/PostsListener.IPostUrlsPersistence.html#PostsListener_IPostUrlsPersistence_AddAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.IPostUrlsPersistence.AddAsync(System.String,CancellationToken)
+  fullName: PostsListener.IPostUrlsPersistence.AddAsync(System.String, CancellationToken)
+  nameWithType: IPostUrlsPersistence.AddAsync(String, CancellationToken)
+- uid: PostsListener.IPostUrlsPersistence.AddAsync*
+  name: AddAsync
+  href: api/PostsListener.IPostUrlsPersistence.html#PostsListener_IPostUrlsPersistence_AddAsync_
+  commentId: Overload:PostsListener.IPostUrlsPersistence.AddAsync
+  isSpec: "True"
+  fullName: PostsListener.IPostUrlsPersistence.AddAsync
+  nameWithType: IPostUrlsPersistence.AddAsync
+- uid: PostsListener.IPostUrlsPersistence.ExistsAsync(System.String,CancellationToken)
+  name: ExistsAsync(String, CancellationToken)
+  href: api/PostsListener.IPostUrlsPersistence.html#PostsListener_IPostUrlsPersistence_ExistsAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.IPostUrlsPersistence.ExistsAsync(System.String,CancellationToken)
+  fullName: PostsListener.IPostUrlsPersistence.ExistsAsync(System.String, CancellationToken)
+  nameWithType: IPostUrlsPersistence.ExistsAsync(String, CancellationToken)
+- uid: PostsListener.IPostUrlsPersistence.ExistsAsync*
+  name: ExistsAsync
+  href: api/PostsListener.IPostUrlsPersistence.html#PostsListener_IPostUrlsPersistence_ExistsAsync_
+  commentId: Overload:PostsListener.IPostUrlsPersistence.ExistsAsync
+  isSpec: "True"
+  fullName: PostsListener.IPostUrlsPersistence.ExistsAsync
+  nameWithType: IPostUrlsPersistence.ExistsAsync
+- uid: PostsListener.IPostUrlsPersistence.RemoveAsync(System.String,CancellationToken)
+  name: RemoveAsync(String, CancellationToken)
+  href: api/PostsListener.IPostUrlsPersistence.html#PostsListener_IPostUrlsPersistence_RemoveAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.IPostUrlsPersistence.RemoveAsync(System.String,CancellationToken)
+  fullName: PostsListener.IPostUrlsPersistence.RemoveAsync(System.String, CancellationToken)
+  nameWithType: IPostUrlsPersistence.RemoveAsync(String, CancellationToken)
+- uid: PostsListener.IPostUrlsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.IPostUrlsPersistence.html#PostsListener_IPostUrlsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.IPostUrlsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.IPostUrlsPersistence.RemoveAsync
+  nameWithType: IPostUrlsPersistence.RemoveAsync
+- uid: PostsListener.ISubscriptionsManager
+  name: ISubscriptionsManager
+  href: api/PostsListener.ISubscriptionsManager.html
+  commentId: T:PostsListener.ISubscriptionsManager
+  fullName: PostsListener.ISubscriptionsManager
+  nameWithType: ISubscriptionsManager
+- uid: PostsListener.ISubscriptionsManager.AddOrUpdateAsync(Subscription,System.Nullable{DateTime},CancellationToken)
+  name: AddOrUpdateAsync(Subscription, Nullable<DateTime>, CancellationToken)
+  href: api/PostsListener.ISubscriptionsManager.html#PostsListener_ISubscriptionsManager_AddOrUpdateAsync_Subscription_System_Nullable_DateTime__CancellationToken_
+  commentId: M:PostsListener.ISubscriptionsManager.AddOrUpdateAsync(Subscription,System.Nullable{DateTime},CancellationToken)
+  name.vb: AddOrUpdateAsync(Subscription, Nullable(Of DateTime), CancellationToken)
+  fullName: PostsListener.ISubscriptionsManager.AddOrUpdateAsync(Subscription, System.Nullable<DateTime>, CancellationToken)
+  fullName.vb: PostsListener.ISubscriptionsManager.AddOrUpdateAsync(Subscription, System.Nullable(Of DateTime), CancellationToken)
+  nameWithType: ISubscriptionsManager.AddOrUpdateAsync(Subscription, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ISubscriptionsManager.AddOrUpdateAsync(Subscription, Nullable(Of DateTime), CancellationToken)
+- uid: PostsListener.ISubscriptionsManager.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.ISubscriptionsManager.html#PostsListener_ISubscriptionsManager_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.ISubscriptionsManager.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.ISubscriptionsManager.AddOrUpdateAsync
+  nameWithType: ISubscriptionsManager.AddOrUpdateAsync
+- uid: PostsListener.ISubscriptionsManager.Get
+  name: Get()
+  href: api/PostsListener.ISubscriptionsManager.html#PostsListener_ISubscriptionsManager_Get
+  commentId: M:PostsListener.ISubscriptionsManager.Get
+  fullName: PostsListener.ISubscriptionsManager.Get()
+  nameWithType: ISubscriptionsManager.Get()
+- uid: PostsListener.ISubscriptionsManager.Get*
+  name: Get
+  href: api/PostsListener.ISubscriptionsManager.html#PostsListener_ISubscriptionsManager_Get_
+  commentId: Overload:PostsListener.ISubscriptionsManager.Get
+  isSpec: "True"
+  fullName: PostsListener.ISubscriptionsManager.Get
+  nameWithType: ISubscriptionsManager.Get
+- uid: PostsListener.ISubscriptionsManager.RemoveAsync(Subscription,CancellationToken)
+  name: RemoveAsync(Subscription, CancellationToken)
+  href: api/PostsListener.ISubscriptionsManager.html#PostsListener_ISubscriptionsManager_RemoveAsync_Subscription_CancellationToken_
+  commentId: M:PostsListener.ISubscriptionsManager.RemoveAsync(Subscription,CancellationToken)
+  fullName: PostsListener.ISubscriptionsManager.RemoveAsync(Subscription, CancellationToken)
+  nameWithType: ISubscriptionsManager.RemoveAsync(Subscription, CancellationToken)
+- uid: PostsListener.ISubscriptionsManager.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.ISubscriptionsManager.html#PostsListener_ISubscriptionsManager_RemoveAsync_
+  commentId: Overload:PostsListener.ISubscriptionsManager.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.ISubscriptionsManager.RemoveAsync
+  nameWithType: ISubscriptionsManager.RemoveAsync
+- uid: PostsListener.ISubscriptionsPersistence
+  name: ISubscriptionsPersistence
+  href: api/PostsListener.ISubscriptionsPersistence.html
+  commentId: T:PostsListener.ISubscriptionsPersistence
+  fullName: PostsListener.ISubscriptionsPersistence
+  nameWithType: ISubscriptionsPersistence
+- uid: PostsListener.ISubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity,CancellationToken)
+  name: AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_AddOrUpdateAsync_SubscriptionEntity_CancellationToken_
+  commentId: M:PostsListener.ISubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity,CancellationToken)
+  fullName: PostsListener.ISubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+  nameWithType: ISubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+- uid: PostsListener.ISubscriptionsPersistence.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.ISubscriptionsPersistence.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.ISubscriptionsPersistence.AddOrUpdateAsync
+  nameWithType: ISubscriptionsPersistence.AddOrUpdateAsync
+- uid: PostsListener.ISubscriptionsPersistence.GetAsync(CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_GetAsync_CancellationToken_
+  commentId: M:PostsListener.ISubscriptionsPersistence.GetAsync(CancellationToken)
+  fullName: PostsListener.ISubscriptionsPersistence.GetAsync(CancellationToken)
+  nameWithType: ISubscriptionsPersistence.GetAsync(CancellationToken)
+- uid: PostsListener.ISubscriptionsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  name: GetAsync(String, String, CancellationToken)
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_GetAsync_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.ISubscriptionsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  fullName: PostsListener.ISubscriptionsPersistence.GetAsync(System.String, System.String, CancellationToken)
+  nameWithType: ISubscriptionsPersistence.GetAsync(String, String, CancellationToken)
+- uid: PostsListener.ISubscriptionsPersistence.GetAsync*
+  name: GetAsync
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_GetAsync_
+  commentId: Overload:PostsListener.ISubscriptionsPersistence.GetAsync
+  isSpec: "True"
+  fullName: PostsListener.ISubscriptionsPersistence.GetAsync
+  nameWithType: ISubscriptionsPersistence.GetAsync
+- uid: PostsListener.ISubscriptionsPersistence.RemoveAsync(SubscriptionEntity,CancellationToken)
+  name: RemoveAsync(SubscriptionEntity, CancellationToken)
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_RemoveAsync_SubscriptionEntity_CancellationToken_
+  commentId: M:PostsListener.ISubscriptionsPersistence.RemoveAsync(SubscriptionEntity,CancellationToken)
+  fullName: PostsListener.ISubscriptionsPersistence.RemoveAsync(SubscriptionEntity, CancellationToken)
+  nameWithType: ISubscriptionsPersistence.RemoveAsync(SubscriptionEntity, CancellationToken)
+- uid: PostsListener.ISubscriptionsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.ISubscriptionsPersistence.html#PostsListener_ISubscriptionsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.ISubscriptionsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.ISubscriptionsPersistence.RemoveAsync
+  nameWithType: ISubscriptionsPersistence.RemoveAsync
+- uid: PostsListener.LastPostFilter
+  name: LastPostFilter
+  href: api/PostsListener.LastPostFilter.html
+  commentId: T:PostsListener.LastPostFilter
+  fullName: PostsListener.LastPostFilter
+  nameWithType: LastPostFilter
+- uid: PostsListener.LastPostFilter.#ctor(PostsListener.ILastPostsPersistence,ILogger{PostsListener.LastPostFilter})
+  name: LastPostFilter(ILastPostsPersistence, ILogger<LastPostFilter>)
+  href: api/PostsListener.LastPostFilter.html#PostsListener_LastPostFilter__ctor_PostsListener_ILastPostsPersistence_ILogger_PostsListener_LastPostFilter__
+  commentId: M:PostsListener.LastPostFilter.#ctor(PostsListener.ILastPostsPersistence,ILogger{PostsListener.LastPostFilter})
+  name.vb: LastPostFilter(ILastPostsPersistence, ILogger(Of LastPostFilter))
+  fullName: PostsListener.LastPostFilter.LastPostFilter(PostsListener.ILastPostsPersistence, ILogger<PostsListener.LastPostFilter>)
+  fullName.vb: PostsListener.LastPostFilter.LastPostFilter(PostsListener.ILastPostsPersistence, ILogger(Of PostsListener.LastPostFilter))
+  nameWithType: LastPostFilter.LastPostFilter(ILastPostsPersistence, ILogger<LastPostFilter>)
+  nameWithType.vb: LastPostFilter.LastPostFilter(ILastPostsPersistence, ILogger(Of LastPostFilter))
+- uid: PostsListener.LastPostFilter.#ctor*
+  name: LastPostFilter
+  href: api/PostsListener.LastPostFilter.html#PostsListener_LastPostFilter__ctor_
+  commentId: Overload:PostsListener.LastPostFilter.#ctor
+  isSpec: "True"
+  fullName: PostsListener.LastPostFilter.LastPostFilter
+  nameWithType: LastPostFilter.LastPostFilter
+- uid: PostsListener.LastPostFilter.FilterAsync(Post,System.String,TimeSpan,CancellationToken)
+  name: FilterAsync(Post, String, TimeSpan, CancellationToken)
+  href: api/PostsListener.LastPostFilter.html#PostsListener_LastPostFilter_FilterAsync_Post_System_String_TimeSpan_CancellationToken_
+  commentId: M:PostsListener.LastPostFilter.FilterAsync(Post,System.String,TimeSpan,CancellationToken)
+  fullName: PostsListener.LastPostFilter.FilterAsync(Post, System.String, TimeSpan, CancellationToken)
+  nameWithType: LastPostFilter.FilterAsync(Post, String, TimeSpan, CancellationToken)
+- uid: PostsListener.LastPostFilter.FilterAsync*
+  name: FilterAsync
+  href: api/PostsListener.LastPostFilter.html#PostsListener_LastPostFilter_FilterAsync_
+  commentId: Overload:PostsListener.LastPostFilter.FilterAsync
+  isSpec: "True"
+  fullName: PostsListener.LastPostFilter.FilterAsync
+  nameWithType: LastPostFilter.FilterAsync
+- uid: PostsListener.MongoDatabaseFactory
+  name: MongoDatabaseFactory
+  href: api/PostsListener.MongoDatabaseFactory.html
+  commentId: T:PostsListener.MongoDatabaseFactory
+  fullName: PostsListener.MongoDatabaseFactory
+  nameWithType: MongoDatabaseFactory
+- uid: PostsListener.MongoDatabaseFactory.CreateDatabase(PostsListener.MongoDbConfig)
+  name: CreateDatabase(MongoDbConfig)
+  href: api/PostsListener.MongoDatabaseFactory.html#PostsListener_MongoDatabaseFactory_CreateDatabase_PostsListener_MongoDbConfig_
+  commentId: M:PostsListener.MongoDatabaseFactory.CreateDatabase(PostsListener.MongoDbConfig)
+  fullName: PostsListener.MongoDatabaseFactory.CreateDatabase(PostsListener.MongoDbConfig)
+  nameWithType: MongoDatabaseFactory.CreateDatabase(MongoDbConfig)
+- uid: PostsListener.MongoDatabaseFactory.CreateDatabase*
+  name: CreateDatabase
+  href: api/PostsListener.MongoDatabaseFactory.html#PostsListener_MongoDatabaseFactory_CreateDatabase_
+  commentId: Overload:PostsListener.MongoDatabaseFactory.CreateDatabase
+  isSpec: "True"
+  fullName: PostsListener.MongoDatabaseFactory.CreateDatabase
+  nameWithType: MongoDatabaseFactory.CreateDatabase
+- uid: PostsListener.MongoDbConfig
+  name: MongoDbConfig
+  href: api/PostsListener.MongoDbConfig.html
+  commentId: T:PostsListener.MongoDbConfig
+  fullName: PostsListener.MongoDbConfig
+  nameWithType: MongoDbConfig
+- uid: PostsListener.MongoDbConfig.ConnectionString
+  name: ConnectionString
+  href: api/PostsListener.MongoDbConfig.html#PostsListener_MongoDbConfig_ConnectionString
+  commentId: P:PostsListener.MongoDbConfig.ConnectionString
+  fullName: PostsListener.MongoDbConfig.ConnectionString
+  nameWithType: MongoDbConfig.ConnectionString
+- uid: PostsListener.MongoDbConfig.ConnectionString*
+  name: ConnectionString
+  href: api/PostsListener.MongoDbConfig.html#PostsListener_MongoDbConfig_ConnectionString_
+  commentId: Overload:PostsListener.MongoDbConfig.ConnectionString
+  isSpec: "True"
+  fullName: PostsListener.MongoDbConfig.ConnectionString
+  nameWithType: MongoDbConfig.ConnectionString
+- uid: PostsListener.MongoDbConfig.DatabaseName
+  name: DatabaseName
+  href: api/PostsListener.MongoDbConfig.html#PostsListener_MongoDbConfig_DatabaseName
+  commentId: P:PostsListener.MongoDbConfig.DatabaseName
+  fullName: PostsListener.MongoDbConfig.DatabaseName
+  nameWithType: MongoDbConfig.DatabaseName
+- uid: PostsListener.MongoDbConfig.DatabaseName*
+  name: DatabaseName
+  href: api/PostsListener.MongoDbConfig.html#PostsListener_MongoDbConfig_DatabaseName_
+  commentId: Overload:PostsListener.MongoDbConfig.DatabaseName
+  isSpec: "True"
+  fullName: PostsListener.MongoDbConfig.DatabaseName
+  nameWithType: MongoDbConfig.DatabaseName
+- uid: PostsListener.MongoDbLastPostsPersistence
+  name: MongoDbLastPostsPersistence
+  href: api/PostsListener.MongoDbLastPostsPersistence.html
+  commentId: T:PostsListener.MongoDbLastPostsPersistence
+  fullName: PostsListener.MongoDbLastPostsPersistence
+  nameWithType: MongoDbLastPostsPersistence
+- uid: PostsListener.MongoDbLastPostsPersistence.#ctor(IMongoDatabase,ILogger{PostsListener.MongoDbLastPostsPersistence})
+  name: MongoDbLastPostsPersistence(IMongoDatabase, ILogger<MongoDbLastPostsPersistence>)
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence__ctor_IMongoDatabase_ILogger_PostsListener_MongoDbLastPostsPersistence__
+  commentId: M:PostsListener.MongoDbLastPostsPersistence.#ctor(IMongoDatabase,ILogger{PostsListener.MongoDbLastPostsPersistence})
+  name.vb: MongoDbLastPostsPersistence(IMongoDatabase, ILogger(Of MongoDbLastPostsPersistence))
+  fullName: PostsListener.MongoDbLastPostsPersistence.MongoDbLastPostsPersistence(IMongoDatabase, ILogger<PostsListener.MongoDbLastPostsPersistence>)
+  fullName.vb: PostsListener.MongoDbLastPostsPersistence.MongoDbLastPostsPersistence(IMongoDatabase, ILogger(Of PostsListener.MongoDbLastPostsPersistence))
+  nameWithType: MongoDbLastPostsPersistence.MongoDbLastPostsPersistence(IMongoDatabase, ILogger<MongoDbLastPostsPersistence>)
+  nameWithType.vb: MongoDbLastPostsPersistence.MongoDbLastPostsPersistence(IMongoDatabase, ILogger(Of MongoDbLastPostsPersistence))
+- uid: PostsListener.MongoDbLastPostsPersistence.#ctor*
+  name: MongoDbLastPostsPersistence
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence__ctor_
+  commentId: Overload:PostsListener.MongoDbLastPostsPersistence.#ctor
+  isSpec: "True"
+  fullName: PostsListener.MongoDbLastPostsPersistence.MongoDbLastPostsPersistence
+  nameWithType: MongoDbLastPostsPersistence.MongoDbLastPostsPersistence
+- uid: PostsListener.MongoDbLastPostsPersistence.AddOrUpdateAsync(System.String,System.String,DateTime,CancellationToken)
+  name: AddOrUpdateAsync(String, String, DateTime, CancellationToken)
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_AddOrUpdateAsync_System_String_System_String_DateTime_CancellationToken_
+  commentId: M:PostsListener.MongoDbLastPostsPersistence.AddOrUpdateAsync(System.String,System.String,DateTime,CancellationToken)
+  fullName: PostsListener.MongoDbLastPostsPersistence.AddOrUpdateAsync(System.String, System.String, DateTime, CancellationToken)
+  nameWithType: MongoDbLastPostsPersistence.AddOrUpdateAsync(String, String, DateTime, CancellationToken)
+- uid: PostsListener.MongoDbLastPostsPersistence.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.MongoDbLastPostsPersistence.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbLastPostsPersistence.AddOrUpdateAsync
+  nameWithType: MongoDbLastPostsPersistence.AddOrUpdateAsync
+- uid: PostsListener.MongoDbLastPostsPersistence.GetAsync(CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_GetAsync_CancellationToken_
+  commentId: M:PostsListener.MongoDbLastPostsPersistence.GetAsync(CancellationToken)
+  fullName: PostsListener.MongoDbLastPostsPersistence.GetAsync(CancellationToken)
+  nameWithType: MongoDbLastPostsPersistence.GetAsync(CancellationToken)
+- uid: PostsListener.MongoDbLastPostsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  name: GetAsync(String, String, CancellationToken)
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_GetAsync_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.MongoDbLastPostsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  fullName: PostsListener.MongoDbLastPostsPersistence.GetAsync(System.String, System.String, CancellationToken)
+  nameWithType: MongoDbLastPostsPersistence.GetAsync(String, String, CancellationToken)
+- uid: PostsListener.MongoDbLastPostsPersistence.GetAsync*
+  name: GetAsync
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_GetAsync_
+  commentId: Overload:PostsListener.MongoDbLastPostsPersistence.GetAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbLastPostsPersistence.GetAsync
+  nameWithType: MongoDbLastPostsPersistence.GetAsync
+- uid: PostsListener.MongoDbLastPostsPersistence.RemoveAsync(LastPost,CancellationToken)
+  name: RemoveAsync(LastPost, CancellationToken)
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_RemoveAsync_LastPost_CancellationToken_
+  commentId: M:PostsListener.MongoDbLastPostsPersistence.RemoveAsync(LastPost,CancellationToken)
+  fullName: PostsListener.MongoDbLastPostsPersistence.RemoveAsync(LastPost, CancellationToken)
+  nameWithType: MongoDbLastPostsPersistence.RemoveAsync(LastPost, CancellationToken)
+- uid: PostsListener.MongoDbLastPostsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.MongoDbLastPostsPersistence.html#PostsListener_MongoDbLastPostsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.MongoDbLastPostsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbLastPostsPersistence.RemoveAsync
+  nameWithType: MongoDbLastPostsPersistence.RemoveAsync
+- uid: PostsListener.MongoDbPostUrlsPersistence
+  name: MongoDbPostUrlsPersistence
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html
+  commentId: T:PostsListener.MongoDbPostUrlsPersistence
+  fullName: PostsListener.MongoDbPostUrlsPersistence
+  nameWithType: MongoDbPostUrlsPersistence
+- uid: PostsListener.MongoDbPostUrlsPersistence.#ctor(IMongoDatabase,PostsListener.PostUrlsPersistenceConfig,ILogger{PostsListener.MongoDbPostUrlsPersistence})
+  name: MongoDbPostUrlsPersistence(IMongoDatabase, PostUrlsPersistenceConfig, ILogger<MongoDbPostUrlsPersistence>)
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence__ctor_IMongoDatabase_PostsListener_PostUrlsPersistenceConfig_ILogger_PostsListener_MongoDbPostUrlsPersistence__
+  commentId: M:PostsListener.MongoDbPostUrlsPersistence.#ctor(IMongoDatabase,PostsListener.PostUrlsPersistenceConfig,ILogger{PostsListener.MongoDbPostUrlsPersistence})
+  name.vb: MongoDbPostUrlsPersistence(IMongoDatabase, PostUrlsPersistenceConfig, ILogger(Of MongoDbPostUrlsPersistence))
+  fullName: PostsListener.MongoDbPostUrlsPersistence.MongoDbPostUrlsPersistence(IMongoDatabase, PostsListener.PostUrlsPersistenceConfig, ILogger<PostsListener.MongoDbPostUrlsPersistence>)
+  fullName.vb: PostsListener.MongoDbPostUrlsPersistence.MongoDbPostUrlsPersistence(IMongoDatabase, PostsListener.PostUrlsPersistenceConfig, ILogger(Of PostsListener.MongoDbPostUrlsPersistence))
+  nameWithType: MongoDbPostUrlsPersistence.MongoDbPostUrlsPersistence(IMongoDatabase, PostUrlsPersistenceConfig, ILogger<MongoDbPostUrlsPersistence>)
+  nameWithType.vb: MongoDbPostUrlsPersistence.MongoDbPostUrlsPersistence(IMongoDatabase, PostUrlsPersistenceConfig, ILogger(Of MongoDbPostUrlsPersistence))
+- uid: PostsListener.MongoDbPostUrlsPersistence.#ctor*
+  name: MongoDbPostUrlsPersistence
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence__ctor_
+  commentId: Overload:PostsListener.MongoDbPostUrlsPersistence.#ctor
+  isSpec: "True"
+  fullName: PostsListener.MongoDbPostUrlsPersistence.MongoDbPostUrlsPersistence
+  nameWithType: MongoDbPostUrlsPersistence.MongoDbPostUrlsPersistence
+- uid: PostsListener.MongoDbPostUrlsPersistence.AddAsync(System.String,CancellationToken)
+  name: AddAsync(String, CancellationToken)
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence_AddAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.MongoDbPostUrlsPersistence.AddAsync(System.String,CancellationToken)
+  fullName: PostsListener.MongoDbPostUrlsPersistence.AddAsync(System.String, CancellationToken)
+  nameWithType: MongoDbPostUrlsPersistence.AddAsync(String, CancellationToken)
+- uid: PostsListener.MongoDbPostUrlsPersistence.AddAsync*
+  name: AddAsync
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence_AddAsync_
+  commentId: Overload:PostsListener.MongoDbPostUrlsPersistence.AddAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbPostUrlsPersistence.AddAsync
+  nameWithType: MongoDbPostUrlsPersistence.AddAsync
+- uid: PostsListener.MongoDbPostUrlsPersistence.ExistsAsync(System.String,CancellationToken)
+  name: ExistsAsync(String, CancellationToken)
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence_ExistsAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.MongoDbPostUrlsPersistence.ExistsAsync(System.String,CancellationToken)
+  fullName: PostsListener.MongoDbPostUrlsPersistence.ExistsAsync(System.String, CancellationToken)
+  nameWithType: MongoDbPostUrlsPersistence.ExistsAsync(String, CancellationToken)
+- uid: PostsListener.MongoDbPostUrlsPersistence.ExistsAsync*
+  name: ExistsAsync
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence_ExistsAsync_
+  commentId: Overload:PostsListener.MongoDbPostUrlsPersistence.ExistsAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbPostUrlsPersistence.ExistsAsync
+  nameWithType: MongoDbPostUrlsPersistence.ExistsAsync
+- uid: PostsListener.MongoDbPostUrlsPersistence.RemoveAsync(System.String,CancellationToken)
+  name: RemoveAsync(String, CancellationToken)
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence_RemoveAsync_System_String_CancellationToken_
+  commentId: M:PostsListener.MongoDbPostUrlsPersistence.RemoveAsync(System.String,CancellationToken)
+  fullName: PostsListener.MongoDbPostUrlsPersistence.RemoveAsync(System.String, CancellationToken)
+  nameWithType: MongoDbPostUrlsPersistence.RemoveAsync(String, CancellationToken)
+- uid: PostsListener.MongoDbPostUrlsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.MongoDbPostUrlsPersistence.html#PostsListener_MongoDbPostUrlsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.MongoDbPostUrlsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbPostUrlsPersistence.RemoveAsync
+  nameWithType: MongoDbPostUrlsPersistence.RemoveAsync
+- uid: PostsListener.MongoDbSubscriptionsPersistence
+  name: MongoDbSubscriptionsPersistence
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html
+  commentId: T:PostsListener.MongoDbSubscriptionsPersistence
+  fullName: PostsListener.MongoDbSubscriptionsPersistence
+  nameWithType: MongoDbSubscriptionsPersistence
+- uid: PostsListener.MongoDbSubscriptionsPersistence.#ctor(IMongoDatabase,ILogger{PostsListener.MongoDbSubscriptionsPersistence})
+  name: MongoDbSubscriptionsPersistence(IMongoDatabase, ILogger<MongoDbSubscriptionsPersistence>)
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence__ctor_IMongoDatabase_ILogger_PostsListener_MongoDbSubscriptionsPersistence__
+  commentId: M:PostsListener.MongoDbSubscriptionsPersistence.#ctor(IMongoDatabase,ILogger{PostsListener.MongoDbSubscriptionsPersistence})
+  name.vb: MongoDbSubscriptionsPersistence(IMongoDatabase, ILogger(Of MongoDbSubscriptionsPersistence))
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.MongoDbSubscriptionsPersistence(IMongoDatabase, ILogger<PostsListener.MongoDbSubscriptionsPersistence>)
+  fullName.vb: PostsListener.MongoDbSubscriptionsPersistence.MongoDbSubscriptionsPersistence(IMongoDatabase, ILogger(Of PostsListener.MongoDbSubscriptionsPersistence))
+  nameWithType: MongoDbSubscriptionsPersistence.MongoDbSubscriptionsPersistence(IMongoDatabase, ILogger<MongoDbSubscriptionsPersistence>)
+  nameWithType.vb: MongoDbSubscriptionsPersistence.MongoDbSubscriptionsPersistence(IMongoDatabase, ILogger(Of MongoDbSubscriptionsPersistence))
+- uid: PostsListener.MongoDbSubscriptionsPersistence.#ctor*
+  name: MongoDbSubscriptionsPersistence
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence__ctor_
+  commentId: Overload:PostsListener.MongoDbSubscriptionsPersistence.#ctor
+  isSpec: "True"
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.MongoDbSubscriptionsPersistence
+  nameWithType: MongoDbSubscriptionsPersistence.MongoDbSubscriptionsPersistence
+- uid: PostsListener.MongoDbSubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity,CancellationToken)
+  name: AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_AddOrUpdateAsync_SubscriptionEntity_CancellationToken_
+  commentId: M:PostsListener.MongoDbSubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity,CancellationToken)
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+  nameWithType: MongoDbSubscriptionsPersistence.AddOrUpdateAsync(SubscriptionEntity, CancellationToken)
+- uid: PostsListener.MongoDbSubscriptionsPersistence.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.MongoDbSubscriptionsPersistence.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.AddOrUpdateAsync
+  nameWithType: MongoDbSubscriptionsPersistence.AddOrUpdateAsync
+- uid: PostsListener.MongoDbSubscriptionsPersistence.GetAsync(CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_GetAsync_CancellationToken_
+  commentId: M:PostsListener.MongoDbSubscriptionsPersistence.GetAsync(CancellationToken)
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.GetAsync(CancellationToken)
+  nameWithType: MongoDbSubscriptionsPersistence.GetAsync(CancellationToken)
+- uid: PostsListener.MongoDbSubscriptionsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  name: GetAsync(String, String, CancellationToken)
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_GetAsync_System_String_System_String_CancellationToken_
+  commentId: M:PostsListener.MongoDbSubscriptionsPersistence.GetAsync(System.String,System.String,CancellationToken)
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.GetAsync(System.String, System.String, CancellationToken)
+  nameWithType: MongoDbSubscriptionsPersistence.GetAsync(String, String, CancellationToken)
+- uid: PostsListener.MongoDbSubscriptionsPersistence.GetAsync*
+  name: GetAsync
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_GetAsync_
+  commentId: Overload:PostsListener.MongoDbSubscriptionsPersistence.GetAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.GetAsync
+  nameWithType: MongoDbSubscriptionsPersistence.GetAsync
+- uid: PostsListener.MongoDbSubscriptionsPersistence.RemoveAsync(SubscriptionEntity,CancellationToken)
+  name: RemoveAsync(SubscriptionEntity, CancellationToken)
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_RemoveAsync_SubscriptionEntity_CancellationToken_
+  commentId: M:PostsListener.MongoDbSubscriptionsPersistence.RemoveAsync(SubscriptionEntity,CancellationToken)
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.RemoveAsync(SubscriptionEntity, CancellationToken)
+  nameWithType: MongoDbSubscriptionsPersistence.RemoveAsync(SubscriptionEntity, CancellationToken)
+- uid: PostsListener.MongoDbSubscriptionsPersistence.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.MongoDbSubscriptionsPersistence.html#PostsListener_MongoDbSubscriptionsPersistence_RemoveAsync_
+  commentId: Overload:PostsListener.MongoDbSubscriptionsPersistence.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.MongoDbSubscriptionsPersistence.RemoveAsync
+  nameWithType: MongoDbSubscriptionsPersistence.RemoveAsync
+- uid: PostsListener.ObservableExtensions
+  name: ObservableExtensions
+  href: api/PostsListener.ObservableExtensions.html
+  commentId: T:PostsListener.ObservableExtensions
+  fullName: PostsListener.ObservableExtensions
+  nameWithType: ObservableExtensions
+- uid: PostsListener.ObservableExtensions.SubscribeAsync*
+  name: SubscribeAsync
+  href: api/PostsListener.ObservableExtensions.html#PostsListener_ObservableExtensions_SubscribeAsync_
+  commentId: Overload:PostsListener.ObservableExtensions.SubscribeAsync
+  isSpec: "True"
+  fullName: PostsListener.ObservableExtensions.SubscribeAsync
+  nameWithType: ObservableExtensions.SubscribeAsync
+- uid: PostsListener.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{``0,CancellationToken,Task})
+  name: SubscribeAsync<T>(IObservable<T>, Func<T, CancellationToken, Task>)
+  href: api/PostsListener.ObservableExtensions.html#PostsListener_ObservableExtensions_SubscribeAsync__1_IObservable___0__Func___0_CancellationToken_Task__
+  commentId: M:PostsListener.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{``0,CancellationToken,Task})
+  name.vb: SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, CancellationToken, Task))
+  fullName: PostsListener.ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<T, CancellationToken, Task>)
+  fullName.vb: PostsListener.ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, CancellationToken, Task))
+  nameWithType: ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<T, CancellationToken, Task>)
+  nameWithType.vb: ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, CancellationToken, Task))
+- uid: PostsListener.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{``0,Task})
+  name: SubscribeAsync<T>(IObservable<T>, Func<T, Task>)
+  href: api/PostsListener.ObservableExtensions.html#PostsListener_ObservableExtensions_SubscribeAsync__1_IObservable___0__Func___0_Task__
+  commentId: M:PostsListener.ObservableExtensions.SubscribeAsync``1(IObservable{``0},Func{``0,Task})
+  name.vb: SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, Task))
+  fullName: PostsListener.ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<T, Task>)
+  fullName.vb: PostsListener.ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, Task))
+  nameWithType: ObservableExtensions.SubscribeAsync<T>(IObservable<T>, Func<T, Task>)
+  nameWithType.vb: ObservableExtensions.SubscribeAsync(Of T)(IObservable(Of T), Func(Of T, Task))
+- uid: PostsListener.PollNewPostSubscriptionConsumer
+  name: PollNewPostSubscriptionConsumer
+  href: api/PostsListener.PollNewPostSubscriptionConsumer.html
+  commentId: T:PostsListener.PollNewPostSubscriptionConsumer
+  fullName: PostsListener.PollNewPostSubscriptionConsumer
+  nameWithType: PollNewPostSubscriptionConsumer
+- uid: PostsListener.PollNewPostSubscriptionConsumer.#ctor(PostsListener.StreamManager,ILogger{PostsListener.PollNewPostSubscriptionConsumer})
+  name: PollNewPostSubscriptionConsumer(StreamManager, ILogger<PollNewPostSubscriptionConsumer>)
+  href: api/PostsListener.PollNewPostSubscriptionConsumer.html#PostsListener_PollNewPostSubscriptionConsumer__ctor_PostsListener_StreamManager_ILogger_PostsListener_PollNewPostSubscriptionConsumer__
+  commentId: M:PostsListener.PollNewPostSubscriptionConsumer.#ctor(PostsListener.StreamManager,ILogger{PostsListener.PollNewPostSubscriptionConsumer})
+  name.vb: PollNewPostSubscriptionConsumer(StreamManager, ILogger(Of PollNewPostSubscriptionConsumer))
+  fullName: PostsListener.PollNewPostSubscriptionConsumer.PollNewPostSubscriptionConsumer(PostsListener.StreamManager, ILogger<PostsListener.PollNewPostSubscriptionConsumer>)
+  fullName.vb: PostsListener.PollNewPostSubscriptionConsumer.PollNewPostSubscriptionConsumer(PostsListener.StreamManager, ILogger(Of PostsListener.PollNewPostSubscriptionConsumer))
+  nameWithType: PollNewPostSubscriptionConsumer.PollNewPostSubscriptionConsumer(StreamManager, ILogger<PollNewPostSubscriptionConsumer>)
+  nameWithType.vb: PollNewPostSubscriptionConsumer.PollNewPostSubscriptionConsumer(StreamManager, ILogger(Of PollNewPostSubscriptionConsumer))
+- uid: PostsListener.PollNewPostSubscriptionConsumer.#ctor*
+  name: PollNewPostSubscriptionConsumer
+  href: api/PostsListener.PollNewPostSubscriptionConsumer.html#PostsListener_PollNewPostSubscriptionConsumer__ctor_
+  commentId: Overload:PostsListener.PollNewPostSubscriptionConsumer.#ctor
+  isSpec: "True"
+  fullName: PostsListener.PollNewPostSubscriptionConsumer.PollNewPostSubscriptionConsumer
+  nameWithType: PollNewPostSubscriptionConsumer.PollNewPostSubscriptionConsumer
+- uid: PostsListener.PollNewPostSubscriptionConsumer.Consume(ConsumeContext{PollNewPostSubscription})
+  name: Consume(ConsumeContext<PollNewPostSubscription>)
+  href: api/PostsListener.PollNewPostSubscriptionConsumer.html#PostsListener_PollNewPostSubscriptionConsumer_Consume_ConsumeContext_PollNewPostSubscription__
+  commentId: M:PostsListener.PollNewPostSubscriptionConsumer.Consume(ConsumeContext{PollNewPostSubscription})
+  name.vb: Consume(ConsumeContext(Of PollNewPostSubscription))
+  fullName: PostsListener.PollNewPostSubscriptionConsumer.Consume(ConsumeContext<PollNewPostSubscription>)
+  fullName.vb: PostsListener.PollNewPostSubscriptionConsumer.Consume(ConsumeContext(Of PollNewPostSubscription))
+  nameWithType: PollNewPostSubscriptionConsumer.Consume(ConsumeContext<PollNewPostSubscription>)
+  nameWithType.vb: PollNewPostSubscriptionConsumer.Consume(ConsumeContext(Of PollNewPostSubscription))
+- uid: PostsListener.PollNewPostSubscriptionConsumer.Consume*
+  name: Consume
+  href: api/PostsListener.PollNewPostSubscriptionConsumer.html#PostsListener_PollNewPostSubscriptionConsumer_Consume_
+  commentId: Overload:PostsListener.PollNewPostSubscriptionConsumer.Consume
+  isSpec: "True"
+  fullName: PostsListener.PollNewPostSubscriptionConsumer.Consume
+  nameWithType: PollNewPostSubscriptionConsumer.Consume
+- uid: PostsListener.PostFilter
+  name: PostFilter
+  href: api/PostsListener.PostFilter.html
+  commentId: T:PostsListener.PostFilter
+  fullName: PostsListener.PostFilter
+  nameWithType: PostFilter
+- uid: PostsListener.PostFilter.#ctor(PostsListener.LastPostFilter,PostsListener.PostUrlFilter,ILogger{PostsListener.PostFilter})
+  name: PostFilter(LastPostFilter, PostUrlFilter, ILogger<PostFilter>)
+  href: api/PostsListener.PostFilter.html#PostsListener_PostFilter__ctor_PostsListener_LastPostFilter_PostsListener_PostUrlFilter_ILogger_PostsListener_PostFilter__
+  commentId: M:PostsListener.PostFilter.#ctor(PostsListener.LastPostFilter,PostsListener.PostUrlFilter,ILogger{PostsListener.PostFilter})
+  name.vb: PostFilter(LastPostFilter, PostUrlFilter, ILogger(Of PostFilter))
+  fullName: PostsListener.PostFilter.PostFilter(PostsListener.LastPostFilter, PostsListener.PostUrlFilter, ILogger<PostsListener.PostFilter>)
+  fullName.vb: PostsListener.PostFilter.PostFilter(PostsListener.LastPostFilter, PostsListener.PostUrlFilter, ILogger(Of PostsListener.PostFilter))
+  nameWithType: PostFilter.PostFilter(LastPostFilter, PostUrlFilter, ILogger<PostFilter>)
+  nameWithType.vb: PostFilter.PostFilter(LastPostFilter, PostUrlFilter, ILogger(Of PostFilter))
+- uid: PostsListener.PostFilter.#ctor*
+  name: PostFilter
+  href: api/PostsListener.PostFilter.html#PostsListener_PostFilter__ctor_
+  commentId: Overload:PostsListener.PostFilter.#ctor
+  isSpec: "True"
+  fullName: PostsListener.PostFilter.PostFilter
+  nameWithType: PostFilter.PostFilter
+- uid: PostsListener.PostFilter.FilterAsync(Post,System.String,CancellationToken)
+  name: FilterAsync(Post, String, CancellationToken)
+  href: api/PostsListener.PostFilter.html#PostsListener_PostFilter_FilterAsync_Post_System_String_CancellationToken_
+  commentId: M:PostsListener.PostFilter.FilterAsync(Post,System.String,CancellationToken)
+  fullName: PostsListener.PostFilter.FilterAsync(Post, System.String, CancellationToken)
+  nameWithType: PostFilter.FilterAsync(Post, String, CancellationToken)
+- uid: PostsListener.PostFilter.FilterAsync*
+  name: FilterAsync
+  href: api/PostsListener.PostFilter.html#PostsListener_PostFilter_FilterAsync_
+  commentId: Overload:PostsListener.PostFilter.FilterAsync
+  isSpec: "True"
+  fullName: PostsListener.PostFilter.FilterAsync
+  nameWithType: PostFilter.FilterAsync
+- uid: PostsListener.PostSubscription
+  name: PostSubscription
+  href: api/PostsListener.PostSubscription.html
+  commentId: T:PostsListener.PostSubscription
+  fullName: PostsListener.PostSubscription
+  nameWithType: PostSubscription
+- uid: PostsListener.PostSubscription.#ctor(Scraper.Net.Stream.IPostStream,IDisposable)
+  name: PostSubscription(IPostStream, IDisposable)
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription__ctor_Scraper_Net_Stream_IPostStream_IDisposable_
+  commentId: M:PostsListener.PostSubscription.#ctor(Scraper.Net.Stream.IPostStream,IDisposable)
+  fullName: PostsListener.PostSubscription.PostSubscription(Scraper.Net.Stream.IPostStream, IDisposable)
+  nameWithType: PostSubscription.PostSubscription(IPostStream, IDisposable)
+- uid: PostsListener.PostSubscription.#ctor*
+  name: PostSubscription
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription__ctor_
+  commentId: Overload:PostsListener.PostSubscription.#ctor
+  isSpec: "True"
+  fullName: PostsListener.PostSubscription.PostSubscription
+  nameWithType: PostSubscription.PostSubscription
+- uid: PostsListener.PostSubscription.Dispose
+  name: Dispose()
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription_Dispose
+  commentId: M:PostsListener.PostSubscription.Dispose
+  fullName: PostsListener.PostSubscription.Dispose()
+  nameWithType: PostSubscription.Dispose()
+- uid: PostsListener.PostSubscription.Dispose*
+  name: Dispose
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription_Dispose_
+  commentId: Overload:PostsListener.PostSubscription.Dispose
+  isSpec: "True"
+  fullName: PostsListener.PostSubscription.Dispose
+  nameWithType: PostSubscription.Dispose
+- uid: PostsListener.PostSubscription.DueTime
+  name: DueTime
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription_DueTime
+  commentId: P:PostsListener.PostSubscription.DueTime
+  fullName: PostsListener.PostSubscription.DueTime
+  nameWithType: PostSubscription.DueTime
+- uid: PostsListener.PostSubscription.DueTime*
+  name: DueTime
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription_DueTime_
+  commentId: Overload:PostsListener.PostSubscription.DueTime
+  isSpec: "True"
+  fullName: PostsListener.PostSubscription.DueTime
+  nameWithType: PostSubscription.DueTime
+- uid: PostsListener.PostSubscription.UpdateAsync(CancellationToken)
+  name: UpdateAsync(CancellationToken)
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription_UpdateAsync_CancellationToken_
+  commentId: M:PostsListener.PostSubscription.UpdateAsync(CancellationToken)
+  fullName: PostsListener.PostSubscription.UpdateAsync(CancellationToken)
+  nameWithType: PostSubscription.UpdateAsync(CancellationToken)
+- uid: PostsListener.PostSubscription.UpdateAsync*
+  name: UpdateAsync
+  href: api/PostsListener.PostSubscription.html#PostsListener_PostSubscription_UpdateAsync_
+  commentId: Overload:PostsListener.PostSubscription.UpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.PostSubscription.UpdateAsync
+  nameWithType: PostSubscription.UpdateAsync
+- uid: PostsListener.PostUrlFilter
+  name: PostUrlFilter
+  href: api/PostsListener.PostUrlFilter.html
+  commentId: T:PostsListener.PostUrlFilter
+  fullName: PostsListener.PostUrlFilter
+  nameWithType: PostUrlFilter
+- uid: PostsListener.PostUrlFilter.#ctor(PostsListener.IPostUrlsPersistence)
+  name: PostUrlFilter(IPostUrlsPersistence)
+  href: api/PostsListener.PostUrlFilter.html#PostsListener_PostUrlFilter__ctor_PostsListener_IPostUrlsPersistence_
+  commentId: M:PostsListener.PostUrlFilter.#ctor(PostsListener.IPostUrlsPersistence)
+  fullName: PostsListener.PostUrlFilter.PostUrlFilter(PostsListener.IPostUrlsPersistence)
+  nameWithType: PostUrlFilter.PostUrlFilter(IPostUrlsPersistence)
+- uid: PostsListener.PostUrlFilter.#ctor*
+  name: PostUrlFilter
+  href: api/PostsListener.PostUrlFilter.html#PostsListener_PostUrlFilter__ctor_
+  commentId: Overload:PostsListener.PostUrlFilter.#ctor
+  isSpec: "True"
+  fullName: PostsListener.PostUrlFilter.PostUrlFilter
+  nameWithType: PostUrlFilter.PostUrlFilter
+- uid: PostsListener.PostUrlFilter.FilterAsync(Post,CancellationToken)
+  name: FilterAsync(Post, CancellationToken)
+  href: api/PostsListener.PostUrlFilter.html#PostsListener_PostUrlFilter_FilterAsync_Post_CancellationToken_
+  commentId: M:PostsListener.PostUrlFilter.FilterAsync(Post,CancellationToken)
+  fullName: PostsListener.PostUrlFilter.FilterAsync(Post, CancellationToken)
+  nameWithType: PostUrlFilter.FilterAsync(Post, CancellationToken)
+- uid: PostsListener.PostUrlFilter.FilterAsync*
+  name: FilterAsync
+  href: api/PostsListener.PostUrlFilter.html#PostsListener_PostUrlFilter_FilterAsync_
+  commentId: Overload:PostsListener.PostUrlFilter.FilterAsync
+  isSpec: "True"
+  fullName: PostsListener.PostUrlFilter.FilterAsync
+  nameWithType: PostUrlFilter.FilterAsync
+- uid: PostsListener.PostUrlsPersistenceConfig
+  name: PostUrlsPersistenceConfig
+  href: api/PostsListener.PostUrlsPersistenceConfig.html
+  commentId: T:PostsListener.PostUrlsPersistenceConfig
+  fullName: PostsListener.PostUrlsPersistenceConfig
+  nameWithType: PostUrlsPersistenceConfig
+- uid: PostsListener.PostUrlsPersistenceConfig.ExpirationTime
+  name: ExpirationTime
+  href: api/PostsListener.PostUrlsPersistenceConfig.html#PostsListener_PostUrlsPersistenceConfig_ExpirationTime
+  commentId: P:PostsListener.PostUrlsPersistenceConfig.ExpirationTime
+  fullName: PostsListener.PostUrlsPersistenceConfig.ExpirationTime
+  nameWithType: PostUrlsPersistenceConfig.ExpirationTime
+- uid: PostsListener.PostUrlsPersistenceConfig.ExpirationTime*
+  name: ExpirationTime
+  href: api/PostsListener.PostUrlsPersistenceConfig.html#PostsListener_PostUrlsPersistenceConfig_ExpirationTime_
+  commentId: Overload:PostsListener.PostUrlsPersistenceConfig.ExpirationTime
+  isSpec: "True"
+  fullName: PostsListener.PostUrlsPersistenceConfig.ExpirationTime
+  nameWithType: PostUrlsPersistenceConfig.ExpirationTime
+- uid: PostsListener.Program
+  name: Program
+  href: api/PostsListener.Program.html
+  commentId: T:PostsListener.Program
+  fullName: PostsListener.Program
+  nameWithType: Program
+- uid: PostsListener.Program.Main(System.String[])
+  name: Main(String[])
+  href: api/PostsListener.Program.html#PostsListener_Program_Main_System_String___
+  commentId: M:PostsListener.Program.Main(System.String[])
+  name.vb: Main(String())
+  fullName: PostsListener.Program.Main(System.String[])
+  fullName.vb: PostsListener.Program.Main(System.String())
+  nameWithType: Program.Main(String[])
+  nameWithType.vb: Program.Main(String())
+- uid: PostsListener.Program.Main*
+  name: Main
+  href: api/PostsListener.Program.html#PostsListener_Program_Main_
+  commentId: Overload:PostsListener.Program.Main
+  isSpec: "True"
+  fullName: PostsListener.Program.Main
+  nameWithType: Program.Main
+- uid: PostsListener.RemoveNewPostSubscriptionConsumer
+  name: RemoveNewPostSubscriptionConsumer
+  href: api/PostsListener.RemoveNewPostSubscriptionConsumer.html
+  commentId: T:PostsListener.RemoveNewPostSubscriptionConsumer
+  fullName: PostsListener.RemoveNewPostSubscriptionConsumer
+  nameWithType: RemoveNewPostSubscriptionConsumer
+- uid: PostsListener.RemoveNewPostSubscriptionConsumer.#ctor(PostsListener.ISubscriptionsManager,ILogger{PostsListener.RemoveNewPostSubscriptionConsumer})
+  name: RemoveNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger<RemoveNewPostSubscriptionConsumer>)
+  href: api/PostsListener.RemoveNewPostSubscriptionConsumer.html#PostsListener_RemoveNewPostSubscriptionConsumer__ctor_PostsListener_ISubscriptionsManager_ILogger_PostsListener_RemoveNewPostSubscriptionConsumer__
+  commentId: M:PostsListener.RemoveNewPostSubscriptionConsumer.#ctor(PostsListener.ISubscriptionsManager,ILogger{PostsListener.RemoveNewPostSubscriptionConsumer})
+  name.vb: RemoveNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger(Of RemoveNewPostSubscriptionConsumer))
+  fullName: PostsListener.RemoveNewPostSubscriptionConsumer.RemoveNewPostSubscriptionConsumer(PostsListener.ISubscriptionsManager, ILogger<PostsListener.RemoveNewPostSubscriptionConsumer>)
+  fullName.vb: PostsListener.RemoveNewPostSubscriptionConsumer.RemoveNewPostSubscriptionConsumer(PostsListener.ISubscriptionsManager, ILogger(Of PostsListener.RemoveNewPostSubscriptionConsumer))
+  nameWithType: RemoveNewPostSubscriptionConsumer.RemoveNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger<RemoveNewPostSubscriptionConsumer>)
+  nameWithType.vb: RemoveNewPostSubscriptionConsumer.RemoveNewPostSubscriptionConsumer(ISubscriptionsManager, ILogger(Of RemoveNewPostSubscriptionConsumer))
+- uid: PostsListener.RemoveNewPostSubscriptionConsumer.#ctor*
+  name: RemoveNewPostSubscriptionConsumer
+  href: api/PostsListener.RemoveNewPostSubscriptionConsumer.html#PostsListener_RemoveNewPostSubscriptionConsumer__ctor_
+  commentId: Overload:PostsListener.RemoveNewPostSubscriptionConsumer.#ctor
+  isSpec: "True"
+  fullName: PostsListener.RemoveNewPostSubscriptionConsumer.RemoveNewPostSubscriptionConsumer
+  nameWithType: RemoveNewPostSubscriptionConsumer.RemoveNewPostSubscriptionConsumer
+- uid: PostsListener.RemoveNewPostSubscriptionConsumer.Consume(ConsumeContext{RemoveNewPostSubscription})
+  name: Consume(ConsumeContext<RemoveNewPostSubscription>)
+  href: api/PostsListener.RemoveNewPostSubscriptionConsumer.html#PostsListener_RemoveNewPostSubscriptionConsumer_Consume_ConsumeContext_RemoveNewPostSubscription__
+  commentId: M:PostsListener.RemoveNewPostSubscriptionConsumer.Consume(ConsumeContext{RemoveNewPostSubscription})
+  name.vb: Consume(ConsumeContext(Of RemoveNewPostSubscription))
+  fullName: PostsListener.RemoveNewPostSubscriptionConsumer.Consume(ConsumeContext<RemoveNewPostSubscription>)
+  fullName.vb: PostsListener.RemoveNewPostSubscriptionConsumer.Consume(ConsumeContext(Of RemoveNewPostSubscription))
+  nameWithType: RemoveNewPostSubscriptionConsumer.Consume(ConsumeContext<RemoveNewPostSubscription>)
+  nameWithType.vb: RemoveNewPostSubscriptionConsumer.Consume(ConsumeContext(Of RemoveNewPostSubscription))
+- uid: PostsListener.RemoveNewPostSubscriptionConsumer.Consume*
+  name: Consume
+  href: api/PostsListener.RemoveNewPostSubscriptionConsumer.html#PostsListener_RemoveNewPostSubscriptionConsumer_Consume_
+  commentId: Overload:PostsListener.RemoveNewPostSubscriptionConsumer.Consume
+  isSpec: "True"
+  fullName: PostsListener.RemoveNewPostSubscriptionConsumer.Consume
+  nameWithType: RemoveNewPostSubscriptionConsumer.Consume
+- uid: PostsListener.Startup
+  name: Startup
+  href: api/PostsListener.Startup.html
+  commentId: T:PostsListener.Startup
+  fullName: PostsListener.Startup
+  nameWithType: Startup
+- uid: PostsListener.Startup.#ctor(IConfiguration)
+  name: Startup(IConfiguration)
+  href: api/PostsListener.Startup.html#PostsListener_Startup__ctor_IConfiguration_
+  commentId: M:PostsListener.Startup.#ctor(IConfiguration)
+  fullName: PostsListener.Startup.Startup(IConfiguration)
+  nameWithType: Startup.Startup(IConfiguration)
+- uid: PostsListener.Startup.#ctor*
+  name: Startup
+  href: api/PostsListener.Startup.html#PostsListener_Startup__ctor_
+  commentId: Overload:PostsListener.Startup.#ctor
+  isSpec: "True"
+  fullName: PostsListener.Startup.Startup
+  nameWithType: Startup.Startup
+- uid: PostsListener.Startup.ConfigureServices(IServiceCollection)
+  name: ConfigureServices(IServiceCollection)
+  href: api/PostsListener.Startup.html#PostsListener_Startup_ConfigureServices_IServiceCollection_
+  commentId: M:PostsListener.Startup.ConfigureServices(IServiceCollection)
+  fullName: PostsListener.Startup.ConfigureServices(IServiceCollection)
+  nameWithType: Startup.ConfigureServices(IServiceCollection)
+- uid: PostsListener.Startup.ConfigureServices*
+  name: ConfigureServices
+  href: api/PostsListener.Startup.html#PostsListener_Startup_ConfigureServices_
+  commentId: Overload:PostsListener.Startup.ConfigureServices
+  isSpec: "True"
+  fullName: PostsListener.Startup.ConfigureServices
+  nameWithType: Startup.ConfigureServices
+- uid: PostsListener.StreamConfig
+  name: StreamConfig
+  href: api/PostsListener.StreamConfig.html
+  commentId: T:PostsListener.StreamConfig
+  fullName: PostsListener.StreamConfig
+  nameWithType: StreamConfig
+- uid: PostsListener.StreamConfig.PlatformMultipliers
+  name: PlatformMultipliers
+  href: api/PostsListener.StreamConfig.html#PostsListener_StreamConfig_PlatformMultipliers
+  commentId: P:PostsListener.StreamConfig.PlatformMultipliers
+  fullName: PostsListener.StreamConfig.PlatformMultipliers
+  nameWithType: StreamConfig.PlatformMultipliers
+- uid: PostsListener.StreamConfig.PlatformMultipliers*
+  name: PlatformMultipliers
+  href: api/PostsListener.StreamConfig.html#PostsListener_StreamConfig_PlatformMultipliers_
+  commentId: Overload:PostsListener.StreamConfig.PlatformMultipliers
+  isSpec: "True"
+  fullName: PostsListener.StreamConfig.PlatformMultipliers
+  nameWithType: StreamConfig.PlatformMultipliers
+- uid: PostsListener.StreamManager
+  name: StreamManager
+  href: api/PostsListener.StreamManager.html
+  commentId: T:PostsListener.StreamManager
+  fullName: PostsListener.StreamManager
+  nameWithType: StreamManager
+- uid: PostsListener.StreamManager.#ctor(PostsListener.StreamConfig,Scraper.Net.Stream.PostStreamFactory,IBus,ILogger{PostsListener.StreamManager})
+  name: StreamManager(StreamConfig, PostStreamFactory, IBus, ILogger<StreamManager>)
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager__ctor_PostsListener_StreamConfig_Scraper_Net_Stream_PostStreamFactory_IBus_ILogger_PostsListener_StreamManager__
+  commentId: M:PostsListener.StreamManager.#ctor(PostsListener.StreamConfig,Scraper.Net.Stream.PostStreamFactory,IBus,ILogger{PostsListener.StreamManager})
+  name.vb: StreamManager(StreamConfig, PostStreamFactory, IBus, ILogger(Of StreamManager))
+  fullName: PostsListener.StreamManager.StreamManager(PostsListener.StreamConfig, Scraper.Net.Stream.PostStreamFactory, IBus, ILogger<PostsListener.StreamManager>)
+  fullName.vb: PostsListener.StreamManager.StreamManager(PostsListener.StreamConfig, Scraper.Net.Stream.PostStreamFactory, IBus, ILogger(Of PostsListener.StreamManager))
+  nameWithType: StreamManager.StreamManager(StreamConfig, PostStreamFactory, IBus, ILogger<StreamManager>)
+  nameWithType.vb: StreamManager.StreamManager(StreamConfig, PostStreamFactory, IBus, ILogger(Of StreamManager))
+- uid: PostsListener.StreamManager.#ctor*
+  name: StreamManager
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager__ctor_
+  commentId: Overload:PostsListener.StreamManager.#ctor
+  isSpec: "True"
+  fullName: PostsListener.StreamManager.StreamManager
+  nameWithType: StreamManager.StreamManager
+- uid: PostsListener.StreamManager.AddOrUpdate(Subscription,DateTime)
+  name: AddOrUpdate(Subscription, DateTime)
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager_AddOrUpdate_Subscription_DateTime_
+  commentId: M:PostsListener.StreamManager.AddOrUpdate(Subscription,DateTime)
+  fullName: PostsListener.StreamManager.AddOrUpdate(Subscription, DateTime)
+  nameWithType: StreamManager.AddOrUpdate(Subscription, DateTime)
+- uid: PostsListener.StreamManager.AddOrUpdate*
+  name: AddOrUpdate
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager_AddOrUpdate_
+  commentId: Overload:PostsListener.StreamManager.AddOrUpdate
+  isSpec: "True"
+  fullName: PostsListener.StreamManager.AddOrUpdate
+  nameWithType: StreamManager.AddOrUpdate
+- uid: PostsListener.StreamManager.Get
+  name: Get()
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager_Get
+  commentId: M:PostsListener.StreamManager.Get
+  fullName: PostsListener.StreamManager.Get()
+  nameWithType: StreamManager.Get()
+- uid: PostsListener.StreamManager.Get*
+  name: Get
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager_Get_
+  commentId: Overload:PostsListener.StreamManager.Get
+  isSpec: "True"
+  fullName: PostsListener.StreamManager.Get
+  nameWithType: StreamManager.Get
+- uid: PostsListener.StreamManager.Remove(Subscription)
+  name: Remove(Subscription)
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager_Remove_Subscription_
+  commentId: M:PostsListener.StreamManager.Remove(Subscription)
+  fullName: PostsListener.StreamManager.Remove(Subscription)
+  nameWithType: StreamManager.Remove(Subscription)
+- uid: PostsListener.StreamManager.Remove*
+  name: Remove
+  href: api/PostsListener.StreamManager.html#PostsListener_StreamManager_Remove_
+  commentId: Overload:PostsListener.StreamManager.Remove
+  isSpec: "True"
+  fullName: PostsListener.StreamManager.Remove
+  nameWithType: StreamManager.Remove
+- uid: PostsListener.SubscriptionsExtensions
+  name: SubscriptionsExtensions
+  href: api/PostsListener.SubscriptionsExtensions.html
+  commentId: T:PostsListener.SubscriptionsExtensions
+  fullName: PostsListener.SubscriptionsExtensions
+  nameWithType: SubscriptionsExtensions
+- uid: PostsListener.SubscriptionsExtensions.ToNewEntity(Subscription)
+  name: ToNewEntity(Subscription)
+  href: api/PostsListener.SubscriptionsExtensions.html#PostsListener_SubscriptionsExtensions_ToNewEntity_Subscription_
+  commentId: M:PostsListener.SubscriptionsExtensions.ToNewEntity(Subscription)
+  fullName: PostsListener.SubscriptionsExtensions.ToNewEntity(Subscription)
+  nameWithType: SubscriptionsExtensions.ToNewEntity(Subscription)
+- uid: PostsListener.SubscriptionsExtensions.ToNewEntity*
+  name: ToNewEntity
+  href: api/PostsListener.SubscriptionsExtensions.html#PostsListener_SubscriptionsExtensions_ToNewEntity_
+  commentId: Overload:PostsListener.SubscriptionsExtensions.ToNewEntity
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsExtensions.ToNewEntity
+  nameWithType: SubscriptionsExtensions.ToNewEntity
+- uid: PostsListener.SubscriptionsExtensions.ToSubscription(SubscriptionEntity)
+  name: ToSubscription(SubscriptionEntity)
+  href: api/PostsListener.SubscriptionsExtensions.html#PostsListener_SubscriptionsExtensions_ToSubscription_SubscriptionEntity_
+  commentId: M:PostsListener.SubscriptionsExtensions.ToSubscription(SubscriptionEntity)
+  fullName: PostsListener.SubscriptionsExtensions.ToSubscription(SubscriptionEntity)
+  nameWithType: SubscriptionsExtensions.ToSubscription(SubscriptionEntity)
+- uid: PostsListener.SubscriptionsExtensions.ToSubscription*
+  name: ToSubscription
+  href: api/PostsListener.SubscriptionsExtensions.html#PostsListener_SubscriptionsExtensions_ToSubscription_
+  commentId: Overload:PostsListener.SubscriptionsExtensions.ToSubscription
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsExtensions.ToSubscription
+  nameWithType: SubscriptionsExtensions.ToSubscription
+- uid: PostsListener.SubscriptionsLoaderService
+  name: SubscriptionsLoaderService
+  href: api/PostsListener.SubscriptionsLoaderService.html
+  commentId: T:PostsListener.SubscriptionsLoaderService
+  fullName: PostsListener.SubscriptionsLoaderService
+  nameWithType: SubscriptionsLoaderService
+- uid: PostsListener.SubscriptionsLoaderService.#ctor(PostsListener.StreamManager,PostsListener.ISubscriptionsPersistence)
+  name: SubscriptionsLoaderService(StreamManager, ISubscriptionsPersistence)
+  href: api/PostsListener.SubscriptionsLoaderService.html#PostsListener_SubscriptionsLoaderService__ctor_PostsListener_StreamManager_PostsListener_ISubscriptionsPersistence_
+  commentId: M:PostsListener.SubscriptionsLoaderService.#ctor(PostsListener.StreamManager,PostsListener.ISubscriptionsPersistence)
+  fullName: PostsListener.SubscriptionsLoaderService.SubscriptionsLoaderService(PostsListener.StreamManager, PostsListener.ISubscriptionsPersistence)
+  nameWithType: SubscriptionsLoaderService.SubscriptionsLoaderService(StreamManager, ISubscriptionsPersistence)
+- uid: PostsListener.SubscriptionsLoaderService.#ctor*
+  name: SubscriptionsLoaderService
+  href: api/PostsListener.SubscriptionsLoaderService.html#PostsListener_SubscriptionsLoaderService__ctor_
+  commentId: Overload:PostsListener.SubscriptionsLoaderService.#ctor
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsLoaderService.SubscriptionsLoaderService
+  nameWithType: SubscriptionsLoaderService.SubscriptionsLoaderService
+- uid: PostsListener.SubscriptionsLoaderService.StartAsync(CancellationToken)
+  name: StartAsync(CancellationToken)
+  href: api/PostsListener.SubscriptionsLoaderService.html#PostsListener_SubscriptionsLoaderService_StartAsync_CancellationToken_
+  commentId: M:PostsListener.SubscriptionsLoaderService.StartAsync(CancellationToken)
+  fullName: PostsListener.SubscriptionsLoaderService.StartAsync(CancellationToken)
+  nameWithType: SubscriptionsLoaderService.StartAsync(CancellationToken)
+- uid: PostsListener.SubscriptionsLoaderService.StartAsync*
+  name: StartAsync
+  href: api/PostsListener.SubscriptionsLoaderService.html#PostsListener_SubscriptionsLoaderService_StartAsync_
+  commentId: Overload:PostsListener.SubscriptionsLoaderService.StartAsync
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsLoaderService.StartAsync
+  nameWithType: SubscriptionsLoaderService.StartAsync
+- uid: PostsListener.SubscriptionsLoaderService.StopAsync(CancellationToken)
+  name: StopAsync(CancellationToken)
+  href: api/PostsListener.SubscriptionsLoaderService.html#PostsListener_SubscriptionsLoaderService_StopAsync_CancellationToken_
+  commentId: M:PostsListener.SubscriptionsLoaderService.StopAsync(CancellationToken)
+  fullName: PostsListener.SubscriptionsLoaderService.StopAsync(CancellationToken)
+  nameWithType: SubscriptionsLoaderService.StopAsync(CancellationToken)
+- uid: PostsListener.SubscriptionsLoaderService.StopAsync*
+  name: StopAsync
+  href: api/PostsListener.SubscriptionsLoaderService.html#PostsListener_SubscriptionsLoaderService_StopAsync_
+  commentId: Overload:PostsListener.SubscriptionsLoaderService.StopAsync
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsLoaderService.StopAsync
+  nameWithType: SubscriptionsLoaderService.StopAsync
+- uid: PostsListener.SubscriptionsManager
+  name: SubscriptionsManager
+  href: api/PostsListener.SubscriptionsManager.html
+  commentId: T:PostsListener.SubscriptionsManager
+  fullName: PostsListener.SubscriptionsManager
+  nameWithType: SubscriptionsManager
+- uid: PostsListener.SubscriptionsManager.#ctor(PostsListener.StreamManager,PostsListener.ISubscriptionsPersistence)
+  name: SubscriptionsManager(StreamManager, ISubscriptionsPersistence)
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager__ctor_PostsListener_StreamManager_PostsListener_ISubscriptionsPersistence_
+  commentId: M:PostsListener.SubscriptionsManager.#ctor(PostsListener.StreamManager,PostsListener.ISubscriptionsPersistence)
+  fullName: PostsListener.SubscriptionsManager.SubscriptionsManager(PostsListener.StreamManager, PostsListener.ISubscriptionsPersistence)
+  nameWithType: SubscriptionsManager.SubscriptionsManager(StreamManager, ISubscriptionsPersistence)
+- uid: PostsListener.SubscriptionsManager.#ctor*
+  name: SubscriptionsManager
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager__ctor_
+  commentId: Overload:PostsListener.SubscriptionsManager.#ctor
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsManager.SubscriptionsManager
+  nameWithType: SubscriptionsManager.SubscriptionsManager
+- uid: PostsListener.SubscriptionsManager.AddOrUpdateAsync(Subscription,System.Nullable{DateTime},CancellationToken)
+  name: AddOrUpdateAsync(Subscription, Nullable<DateTime>, CancellationToken)
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager_AddOrUpdateAsync_Subscription_System_Nullable_DateTime__CancellationToken_
+  commentId: M:PostsListener.SubscriptionsManager.AddOrUpdateAsync(Subscription,System.Nullable{DateTime},CancellationToken)
+  name.vb: AddOrUpdateAsync(Subscription, Nullable(Of DateTime), CancellationToken)
+  fullName: PostsListener.SubscriptionsManager.AddOrUpdateAsync(Subscription, System.Nullable<DateTime>, CancellationToken)
+  fullName.vb: PostsListener.SubscriptionsManager.AddOrUpdateAsync(Subscription, System.Nullable(Of DateTime), CancellationToken)
+  nameWithType: SubscriptionsManager.AddOrUpdateAsync(Subscription, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: SubscriptionsManager.AddOrUpdateAsync(Subscription, Nullable(Of DateTime), CancellationToken)
+- uid: PostsListener.SubscriptionsManager.AddOrUpdateAsync*
+  name: AddOrUpdateAsync
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager_AddOrUpdateAsync_
+  commentId: Overload:PostsListener.SubscriptionsManager.AddOrUpdateAsync
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsManager.AddOrUpdateAsync
+  nameWithType: SubscriptionsManager.AddOrUpdateAsync
+- uid: PostsListener.SubscriptionsManager.Get
+  name: Get()
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager_Get
+  commentId: M:PostsListener.SubscriptionsManager.Get
+  fullName: PostsListener.SubscriptionsManager.Get()
+  nameWithType: SubscriptionsManager.Get()
+- uid: PostsListener.SubscriptionsManager.Get*
+  name: Get
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager_Get_
+  commentId: Overload:PostsListener.SubscriptionsManager.Get
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsManager.Get
+  nameWithType: SubscriptionsManager.Get
+- uid: PostsListener.SubscriptionsManager.RemoveAsync(Subscription,CancellationToken)
+  name: RemoveAsync(Subscription, CancellationToken)
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager_RemoveAsync_Subscription_CancellationToken_
+  commentId: M:PostsListener.SubscriptionsManager.RemoveAsync(Subscription,CancellationToken)
+  fullName: PostsListener.SubscriptionsManager.RemoveAsync(Subscription, CancellationToken)
+  nameWithType: SubscriptionsManager.RemoveAsync(Subscription, CancellationToken)
+- uid: PostsListener.SubscriptionsManager.RemoveAsync*
+  name: RemoveAsync
+  href: api/PostsListener.SubscriptionsManager.html#PostsListener_SubscriptionsManager_RemoveAsync_
+  commentId: Overload:PostsListener.SubscriptionsManager.RemoveAsync
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsManager.RemoveAsync
+  nameWithType: SubscriptionsManager.RemoveAsync
+- uid: PostsListener.SubscriptionsManagerConfig
+  name: SubscriptionsManagerConfig
+  href: api/PostsListener.SubscriptionsManagerConfig.html
+  commentId: T:PostsListener.SubscriptionsManagerConfig
+  fullName: PostsListener.SubscriptionsManagerConfig
+  nameWithType: SubscriptionsManagerConfig
+- uid: PostsListener.SubscriptionsManagerConfig.MaxDegreeOfParallelism
+  name: MaxDegreeOfParallelism
+  href: api/PostsListener.SubscriptionsManagerConfig.html#PostsListener_SubscriptionsManagerConfig_MaxDegreeOfParallelism
+  commentId: P:PostsListener.SubscriptionsManagerConfig.MaxDegreeOfParallelism
+  fullName: PostsListener.SubscriptionsManagerConfig.MaxDegreeOfParallelism
+  nameWithType: SubscriptionsManagerConfig.MaxDegreeOfParallelism
+- uid: PostsListener.SubscriptionsManagerConfig.MaxDegreeOfParallelism*
+  name: MaxDegreeOfParallelism
+  href: api/PostsListener.SubscriptionsManagerConfig.html#PostsListener_SubscriptionsManagerConfig_MaxDegreeOfParallelism_
+  commentId: Overload:PostsListener.SubscriptionsManagerConfig.MaxDegreeOfParallelism
+  isSpec: "True"
+  fullName: PostsListener.SubscriptionsManagerConfig.MaxDegreeOfParallelism
+  nameWithType: SubscriptionsManagerConfig.MaxDegreeOfParallelism
 - uid: root.home
   name: Scraper.Net
   href: index.html
+- uid: Scraper.MassTransit
+  name: Scraper.MassTransit
+  href: api/Scraper.MassTransit.html
+  commentId: N:Scraper.MassTransit
+  fullName: Scraper.MassTransit
+  nameWithType: Scraper.MassTransit
+- uid: Scraper.MassTransit.Client
+  name: Scraper.MassTransit.Client
+  href: api/Scraper.MassTransit.Client.html
+  commentId: N:Scraper.MassTransit.Client
+  fullName: Scraper.MassTransit.Client
+  nameWithType: Scraper.MassTransit.Client
+- uid: Scraper.MassTransit.Client.BusExtensions
+  name: BusExtensions
+  href: api/Scraper.MassTransit.Client.BusExtensions.html
+  commentId: T:Scraper.MassTransit.Client.BusExtensions
+  fullName: Scraper.MassTransit.Client.BusExtensions
+  nameWithType: BusExtensions
+- uid: Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable*
+  name: ConnectRequestObservable
+  href: api/Scraper.MassTransit.Client.BusExtensions.html#Scraper_MassTransit_Client_BusExtensions_ConnectRequestObservable_
+  commentId: Overload:Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable
+  nameWithType: BusExtensions.ConnectRequestObservable
+- uid: Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable``1(IBus,Guid)
+  name: ConnectRequestObservable<T>(IBus, Guid)
+  href: api/Scraper.MassTransit.Client.BusExtensions.html#Scraper_MassTransit_Client_BusExtensions_ConnectRequestObservable__1_IBus_Guid_
+  commentId: M:Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable``1(IBus,Guid)
+  name.vb: ConnectRequestObservable(Of T)(IBus, Guid)
+  fullName: Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable<T>(IBus, Guid)
+  fullName.vb: Scraper.MassTransit.Client.BusExtensions.ConnectRequestObservable(Of T)(IBus, Guid)
+  nameWithType: BusExtensions.ConnectRequestObservable<T>(IBus, Guid)
+  nameWithType.vb: BusExtensions.ConnectRequestObservable(Of T)(IBus, Guid)
+- uid: Scraper.MassTransit.Client.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Scraper.MassTransit.Client.ServiceCollectionExtensions.html
+  commentId: T:Scraper.MassTransit.Client.ServiceCollectionExtensions
+  fullName: Scraper.MassTransit.Client.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient(IServiceCollection,System.Nullable{TimeSpan})
+  name: AddScraperMassTransitClient(IServiceCollection, Nullable<TimeSpan>)
+  href: api/Scraper.MassTransit.Client.ServiceCollectionExtensions.html#Scraper_MassTransit_Client_ServiceCollectionExtensions_AddScraperMassTransitClient_IServiceCollection_System_Nullable_TimeSpan__
+  commentId: M:Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient(IServiceCollection,System.Nullable{TimeSpan})
+  name.vb: AddScraperMassTransitClient(IServiceCollection, Nullable(Of TimeSpan))
+  fullName: Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient(IServiceCollection, System.Nullable<TimeSpan>)
+  fullName.vb: Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient(IServiceCollection, System.Nullable(Of TimeSpan))
+  nameWithType: ServiceCollectionExtensions.AddScraperMassTransitClient(IServiceCollection, Nullable<TimeSpan>)
+  nameWithType.vb: ServiceCollectionExtensions.AddScraperMassTransitClient(IServiceCollection, Nullable(Of TimeSpan))
+- uid: Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient*
+  name: AddScraperMassTransitClient
+  href: api/Scraper.MassTransit.Client.ServiceCollectionExtensions.html#Scraper_MassTransit_Client_ServiceCollectionExtensions_AddScraperMassTransitClient_
+  commentId: Overload:Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Client.ServiceCollectionExtensions.AddScraperMassTransitClient
+  nameWithType: ServiceCollectionExtensions.AddScraperMassTransitClient
+- uid: Scraper.MassTransit.Common
+  name: Scraper.MassTransit.Common
+  href: api/Scraper.MassTransit.Common.html
+  commentId: N:Scraper.MassTransit.Common
+  fullName: Scraper.MassTransit.Common
+  nameWithType: Scraper.MassTransit.Common
+- uid: Scraper.MassTransit.Common.JsonConfigurator
+  name: JsonConfigurator
+  href: api/Scraper.MassTransit.Common.JsonConfigurator.html
+  commentId: T:Scraper.MassTransit.Common.JsonConfigurator
+  fullName: Scraper.MassTransit.Common.JsonConfigurator
+  nameWithType: JsonConfigurator
+- uid: Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator,Type[])
+  name: ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator, Type[])
+  href: api/Scraper.MassTransit.Common.JsonConfigurator.html#Scraper_MassTransit_Common_JsonConfigurator_ConfigureInterfaceJsonSerialization_IBusFactoryConfigurator_Type___
+  commentId: M:Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator,Type[])
+  name.vb: ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator, Type())
+  fullName: Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator, Type[])
+  fullName.vb: Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator, Type())
+  nameWithType: JsonConfigurator.ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator, Type[])
+  nameWithType.vb: JsonConfigurator.ConfigureInterfaceJsonSerialization(IBusFactoryConfigurator, Type())
+- uid: Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization*
+  name: ConfigureInterfaceJsonSerialization
+  href: api/Scraper.MassTransit.Common.JsonConfigurator.html#Scraper_MassTransit_Common_JsonConfigurator_ConfigureInterfaceJsonSerialization_
+  commentId: Overload:Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Common.JsonConfigurator.ConfigureInterfaceJsonSerialization
+  nameWithType: JsonConfigurator.ConfigureInterfaceJsonSerialization
+- uid: Scraper.MassTransit.Common.RabbitMqConfig
+  name: RabbitMqConfig
+  href: api/Scraper.MassTransit.Common.RabbitMqConfig.html
+  commentId: T:Scraper.MassTransit.Common.RabbitMqConfig
+  fullName: Scraper.MassTransit.Common.RabbitMqConfig
+  nameWithType: RabbitMqConfig
+- uid: Scraper.MassTransit.Common.RabbitMqConfig.ConnectionString
+  name: ConnectionString
+  href: api/Scraper.MassTransit.Common.RabbitMqConfig.html#Scraper_MassTransit_Common_RabbitMqConfig_ConnectionString
+  commentId: P:Scraper.MassTransit.Common.RabbitMqConfig.ConnectionString
+  fullName: Scraper.MassTransit.Common.RabbitMqConfig.ConnectionString
+  nameWithType: RabbitMqConfig.ConnectionString
+- uid: Scraper.MassTransit.Common.RabbitMqConfig.ConnectionString*
+  name: ConnectionString
+  href: api/Scraper.MassTransit.Common.RabbitMqConfig.html#Scraper_MassTransit_Common_RabbitMqConfig_ConnectionString_
+  commentId: Overload:Scraper.MassTransit.Common.RabbitMqConfig.ConnectionString
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Common.RabbitMqConfig.ConnectionString
+  nameWithType: RabbitMqConfig.ConnectionString
+- uid: Scraper.MassTransit.GetAuthorConsumer
+  name: GetAuthorConsumer
+  href: api/Scraper.MassTransit.GetAuthorConsumer.html
+  commentId: T:Scraper.MassTransit.GetAuthorConsumer
+  fullName: Scraper.MassTransit.GetAuthorConsumer
+  nameWithType: GetAuthorConsumer
+- uid: Scraper.MassTransit.GetAuthorConsumer.#ctor(IScraperService)
+  name: GetAuthorConsumer(IScraperService)
+  href: api/Scraper.MassTransit.GetAuthorConsumer.html#Scraper_MassTransit_GetAuthorConsumer__ctor_IScraperService_
+  commentId: M:Scraper.MassTransit.GetAuthorConsumer.#ctor(IScraperService)
+  fullName: Scraper.MassTransit.GetAuthorConsumer.GetAuthorConsumer(IScraperService)
+  nameWithType: GetAuthorConsumer.GetAuthorConsumer(IScraperService)
+- uid: Scraper.MassTransit.GetAuthorConsumer.#ctor*
+  name: GetAuthorConsumer
+  href: api/Scraper.MassTransit.GetAuthorConsumer.html#Scraper_MassTransit_GetAuthorConsumer__ctor_
+  commentId: Overload:Scraper.MassTransit.GetAuthorConsumer.#ctor
+  isSpec: "True"
+  fullName: Scraper.MassTransit.GetAuthorConsumer.GetAuthorConsumer
+  nameWithType: GetAuthorConsumer.GetAuthorConsumer
+- uid: Scraper.MassTransit.GetAuthorConsumer.Consume(ConsumeContext{GetAuthor})
+  name: Consume(ConsumeContext<GetAuthor>)
+  href: api/Scraper.MassTransit.GetAuthorConsumer.html#Scraper_MassTransit_GetAuthorConsumer_Consume_ConsumeContext_GetAuthor__
+  commentId: M:Scraper.MassTransit.GetAuthorConsumer.Consume(ConsumeContext{GetAuthor})
+  name.vb: Consume(ConsumeContext(Of GetAuthor))
+  fullName: Scraper.MassTransit.GetAuthorConsumer.Consume(ConsumeContext<GetAuthor>)
+  fullName.vb: Scraper.MassTransit.GetAuthorConsumer.Consume(ConsumeContext(Of GetAuthor))
+  nameWithType: GetAuthorConsumer.Consume(ConsumeContext<GetAuthor>)
+  nameWithType.vb: GetAuthorConsumer.Consume(ConsumeContext(Of GetAuthor))
+- uid: Scraper.MassTransit.GetAuthorConsumer.Consume*
+  name: Consume
+  href: api/Scraper.MassTransit.GetAuthorConsumer.html#Scraper_MassTransit_GetAuthorConsumer_Consume_
+  commentId: Overload:Scraper.MassTransit.GetAuthorConsumer.Consume
+  isSpec: "True"
+  fullName: Scraper.MassTransit.GetAuthorConsumer.Consume
+  nameWithType: GetAuthorConsumer.Consume
+- uid: Scraper.MassTransit.GetPostsConsumer
+  name: GetPostsConsumer
+  href: api/Scraper.MassTransit.GetPostsConsumer.html
+  commentId: T:Scraper.MassTransit.GetPostsConsumer
+  fullName: Scraper.MassTransit.GetPostsConsumer
+  nameWithType: GetPostsConsumer
+- uid: Scraper.MassTransit.GetPostsConsumer.#ctor(IScraperService)
+  name: GetPostsConsumer(IScraperService)
+  href: api/Scraper.MassTransit.GetPostsConsumer.html#Scraper_MassTransit_GetPostsConsumer__ctor_IScraperService_
+  commentId: M:Scraper.MassTransit.GetPostsConsumer.#ctor(IScraperService)
+  fullName: Scraper.MassTransit.GetPostsConsumer.GetPostsConsumer(IScraperService)
+  nameWithType: GetPostsConsumer.GetPostsConsumer(IScraperService)
+- uid: Scraper.MassTransit.GetPostsConsumer.#ctor*
+  name: GetPostsConsumer
+  href: api/Scraper.MassTransit.GetPostsConsumer.html#Scraper_MassTransit_GetPostsConsumer__ctor_
+  commentId: Overload:Scraper.MassTransit.GetPostsConsumer.#ctor
+  isSpec: "True"
+  fullName: Scraper.MassTransit.GetPostsConsumer.GetPostsConsumer
+  nameWithType: GetPostsConsumer.GetPostsConsumer
+- uid: Scraper.MassTransit.GetPostsConsumer.Consume(ConsumeContext{GetPosts})
+  name: Consume(ConsumeContext<GetPosts>)
+  href: api/Scraper.MassTransit.GetPostsConsumer.html#Scraper_MassTransit_GetPostsConsumer_Consume_ConsumeContext_GetPosts__
+  commentId: M:Scraper.MassTransit.GetPostsConsumer.Consume(ConsumeContext{GetPosts})
+  name.vb: Consume(ConsumeContext(Of GetPosts))
+  fullName: Scraper.MassTransit.GetPostsConsumer.Consume(ConsumeContext<GetPosts>)
+  fullName.vb: Scraper.MassTransit.GetPostsConsumer.Consume(ConsumeContext(Of GetPosts))
+  nameWithType: GetPostsConsumer.Consume(ConsumeContext<GetPosts>)
+  nameWithType.vb: GetPostsConsumer.Consume(ConsumeContext(Of GetPosts))
+- uid: Scraper.MassTransit.GetPostsConsumer.Consume*
+  name: Consume
+  href: api/Scraper.MassTransit.GetPostsConsumer.html#Scraper_MassTransit_GetPostsConsumer_Consume_
+  commentId: Overload:Scraper.MassTransit.GetPostsConsumer.Consume
+  isSpec: "True"
+  fullName: Scraper.MassTransit.GetPostsConsumer.Consume
+  nameWithType: GetPostsConsumer.Consume
+- uid: Scraper.MassTransit.Program
+  name: Program
+  href: api/Scraper.MassTransit.Program.html
+  commentId: T:Scraper.MassTransit.Program
+  fullName: Scraper.MassTransit.Program
+  nameWithType: Program
+- uid: Scraper.MassTransit.Program.Main(System.String[])
+  name: Main(String[])
+  href: api/Scraper.MassTransit.Program.html#Scraper_MassTransit_Program_Main_System_String___
+  commentId: M:Scraper.MassTransit.Program.Main(System.String[])
+  name.vb: Main(String())
+  fullName: Scraper.MassTransit.Program.Main(System.String[])
+  fullName.vb: Scraper.MassTransit.Program.Main(System.String())
+  nameWithType: Program.Main(String[])
+  nameWithType.vb: Program.Main(String())
+- uid: Scraper.MassTransit.Program.Main*
+  name: Main
+  href: api/Scraper.MassTransit.Program.html#Scraper_MassTransit_Program_Main_
+  commentId: Overload:Scraper.MassTransit.Program.Main
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Program.Main
+  nameWithType: Program.Main
+- uid: Scraper.MassTransit.Startup
+  name: Startup
+  href: api/Scraper.MassTransit.Startup.html
+  commentId: T:Scraper.MassTransit.Startup
+  fullName: Scraper.MassTransit.Startup
+  nameWithType: Startup
+- uid: Scraper.MassTransit.Startup.#ctor(IConfiguration)
+  name: Startup(IConfiguration)
+  href: api/Scraper.MassTransit.Startup.html#Scraper_MassTransit_Startup__ctor_IConfiguration_
+  commentId: M:Scraper.MassTransit.Startup.#ctor(IConfiguration)
+  fullName: Scraper.MassTransit.Startup.Startup(IConfiguration)
+  nameWithType: Startup.Startup(IConfiguration)
+- uid: Scraper.MassTransit.Startup.#ctor*
+  name: Startup
+  href: api/Scraper.MassTransit.Startup.html#Scraper_MassTransit_Startup__ctor_
+  commentId: Overload:Scraper.MassTransit.Startup.#ctor
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Startup.Startup
+  nameWithType: Startup.Startup
+- uid: Scraper.MassTransit.Startup.ConfigureServices(IServiceCollection)
+  name: ConfigureServices(IServiceCollection)
+  href: api/Scraper.MassTransit.Startup.html#Scraper_MassTransit_Startup_ConfigureServices_IServiceCollection_
+  commentId: M:Scraper.MassTransit.Startup.ConfigureServices(IServiceCollection)
+  fullName: Scraper.MassTransit.Startup.ConfigureServices(IServiceCollection)
+  nameWithType: Startup.ConfigureServices(IServiceCollection)
+- uid: Scraper.MassTransit.Startup.ConfigureServices*
+  name: ConfigureServices
+  href: api/Scraper.MassTransit.Startup.html#Scraper_MassTransit_Startup_ConfigureServices_
+  commentId: Overload:Scraper.MassTransit.Startup.ConfigureServices
+  isSpec: "True"
+  fullName: Scraper.MassTransit.Startup.ConfigureServices
+  nameWithType: Startup.ConfigureServices
 - uid: Scraper.Net
   name: Scraper.Net
   href: api/Scraper.Net.html
