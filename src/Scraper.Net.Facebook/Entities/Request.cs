@@ -12,12 +12,12 @@ namespace Scraper.Net.Facebook
         public string Proxy { get; init; }
 
         [JsonIgnore]
-        public TimeSpan Timeout { get; init; } = TimeSpan.FromSeconds(10);
+        public TimeSpan Timeout { get; init; }
 
         [JsonPropertyName("timeout")]
         public int TimeoutSeconds => (int) Timeout.TotalSeconds;
 
-        [JsonPropertyName("cookies_filename")]
-        public string CookiesFileName { get; init; }
+        [JsonPropertyName("cookies_filenames")]
+        public string[] CookiesFileNames { get; init; }
     }
 }

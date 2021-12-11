@@ -83,7 +83,8 @@ namespace Scraper.Net.Facebook
             {
                 UserId = id,
                 Proxy = proxy,
-                CookiesFileName = _config.CookiesFileName
+                Timeout = _config.Timeout,
+                CookiesFileNames = _config.CookiesFileNames
             };
         }
     }

@@ -5,10 +5,24 @@ on:
   push:
     paths:
       - "src/Scraper.MassTransit/**"
+      - "src/Scraper.Net/**"
+      - "src/Scraper.Net.Facebook/**"
+      - "src/Scraper.Net.Feeds/**"
+      - "src/Scraper.Net.Screenshot/**"
+      - "src/Scraper.Net.Twitter/**"
+      - "src/Scraper.Net.Youtube/**"
+      - "src/Scraper.Net.YoutubeDl/**"
   pull_request:
     paths:
       - "src/Scraper.MassTransit/**"
-    
+      - "src/Scraper.Net/**"
+      - "src/Scraper.Net.Facebook/**"
+      - "src/Scraper.Net.Feeds/**"
+      - "src/Scraper.Net.Screenshot/**"
+      - "src/Scraper.Net.Twitter/**"
+      - "src/Scraper.Net.Youtube/**"
+      - "src/Scraper.Net.YoutubeDl/**"
+
 jobs:
   build:
 

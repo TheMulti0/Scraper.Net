@@ -1,9 +1,12 @@
 ﻿import json
 import traceback, sys
 from datetime import datetime
+from itertools import cycle
+from random import shuffle
 from typing import Optional
 
-from facebook_scraper import get_posts, set_proxy
+from facebook_scraper import get_posts, set_proxy, set_cookies
+from facebook_scraper.exceptions import InvalidCookies
 
 
 class GetPostsRequest:
@@ -12,7 +15,7 @@ class GetPostsRequest:
     posts_per_page: int
     proxy: Optional[str]
     timeout: int
-    cookies_filename: Optional[str]
+    cookies_filenames: list[str]
 
     def __init__(self, new_dict):
         self.__dict__.update(new_dict)
@@ -33,8 +36,8 @@ def get_stack_trace():
     exc = sys.exc_info()[0]
     stack = traceback.extract_stack()[:-1]  # last one would be full_stack()
     if exc is not None:  # i.e. an exception is present
-        del stack[-1]       # remove call of full_stack, the printed exception
-                            # will contain the caught exception caller instead
+        del stack[-1]  # remove call of full_stack, the printed exception
+        # will contain the caught exception caller instead
     return ''.join(traceback.format_list(stack))
 
 
@@ -48,6 +51,10 @@ def json_converter(obj):
 def main(args):
     try:
         request = GetPostsRequest(json.loads(args[0]))
+
+        shuffle(request.cookies_filenames)
+        cookies = cycle(request.cookies_filenames)
+        set_cookie(cookies)
 
         for post in get_facebook_posts(request):
             print(serialize(post))
@@ -64,9 +71,32 @@ def get_facebook_posts(request: GetPostsRequest):
     return get_posts(
         request.user_id,
         pages=request.pages,
-        cookies=request.cookies_filename,
         timeout=request.timeout,
         options={"posts_per_page": request.posts_per_page})
+
+
+def set_cookie(cookies, initial=None):
+    try:
+        cookie = next(cookies)
+
+        if initial == cookie:
+            raise StopIteration
+
+        print(f'Trying cookies from file {cookie}')
+
+        try:
+            set_cookies(cookie)
+        except (InvalidCookies, FileNotFoundError) as e:
+            print(f'Failed to use cookies from file {cookie}:')
+            print(f'{type(e).__name__}: {e}')
+
+            set_cookie(
+                cookies,
+                initial=cookie if initial is None else initial)
+
+    except StopIteration:
+        print("Not using cookies")
+        return
 
 
 def serialize(obj):

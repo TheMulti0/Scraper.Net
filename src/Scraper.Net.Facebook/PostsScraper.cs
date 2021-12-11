@@ -92,7 +92,8 @@ namespace Scraper.Net.Facebook
             Pages = _config.MaxPageCount,
             PostsPerPage = _config.PostsPerPage,
             Proxy = proxy,
-            CookiesFileName = _config.CookiesFileName
+            Timeout = _config.Timeout,
+            CookiesFileNames = _config.CookiesFileNames
         };
     }
 }

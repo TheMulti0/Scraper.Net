@@ -1,4 +1,6 @@
-﻿namespace Scraper.Net.Facebook
+﻿using System;
+
+namespace Scraper.Net.Facebook
 {
     public class FacebookConfig
     {
@@ -7,7 +9,9 @@
         public int MaxPageCount { get; set; } = 1;
 
         public int PostsPerPage { get; set; } = 5;
+        
+        public TimeSpan Timeout { get; init; } = TimeSpan.FromSeconds(10);
 
-        public string CookiesFileName { get; set; }
+        public string[] CookiesFileNames { get; set; } = Array.Empty<string>();
     }
 }
