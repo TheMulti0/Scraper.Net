@@ -1,6 +1,7 @@
 ﻿import json
 import sys
 import traceback
+import warnings
 from datetime import datetime
 from itertools import cycle
 from random import shuffle
@@ -79,20 +80,20 @@ def set_cookie(cookies: List[str], initial=None):
         if initial == cookie:
             raise StopIteration
 
-        print(f'Trying cookies from file {cookie}')
+        warnings.warn(f'Trying cookies from file {cookie}')
 
         try:
             set_cookies(cookie)
         except (InvalidCookies, FileNotFoundError) as e:
-            print(f'Failed to use cookies from file {cookie}:')
-            print(f'{type(e).__name__}: {e}')
+            warnings.warn(f'Failed to use cookies from file {cookie}:')
+            warnings.warn(f'{type(e).__name__}: {e}')
 
             set_cookie(
                 cookies,
                 initial=cookie if initial is None else initial)
 
     except StopIteration:
-        print("Not using cookies")
+        warnings.warn("Not using cookies")
         return
 
 
