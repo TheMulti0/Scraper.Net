@@ -1,5 +1,7 @@
 ﻿import json
 import sys
+import traceback
+from datetime import datetime
 from itertools import cycle
 from random import shuffle
 from typing import Optional
@@ -18,17 +20,30 @@ class GetPageInfoRequest:
         self.__dict__.update(new_dict)
 
 
-class Error:
+class FacebookScraperException:
     type: str
     message: str
+    stack_trace: str
 
     def __init__(self, exception: Exception):
         self.type = type(exception).__name__
         self.message = str(exception)
+        self.stack_trace = get_stack_trace()
+
+
+def get_stack_trace():
+    exc = sys.exc_info()[0]
+    stack = traceback.extract_stack()[:-1]  # last one would be full_stack()
+    if exc is not None:  # i.e. an exception is present
+        del stack[-1]  # remove call of full_stack, the printed exception
+        # will contain the caught exception caller instead
+    return ''.join(traceback.format_list(stack))
 
 
 def json_converter(obj):
-    if isinstance(obj, Error):
+    if isinstance(obj, datetime):
+        return obj.__str__()
+    if isinstance(obj, FacebookScraperException):
         return obj.__dict__
 
 
@@ -44,7 +59,7 @@ def main(args):
         print(serialize(page_info))
 
     except Exception as e:
-        error = Error(e)
+        error = FacebookScraperException(e)
         print(serialize(error))
 
 
