@@ -1,9 +1,10 @@
 ﻿import json
-import traceback, sys
+import sys
+import traceback
 from datetime import datetime
 from itertools import cycle
 from random import shuffle
-from typing import Optional
+from typing import Optional, List
 
 from facebook_scraper import get_posts, set_proxy, set_cookies
 from facebook_scraper.exceptions import InvalidCookies
@@ -15,7 +16,7 @@ class GetPostsRequest:
     posts_per_page: int
     proxy: Optional[str]
     timeout: int
-    cookies_filenames: list[str]
+    cookies_filenames: List[str]
 
     def __init__(self, new_dict):
         self.__dict__.update(new_dict)
@@ -75,7 +76,7 @@ def get_facebook_posts(request: GetPostsRequest):
         options={"posts_per_page": request.posts_per_page})
 
 
-def set_cookie(cookies, initial=None):
+def set_cookie(cookies: List[str], initial=None):
     try:
         cookie = next(cookies)
 
