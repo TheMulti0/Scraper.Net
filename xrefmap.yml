@@ -1720,19 +1720,19 @@ references:
   commentId: T:Scraper.Net.Facebook.FacebookConfig
   fullName: Scraper.Net.Facebook.FacebookConfig
   nameWithType: FacebookConfig
-- uid: Scraper.Net.Facebook.FacebookConfig.CookiesFileName
-  name: CookiesFileName
-  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_CookiesFileName
-  commentId: P:Scraper.Net.Facebook.FacebookConfig.CookiesFileName
-  fullName: Scraper.Net.Facebook.FacebookConfig.CookiesFileName
-  nameWithType: FacebookConfig.CookiesFileName
-- uid: Scraper.Net.Facebook.FacebookConfig.CookiesFileName*
-  name: CookiesFileName
-  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_CookiesFileName_
-  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.CookiesFileName
+- uid: Scraper.Net.Facebook.FacebookConfig.CookiesFileNames
+  name: CookiesFileNames
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_CookiesFileNames
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.CookiesFileNames
+  fullName: Scraper.Net.Facebook.FacebookConfig.CookiesFileNames
+  nameWithType: FacebookConfig.CookiesFileNames
+- uid: Scraper.Net.Facebook.FacebookConfig.CookiesFileNames*
+  name: CookiesFileNames
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_CookiesFileNames_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.CookiesFileNames
   isSpec: "True"
-  fullName: Scraper.Net.Facebook.FacebookConfig.CookiesFileName
-  nameWithType: FacebookConfig.CookiesFileName
+  fullName: Scraper.Net.Facebook.FacebookConfig.CookiesFileNames
+  nameWithType: FacebookConfig.CookiesFileNames
 - uid: Scraper.Net.Facebook.FacebookConfig.MaxPageCount
   name: MaxPageCount
   href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_MaxPageCount
@@ -1772,6 +1772,19 @@ references:
   isSpec: "True"
   fullName: Scraper.Net.Facebook.FacebookConfig.PythonPath
   nameWithType: FacebookConfig.PythonPath
+- uid: Scraper.Net.Facebook.FacebookConfig.Timeout
+  name: Timeout
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_Timeout
+  commentId: P:Scraper.Net.Facebook.FacebookConfig.Timeout
+  fullName: Scraper.Net.Facebook.FacebookConfig.Timeout
+  nameWithType: FacebookConfig.Timeout
+- uid: Scraper.Net.Facebook.FacebookConfig.Timeout*
+  name: Timeout
+  href: api/Scraper.Net.Facebook.FacebookConfig.html#Scraper_Net_Facebook_FacebookConfig_Timeout_
+  commentId: Overload:Scraper.Net.Facebook.FacebookConfig.Timeout
+  isSpec: "True"
+  fullName: Scraper.Net.Facebook.FacebookConfig.Timeout
+  nameWithType: FacebookConfig.Timeout
 - uid: Scraper.Net.Facebook.FacebookConstants
   name: FacebookConstants
   href: api/Scraper.Net.Facebook.FacebookConstants.html
