@@ -73,7 +73,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MassTransit", "MassTransit"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostsListener", "PostsListener", "{559A281A-0BB7-4969-857A-32AC25DE2E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostsListener.Service", "PostsListener.Service\PostsListener.Service.csproj", "{10E42FA2-43BB-4F0A-9143-77C963607492}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostsListener.Service", "src\PostsListener.Service\PostsListener.Service.csproj", "{ADBA4ED8-A063-4506-BF60-35A28654FB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +201,10 @@ Global
 		{10E42FA2-43BB-4F0A-9143-77C963607492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E42FA2-43BB-4F0A-9143-77C963607492}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E42FA2-43BB-4F0A-9143-77C963607492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBA4ED8-A063-4506-BF60-35A28654FB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBA4ED8-A063-4506-BF60-35A28654FB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBA4ED8-A063-4506-BF60-35A28654FB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBA4ED8-A063-4506-BF60-35A28654FB75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,5 +243,6 @@ Global
 		{9A4F5C11-9114-456B-9D0E-DA88506ADA3C} = {70BDE26A-6486-4262-B774-17D2723ADDCE}
 		{663F57CF-74EE-4D7A-96A9-F27296986217} = {70BDE26A-6486-4262-B774-17D2723ADDCE}
 		{10E42FA2-43BB-4F0A-9143-77C963607492} = {559A281A-0BB7-4969-857A-32AC25DE2E50}
+		{ADBA4ED8-A063-4506-BF60-35A28654FB75} = {559A281A-0BB7-4969-857A-32AC25DE2E50}
 	EndGlobalSection
 EndGlobal
