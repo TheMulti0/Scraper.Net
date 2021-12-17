@@ -1068,28 +1068,6 @@ references:
   isSpec: "True"
   fullName: PostsListener.PostUrlsPersistenceConfig.ExpirationTime
   nameWithType: PostUrlsPersistenceConfig.ExpirationTime
-- uid: PostsListener.Program
-  name: Program
-  href: api/PostsListener.Program.html
-  commentId: T:PostsListener.Program
-  fullName: PostsListener.Program
-  nameWithType: Program
-- uid: PostsListener.Program.Main(System.String[])
-  name: Main(String[])
-  href: api/PostsListener.Program.html#PostsListener_Program_Main_System_String___
-  commentId: M:PostsListener.Program.Main(System.String[])
-  name.vb: Main(String())
-  fullName: PostsListener.Program.Main(System.String[])
-  fullName.vb: PostsListener.Program.Main(System.String())
-  nameWithType: Program.Main(String[])
-  nameWithType.vb: Program.Main(String())
-- uid: PostsListener.Program.Main*
-  name: Main
-  href: api/PostsListener.Program.html#PostsListener_Program_Main_
-  commentId: Overload:PostsListener.Program.Main
-  isSpec: "True"
-  fullName: PostsListener.Program.Main
-  nameWithType: Program.Main
 - uid: PostsListener.RemoveNewPostSubscriptionConsumer
   name: RemoveNewPostSubscriptionConsumer
   href: api/PostsListener.RemoveNewPostSubscriptionConsumer.html
@@ -1128,38 +1106,6 @@ references:
   isSpec: "True"
   fullName: PostsListener.RemoveNewPostSubscriptionConsumer.Consume
   nameWithType: RemoveNewPostSubscriptionConsumer.Consume
-- uid: PostsListener.Startup
-  name: Startup
-  href: api/PostsListener.Startup.html
-  commentId: T:PostsListener.Startup
-  fullName: PostsListener.Startup
-  nameWithType: Startup
-- uid: PostsListener.Startup.#ctor(IConfiguration)
-  name: Startup(IConfiguration)
-  href: api/PostsListener.Startup.html#PostsListener_Startup__ctor_IConfiguration_
-  commentId: M:PostsListener.Startup.#ctor(IConfiguration)
-  fullName: PostsListener.Startup.Startup(IConfiguration)
-  nameWithType: Startup.Startup(IConfiguration)
-- uid: PostsListener.Startup.#ctor*
-  name: Startup
-  href: api/PostsListener.Startup.html#PostsListener_Startup__ctor_
-  commentId: Overload:PostsListener.Startup.#ctor
-  isSpec: "True"
-  fullName: PostsListener.Startup.Startup
-  nameWithType: Startup.Startup
-- uid: PostsListener.Startup.ConfigureServices(IServiceCollection)
-  name: ConfigureServices(IServiceCollection)
-  href: api/PostsListener.Startup.html#PostsListener_Startup_ConfigureServices_IServiceCollection_
-  commentId: M:PostsListener.Startup.ConfigureServices(IServiceCollection)
-  fullName: PostsListener.Startup.ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-- uid: PostsListener.Startup.ConfigureServices*
-  name: ConfigureServices
-  href: api/PostsListener.Startup.html#PostsListener_Startup_ConfigureServices_
-  commentId: Overload:PostsListener.Startup.ConfigureServices
-  isSpec: "True"
-  fullName: PostsListener.Startup.ConfigureServices
-  nameWithType: Startup.ConfigureServices
 - uid: PostsListener.StreamConfig
   name: StreamConfig
   href: api/PostsListener.StreamConfig.html
