@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using TheMulti0.Console;
 
-namespace PostsListener
+namespace PostsListener.Service
 {
     public class Program
     {

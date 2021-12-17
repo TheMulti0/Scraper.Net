@@ -4,11 +4,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using Scraper.MassTransit.Client;
-using Scraper.Net;
 using Scraper.MassTransit.Common;
+using Scraper.Net;
 using Scraper.Net.Stream;
 
-namespace PostsListener
+namespace PostsListener.Service
 {
     public class Startup
     {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
+using PostsListener.Service;
 using Scraper.MassTransit.Common;
 
 namespace PostsListener.Tests
