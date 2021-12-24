@@ -1134,37 +1134,37 @@ references:
   isSpec: "True"
   fullName: PostsListener.Service.Program.Main
   nameWithType: Program.Main
-- uid: PostsListener.Service.Startup
+- uid: PostsListener.Startup
   name: Startup
-  href: api/PostsListener.Service.Startup.html
-  commentId: T:PostsListener.Service.Startup
-  fullName: PostsListener.Service.Startup
+  href: api/PostsListener.Startup.html
+  commentId: T:PostsListener.Startup
+  fullName: PostsListener.Startup
   nameWithType: Startup
-- uid: PostsListener.Service.Startup.#ctor(IConfiguration)
+- uid: PostsListener.Startup.#ctor(IConfiguration)
   name: Startup(IConfiguration)
-  href: api/PostsListener.Service.Startup.html#PostsListener_Service_Startup__ctor_IConfiguration_
-  commentId: M:PostsListener.Service.Startup.#ctor(IConfiguration)
-  fullName: PostsListener.Service.Startup.Startup(IConfiguration)
+  href: api/PostsListener.Startup.html#PostsListener_Startup__ctor_IConfiguration_
+  commentId: M:PostsListener.Startup.#ctor(IConfiguration)
+  fullName: PostsListener.Startup.Startup(IConfiguration)
   nameWithType: Startup.Startup(IConfiguration)
-- uid: PostsListener.Service.Startup.#ctor*
+- uid: PostsListener.Startup.#ctor*
   name: Startup
-  href: api/PostsListener.Service.Startup.html#PostsListener_Service_Startup__ctor_
-  commentId: Overload:PostsListener.Service.Startup.#ctor
+  href: api/PostsListener.Startup.html#PostsListener_Startup__ctor_
+  commentId: Overload:PostsListener.Startup.#ctor
   isSpec: "True"
-  fullName: PostsListener.Service.Startup.Startup
+  fullName: PostsListener.Startup.Startup
   nameWithType: Startup.Startup
-- uid: PostsListener.Service.Startup.ConfigureServices(IServiceCollection)
+- uid: PostsListener.Startup.ConfigureServices(IServiceCollection)
   name: ConfigureServices(IServiceCollection)
-  href: api/PostsListener.Service.Startup.html#PostsListener_Service_Startup_ConfigureServices_IServiceCollection_
-  commentId: M:PostsListener.Service.Startup.ConfigureServices(IServiceCollection)
-  fullName: PostsListener.Service.Startup.ConfigureServices(IServiceCollection)
+  href: api/PostsListener.Startup.html#PostsListener_Startup_ConfigureServices_IServiceCollection_
+  commentId: M:PostsListener.Startup.ConfigureServices(IServiceCollection)
+  fullName: PostsListener.Startup.ConfigureServices(IServiceCollection)
   nameWithType: Startup.ConfigureServices(IServiceCollection)
-- uid: PostsListener.Service.Startup.ConfigureServices*
+- uid: PostsListener.Startup.ConfigureServices*
   name: ConfigureServices
-  href: api/PostsListener.Service.Startup.html#PostsListener_Service_Startup_ConfigureServices_
-  commentId: Overload:PostsListener.Service.Startup.ConfigureServices
+  href: api/PostsListener.Startup.html#PostsListener_Startup_ConfigureServices_
+  commentId: Overload:PostsListener.Startup.ConfigureServices
   isSpec: "True"
-  fullName: PostsListener.Service.Startup.ConfigureServices
+  fullName: PostsListener.Startup.ConfigureServices
   nameWithType: Startup.ConfigureServices
 - uid: PostsListener.StreamConfig
   name: StreamConfig
