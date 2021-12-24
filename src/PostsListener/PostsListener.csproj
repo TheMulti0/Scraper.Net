@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <Version>0.3.11</Version>
+        <Version>0.3.12</Version>
         <Title>PostsListener</Title>
         <Authors>TheMulti0</Authors>
         <RepositoryUrl>https://github.com/TheMulti0/Scraper.Net</RepositoryUrl>

@@ -32,8 +32,6 @@ namespace PostsListener
             services.AddSingleton<ISubscriptionsManager, SubscriptionsManager>();
             services.AddHostedService<SubscriptionsLoaderService>();
 
-            services.AddScraperMassTransitClient();
-
             return ConfigureMassTransit;
         }
 

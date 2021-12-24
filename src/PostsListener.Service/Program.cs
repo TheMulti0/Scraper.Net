@@ -46,6 +46,7 @@ namespace PostsListener.Service
                         Action<IServiceCollectionBusConfigurator> massTransitCallback = new Startup(config).ConfigureServices(services);
                         
                         services
+                            .AddScraperMassTransitClient()
                             .AddMassTransit(
                                 x =>
                                 {
