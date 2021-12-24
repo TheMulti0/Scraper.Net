@@ -1,4 +1,6 @@
+using System;
 using MassTransit;
+using MassTransit.ExtensionsDependencyInjectionIntegration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -8,7 +10,7 @@ using Scraper.MassTransit.Common;
 using Scraper.Net;
 using Scraper.Net.Stream;
 
-namespace PostsListener.Service
+namespace PostsListener
 {
     public class Startup
     {
@@ -19,10 +21,9 @@ namespace PostsListener.Service
             _configuration = configuration;
         }
 
-        public void ConfigureServices(IServiceCollection services)
+        public Action<IServiceCollectionBusConfigurator> ConfigureServices(IServiceCollection services)
         {
             AddStream(services);
-            AddMassTransit(services);
             AddPersistence(services);
             
             services.AddSingleton<LastPostFilter>();
@@ -30,6 +31,10 @@ namespace PostsListener.Service
             services.AddSingleton<PostFilter>();
             services.AddSingleton<ISubscriptionsManager, SubscriptionsManager>();
             services.AddHostedService<SubscriptionsLoaderService>();
+
+            services.AddScraperMassTransitClient();
+
+            return ConfigureMassTransit;
         }
 
         private void AddStream(IServiceCollection services)
@@ -50,31 +55,12 @@ namespace PostsListener.Service
                     provider.GetRequiredService<ILogger<StreamManager>>()));
         }
 
-        private void AddMassTransit(IServiceCollection services)
+        private void ConfigureMassTransit(IServiceCollectionBusConfigurator x)
         {
-            services
-                .AddScraperMassTransitClient()
-                .AddMassTransit(
-                    x =>
-                    {
-                        x.AddConsumer<AddOrUpdateNewPostSubscriptionConsumer>();
-                        x.AddConsumer<RemoveNewPostSubscriptionConsumer>();
-                        x.AddConsumer<GetNewPostSubscriptionsConsumer>();
-                        x.AddConsumer<PollNewPostSubscriptionConsumer>();
-
-                        x.UsingRabbitMq(
-                            (context, cfg) =>
-                            {
-                                var rabbitMqConfig = _configuration.GetSection("RabbitMq").Get<RabbitMqConfig>() ?? new RabbitMqConfig();
-                                
-                                cfg.Host(rabbitMqConfig.ConnectionString);
-                                
-                                cfg.ConfigureInterfaceJsonSerialization(typeof(IMediaItem));
-                                
-                                cfg.ConfigureEndpoints(context);
-                            });
-                    })
-                .AddMassTransitHostedService();
+            x.AddConsumer<AddOrUpdateNewPostSubscriptionConsumer>();
+            x.AddConsumer<RemoveNewPostSubscriptionConsumer>();
+            x.AddConsumer<GetNewPostSubscriptionsConsumer>();
+            x.AddConsumer<PollNewPostSubscriptionConsumer>();
         }
 
         private void AddPersistence(IServiceCollection services)

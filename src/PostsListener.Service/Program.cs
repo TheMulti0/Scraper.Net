@@ -1,7 +1,13 @@
+using System;
 using System.Threading.Tasks;
+using MassTransit;
+using MassTransit.ExtensionsDependencyInjectionIntegration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Scraper.MassTransit.Client;
+using Scraper.MassTransit.Common;
+using Scraper.Net;
 using TheMulti0.Console;
 
 namespace PostsListener.Service
@@ -34,7 +40,31 @@ namespace PostsListener.Service
                         .AddTheMulti0Console()
                         .AddSentry())
                 .ConfigureServices(
-                    (context, services) => new Startup(context.Configuration).ConfigureServices(services));
+                    (context, services) =>
+                    {
+                        IConfiguration config = context.Configuration;
+                        Action<IServiceCollectionBusConfigurator> massTransitCallback = new Startup(config).ConfigureServices(services);
+                        
+                        services
+                            .AddMassTransit(
+                                x =>
+                                {
+                                    massTransitCallback(x);
+
+                                    x.UsingRabbitMq(
+                                        (context, cfg) =>
+                                        {
+                                            var rabbitMqConfig = config.GetSection("RabbitMq").Get<RabbitMqConfig>() ?? new RabbitMqConfig();
+                                
+                                            cfg.Host(rabbitMqConfig.ConnectionString);
+                                
+                                            cfg.ConfigureInterfaceJsonSerialization(typeof(IMediaItem));
+                                
+                                            cfg.ConfigureEndpoints(context);
+                                        });
+                                })
+                            .AddMassTransitHostedService();
+                    });
         }
     }
 }

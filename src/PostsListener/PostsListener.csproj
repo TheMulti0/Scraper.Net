@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <Version>0.3.10</Version>
+        <Version>0.3.11</Version>
         <Title>PostsListener</Title>
         <Authors>TheMulti0</Authors>
         <RepositoryUrl>https://github.com/TheMulti0/Scraper.Net</RepositoryUrl>
@@ -11,12 +11,13 @@
     
     <ItemGroup>
         <PackageReference Include="MassTransit" Version="7.2.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
         <PackageReference Include="MongoDB.Driver" Version="2.13.0" />
     </ItemGroup>
     
     <ItemGroup>
       <ProjectReference Include="..\Scraper.MassTransit.Client\Scraper.MassTransit.Client.csproj" />
-      <ProjectReference Include="..\Scraper.MassTransit.Common\Scraper.MassTransit.Common.csproj" />
+      <ProjectReference Include="..\Scraper.MassTransit.Common\Scraper.MassTransit.Common.csproj" PrivateAssets="All" />
       <ProjectReference Include="..\Scraper.Net.Stream\Scraper.Net.Stream.csproj" />
       <ProjectReference Include="..\Scraper.Net\Scraper.Net.csproj" />
     </ItemGroup>
