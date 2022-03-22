@@ -7,6 +7,16 @@ namespace Scraper.Net.Facebook
     {
         private const string LinkRegex = "\n(?<link>[A-Z].+)";
 
+        private static readonly string[] ReactionsNames = 
+        {
+            "Like",
+            "Love",
+            "Haha",
+            "Wow",
+            "Sad",
+            "Angry"
+        };
+
         public static FacebookPost ToPost(this RawFacebookPost raw)
         {
             return new()
@@ -69,7 +79,13 @@ namespace Scraper.Net.Facebook
                 };
             }
 
-            return images.Select(ToImage);
+            return images.Select(ToImage).Where(ImageIsNotAReaction);
+        }
+
+        private static bool ImageIsNotAReaction(Image image)
+        {
+            return !(ReactionsNames.Contains(image.Description) &&
+                     image.LowQualityUrl != null);
         }
 
         private static Video GetVideo(this RawFacebookPost raw)

@@ -6,6 +6,7 @@
       <Title>Scraper.Net.Facebook</Title>
       <Authors>TheMulti0</Authors>
       <RepositoryUrl>https://github.com/TheMulti0/Scraper.Net</RepositoryUrl>
+      <PackageVersion>0.2.7</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
