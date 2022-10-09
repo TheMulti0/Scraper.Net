@@ -4,6 +4,17 @@
 
 Scraper.Net is a multi-platform, asynchronous .NET library responsible of providing easy post scraping over a variety of sources.
 
+## Supported features
+
+- [x] Scraping Facebook pages
+- [x] Scraping RSS feeds
+- [x] Scraping Twitter users
+- [x] Scraping Youtube channels
+- [x] Downloading high-quality videos via youtube-dl
+- [x] Screenshotting pages via [HtmlCssToImage](https://htmlcsstoimage.com/)
+- [x] Communication with remote scraper nodes via MassTransit
+- [x] Persisting posts and listening to new posts
+
 ## Where to begin?
 
 Refer to the [documentation site](https://themulti0.github.io/Scraper.Net) which contains [guides](https://themulti0.github.io/Scraper.Net/articles/getting_started.html) along with an [API reference](https://themulti0.github.io/Scraper.Net/api/index.html).
